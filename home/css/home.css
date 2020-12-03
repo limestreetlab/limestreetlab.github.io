@@ -167,7 +167,7 @@ body {
     margin-bottom: 0;
   }
   #about-title h2 {
-    font-size: 2.02rem;
+    font-size: 2.02rem; /*set such that h2 title width approximates h1 title width, which looks better*/
     margin-top: 5px;
     margin-bottom: 0;
   }

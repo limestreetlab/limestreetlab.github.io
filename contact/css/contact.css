@@ -31,7 +31,7 @@ body {
 }
 
 #top-msg1 {
-    color: var(--light-blue-color);
+    color: var(--blue-color);
     font-size: calc(3em + 2vh); /*min 3em and adjust on vh*/
     font-weight: bold;
 }
@@ -117,7 +117,7 @@ body {
 }
 
 #social-media a:hover > .iconify {
-    color: var(--light-blue-color);
+    color: var(--blue-color);
 }
 
 #bottom-box {
