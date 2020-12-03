@@ -18,7 +18,7 @@ function initMap() {
 
     var marker = new google.maps.Marker({
         position: myLatLng,
-        icon: "https://i.ibb.co/FsTk3XS/map-cursor.png",
+        icon: "https://i.ibb.co/8KnRjYg/map-cursor.png",
         map: map,
         title: "Dean Street",
         optimized: false
