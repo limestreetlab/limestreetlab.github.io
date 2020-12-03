@@ -1,0 +1,21 @@
+<div id="problem">
+
+  There are two customer service counters in a store that are currently occupied.
+  <br>
+  Mr. Musk arrives and waits for the next available counter.
+  <br>
+  The service time is known to be exponentially distributed with parameter $\lambda$.
+  <br>
+  What's the probability that, of the three customers, Mr. Musk is the last to leave customer service?
+  
+</div>
+
+<div id="solution">
+
+  When a counter becomes available, Mr. Musk enters and the other one is still in service.
+  <br>
+  Given service time is exponentially distributed, it is <i>memoryless</i>, such that it is as if the service time for that other person were just starting.
+  <br>
+  Hence, by symmetry, the other service counter finishes before Mr. Musk finishes is $\frac{1}{2}$.  
+
+</div>

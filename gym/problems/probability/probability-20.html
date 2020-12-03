@@ -1,0 +1,38 @@
+<div id="problem">
+  Seven pathetic human beings carrying guns call themselves hunters are waiting for birds to fly by.
+  <br>
+  When birds fly over, they independently and randomly aim at one of the birds. 
+  <br>
+  Let each cowardly hunter's hit probability be $p$.
+  <br>
+  A group of $10$ birds are to fly by, what's the expected number of them escaping safely (unhit).
+</div>
+
+<div id="solution">
+
+  Let $X = [0, 10]$ be the number of birds unhit.<br>
+  Let $X_i$ be an indicator variable to indicate if $i^{th}$ bird escapes unhit,
+  $$
+  X_i = 
+  \begin{cases}
+    1 \quad \text{if $i^{th}$ bird unhit} \\
+    0 \quad \text{if $i^{th}$ bird hit}
+  \end{cases}
+  $$
+  Hence, the number of the $10$ birds escaping unhit is
+  $$
+    X = X_1 + X_2 + \ldots + X_9 + X_{10}
+  $$
+  Now, for each hunter, a bird is chosen with probability $\frac{1}{10}$ and hit at $p$.
+  <br>
+  So for each hunter, $i^{th}$ bird will be aimed at and hit with probability $\frac{p}{10}$ and unhit with probability $\left(1 - \frac{p}{10} \right)$.
+  <br>
+  Hence, $i^{th}$ bird unhit by 7 hunters is,
+  $$
+    P(X_i = 1) = \left( 1-\frac{p}{10} \right)^{7}
+  $$ 
+  and so, 
+  $$
+    E(X) = E(X_1) + \ldots + E(X_{10}) = 10 \cdot \left( 1-\frac{p}{10} \right)^{7}
+  $$
+</div>

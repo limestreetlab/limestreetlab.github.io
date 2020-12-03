@@ -1,0 +1,51 @@
+<div id="problem">
+
+  A basketball team, Chicago Labrador, will play a 44-game season. 
+  <br>
+  26 of these games are against Toronto Python and 18 are against Seattle Dolphin.
+  <br>
+  Assume the Labrador has a winning probability of 0.4 against the Python and 0.7 against the Dolphin.
+  <br>
+  Game results are independent. What's the probability that
+  <ul>
+    <li>Chicago Labrador will win at least 25 games in the season;</li>
+    <li>Chicago Labrador will win more games against Toronto Python than against Seattle Dolphin.</li>
+  </ul>
+
+</div>
+
+<div id="solution">
+
+  Let $W_T, W_S$ denote winnings against Toronto and Seattle, which are binomial $r.v. $,
+  \begin{align}
+    E(W_T) = (26)(0.4) & = 10.4 \quad & Var(W_T) & = (26)(0.4)(0.6) = 6.24 \\
+    E(W_S) = (18)(0.7) & = 12.6 \quad & Var(W_S) & = (18)(0.7)(0.3) = 3.78
+  \end{align}
+  
+  Given independence,
+  \begin{align}
+  & E(W_T + W_S)  = E(W_T) + E(W_S) = 23.0 \\  
+  & Var(W_T + W_S) = Var(W_T) + Var(W_S) = 10.02
+  \end{align}
+
+  Approximating using normal,
+  \begin{align}
+    P(W_T+W_S \geq 25) & = P(Z \geq \frac{25-23}{\sqrt{10.02}}) \\
+    & \approx P(Z \geq 0.63) \\
+    & \approx 1 - P(Z \lt 0.63) \\
+    & \approx 1 - 0.74 \\
+    & \approx 0.26 
+  \end{align}
+  <br>
+  Now, $W_T - W-S$ is also normal with $E(W_T - W_S) = -2.2 \text{ and } Var(W_T - W_S) = 10.02$,
+  \begin{align}
+    P(W_T \gt W_S) & = P(W_T - W_S \geq 1) \\
+    & = P(Z \geq \frac{3.2}{\sqrt{10.02}}) \\
+    & \approx P(Z \geq 1.01) = 1 - P(Z \lt 1.01) \\
+    & \approx 1 - 0.844 \approx 0.16
+  \end{align}
+
+  Hence, the probabilities are about $26\% \text{ and } 16\%$, respectively.
+
+
+</div>

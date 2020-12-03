@@ -1,0 +1,40 @@
+<div id="problem">
+
+  Let $S(t)$ be the stock price of technology giant Macrohard in $t$ days.
+  <br>
+  Assume ratios $\frac{S(t+1)}{S(t)}$ are $i.i.d.$  lognormal, such that $ \frac{S(t+1)}{S(t)} = e^{x} \text{ where } x\sim N(\mu, \sigma^2)$.
+  <br>
+  Assume the parameters are $\mu = 0.0165, \sigma = 0.0730$. <br> What's the probability that
+  <ul>
+    <li>$\frac{S(1)}{S(0)}\gt 1 \text{ and } \frac{S(2)}{S(1)} \gt 1$, that is, the stock goes up consecutively over two days;</li>
+    <li>$\frac{S(2)}{S(0)}\gt 1$, that is, the stock price at the end of 2 days is higher than what it is today.</li>
+  </ul>
+</div>
+
+<div id="solution">
+
+  The probability that the stock goes up in a day is,
+  \begin{align}
+    P\left( \frac{S(t+1)}{S(t)} \gt 1 \right) & = P\left(\ln \left( \frac{S(t+1)}{S(t)} \right) \gt \ln{1}\right) \\
+    & = P\left(Z \gt \frac{-0.0165}{0.0730} \right) \\
+    & \approx 1 - P(Z \lt -0.226) \\
+    & \approx 1 - 0.41 = 0.59\\
+  \end{align}
+  Given independece, the probability that it will go up in two consecutive days is,
+  $$
+    (0.59)(0.59) \approx 0.35
+  $$
+
+  <br>
+  For its stock price to be higher in 2 days,
+  \begin{align}
+    P\left( \frac{S(2)}{S(0)} \gt 1 \right) &= P\left(\frac{S(2)}{S(1)}\frac{S(1)}{S(0)} \gt 1 \right) \\
+    & = P\left( \ln{\left(\frac{S(2)}{S(1)}\right)} + \ln{\left(\frac{S(1)}{S(0)}\right)} \gt \ln{1}\right) \\
+    & = P\left( Z \gt \frac{0 - (0.0165)(2)} {\sqrt{(0.073^2)(2)}} \right) \\
+    & = P\left( Z \gt \frac{-0.033}{(0.073)(\sqrt{2})} \right) \\
+    & \approx P(Z \gt -0.3197) = P(Z \lt 0.3197)\\
+    & \approx 0.63
+  \end{align}
+
+
+</div>

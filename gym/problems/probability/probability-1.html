@@ -1,0 +1,38 @@
+<div id="problem">
+
+  A crime occurs at a point $X$ that is uniformly distributed on a street of length $K$. 
+  <br>
+  A police officier is at point $Y$ that is also uniformly distributed on the street. 
+  <br>
+  If $X$ and $Y$ are independent, what is the expected distance between the crime spot and police officier.
+
+</div>
+
+<div id="solution">
+
+  The expected distance is $E(|X - Y |)$. 
+  <br>
+  Given independence, the joint pdf is,
+  $$f_{X,Y}(x,y) = f_X(x) f_Y(y) = \frac{1}{K} \frac{1}{K} = \frac{1}{K^2}, \qquad \text{0 $<$ x, y $<$ K} $$
+
+  Hence, $$ E(|E-Y|) = \int_0^K \int_0^K \left(|x - y| \frac{1}{K^2}\right) dx dy $$
+
+  Now, 
+  \begin{align}
+    \int_0^K |x-y|dx &= 
+    \int_0^y(y-x)dx + \int_y^K(x-y)dx \qquad \text{as $|x - y| = (y-x)$ when $x < y$}  \\
+    &= (yx  - \frac{x^K}{2})\bigg|_0^y + (\frac{x^2}{2} - yx)\bigg|_y^K \\
+    &= y^2 -\frac{y^2}{2} + \frac{K^2}{2} - yK - \frac{y^2}{2} + y^2 \\
+    &= 2y^2 + \frac{K^2}{2} - y^2 - yK \\
+    &= \frac{K^2}{2} + y^2 - yK
+  \end{align}
+
+  Therefore,
+  \begin{align}
+    E(|E - Y|) &= \frac{1}{K^2}\int_0^K \left(\frac{K^2}{2} + y^2 - yK \right ) dy \\
+    &= \frac{1}{K^2}\left(\frac{yK^2}{2} + \frac{y^3}{3} - \frac{y^2K}{2} \right)\Bigg|_0^K \\
+    &= \frac{1}{K^2} \frac{K^3}{3} \\
+    &= \frac{K}{3} 
+  \end{align} 
+
+</div>

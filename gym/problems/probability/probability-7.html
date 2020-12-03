@@ -1,0 +1,26 @@
+<div id="problem">
+
+  Mr. Musk plans to do a 500-km trip on an electric scooter.
+  <br>
+  The battery life is exponentially distributed with an average of 1000-km.
+  <br>
+  What's the probability that Mr. Musk can complete the trip?
+  
+</div>
+
+<div id="solution">
+
+  Recall for exponential distribution,
+  $$ f_X(x) = \lambda e^{-\lambda x} \quad \text{for } x\geq 0 , \qquad F_X(x) = 1-e^{-\lambda x} \quad \text{for } x\geq 0$$
+
+  The exponential rate is $\lambda = \frac{1}{E(X)} = \frac{1}{1000}.$
+  <br>
+  Hence, 
+  \begin{align}
+  P(\text{life} \gt 500) & = 1 - P(\text{life} \leq 500) \\
+  & = 1 - (1 - e^{-\frac{500}{1000}}) \\
+  &= e^{-\frac{1}{2}}\\
+  & \approx 0.6
+  \end{align}
+
+</div>

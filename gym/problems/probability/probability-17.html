@@ -1,0 +1,18 @@
+<div id="problem">
+    Let $X, Y, Z$ be independent $r.v. \sim U(0,1)$.
+    <br>
+    Find $P(Z \geq XY)$.
+</div>
+
+<div id="solution">
+
+\begin{align}
+  P(Z \geq XY) &= \iiint \limits_{z\geq xy} f_{X,Y,Z}(x,y,z) dx dy dz \\
+  & = \int_{xy}^1 \int_0^1 \int_0^1 1\cdot 1\cdot 1 dx dy dz \\
+  & = \int_0^1 \int_0^1 \int_{xy}^1  dz dx dy \\
+  & = \int_0^1 \int_0^1 (1-xy)  dx dy \\
+  & = \int_0^1 (x - y\frac{x^2}{2})\bigg|_0^1 dy = \int_0^1(1-\frac{y}{2})dy \\
+  & = \left(y - \frac{y^2}{4} \right) \bigg|_0^1 \\
+  & = 1 - \frac{1}{4} = \frac{3}{4}
+\end{align}
+</div>

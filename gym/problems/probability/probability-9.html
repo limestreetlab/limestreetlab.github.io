@@ -1,0 +1,25 @@
+<div id="problem">
+
+  Let $X \sim{} U(0, 1) $ and $Y = X^n $.
+  <br>
+  Get $f_Y(y)$. 
+
+</div>
+
+
+<div id="solution">
+
+  \begin{align}
+    F_Y(y) &= P(Y \leq y) \\
+    & = P(X^n \leq y) \\
+    & = P(X \leq y^{\frac{1}{n}}) \\
+    & = F_X(y^{\frac{1}{n}}) \\ 
+    & = y^{\frac{1}{n}} \qquad \text{because } F_X(x) = x \\
+  \end{align}
+
+  Hence,
+  $$
+    f_Y(y) = \frac{F_Y(y)}{dy}= \frac{1}{n}y^{\frac{1}{n}-1} \qquad 0\leq y \leq 1
+  $$
+
+</div>

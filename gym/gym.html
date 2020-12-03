@@ -1,0 +1,94 @@
+<!--
+description: loading problem files stored in a "question bank" into this page. 
+             Loaded files are written in LaTeX and parsed using MathJax.
+date: 16/10/2020
+author: Dean Street
+using: manually written html/css 
+-->
+
+<html>
+    <head>
+        <title>
+            Dean Street :: Gym
+        </title>
+
+        <!--styling, internal files-->
+        <link rel="stylesheet" href="css/gym.css" type="text/css">
+        <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+       
+        <!--external scripts-->
+            <!--jquery-->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <!--MathJax to typeset LaTeX math-->
+            <script>
+                MathJax = { //configuration script to set $...$ and \(...\) for inline math
+                  tex: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']]
+                  },
+                  svg: {
+                    fontCache: 'global'
+                  }
+                };
+            </script>
+            <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+            
+
+        <!--script to load navigation menu into #nav-menu-container-->
+        <script src="../assets/js/navbar.js"></script>
+
+        <!--internal javascripts-->
+        <script src="js/foldable.js"></script> <!--for showing and hiding folded contents-->
+        <script src="js/problemLoader.js"></script> <!--for loading exercises-->
+
+        <!--meta tags-->
+        <meta name="description" content="Dean Street, Technology&#8745;Probability&#8745;Finance">
+        <meta name="keywords" content="Dean Street Lab, Dean Street, Dean Street gym">
+        <meta name="author" content="Dean Street">
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex, follow">
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">, site not designed to be responsive (yet)-->
+
+    </head>
+
+
+    <body ontouchstart="">
+        
+    <!--start, navigation menu--> 
+    <main id="nav-menu-container">
+    
+
+    </main>
+    <!--end, navigation menu--> 
+
+    
+    <main id="main-container">
+
+
+        <header id="page-top-container">
+          <div id="page-top-content"><h1>Gym</h1></div>
+        </header>
+
+        <section id="qa-container">
+            
+            <div class="reload-button">
+            <a href="#" onclick="location.reload(false); "><!--inline js to reload current page-->
+            <span class="iconify" data-icon="carbon:next-outline" data-inline="false"></span><!--reload icon-->
+            </a>
+            </div>
+
+            <div id="question-top"><span class="iconify" data-icon="map:gym" data-inline="false"></span></div>
+            <section id="question">
+            </section>
+
+            <button class="foldable"><span class="iconify" data-icon="carbon:idea" data-inline="false"></span></button>
+              <section id="answer">               
+              </section>     
+
+
+        </section>
+
+    </main> 
+
+    </body>
+</html>
+

@@ -1,0 +1,23 @@
+<div id="problem">
+    For $f_{X,Y}(x,y) = \frac{e^{-x/y}e^{-y}}{y} \qquad 0\lt x, y\lt \infty$
+    <br>
+    Find $P(X \gt 1 | Y=y)$.
+</div>
+
+<div id="solution">
+First, compute the conditional density,
+\begin{align}
+  f_{X|Y}(x|y) &= \frac{f_{X,Y}(x,y)}{f_Y(y)} \\
+  & = \frac{f_{X,Y}(x,y)}{\int_{-\infty}^\infty f_{X,Y}(x,y) dx} \\
+  & = \frac{ e^{-x/y}e^{-y}/y } { \frac{e^{-y}}{y}\int_0^\infty e^{-x/y} dx } \\
+  & = \frac{ e^{-x/y}e^{-y}/y } {\frac{e^{-y}}{y} \left((-ye^{-x/y})\bigg|_0^\infty \right) }\\
+  & = \frac{ e^{-x/y}e^{-y}/y } {e^{-y}} \\
+  & = \frac{1}{y} e^{-x/y} \\
+\end{align}
+Hence,
+\begin{align}
+  P(X\gt 1 | Y=y) &= \int_1^\infty \frac{1}{y} e^{-x/y} dx \\
+  & = (-e^{-x/y})\bigg |_1^\infty \\
+  & = (0) - (-e^{-1/y}) = e^{-1/y} \\
+\end{align}
+</div>

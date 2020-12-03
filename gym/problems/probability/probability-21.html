@@ -1,0 +1,68 @@
+<div id="problem">
+  There are n $1$'s and m $0$'s. They are randomly permuted into a sequence.
+  <br>
+  So there are $(n+m)!/(n!m!)$ possible arrangements for the sequence, each equally likely.
+  <br><br>
+  Define a run of $1$'s as,
+  $$
+  \text{a sequence of 1's, of any size including only a single 1 or many consecutive 1's}
+  $$
+  For example, if $n=6, m=4$, the sequence
+  $$
+  1, 1, 1, 0, 1, 1, 0, 0, 1, 0\\
+  $$
+  has $3$ runs of $1$'s as below,
+  $$
+  \underbrace{\boxed{1, 1, 1}, 0, \boxed{1, 1}, 0, 0, \boxed{1}, 0}_\text{there are $3$ stripes of $1$'s, so $3$ runs}
+  $$
+  <br>
+  For any arbitrary n $1$'s and m $0$'s, compute the expected number of runs of $1$'s. 
+  <br>Also for runs of $0$'s and run's of both $0$'s and $1$'s.
+
+</div>
+
+<div id="solution">
+
+  According to the definition, a run of $1$'s is realized whenever an entry is $1$ but its prior entry is $0$.
+  <br><br>
+  Define an indicator,
+  $$
+  I_i = 
+  \begin{cases}
+  1 \quad \text{ if a run starts at the $i^{th}$ position} \\
+  0 \quad \text{ otherwise}
+  \end{cases}
+  $$
+  Let $R_1$ be the number of runs of $1$'s, which can be written as
+  $$
+  R_1 = \sum\limits_{i=1}^{n+m} I_i
+  $$
+  
+  For $i$ = 1, because there is no prior entry,
+  \begin{align}
+    E(I_1) & = P(\text{a } 1 \text{ at } i =1) \\
+    & = \frac{n}{n+m}
+  \end{align}
+  For $1 \lt i \leq n+m,$
+  \begin{align}
+    E(I_i) & = P(\text{$0$ at $i-1$ and $1$ at $i$}) \\
+    & = P(0 \text{ at } i-1) \cdot P(1 \text{ at } i) \\
+    & = \frac{m}{n+m} \frac{n}{n+m-1}
+  \end{align}
+  Hence,
+  \begin{align}
+  E(R_1) &= \sum\limits_{i=1}^{n+m} E(I_i) \\
+  & = \frac{n}{n+m} + (n+m-1)\left(\frac{nm}{(n+m)(n+m-1)}\right)\\
+  & = \frac{n}{n+m} + \frac{nm}{n+m} \\
+  & = \frac{n+nm}{n+m}
+  \end{align}
+  Similarly, 
+  $$
+  E(R_0) = \frac{m+nm}{n+m}
+  $$
+  So,
+  $$
+  E(R_{0 \& 1}) = \frac{n+nm}{n+m} + \frac{m+nm}{n+m} = 1 + \frac{2nm}{n+m}
+  $$
+
+</div>

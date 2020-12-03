@@ -1,0 +1,26 @@
+<div id="problem">
+  Whenever a doctor is at least $80\%$ certain of breast cancer, he recommends immediate surgery.
+  <br>
+  When he has less than $80\%$ confidence, he suggests additional diagnosis which is painful. 
+  <br>
+  He assigns a $60\%$ probability that Mr. Musk has cancer and requests an additional diagnosis.
+  <br>
+  The chosen additional test comes back positive.
+  <br>
+  That test is perfectly accurate when cancer indeed is present but has a $30\%$ positive rate when cancer doesn't exist (false positive). 
+  <br>
+  Should he go for surgery or further testing. That is, what's his updated probability assessment.
+
+</div>
+
+<div id="solution">
+
+  Let $C, E$ denote cancer and the positive further test result,
+  \begin{align}
+  P(C | E) &= \frac{P(E|C)P(C)}{P(E|C)P(C) + P(E|C^c)P(C^c)} \\
+  & = \frac{(1)(0.6)}{(1)(0.6)+(0.3)(0.4)} \\
+  & \approx 0.83
+  \end{align}
+  The updated probability is above his surgery threshold of $80\%$.
+
+</div>

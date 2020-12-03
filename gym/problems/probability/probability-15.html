@@ -1,0 +1,20 @@
+<div id="problem">
+
+  There are $3$ cards in a box. <br>
+  Card $1$ has both sides red.<br>
+  Card $2$ has both sides black. <br>
+  Card $3$ has one side red and one side black.<br>
+  A card randomly drawn shows one side is red.<br>
+  What's the probability that the other side is black.
+</div>
+
+<div id="solution">
+
+  \begin{align}
+    P(RB|R) &= \frac{P(RB \cap R)}{P(R)} \\
+    &= \frac{P(R|RB)P(RB)}{P(R|RB)P(RB) + P(R|BB)P(BB) + P(R|RR)P(RR)} \\
+    &= \frac{(0.50)(0.33)}{(0.5)(0.33) + (0)(0.33) + (1)(0.33)} \\
+    & = \frac{0.165}{0.165+0.33} = 0.33
+
+  \end{align}
+</div>

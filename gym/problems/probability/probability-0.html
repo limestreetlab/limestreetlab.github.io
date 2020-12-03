@@ -1,0 +1,47 @@
+<div id="problem">
+  <b>Coupon-Collection Problem</b>
+  <br>
+  There are $n$ types of limited-edition toys inside a bag of potato chips.
+  <br>
+  Getting any one of the toys is equally likely.
+  <br>
+  If you want to obtain all the toys, what's the expected number of bags in total you have to buy.
+  <br>
+  In other words, on average how many toys in total you will end up having in order to have a complete set.
+
+</div>
+
+<div id="solution">
+
+  Let $X$ denote the total number of bags to result in a complete set of toys. 
+  <br>
+  Let $X_i$ denote the number of bags you continue to buy to get a new additional type when $i$ distinct types have been collected.<br>
+  For example, $X_4$ denotes when you have already collected $4$ distinct types, how many bags you have to keep buying to obtain a new type, your $5^{th}$ distinct type.
+  <br><br>
+  Hence,
+  $$
+    X = X_0 + X_1 + X_2 + \ldots + X_{n-2} + X_{n-1}
+  $$
+  <br>
+  $X_i$ is a geometric $r.v.$ with probability of success $ p = \frac{n-i}{n}$, so
+  $$
+    P(X_i = k) = q^{k-1} p = \left(1 - \frac{n-i}{n}\right)^{k-1} \left(\frac{n-i}{n}\right) = \left(\frac{i}{n}\right)^{k-1} \left(\frac{n-i}{n}\right)
+  $$
+  Recall that for a geometric $r.v.$,
+  $$
+    E(X) = \frac{1}{p}
+  $$
+  Hence, 
+  $$
+    E(X_i) = \frac{1}{(n-i)/n} = \frac{n}{n-i}
+  $$
+  and so
+  \begin{align}
+    E(X) &= E(X_0) + E(X_1) + \ldots + E(X_{n-1}) \\
+    & = \frac{n}{n - 0} + \frac{n}{n - 1} + \frac{n}{n - 2} + \ldots + \frac{n}{n - (n-1)} \\
+    & = \frac{n}{n} + \frac{n}{n-1} + \frac{n}{n-2} + \ldots + \frac{n}{2} + \frac{n}{1} \\
+    & = n \cdot \left[\frac{1}{n} + \frac{1}{n-1} + \frac{1}{n-2} + \ldots + \frac{1}{2} + 1 \right]
+
+  \end{align}
+
+</div>

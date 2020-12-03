@@ -1,0 +1,20 @@
+<div id="problem">
+  An ordinary deck of 52 cards is dealt into 4 hands.
+  <br>
+  What's the probability of each hand having an ace?
+</div>
+
+<div id="solution">
+
+  Let $A_1, A_2, A_3, A_4$ represent each ace. <br>
+  The probability of $A_1$ in any hands is $1$. <br>
+  Having $A_1$ fixed in one hand, the probability of $A_2$ in any of the remaining $3$ hands is $\frac{39}{51}$. 
+  <br>
+  Having $A_1, A_2$ fixed in two different hands, the probability of $A_3$ in any of the remaining $2$ hands is $\frac{26}{50}$.
+  <br>
+  Hence, $P(A_1, A_2, A_3, A_4 \text{ in different hands})$ is,
+  $$ 
+  \frac{52}{52} \cdot \frac{39}{51} \cdot \frac{26}{50} \cdot \frac{13}{49} \approx 0.105. 
+  $$
+   
+</div>

@@ -1,0 +1,25 @@
+<div id="problem">
+
+  During a crime investigation, the inspector thinks the current suspect is $60\%$ probable of being guilty.
+  <br>
+  A new piece of evidence from the crime scene emerges showing that the criminal has a certain hair texture.
+  <br>
+  If $20\%$ of the population has that hair texture, how confident should the inspector be if the current suspect has the texture.
+
+</div>
+
+<div id="solution">
+
+  Let $G, E$ denote guilty and the hair texture, then
+  $$
+    P(G) = 0.6, P(G^c) = 0.4, P(E|G) = 1, P(E|G^c) = 0.2 
+  $$
+
+  Plugging in,
+  \begin{align}
+    P(G|E) &= \frac{ P(E|G)P(G) }{ P(E|G)P(G) + P(E|G^c)P(G^c) } \\
+    &= \frac{ (1)(0.6) }{ (1)(0.6) + (0.2)(0.4) } \\
+    &= \frac{0.6}{0.68} \approx 0.88
+  \end{align}
+
+</div>

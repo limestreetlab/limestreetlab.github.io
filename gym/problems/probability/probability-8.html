@@ -1,0 +1,40 @@
+<div id="problem">
+
+  A 1-person toilet at <i>Stardust Coffee</i> has an average occupancy time of 10 minutes.
+  <br>
+  You want to pee badly but someone goes in right before you.
+  <br>
+  If the occupancy time is exponentially distributed, what's the probability you have to wait
+  <ul>
+    <li>more than 10 minutes;</li>
+    <li>between 10 and 20 minutes;</li>
+    <li>more than 20 minutes, which will explode.</li>
+  </ul>  
+
+</div>
+
+<div id="solution">
+
+  Recall for exponential distribution,
+  $$ f_X(x) = \lambda e^{-\lambda x} \quad \text{for } x\geq 0 , \qquad F_X(x) = 1-e^{-\lambda x} \quad \text{for } x\geq 0$$
+  <br>
+  Simply plugging the rate $\lambda = \frac{1}{E(X)} = \frac{1}{10} \text{ into } F_X(x)$, 
+  
+  \begin{align}
+    P(T \gt 10) & = 1 - P(T \leq 10) \\
+    & = 1 - (1 - e^{-\frac{10}{10}}) \\
+    & = e^{-1} \approx 0.37
+  \end{align}
+
+  \begin{align}
+    P(10 \lt T \lt 20) & = F(20) - F(10) \\
+    & = (1 - e^{-\frac{20}{10}}) - (1 - e^{-\frac{10}{10}}) \\
+    & = -e^{-2} + e^{-1} \\
+    & \approx -0.14 + 0.37 = 0.23
+  \end{align}
+
+  $$
+  P(T \gt 20) \approx 0.37 - 0.23 = 0.14.
+  $$
+
+</div>

@@ -1,0 +1,113 @@
+@import url("../../assets/css/colors.css");
+@import url("../../assets/css/global_styles.css");
+
+body {
+    overflow-y: auto;
+    overflow-x: auto;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+#qa-container ul {
+  list-style-type: disc;
+}
+#qa-container ol {
+  list-style-type: lower-alpha;
+}
+
+/*container for main contents, anything below the navigation icon*/
+#main-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    margin-top: 0vh;
+    font-size: 1rem;
+}
+
+/*container for hero contents at top of main container*/
+#page-top-container {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+}
+#page-top-content h1 {
+  width: auto;
+  height: auto;
+  font-size: 3rem;
+}
+
+#qa-container {
+  margin-left: 15%;
+  width: 70%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 90vh;
+}
+
+#question-top {
+  margin-top: 60px;
+  display: block;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+#question {
+  width: 100%;
+  margin-bottom: 50px;
+  animation: question 2s ease forwards;
+}
+@keyframes question {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.foldable {
+  background-color: var(--background-color);
+  border: none;
+  padding: 0;
+  outline: none;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+.foldable:hover {
+  color: var(--blue-color);
+}
+
+#answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s linear;
+}
+
+#answer::after { /*a blacksquare after the answer to indicate end*/
+  content: "\25a0"; /*code for a blacksquare*/
+  font-size: 150%;
+  margin-left: 90%;
+}
+
+.reload-button {
+  font-size: 250%;
+  position: absolute;
+  width: 70%;
+  display: flex;
+  justify-content: center; 
+}
+.reload-button:hover {
+  color: var(--blue-color);
+}

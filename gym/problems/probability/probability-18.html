@@ -1,0 +1,18 @@
+<div id="problem">
+    For $f_{X,Y}(x,y) = \frac{12}{5}x(2-x-y) \qquad 0\lt x, y\lt 1$
+    <br>
+    Find the conditional density of $X$ on $Y=y$, $f_{X|Y}(x|y)$.
+</div>
+
+<div id="solution">
+
+\begin{align}
+  f_{X|Y}(x|y) &= \frac{f_{X,Y}(x,y)}{f_Y(y)} \\
+  & = \frac{f_{X,Y}(x,y)}{\int_{-\infty}^\infty f_{X,Y}(x,y) dx} \\
+  & = \frac{\frac{12}{5}x(2-x-y)}{\int_0^1 \frac{12}{5}x(2-x-y) dx} \\
+  & = \frac{x(2-x-y)}{ (x^2-\frac{x^3}{3}-\frac{x^2}{2}y)\bigg|_0^1 } \\
+  & = \frac{x(2-x-y)}{ (\frac{2}{3}-\frac{y}{2})} \\
+  & = \frac{x(2-x-y)}{ (\frac{2}{3}-\frac{y}{2})} \cdot \frac{6}{6} \\
+  & = \frac{6x(2-x-y)} {4-3y}
+\end{align}
+</div>

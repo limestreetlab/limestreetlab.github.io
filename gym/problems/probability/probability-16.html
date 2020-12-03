@@ -1,0 +1,22 @@
+<div id="problem">
+    Boyfriend and girlfriend are to meet at a Chinatown hotel.
+    <br>
+    Their arrival times are independent and uniformly distributed over a one hour period. 
+    <br>
+    What's the probability that whoever arrives first will have to wait longer than 10 minutes.
+</div>
+
+<div id="solution">
+Let $X$ and $Y$ denote their arrival times, which are independent uniform $r.v.$ over (0, 60).
+<br>
+So we want $P(X+10\lt Y) + P(Y+10 \lt X)$, which by symmetry, $= 2P(X+10\lt Y)$.
+\begin{align}
+  2P(X+10\lt Y) &= 2\iint\limits_{x+10 \lt y} f_X(x) f_Y(y) dx dy\\ 
+  &= 2\int_{10}^{60} \int_0^{y-10} (\frac{1}{60})^2dxdy \\
+  & = \frac{2}{60^2} \int_{10}^{60} (y - 10)dy \\ 
+  & = \frac{2}{60^2} \cdot \left(\frac{y^2}{2} - 10y\right)\bigg |_{10}^{60} \\
+  & = \frac{2}{60^2} \cdot \left( (\frac{60^2}{2}-(10)(60)) - (\frac{10^2}{2}-(10)(10)) \right)\\
+  & \approx 0.69
+
+\end{align}
+</div>

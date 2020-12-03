@@ -1,0 +1,27 @@
+<div id="problem">
+
+  $X$ and $Y$ have joint density $f_{X,Y}(x,y) = e^{-(x+y)} \qquad 0\lt x,y \lt \infty$.
+  <br>
+  Find the density of $\frac{X}{Y}$.
+  
+</div>
+
+<div id="solution">
+
+  \begin{align}
+    F_{X/Y}(z) & = P(\frac{X}{Y} \leq z) \\
+    & = \iint \limits_{X/Y \leq z} e^{-(x+y)} dx dy \\
+    & = \int_0^\infty \int_0^{zy} e^{-(x+y)} dx dy \\
+    & = \int_0^\infty ( -e^{-(x+y)} )\bigg|_0^{zy} dy \\
+    & = \int_0^\infty (-e^{-( zy+y))} - (-e^{-y}) dy \\
+    & = \int_0^\infty e^{-y} - e^{-(zy+y)} dy \\
+    & = \left(-e^{-y} - e^{-(zy+y)}(\frac{1}{-z-1}) \right) \Bigg|_0^\infty \\
+    & = (0 + 0) - (-1 + \frac{1}{z+1}) \\
+    & = 1 - \frac{1}{z+1} \\
+  \end{align}
+  Hence, 
+  $$
+    f_{X/Y}(z) = \frac{F_{X/Y}(z)}{dz} = \frac{1}{(z+1)^2} \qquad 0\lt z \lt \infty
+  $$
+
+</div>

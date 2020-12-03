@@ -1,0 +1,31 @@
+<div id="problem">
+  
+  $N$ people in a meeting room throw their hats on the floor, which are then mixed. 
+  <br>
+  Each person randomly picks one as he leaves.
+  <br>
+  What's the expected number of matches? That is, find the average number of people picking their own hats.
+
+</div>
+
+<div id="solution">
+
+  Let $X$ denote the number of matches, 
+  $$X = X_1 + X_2 + X_3 + \ldots + X_N$$
+  where 
+  $$X_i = 
+  \begin{cases}
+    1 \quad \text{if $i$th person picks own hat} \\ 
+    0 \quad \text{otherwise}
+  \end{cases}
+  $$
+  We know,
+  $$
+  E(X_i) = P(X_i = 1) = \frac{1}{N}
+  $$
+  Because expected value of a sum is sum of the individual expected values,
+  $$
+    E(X) = \underbrace{ E(X_1) + E(X_2) + \ldots + E(X_N) }_\text{N} = N \frac{1}{N} = 1 
+  $$
+
+</div>
