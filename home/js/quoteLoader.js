@@ -30,8 +30,8 @@ $(document).ready(function() {
     ["The best solution to human overpopulation is to make stupidity punishable by death.","Tiger Tanaka"],
     ["Stupidity is the most widespread virus. We're living in the stupidity pandemic.","Tiger Tanaka"],
     ["Talk sense to a fool and he calls you foolish.", "Euripides"],
-    ["Have the courage to follow your heart and intuition. They somehow know what you truly want to become.", "Steve Jobs"]
-
+    ["Have the courage to follow your heart and intuition. They somehow know what you truly want to become.", "Steve Jobs"],
+    ["Each problem that I solve became a rule, which served afterwards to solve other problems.","Rene Descartes"]
     
 
   ];
