@@ -6,7 +6,7 @@ function initMap() {
     };
 
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 8,
+        zoom: 6,
         center: myLatLng,
         disableDefaultUI: true,
         streetViewControl: false,
