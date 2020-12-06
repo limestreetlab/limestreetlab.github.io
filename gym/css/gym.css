@@ -47,6 +47,7 @@ body {
   width: auto;
   height: auto;
   font-size: 3rem;
+  text-shadow: 1px 1px 0px lightgrey;
 }
 
 #qa-container {
