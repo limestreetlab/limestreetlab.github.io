@@ -29,7 +29,7 @@ body {
     --bg-color: 255,255,255;
     background-color: rgba(var(--bg-color),1);
     z-index: 1;
-    animation: bg-image 5s ease-in forwards;
+    animation: bg-image 3s ease-in forwards;
 }
 
 /*the underneath background layer*/
