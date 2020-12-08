@@ -184,6 +184,7 @@ body {
     margin-top: 3rem;
   }
   
+  /*each section (about) split into hero and contents, side-by-side*/
   .hero, .contents {
     flex: 0 0 45vw;
   }
