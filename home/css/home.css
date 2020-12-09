@@ -148,6 +148,7 @@ body {
     content: "\2014 \0020"; /*hex codes for hyphen and whitespace*/
   }
 
+  /*start of the ABOUT section hereafter*/
 #about-page {
     scroll-snap-align: start;
     width: auto;
@@ -184,9 +185,11 @@ body {
     margin-top: 3rem;
   }
   
-  /*each section (about) split into hero and contents, side-by-side*/
+  /*each section (About) split into hero and contents, two parts side-by-side*/
   .hero, .contents {
-    flex: 0 0 45vw;
+    flex: 0 0 40vw;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
   }
   
   .contents h1 {
@@ -201,11 +204,12 @@ body {
     font-size: 0.9rem;
     margin-top: 1em;
     margin-bottom: 1em;
+    text-align: justify;
   }
   
   #particles-js { /*position particles inside the hero container*/
     position: relative;
-    width: 80%;
+    width: 90%;
     height: 80%;
     top: 10%;
     left: 10%;
@@ -217,8 +221,8 @@ body {
   
   #bayesian-hero-bg {
     position: absolute;
-    width: 60%;
-    height: 60%;
+    width: 70%;
+    height: 70%;
     background-image: url(../images/bayes-toast.png);
     background-size: contain;
     background-repeat: no-repeat;
