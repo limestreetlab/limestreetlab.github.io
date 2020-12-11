@@ -148,7 +148,7 @@ body {
     content: "\2014 \0020"; /*hex codes for hyphen and whitespace*/
   }
 
-  /*start of the ABOUT section hereafter*/
+  /*START of ABOUT section hereafter*/
 #about-page {
     scroll-snap-align: start;
     width: auto;
@@ -209,7 +209,7 @@ body {
   
   #particles-js { /*position particles inside the hero container*/
     position: relative;
-    width: 90%;
+    width: 80%;
     height: 80%;
     top: 10%;
     left: 10%;
