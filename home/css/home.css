@@ -66,6 +66,7 @@ body {
     align-items: center;
     width: 70%;
     max-height: 400px;
+    text-transform: uppercase;
 }
 
 #box1 h1 {
