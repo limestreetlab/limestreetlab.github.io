@@ -31,8 +31,8 @@ $(document).ready(function() {
     ["Stupidity is the most widespread virus. We're living in the stupidity pandemic.","Tiger Tanaka"],
     ["Talk sense to a fool and he calls you foolish.", "Euripides"],
     ["Have the courage to follow your heart and intuition. They somehow know what you truly want to become.", "Steve Jobs"],
-    ["Each problem that I solve became a rule, which served afterwards to solve other problems.","Rene Descartes"]
-    
+    ["Each problem that I solve became a rule, which served afterwards to solve other problems.","Rene Descartes"],
+    ["Most things worth doing aren't easy, and they aren't fast. You play with what you got, and how things turn out, that's the way they are supposed to be. The right thing to do is choose something you love, go after it with everything you got, and that's what life is about.","William Whittaker"]
 
   ];
 
