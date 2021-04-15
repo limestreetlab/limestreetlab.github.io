@@ -1,12 +1,12 @@
 <div id="problem">
   Consider the following game.
   <br>
-  Tiger rolls a fair die. If he rolls 3 or less, $ \set{1,2,3}$, he loses the game immediately.
+  Tiger rolls a fair die. If he rolls 3 or less, $\{1,2,3\}$, he loses the game immediately.
   <br>
-  Otherwise, he is dealt as many cards from a 52-card deck as the number on the die&mdash;that is, \set{4,5,6}.
+  Otherwise, he is dealt as many cards from a 52-card deck as the number on the die&mdash;that is, $\{4,5,6\}$.
   <br>
   Tiger wins only if all four aces are among the dealt cards.
-  <br><br>
+  <br>
   <ol>
     <li>Compute the probability of winning this game.</li>
     <li>Tiger says that he played this game once and won. Assuming he isn't lying, what's the probability he rolled a $6$ on the die?</li>
@@ -30,7 +30,7 @@ Moreover,
 Hence, 
 \begin{align}
   P(W) &= \frac{1}{6}\cdot\frac{4 \choose 4}{52 \choose 4} + \frac{1}{6}\cdot\frac{ {4 \choose 4}{48 \choose 1} }{52 \choose 5} + \frac{1}{6}\cdot\frac{ {4 \choose 4}{48 \choose 2 } }{52 \choose 6}
-       &= 
+       &\approx 0.0013\%
 \end{align}
 
  
