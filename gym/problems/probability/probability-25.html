@@ -1,0 +1,38 @@
+<div id="problem">
+  Consider the following game.
+  <br>
+  Tiger rolls a fair die. If he rolls 3 or less, $ \set{1,2,3}$, he loses the game immediately.
+  <br>
+  Otherwise, he is dealt as many cards from a 52-card deck as the number on the die&mdash;that is, \set{4,5,6}.
+  <br>
+  Tiger wins only if all four aces are among the dealt cards.
+  <br><br>
+  <ol>
+    <li>Compute the probability of winning this game.</li>
+    <li>Tiger says that he played this game once and won. Assuming he isn't lying, what's the probability he rolled a $6$ on the die?</li>
+  </ol>
+
+</div>
+
+<div id="solution">
+a.
+<br>
+Let $W$ be the event of winning and $R_i$ of rolling $i$. 
+<br>
+The game is lost immediately if the roll is $\set{1,2,3}$, so $P(W|R_1) = P(W|R_2) = P(W|R_3) = 0$.
+<br>
+Moreover,
+\begin{align}
+  P(W|R_4) & = \frac{4 \choose 4}{52 \choose 4} \\
+  P(W|R_5) & = \frac{ {4 \choose 4}{48 \choose 1} }{52 \choose 5} \\
+  P(W|R_6) & = \frac{ {4 \choose 4}{48 \choose 2 } }{52 \choose 6} \\
+\end{align}
+Hence, 
+\begin{align}
+  P(W) &= \frac{1}{6}\cdot\frac{4 \choose 4}{52 \choose 4} + \frac{1}{6}\cdot\frac{ {4 \choose 4}{48 \choose 1} }{52 \choose 5} + \frac{1}{6}\cdot\frac{ {4 \choose 4}{48 \choose 2 } }{52 \choose 6}
+       &= 
+\end{align}
+
+ 
+
+</div>
