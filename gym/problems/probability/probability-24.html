@@ -1,0 +1,31 @@
+<div id="problem">
+  We have a well-shuffled deck of 52 cards. We turn up cards from the deck one at a time until an ace appears.
+  <br>
+  Once we stop, is the next card in the deck &mdash;that is, the card following the first ace&mdash;	more likely to be the ace of spade or the king of heart?
+
+</div>
+
+<div id="solution">
+
+  We first consider how many of the $52!$ possible orderings of cards have the ace of spade immediately after the first ace.
+  <br>
+  For each of the $51!$ orderings of the other cards, there is only $1$ slot the ace of spade can be placed such that it follows the first ace.
+  <br>
+  For example, if the ordering of the $51$ other cards is 
+  $$
+    4c, 8h, Kd, 4d, 5s, Ac, 8s, \dots, Jh, 10d 
+  $$
+  then the only slot of ace spade to result in its following the first ace is
+  $$
+     4c, 8h, Kd, 4d, 5s, Ac, As, 8s, \dots, Jh, 10d 
+  $$
+  Hence, there are $51!$ orderings of the ace of spade following the first ace, so
+  $$
+    P(ace of spade following the first ace) = \frac{51!}{52!} = \frac{1}{52}
+  $$
+  <br><br>
+  By exactly the same argument, it follows that the probability that the king of heart (or any other specific card) follows the first ace is also $\frac{1}{52}$. 
+  <br>
+  That is to say, each of the $52$ cards following the first ace is equally likely.
+
+</div>
