@@ -6,18 +6,14 @@
   Otherwise, he is dealt as many cards from a 52-card deck as the number on the die&mdash;that is, $\{4,5,6\}$.
   <br>
   Tiger wins only if all four aces are among the dealt cards.
-  <br>
-  <ol>
-    <li>Compute the probability of winning this game.</li>
-    <li>Honest Tiger says that he played this game once and won. What's the probability he rolled a $6$ on the die?</li>
-  </ol>
+  <br>  
+  Compute the probability of winning this game.
 
 </div>
 
 <div id="solution">
-a.
-<br>
-Let $W$ be the event of winning and $R_i$ of rolling $i$. 
+
+Let $W$ be the event of winning and $R_i$ of rolling $i$ on the die. 
 <br>
 The game is lost immediately if the roll is $\{1,2,3\}$, so $P(W|R_1) = P(W|R_2) = P(W|R_3) = 0$.
 <br>
@@ -31,6 +27,12 @@ Hence,
 \begin{align}
   P(W) &= \frac{1}{6}\cdot\frac{4 \choose 4}{52 \choose 4} + \frac{1}{6}\cdot\frac{ {4 \choose 4}{48 \choose 1} }{52 \choose 5} + \frac{1}{6}\cdot\frac{ {4 \choose 4}{48 \choose 2 } }{52 \choose 6} \\
        &\approx 0.0013\%
+\end{align}
+<br><br>
+b.
+<br>
+\begin{align}
+  P(R_6 | W) & = 
 \end{align}
 
  
