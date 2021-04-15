@@ -1,19 +1,21 @@
 <div id="problem">
   From a regular poker deck of 52 cards, what's the probability of being dealt a straight?
-  <br>
+  <br><br>
+  <small>
   Note: a straight is a 5-card hand consisting of distinct consecutive values and not all of the same suit.
+  </small>
 
 </div>
 
 <div id="solution">
 
   We start by noting that all $ {52 \choose 5} $ possible hands are equally likely.
+  <br><br>
+  Let's first consider a straight of ${A2345}$.
   <br>
-  Let's first consider a straight of $ {A2345} $suit.
+  Each card can come from any 1 of the 4 suits, so there are $ 4 \cdot 4 \cdot 4 \cdot 4 \cdot 4 = 4^5 $ outcomes for $ {A2345} $.
   <br>
-  Each card can be any 1 of the 4 suits, so there are $ 4 \cdot 4 \cdot 4 \cdot 4 \cdot 4 = 4^5 $ outcomes for $ {A2345} $.
-  <br>
-  It follows that 4 of such outcomes are of the same suit (straight flush), so there are $ 4^5 - 4 $ possible ways of a ${A2345}$ straight.
+  Because 4 of such outcomes are of the same suit (straight flush), there are $ 4^5 - 4 $ possible ways of a ${A2345}$ straight.
   <br><br>
   Now, there are 10 different straights from $ {A2345} $ to $ {10JQKA} $. 
   <br>
