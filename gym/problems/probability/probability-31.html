@@ -1,0 +1,24 @@
+<div id="problem">
+Tiger is taking a one-hour test. <br>
+Suppose the probability that Tiger will finish the test in less than $x$ hour is $\frac{x}{2}$, for all $0\leq x \leq 1$.
+<br>
+Given that Tiger is still working after $0.75$ hour, what's the probability that the full hour is used?
+  
+</div>
+
+<div id="solution">
+
+Let's $L_t$ denote the event Tiger finishes in less than $t$ hour and $F$ the event that the full hour is used.
+<br>
+Note that
+$$
+  P(F) = P(L_1^c) = 1 - P(L_1) = 1 - \frac{1}{2} = \frac{1}{2}
+$$
+Also, the probability that Tiger is still working at $0.75$ hour is $P(L_0.75^c)$, so the desired probability is
+
+\begin{align}
+  P(F | L_0.75^c) &=  \left( \frac{P(F)\cap P(L_0.75^c)}{P(L_0.75^c)} \right) \\
+  &= \left( \frac{P(F)}{1-P(L_0.75)} \right) \\
+  &= \left( \frac{0.5}{0.625} \right) =  0.8
+\end{align}
+</div>
