@@ -1,0 +1,42 @@
+<div id="problem">
+ A pair of dice is rolled until a sum of either $5$ or $7$ appears. What's the probability that $5$ occurs first.
+  
+</div>
+
+<div id="solution">
+
+  Let $E_n$ denote the event that a $5$ turns up on the $n^{th}$ roll, implying neither $5$ nor $7$ turn up on the $n-1$ rolls.
+  <br>
+  Our desired probability is then $\sum_{i=1}^{\infty}P(E_i)$.
+  <br><br>
+  Firstly, the probabilities of sums of $5$ and $7$ on each roll are
+  \begin{align}
+    P(\text{sum}=5) &= P(1,4) + P(2,3) + P(3,2) + P(4,1) = \frac{4}{36} \\
+    P(\text{sum}=7) &= P(1,6) + P(2,5) + P(3,4) + P(4,3) + P(5,2) + P(6,1)= \frac{6}{36} 
+  \end{align}
+
+  We then see probability of rolling neither $5$ nor $7$ is then
+  $$
+    P(\text{sum} \neq 5 \text{or} 7) = 1 - \frac{4}{36} - \frac{6}{36} = \frac{26}{36}
+  $$ 
+
+  We now have
+  \begin{align}
+    P(E_1) &= \left( \frac{4}{36} \right) \\
+    P(E_2) &= \left( \frac{26}{36} \right) \left(\frac{4}{36}\right) \\
+    P(E_3) &= \left( \frac{26}{36} \right)^2 \left(\frac{4}{36}\right) \\
+    P(E_4) &= \left( \frac{26}{36} \right)^3 \left(\frac{4}{36}\right) \\
+    \ldots \\
+    P(E_n) &= \left( \frac{26}{36} \right)^{n-1} \left(\frac{4}{36}\right) \\
+  \end{align}
+
+  Hence, 
+  \begin{align}
+    \sum_{i=1}^{\infty}P(E_i) &= \left( \frac{4}{36} \right) + \left( \frac{26}{36} \right) \left(\frac{4}{36}\right) + \ldots + \left( \frac{26}{36} \right)^{n-1} \left(\frac{4}{36}\right) \\
+    &= \left( \frac{ \frac{4}{36} - \frac{4}{36}\frac{26}{36}^n }{1-\frac{26}{36}} \right) \\
+    &= \frac{4}{36} \cdot \frac{36}{10}
+    &= 0.4
+  \end{align}
+
+
+</div>
