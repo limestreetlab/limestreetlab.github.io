@@ -9,7 +9,7 @@ Given that Tiger is still working after $0.75$ hour, what's the probability that
 <div id="solution">
 
 Let's $L_t$ denote the event Tiger finishes in less than $t$ hour and $F$ the event that the full hour is used.
-<br>
+<br><br>
 Note that
 $$
   P(F) = P(L_1^c) = 1 - P(L_1) = 1 - \frac{1}{2} = \frac{1}{2}
@@ -17,8 +17,9 @@ $$
 Also, the probability that Tiger is still working at $0.75$ hour is $P(L_0.75^c)$, so the desired probability is
 
 \begin{align}
-  P(F | L_0.75^c) &=  \left( \frac{P(F)\cap P(L_0.75^c)}{P(L_0.75^c)} \right) \\
-  &= \left( \frac{P(F)}{1-P(L_0.75)} \right) \\
-  &= \left( \frac{0.5}{0.625} \right) =  0.8
+  P(F | L_{0.75}^c) &=  \left( \frac{P(F)\cap P(L_{0.75}^c)}{P(L_{0.75}^c)} \right) \\
+  &= \left( \frac{P(F)}{1-P(L_{0.75})} \right) \\
+  &= \left( \frac{0.5}{0.625} \right) \\
+  &=  0.8
 \end{align}
 </div>
