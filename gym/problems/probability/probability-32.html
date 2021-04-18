@@ -1,9 +1,28 @@
 <div id="problem">
 
+In a multiple-choice test, each question has $ m $ choices. 
+<br>
+Peter has probability $ p $ of knowing the answer. When Peter does not know the answer, he guesses randomly.
+<ol>
+<li>What's the conditional probability that Peter really knew the answer to a question given a correct answer?</li>
+<li>What if we let $ m $ and $ p $ be $ 5 $ and $ 0.5 $?</li>
+</ol>
   
 </div>
 
 <div id="solution">
+
+Let $ K $ and $ C $ denote the events that Peter really knows the answer and that a question is answered correctly.
+<br>
+\begin{align}
+  P(K | C) & = \frac{ P(K \cap C) }{ P(C) } \\
+  & = \frac{ P(K) P(C | K) }{ P(K) P(C | K) + P(K^c) P(C | K^c) } \\
+  & = \frac{ p \cdot 1 }{ p \cdot 1 + (1-p) \frac{1}{m} } \\
+  & = \frac{m \cdot p}{m \cdot p + (1-p) } \\
+  & = \frac{m \cdot p}{1 + p(m - 1)}
+\end{align}
+
+Letting $ p=0.5 $ and $ m = 5 $, we get $ P(K | C) = \frac{2.5}{3} = \frac{5}{6}$.
 
 
 </div>
