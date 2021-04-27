@@ -1,9 +1,27 @@
 <div id="problem">
+The <i>problem of points</i> relates to how a pot should be divided between the players when the game must be stopped before a final winner appears.<br>
+The idea is to allocation the pot proportional to each player's probability of winning the pot if the game were to continue until the end.
+<br><br>
+Let $p$ and $1-p$ denote probability of success and failure in independent trials. 
+<br>
+A and B play a game such that A gains 1 point if a success occurs and B gains 1 point if a failure occurs.
+<br>
+Compute the proportional pots to allocate between A and B when the game is interrupted when A need $n$ and B need $m$ more points to win.
 
   
 </div>
 
 <div id="solution">
 
+The proportional pot for A should be the probability that $n$ successes occur before $m$ failures.<br>
+In order for $n$ successes for $m$ failures, it's necessary and sufficient that there be at least $n$ successes in $n + m - 1$ trials.<br>
+It is true, for if there are at least $n$ successes in the first $n + m - 1$ trials, there are at most $m - 1$ failures so $n$ successes occur before $m$ failures.
+<br>
+If there are less than $n$ successes, there are at least $m$ failures in those $n + m - 1$ trials so $m$ failures occur first.
+<br><br>
+It follows that the desired probability is
+$$
+  \sum_{k=n}^{n+m-1}{ {n+m-1} \choose k}\cdot p^k \cdot (1-p)^{n+m-1-k} 
+$$
 
 </div>
