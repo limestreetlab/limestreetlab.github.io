@@ -1,0 +1,55 @@
+<div id="problem">
+<b>Gambler's ruin</b>
+<br>
+In a classical gambler's ruin situation where two players Tony and Sally bet on successive flips of a coin, Tony wins $\$1$ from Sally on a head and Sally wins $\$1$ from Tony on a tail.
+<br>
+Tony starts with $\$i$ and Sally with $\$(N-i) $ so $\$N$ is the total money in the pot. 
+<br>
+They keep playing the game until one is broke.
+<br>
+The coin flips are independent, and each flip has constant probability $p$ of landing a head.
+<br><br>
+Derive the general formula for the probability that Tony will win.
+<br>
+What if the coin is fair such that $p = \frac{1}{2}$ and Tony starts with $\$5$ and Sally with $\$10$? What if the coin is instead biased having $p = 0.6$?
+
+</div>
+
+<div id="solution">
+The derivation is by doing basic reasoning and making use of the assumptions and obvious facts to result in a recursive pattern.
+<br>
+Let $E$ denote the event of Tony winning when he starts with $i$. Let use $P_i$ to denote $P(E)$ to make clear how $E$ might depend on $i$.
+<br>
+Letting $H$ denote a head on the 1st flip, we can express $P(E)$ by conditioning it on the 1st flip as
+\begin{align}
+  P(E) = P_i &= P(E|H)P(H) + P(E|H^c)P(H^c) \\
+  &= P(E|H)p + P(E|H^c)(1-p)
+\end{align}
+Because of independence and constant probability,
+\begin{align}
+  P_{i+1} &= P(E|H)
+  P_{i-1} &= P(E|H^c)
+\end{align}
+Now, let $q = 1 - p$,
+$$
+  P(E) = P_i = p \cdot P_i + q \cdot P_i = p \cdot P_{i+1} + q \cdot P_{i-1} 
+$$
+Re-arranging,
+$$
+  P_{i+1} - P_i = \frac{q}{p}(P_i - P_{i-1}) \tag{1}\label{1}
+$$
+Note that obviously we have boundary conditions P_0 = 0 and P_N = 1. 
+<br>
+Using eqref{1}, 
+\begin{align}
+  P_2 - P_1 & = \frac{q}{p}(P_1 - P_0) = \frac{q}{p}P_1 \\
+  P_3 - P_2 & = \frac{q}{p}(P_2 - P_1) = (\frac{q}{p})^2 P_1 \\
+  P_4 - P_3 & = \frac{q}{p}(P_3 - P_2) = (\frac{q}{p})^3 P_1 \\
+  \vdots \\
+  P_i - P_{i-1} & = \frac{q}{p}(P_{i-1} - P_{i-2}) = (\frac{q}{p})^{i-1} P_1 \\
+  \vdots \\
+  P_N - P_{N-1} & = \frac{q}{p}(P_{N-1} - P_{N-2}) = (\frac{q}{p})^{N-1} P_1 \\
+\end{align}
+Now, summing the first $i -1 $ equations
+
+</div>
