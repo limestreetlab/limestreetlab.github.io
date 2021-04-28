@@ -16,7 +16,7 @@ What if the coin is fair such that $p = \frac{1}{2}$ and Tony starts with $\$5$ 
 </div>
 
 <div id="solution">
-The derivation is by doing basic reasoning and making use of the assumptions and obvious facts to result in a recursive pattern.
+The derivation is by doing basic algebra and making use of the assumptions and obvious facts to result in a recursive pattern.
 <br><br>
 Let $E$ denote the event of Tony winning when he starts with $i$. Let use $P_i$ to denote $P(E)$ to make clear how $E$ might depend on $i$.
 <br>
@@ -53,13 +53,13 @@ Using \eqref{2} for $i = 1, 2, 3, \ldots , N-1$,
 
 Now, summing the first $i -1 $ equations of \eqref{3},
 $$
-  P_i - P_1 = P_1\left((\frac{q}{p})^1 + \frac{q}{p})^2 + \frac{q}{p})^3 + \ldots + \frac{q}{p})^{i-1} \right) 
+  P_i - P_1 = P_1\left((\frac{q}{p})^1 + (\frac{q}{p})^2 + (\frac{q}{p})^3 + \ldots + (\frac{q}{p})^{i-1} \right) 
 $$
 Giving, 
 $$
 P_i = 
 \begin{cases}
-P_1 \left( \frac{1-(\frac{q}{p})^i}{1-\frac{q}{p}} \right) \qquad & \text{if} \frac{q}{p} \neq 1 \tag{4}\label{4}\\
+P_1 \left( \frac{1-(q/p)^i}{1-(q/p)} \right) \qquad & \text{if} \frac{q}{p} \neq 1 \tag{4}\label{4}\\
 iP_1 \qquad & \text{if} \frac{q}{p} = 1
 \end{cases}
 $$
