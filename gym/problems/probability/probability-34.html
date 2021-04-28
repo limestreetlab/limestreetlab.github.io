@@ -64,13 +64,21 @@ iP_1 \qquad & \text{if} \frac{q}{p} = 1
 \end{cases}
 $$
 
-Using $P_N = 1$ in \eqref{4},
+Setting $i=N$ and using $P_N = 1$ in \eqref{4},
 $$
   P_1 = 
   \begin{cases} 
-  \frac{1-(\frac{q}{p})}{1-(\frac{q}{p})^N} \qquad & \text{if} \frac{q}{p} \neq 1 \\
+  \frac{1-(q/p)}{1-(q/p)^N} \qquad & \text{if} \frac{q}{p} \neq 1 \tag{5}\label{5} \\
   \frac{1}{N} \qquad & \text{if} \frac{q}{p} = 1
   \end{cases}
+$$
+Substituting \eqref{5} into \eqref{4},
+$$
+P_i = 
+\begin{cases}
+\frac{1-(q/p)^i}{1-(q/p)^N} \qquad & \text{if} \frac{q}{p} \neq 1 \tag{6}\label{6}\\
+\frac{i}{N} \qquad & \text{if} \frac{q}{p} = 1
+\end{cases}
 $$
 
 
