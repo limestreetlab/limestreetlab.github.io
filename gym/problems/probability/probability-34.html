@@ -17,7 +17,7 @@ What if the coin is fair such that $p = \frac{1}{2}$ and Tony starts with $\$5$ 
 
 <div id="solution">
 The derivation is by doing basic reasoning and making use of the assumptions and obvious facts to result in a recursive pattern.
-<br>
+<br><br>
 Let $E$ denote the event of Tony winning when he starts with $i$. Let use $P_i$ to denote $P(E)$ to make clear how $E$ might depend on $i$.
 <br>
 Letting $H$ denote a head on the 1st flip, we can express $P(E)$ by conditioning it on the 1st flip as
@@ -45,11 +45,12 @@ Using \eqref{2} for $i = 1, 2, 3, \ldots , N-1$,
   P_2 - P_1 & = \frac{q}{p}(P_1 - P_0) = \frac{q}{p}P_1 \\
   P_3 - P_2 & = \frac{q}{p}(P_2 - P_1) = (\frac{q}{p})^2 P_1 \\
   P_4 - P_3 & = \frac{q}{p}(P_3 - P_2) = (\frac{q}{p})^3 P_1 \\
-  \vdots \\
+  \vdots \tag{3}\label{3} \\
   P_i - P_{i-1} & = \frac{q}{p}(P_{i-1} - P_{i-2}) = (\frac{q}{p})^{i-1} P_1 \\
   \vdots \\
   P_N - P_{N-1} & = \frac{q}{p}(P_{N-1} - P_{N-2}) = (\frac{q}{p})^{N-1} P_1 \\
 \end{align}
-Now, summing the first $i -1 $ equations
+Now, summing the first $i -1 $ equations of \eqref{3},
+
 
 </div>
