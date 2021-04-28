@@ -1,11 +1,11 @@
 <div id="problem">
 <b>Gambler's ruin</b>
 <br>
-In a classical gambler's ruin situation where two players Tony and Sally bet on successive flips of a coin, Tony wins $\$1$ from Sally on a head and Sally wins $\$1$ from Tony on a tail.
+In a classical gambler's ruin situation where Tony and Sally bet on successive coin flips, Tony wins $\$1$ from Sally on a head and Sally wins $\$1$ from Tony on a tail.
 <br>
 Tony starts with $\$i$ and Sally with $\$(N-i) $ so $\$N$ is the total money in the pot. 
 <br>
-They keep playing the game until one is broke.
+They keep playing until one is broke.
 <br>
 The coin flips are independent, and each flip has constant probability $p$ of landing a head.
 <br><br>
@@ -27,20 +27,20 @@ Letting $H$ denote a head on the 1st flip, we can express $P(E)$ by conditioning
 \end{align}
 Because of independence and constant probability,
 \begin{align}
-  P_{i+1} &= P(E|H)
+  P_{i+1} &= P(E|H) \\
   P_{i-1} &= P(E|H^c)
 \end{align}
-Now, let $q = 1 - p$,
+Letting $q = 1 - p$,
 $$
-  P(E) = P_i = p \cdot P_i + q \cdot P_i = p \cdot P_{i+1} + q \cdot P_{i-1} 
+  P(E) = P_i = p \cdot P_i + q \cdot P_i = p \cdot P_{i+1} + q \cdot P_{i-1} \tag{1}\label{1}
 $$
-Re-arranging,
+Re-arranging \eqref{1},
 $$
-  P_{i+1} - P_i = \frac{q}{p}(P_i - P_{i-1}) \tag{1}\label{1}
+  P_{i+1} - P_i = \frac{q}{p}(P_i - P_{i-1}) \tag{2}\label{2}
 $$
-Note that obviously we have boundary conditions P_0 = 0 and P_N = 1. 
+Boundary conditions $P_0 = 0$ and $P_N = 1$ are obvious. 
 <br>
-Using eqref{1}, 
+Using \eqref{2} for $i = 1, 2, 3, \ldots , N-1$, 
 \begin{align}
   P_2 - P_1 & = \frac{q}{p}(P_1 - P_0) = \frac{q}{p}P_1 \\
   P_3 - P_2 & = \frac{q}{p}(P_2 - P_1) = (\frac{q}{p})^2 P_1 \\
