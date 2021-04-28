@@ -34,13 +34,13 @@ Letting $q = 1 - p$,
 $$
   P(E) = P_i = p \cdot P_i + q \cdot P_i = p \cdot P_{i+1} + q \cdot P_{i-1} \tag{1}\label{1}
 $$
-Re-arranging \ref{1},
+Re-arranging \eqref{1},
 $$
   P_{i+1} - P_i = \frac{q}{p}(P_i - P_{i-1}) \tag{2}\label{2}
 $$
 Boundary conditions $P_0 = 0$ and $P_N = 1$ are obvious. 
 <br>
-Using \ref{2} for $i = 1, 2, 3, \ldots , N-1$, 
+Using \eqref{2} for $i = 1, 2, 3, \ldots , N-1$, 
 \begin{align}
   P_2 - P_1 & = \frac{q}{p}(P_1 - P_0) = \frac{q}{p}P_1 \\
   P_3 - P_2 & = \frac{q}{p}(P_2 - P_1) = (\frac{q}{p})^2 P_1 \\
@@ -50,7 +50,29 @@ Using \ref{2} for $i = 1, 2, 3, \ldots , N-1$,
   \vdots \\
   P_N - P_{N-1} & = \frac{q}{p}(P_{N-1} - P_{N-2}) = (\frac{q}{p})^{N-1} P_1 \\
 \end{align}
-Now, summing the first $i -1 $ equations of \ref{3},
+
+Now, summing the first $i -1 $ equations of \eqref{3},
+$$
+  P_i - P_1 & = P_1\left((\frac{q}{p})^1 + \frac{q}{p})^2 + \frac{q}{p})^3 + \ldots + \frac{q}{p})^{i-1} \right) 
+$$
+Giving, 
+$$
+P_i = 
+\begin{cases}
+P_1\frac{1-(\frac{q}{p})^i}{1-\frac{q}{p}} \qquad & \text{if} \frac{q}{p} \neq 1 \tag{4}\label{4}\\
+iP_1 \qquad & \text{if} \frac{q}{p} = 1
+\end{cases}
+$$
+
+Using $P_N = 1$ in \eqref{4},
+$$
+  P_1 = 
+  \begin{cases} 
+  \frac{1-(\frac{q}{p})}{1-(\frac{q}{p})^N} \qquad & \text{if} \frac{q}{p} \neq 1 \\
+  \frac{1}{N} \qquad & \text{if} \frac{q}{p} = 1
+$$
+
+
 
 
 </div>
