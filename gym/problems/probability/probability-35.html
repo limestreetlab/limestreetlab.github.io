@@ -1,11 +1,11 @@
 <div id="problem">
 Sally is preparing for the Chartered Financial Analyst (CFA) qualification which requires passing 3 exams sequentially.
 <br>
-The probability of her passing the level-1 exam is $90\%$sequentially.
+The probability of her passing the level-1 exam is $90\%$.
 <br>
 If she passes level-1, then the probability of passing level-2 is $80\%$.
 <br>
-If she passes the first 2 levels, then she has probability of $70\%$ in passing level-3 and becoming a CFA. 
+If she passes the first 2 levels, then she has $70\%$ probability in passing level-3 and becoming a CFA. 
 <br>
 <ol>
   <li>What's the probability she becomes a CFA without any re-sitting?</li>
@@ -22,9 +22,9 @@ P(L_1 \cap L_2 \cap L_3) = P(L_1) \cdot P(L_2 | L_1) \cdot P(L_3 | L_1 \cap L_2)
 $$
 
 b.
-The event that Sally did not pass all three exams is $(L_1 \cap L_2 \cap L_3)^c$.
+The event of not passing all three exams is $(L_1 \cap L_2 \cap L_3)^c$. The desired probability is
 $$
-P({L_2}^c | {L_1 \cap L_2 \cap L_3}^c) = \frac{P(L_1) \cdot P(L_2)^c }{ {L_1 \cap L_2 \cap L_3}^c } = \frac{0.9 \cdot 0.2}{1 - 0.504} \approx 0.36 
+P({L_2}^c | (L_1 \cap L_2 \cap L_3)^c) = \frac{P(L_1) \cdot P(L_2)^c }{ {L_1 \cap L_2 \cap L_3}^c } = \frac{0.9 \cdot 0.2}{1 - 0.504} \approx 0.36 
 $$
 
 
