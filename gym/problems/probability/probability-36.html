@@ -1,10 +1,32 @@
 <div id="problem">
-
+From a shuffled deck of 52 cards, a card is turned up one at a time until an ace appears.
+<br>
+Given that the first ace appears on the $20^{th}$ card, what's the probability that the card following it is the:
+<ol>
+<li>ace of diamonds?</li>
+<li>five of hearts?</li>
+</ol>
 
 </div>
 
 <div id="solution">
+a.
+<br>
+Let $E_{Ad}$ denote that event that the next card is the ace of diamonds, then
+\begin{align}
+  P(E_{Ad}) & = P(\text{next card is an ace}) \cdot P(E_{Ad} | \text{next card is an ace}) \\
+  & = \frac{3}{32} \cdot \frac{1}{4} = \frac{3}{128} \approx 0.023
+\end{align}
+<br>
 
-
-
+b.
+<br>
+Let $E_{5h}$ and $E_{\text{5h in 20}}$ respectively denote the events that the next card is the five of hearts, and that it appears in the first 20 cards.
+<br>
+Then, 
+\begin{align}
+  P(E_{5h}) & = P(E_{5h} | E_{\text{5h in 20}}) \cdot P(E_{\text{5h in 20}}) + P(E_{5h} | {E_{\text{5h in 20}}}^c) \cdot P({E_{\text{5h in 20}}}^c) &&  \\
+  & = 0 \cdot \frac{19}{48} + \frac{1}{32} \cdot \frac{29}{48} && \text{$48$ because we know the four aces aren't in the first $19$ cards } \\
+  & = \frac{29}{1536} \approx 0.019
+\end{align}
 </div>
