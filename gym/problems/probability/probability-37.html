@@ -1,20 +1,21 @@
 <div id="problem">
-Inside a box of $15$ balls, $9$ are new.
+Inside a box of $15$ balls, $9$ are new and $6$ are used.
 <br>
-$3$ balls are picked randomly and used, then returned to the box.
+$3$ balls are picked at random and used, then returned to the box.
 <br>
-Later, another $3$ balls are again picked randomly from the box. 
+Later, $3$ balls are again picked at random from the box. 
 <br>
-What's the probability that all $3$ balls are new?
+What's the probability that all those $3$ balls are new?
 
 
 </div>
 
 <div id="solution">
-There are two random picks of $3$ balls each. Let $A_i$ denote that first pick where $i$ is the number of used balls picked, so $A_2$ denotes $2$ out of the $3$ balls picked are used.
+There are two random picks of $3$ balls each. <br>
+Let $A_i$ denote the first pick where $i$ is the number of used balls picked, so $A_2$ denotes $2$ out of the $3$ balls picked are used.
 <br>
-Let $B$ be the event that all $3$ balls are new in the second pick.
-The desired probability is then,
+Let $B$ denote the event that all $3$ balls are new in the second pick, so the desired probability is
+
 \begin{align}
   P(B) &= P(B | A_0)P(A_0) + P(B | A_1)P(A_1) + P(B | A_2)P(A_2) + P(B | A_3)P(A_3) \\
   &= \sum_{i=0}^3 \frac{ { {9-3+i} \choose 3} }{ {15 \choose 3} } \cdot \frac{ {6 \choose i} {9 \choose {3-i}} }{ {15 \choose 3} }   \\
