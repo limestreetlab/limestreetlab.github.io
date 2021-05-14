@@ -1,11 +1,38 @@
 <div id="problem">
-
+Sally and Tony alternate rolling a pair of dice, stopping when either Sally rolls a $9$ sum or Tony a $6$ sum.
+<br>
+Suppose Sally rolls first, what's the probability that
+<ol>
+<li>The game stops at Sally? </li>
+<li>The game stops at Tony?</li>
+</ol>
 
 
 </div>
 
 <div id="solution">
+a. <br>
+We have 
+\begin{align}
+P(9_{sum}) & = P(\{3,6\},\{4,5\},\{5,4\},\{6,3\}) = \frac{4}{36} \qquad && P(9_{sum}^c) = \frac{32}{36} \\
+P(6_{sum}) & = P(\{1,5\},\{2,4\},\{3,3\},\{4,2\}, \{5,1\}) = \frac{5}{36} \qquad && P(6_{sum}^c) = \frac{31}{36}
+\end{align}
 
+The cases that Sally rolls her $9$ sum first are
+\begin{equation*}
+  P(9_{sum}) \\
+  P(9_{sum}^c) \cdot P(6_{sum}^c) \cdot P(9_{sum}) \\
+  P(9_{sum}^c) \cdot P(6_{sum}^c) \cdot P(9_{sum}^c) \cdot  P(6_{sum}^c) \cdot P(9_{sum}) \\
+  P(9_{sum}^c) \cdot P(6_{sum}^c) \cdot P(9_{sum}^c) \cdot  P(6_{sum}^c) \cdot P(9_{sum}^c) \cdot P(6_{sum}^c) \cdot P(9_{sum}) \\
+  \ldots
+\end{equation*}
 
+Using the geometric series formula $\text{sum} = frac{a(1-r^{n+1})}{1-r}$ where $n = \infty$ here, we get
+
+$$
+  P(\text{Sally}) = \frac{4/36(1-((32/36)(31/36))^\infty)}{1-(32/36)(31/36)} \approx 0.47
+$$
+
+b. <br>
 
 </div>
