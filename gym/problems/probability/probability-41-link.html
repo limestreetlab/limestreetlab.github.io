@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>
+            Dean Street :: Gym
+        </title>
+
+        <!--styling, internal files-->
+        <link rel="stylesheet" href="css/gym.css" type="text/css">
+       
+        <!--external scripts-->
+            <!--jquery-->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+            <!--MathJax to typeset LaTeX math-->
+            <script>
+                MathJax = { //configuration script to set $...$ and \(...\) for inline math
+                  tex: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']]
+                  },
+                  svg: {
+                    fontCache: 'global'
+                  }
+                };
+            </script>
+            <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+            
+        
+        <script>
+        $(document).ready( function() {
+        
+    var thisQuestion = "probability-34.html" + " #problem"; //string of filepath and the question id element
+    var thisAnswer   = "probability-34.html" + " #solution"; //string of filepath and the answer id element
+
+    $("#question").load(thisQuestion, function(){MathJax.typeset();});  //load the path for problem
+    $("#answer").load(thisAnswer, function(){MathJax.typeset();} );  //load the path for answer and then callback MathJax.typeset() to re-typeset the LaTeX math
+
+});
+        
+        </script>
+
+    </head>
+
+
+    <body ontouchstart="">
+        
+    <!--start, navigation menu--> 
+    <main id="nav-menu-container">
+    
+
+    </main>
+    <!--end, navigation menu--> 
+
+    
+    <main id="main-container">
+
+
+        <section id="qa-container">
+            
+            <div id="question-top"><span class="iconify" data-icon="map:gym" data-inline="false"></span></div>
+            <section id="question">
+            </section>
+
+            <button><span class="iconify" data-icon="carbon:idea" data-inline="false"></span></button>
+              <section id="answer">               
+              </section>     
+
+
+        </section>
+
+    </main> 
+
+    </body>
+</html>

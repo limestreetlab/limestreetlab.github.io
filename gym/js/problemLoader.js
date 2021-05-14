@@ -3,14 +3,14 @@ $(document).ready( function() {
   //list of subjects to draw the question from; elements must reflect questions directory structure
   const questionSubject = ["probability"];
    //total number of available questions, positions directly correspond to subjects, should be updated as questions are added
-  const questionsAvailable = [41]; //exact number of question files in each directory
+  const questionsAvailable = [42]; //exact number of question files in each directory
 
     //codes hereafter need no maintenance
     var numberOfSubjects = questionSubject.length; 
     var subjectNumber = Math.floor(Math.random() * numberOfSubjects); //randomly picking a subject
     var thisSubject = questionSubject[subjectNumber]; //the randomly picked subject
     
-    var questionNumber = Math.floor(Math.random() * questionsAvailable[subjectNumber]); //randomly picked question number
+    var questionNumber = 42// Math.floor(Math.random() * questionsAvailable[subjectNumber]); //randomly picked question number
     questionNumber = questionNumber.toString(); //cast int to string
 
     var thisQuestion = "./problems/" + thisSubject + "/" + thisSubject + "-" + questionNumber + ".html" + " #problem"; //string of filepath and the question id element
