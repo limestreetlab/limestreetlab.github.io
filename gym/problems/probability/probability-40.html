@@ -27,15 +27,23 @@ The cases that Sally rolls her $9$ sum first are
   &\vdots
 \end{align}
 
-Using the geometric series formula $\text{sum} = \frac{a(1-r^{n+1})}{1-r}$ where $n = \infty$ here, we get
+Using the geometric series formula that $\text{sum} = \frac{a(1-r^{n+1})}{1-r}$ where $n = \infty$ here, we get
 
 $$
   P(\text{Sally}) = \frac{4/36(1-((32/36)(31/36))^\infty)}{1-(32/36)(31/36)} \approx 0.47
 $$
 
 b. <br>
+The cases that Tony rolls his $6$ sum first are
+\begin{align}
+  &P(9_{sum}^c) \cdot P(6_{sum})\\
+  &P(9_{sum}^c) \cdot P(6_{sum}^c) \cdot P(9_{sum}^c) \cdot P(6_{sum})\\
+  &P(9_{sum}^c) \cdot P(6_{sum}^c) \cdot P(9_{sum}^c) \cdot P(6_{sum}^c) \cdot P(9_{sum}^c) \cdot P(6_{sum}) \\
+  &\vdots
+\end{align}
+
 $$
-  P(\text{Tony}) = \frac{5/36(1-((32/36)(31/36))^\infty)}{1-(32/36)(31/36)} \approx 0.59
+  P(\text{Tony}) = \frac{(32/36)(5/36)}{1-(32/36)(31/36)} \approx 0.53  = 1 - P(\text{Sally}) 
 $$
 
 </div>
