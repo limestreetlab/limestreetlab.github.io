@@ -1,11 +1,46 @@
 <div id="problem">
-
-
+There are $10$ coins where the $i^{th}$ coin lands head with probability $\frac{i}{10}$.
+<br>
+We pick one of those $10$ coins at random and it shows a head. What's the probability that the coin is
+<ol>
+<li>The second coin, $i = 2$</li>
+<li>The fifth coin, $i = 5$</li>
+<li>The tenth coin, $i = 10$</li>
+</ol>
 
 </div>
 
 <div id="solution">
 
+a.<br>
+\begin{align}
+P(i = 2 | H) &= \frac{P(H | i=2)P(i = 2)}{\sum_{j=1}^10 P(H | i=j)P(i = j)} \\ 
+& = \frac{2/10 \cdot 1/10}{1/10 \cdot 1/10 + 2/10 \cdot 1/10 + ldots + 9/10 \cdot 1/10 + 10/10 \cdot 1/10} \\
+& = \frac{2/10}{1/10 + 2/10 + \ldots + 9/10 + 10/10} \\
+&= \frac{2/10}{1/10(1+2+\ldots +9 +10)} \\
+&= \frac{2/10}{1/10(55)} \\
+& = \frac{2}{10} \cdot \frac{10}{55} \\
+& = \frac{2}{55} \approx 0.036
+\end{align}
+
+b.<br>
+\begin{align}
+P(i = 5 | H) &= \frac{P(H | i=5)P(i = 5)}{\sum_{j=1}^10 P(H | i=j)P(i = j)} \\ 
+& = \frac{5/10 \cdot 1/10}{1/10 \cdot 1/10 + 2/10 \cdot 1/10 + ldots + 9/10 \cdot 1/10 + 10/10 \cdot 1/10} \\
+& = \frac{5/10}{1/10 + 2/10 + \ldots + 9/10 + 10/10} \\
+&= \frac{5/10}{55/10} \\
+& = \frac{5}{10} \cdot \frac{10}{55} \\
+& = \frac{5}{55} \approx 0.09
+\end{align}
+
+c.<br>
+\begin{align}
+P(i = 10 | H) &= \frac{P(H | i=10)P(i = 10)}{\sum_{j=1}^10 P(H | i=j)P(i = j)} \\ 
+& = \frac{10/10 \cdot 1/10}{1/10 \cdot 1/10 + 2/10 \cdot 1/10 + ldots + 9/10 \cdot 1/10 + 10/10 \cdot 1/10} \\
+& = \frac{10/10}{1/10 + 2/10 + \ldots + 9/10 + 10/10} \\
+&= \frac{10/10}{55/10} \\
+& = \frac{10}{10} \cdot \frac{10}{55} = \frac{10}{55} \approx 0.18 
+\end{align}
 
 
 </div>
