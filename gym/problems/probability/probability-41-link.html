@@ -26,7 +26,13 @@
             <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
             
         
-        <script>
+        <!--script to load common head elements-->
+        <script src="../assets/js/head-elements-loader.js"></script>
+        
+        <!--internal javascripts-->
+        <script src="js/foldable.js"></script> <!--for showing and hiding folded contents-->
+        
+<script>
         $(document).ready( function() {
         
     var thisQuestion = "probability-34.html" + " #problem"; //string of filepath and the question id element
@@ -55,13 +61,17 @@
     <main id="main-container">
 
 
+        <header id="page-top-container">
+          <div id="page-top-content"><h1>Gym</h1></div>
+        </header>
+
         <section id="qa-container">
             
             <div id="question-top"><span class="iconify" data-icon="map:gym" data-inline="false"></span></div>
             <section id="question">
             </section>
 
-            <button><span class="iconify" data-icon="carbon:idea" data-inline="false"></span></button>
+            <button class="foldable"><span class="iconify" data-icon="carbon:idea" data-inline="false"></span></button>
               <section id="answer">               
               </section>     
 
