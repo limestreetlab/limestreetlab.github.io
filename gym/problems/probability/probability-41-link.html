@@ -28,11 +28,9 @@
 <script>
         $(document).ready( function() {
         
-    var thisQuestion = "probability-34.html" + " #problem"; //string of filepath and the question id element
-    var thisAnswer   = "probability-34.html" + " #solution"; //string of filepath and the answer id element
-
+    var thisQuestion = "probability-34.html"; //string of filepath and the question id element
+    
     $("#question").load(thisQuestion, function(){MathJax.typeset();});  //load the path for problem
-    $("#answer").load(thisAnswer, function(){MathJax.typeset();} );  //load the path for answer and then callback MathJax.typeset() to re-typeset the LaTeX math
 
 });        
         </script>
@@ -64,9 +62,6 @@
             <section id="question">
             </section>
 
-            <span class="iconify" data-icon="carbon:idea" data-inline="false"></span>
-              <section id="answer">               
-              </section>     
 
 
         </section>
