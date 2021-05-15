@@ -10,7 +10,7 @@ $(document).ready( function() {
     var subjectNumber = Math.floor(Math.random() * numberOfSubjects); //randomly picking a subject
     var thisSubject = questionSubject[subjectNumber]; //the randomly picked subject
     
-    var questionNumber = 41// Math.floor(Math.random() * questionsAvailable[subjectNumber]); //randomly picked question number
+    var questionNumber = Math.floor(Math.random() * questionsAvailable[subjectNumber]); //randomly picked question number
     questionNumber = questionNumber.toString(); //cast int to string
 
     var thisQuestion = "./problems/" + thisSubject + "/" + thisSubject + "-" + questionNumber + ".html" + " #problem"; //string of filepath and the question id element
