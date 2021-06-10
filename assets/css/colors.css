@@ -5,10 +5,10 @@
     --font-color: rgb(72, 72, 72);
     --font-color-rgb: 72, 72, 72;
     /*reverse default background and font color for a dark theme*/
-    --dark-background-color: rgb(50,50,50);
-    --dark-background-color-rgb: 50, 50, 50;
-    --dark-bg-font-color: rgb(240,240,240);
-    --dark-bg-font-color-rgb: 240, 240, 240;
+    --dark-background-color: rgb(72,72,72);
+    --dark-background-color-rgb: 72, 72, 72;
+    --dark-bg-font-color: rgb(245,245,245);
+    --dark-bg-font-color-rgb: 245, 245, 245;
     /*various colours, blue main*/
     --red-color: rgb(230, 63, 90);
     --red-color-rgb: 230, 63, 90; 
