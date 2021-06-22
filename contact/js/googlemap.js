@@ -1,8 +1,8 @@
 function initMap() {
 
     var myLatLng = {
-        lat: 51.4545,
-        lng: -2.5879
+        lat: 51.283695,
+        lng: -2.355104
     };
 
     var map = new google.maps.Map(document.getElementById('map'), {
