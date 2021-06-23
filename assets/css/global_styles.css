@@ -7,7 +7,7 @@ body {
   padding: 0;
   background-color: var(--background-color);
   color: var(--font-color);
-  font-family: "Helvetica Neue", Helvetica, sans-serif; /*matching Bootstrap default fonts*/
+  font-family: "Helvetica Neue", Helvetica, arial, sans-serif; /*matching Bootstrap default fonts*/
   font-size: 75%;
   scroll-behavior: smooth;
   -ms-overflow-style: none;

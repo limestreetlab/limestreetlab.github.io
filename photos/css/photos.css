@@ -148,7 +148,7 @@ body {
 #page-top-content h1 {
   font-size: 3rem;
   text-shadow: 1px 1px 0px lightgrey;
-  animation: page-top-content 4s ease forwards;
+  animation: page-top-content 3s ease forwards;
 }
 @keyframes page-top-content {
   0% {color: var(--background-color);}

@@ -38,41 +38,14 @@ body {
   white-space: nowrap;
 }
 
-#page-top-content::before {
-  z-index: 2;
-  color: var(--font-color);
-  font-family: 'Qwigley', 'Herr Von Muellerhoff'; /*using handwriting fonts, allowed in this notes page only*/
-  font-size: calc(6em + 2vh);
-  animation-name: page-top-content;
-  animation-duration: 30s;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-timing-function: cubic-bezier(0.15, 0.9, 0.2, 1);
-  content: "";
-  --word1: "S";
-  --word2: "St";
-  --word3: "Stu";
-  --word4: "Stud";
-  --word5: "Study";
-  --word6: "Study N";
-  --word7: "Study No";
-  --word8: "Study Not";
-  --word9: "Study Note";
-  --word10: "Study Notes";
+#page-top-content h1 {
+  font-size: 3rem;
+  text-shadow: 1px 1px 0px lightgrey;
+  animation: page-top-content 3s ease forwards;
 }
 @keyframes page-top-content {
-  0% {content: "";}
-  1% {content: var(--word1);}
-  2% {content: var(--word2);}
-  3% {content: var(--word3);}
-  4% {content: var(--word4);}
-  5% {content: var(--word5);}
-  6% {content: var(--word6);}
-  7% {content: var(--word7);}
-  8% {content: var(--word8);}
-  9% {content: var(--word9);}
-  10% {content: var(--word10);}
-  100% {content: var(--word10);}
+  0% {color: var(--background-color);}
+  100% {color: var(--font-color);}
 }
 
 /*container for notebooks*/
@@ -114,7 +87,7 @@ a {
 }
 
 .notebook p {
-    font-family: 'Nothing You Could Do', cursive;
+    font-family: 'Nothing You Could Do', cursive; /*a handwriting font*/
     font-size: 200%;
     font-weight: bold;
     position: relative;
