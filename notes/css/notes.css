@@ -87,7 +87,7 @@ a {
 }
 
 .notebook p {
-    font-family: 'Nothing You Could Do', cursive; /*a handwriting font*/
+    font-family: 'Nothing You Could Do', cursive; /*a handwriting font, only used here for notes*/
     font-size: 200%;
     font-weight: bold;
     position: relative;
