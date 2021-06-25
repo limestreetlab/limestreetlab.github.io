@@ -134,11 +134,11 @@ using: manually written html/css
         <span class="green">today</span>.<span class="purple">code</span>(<span class="green">projects</span>.pop());
         <span class="green">marketOpen</span> <span class="red">?</span> <span class="green">today</span>.<span class="purple">trade</span>() <span class="red">:</span> <span class="green">today</span>.<span class="purple">code</span>(<span class="green">projects</span>.pop());
         <span class="red">try</span> {
-          <span class="blue">Person</span> <span class="green">mate</span> = Math.<span class="purple">random</span>()>0.5 <span class="red">?</span> <span class="green">yourMom</span> <span class="red">:</span> <span class="green">myWife</span>;
+          <span class="blue">Person</span> <span class="green">mate</span> = Math.<span class="purple">random</span>() > 0.5 <span class="red">?</span> <span class="green">yourMom</span> <span class="red">:</span> <span class="green">myWife</span>;
           <span class="green">today</span>.<span class="purple">fuck</span>(<span class="green">mate</span>);
         }
         <span class="red">catch</span> (<span class="blue">Exception</span> <span class="green">ex</span>) {
-          <span class="green">logger</span>.<span class="purple">error</span>("oops", <span class="green">ex</span>);
+          <span class="green">logger</span>.<span class="purple">log</span>(<span class="blue">Level.INFO</span>, "shit happened", <span class="green">ex</span>);
         }
         <span class="red">finally</span> {
           <span class="green">today</span>.<span class="purple">shower</span>();
