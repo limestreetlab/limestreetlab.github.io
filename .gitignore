@@ -1,2 +1,3 @@
-#ignore bootstrap folder
+
+#ignore bootstrap folder containing source files
 assets/bootstrap/
