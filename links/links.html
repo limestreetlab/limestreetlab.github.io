@@ -11,21 +11,31 @@ using: manually written html/css
         <title>
             Dean Street :: Links
         </title>
-
-        <base target="_blank"> <!--for links opening in a new tab-->
+        
+        <!--meta for google-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Dean Street, Statistics&#8745;Technology">
+        <meta name="keywords" content="Dean Street Lab, Dean Street">
+        <meta name="author" content="Dean Street">
+        <meta name="robots" content="max-snippet:35, index, follow">
+        
+        <!--JQuery and Bootstrap-->
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css" type="text/css"><!--Bootstrap CSS-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--jquery-->
+        <script src="../assets/js/bootstrap.min.js"></script><!--Bootstrap JS-->
 
         <!--styling, internal files-->
         <link rel="stylesheet" href="css/links.css" type="text/css">
        
-        <!--external scripts-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--jquery-->
-        
         <!--icons-->
         <link rel="icon" type="image/png" href="../assets/images/d-favicon.png">
         <link rel="apple-touch-icon" href="../assets/images/d-apple-touch-icon.png">
         
         <!--script to load navigation menu into #nav-menu-container-->
         <script src="../assets/js/navbar.js"></script>
+
+        <base target="_blank"> <!--for links opening in a new tab-->
 
         <!--internal javascripts-->
         <script src="js/foldable.js"></script> <!--for showing and hiding folded contents-->

@@ -5,19 +5,27 @@
 @import url("subjectshelf_bg.css");
 @import url("subjectshelf_commonStyling.css");
 @import url("subjectshelf_hoverEffects.css");
-@import url("subjectshelf_main_layout.css");
 @import url("../../assets/css/colors.css");
 @import url("../../assets/css/global_styles.css");
 
 #bookshelf {
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .nav-tabs {
-    margin: 0 25px 0 25px;
+    margin: 0 40px 0 40px;
     font-size: 1.5em;
 }
 
+.nav-tabs > .nav-link.active, .nav-tabs > .nav-link {
+    color: var(--font-color);
+}
+
+/*for small screens*/
+@media (max-width: 576px) {
+    .nav-tabs {margin: 0 10px 0 10px; font-size: 0.8em;}
+    .nav-tabs > .nav-link {margin: 0; padding: 5px;}
+}
 
 /*start of styling for 2nd page (statistics)*/
 

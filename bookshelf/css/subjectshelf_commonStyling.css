@@ -54,10 +54,21 @@ a:link, a:visited, a:hover, a:active {
     transform: translateX(-50%); 
     background-color: var(--background-color);
     color: var(--font-color);
-    font-size: 1em; 
+    font-size: 0.9em; 
     text-align: center;
     padding: 0.2em 0.5em 0.2em 0.5em;
     border-radius: 0.2em;    
 }
+
+@media (max-width: 576px) {
+    .subjectname {
+        min-width: none;
+        max-width: none;
+        font-size: 0.5em;
+        left: 0;
+        transform: none;
+        padding: 0;
+    }
+  }
 
 

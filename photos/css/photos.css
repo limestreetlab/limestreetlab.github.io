@@ -8,7 +8,8 @@ body {
 #page-top-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 99vh;
+  margin-top: 1vh;
 }
 
 /*the cover image to display in the showcase container, before any photo load*/
