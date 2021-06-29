@@ -1,6 +1,6 @@
 <!--
 description: home landing page
-date: 16/05/2020
+date: 16/05/2021
 author: Dean Street
 using: manually written html/css 
 -->
@@ -16,16 +16,22 @@ using: manually written html/css
         <base target="_blank"> <!--for links opening in a new tab-->
         
         <!--meta for google-->
-        <meta name="description" content="Dean Street, Technology&#8745;Statistics">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Dean Street, Statistics&#8745;Technology">
         <meta name="keywords" content="Dean Street Lab, Dean Street">
         <meta name="author" content="Dean Street">
         <meta name="robots" content="max-snippet:35, index, follow">
         
+        <!--JQuery and Bootstrap-->
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css" type="text/css"><!--Bootstrap CSS-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--jquery-->
+        <script src="../assets/js/bootstrap.min.js"></script><!--Bootstrap JS-->
+
         <!--styling, internal files-->
         <link rel="stylesheet" href="css/home.css" type="text/css">
         
-        <!--external scripts-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--jquery-->
+        <!--other scripts-->
         <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!--particles animation script and its related call script-->
         <script src="js/particlesJSHelper.js"></script>
 
@@ -44,8 +50,7 @@ using: manually written html/css
 
 
       <!--start, navigation menu--> 
-      <main id="nav-menu-container">
-        
+      <main id="nav-menu-container">        
 
       </main>
       <!--end, navigation menu-->
@@ -61,8 +66,8 @@ using: manually written html/css
 
               <section id="box1">
                   <div>
-                  <h1>STAY <span class="primary-color">FOOLISH</span></h1>
-                  <h1>STAY <span class="primary-color">BAYESIAN</span></h1>
+                    <h1>STAY <span class="primary-color">FOOLISH</span></h1>
+                    <h1>STAY <span class="primary-color">BAYESIAN</span></h1>
                   </div>
               </section>
 
@@ -71,7 +76,8 @@ using: manually written html/css
                   <div id="quote-by"></div>
               </section>
 
-             </div>         
+             </div>
+                  
           </main>
           <!--end of landing page-->
           
@@ -82,50 +88,55 @@ using: manually written html/css
       <main id="about-page">
         <!--each part as a section, in which broken into a hero div and a contents div-->
 
-        <section id="about-title">
-          <h1>Dean Street</h1>
-          <h2>A <span class ="blue">Bayesian</span> Street</h2>
+        <div class="container">
+
+        <section class="row justify-content-center">
+       
+          <div class="col-8 col-md-6 col-lg-4" id="about-title">
+            <h1>Dean Street</h1>
+            <h2>A <span class="primary-color">Random</span> Street</h2>
+          </div>
+
         </section>
 
-
-        <section id="about-basics" class="about">
-          <div class="hero">
+        
+        <div class="row about-row justify-content-center">
+       
+          <div class="d-none d-md-block col-md-6">
             <div id="particles-js"></div>
           </div>
 
-          <div class="contents">
-            <h1>Drunken Walk</h1>
+         <div class="col-10 col-md-6">
+            <h2>Drunken Walk</h2>
             <p>Life is a random walk highly sensitive to initial condition, in which my realised path has largely been sub-optimal. I attended the wrong school, studied the wrong subject, graduated at the wrong time, worked for the wrong companies in the wrong industry. To right the wrong, I decided to deprecate life 1.0 and fork into life 2.0. </p>
             <p>In life 1.0, years were spent reading economics and business subjects, which I find soft, unintellectual, and worthless (ie bullshit). Thenceforth, a career in the old-fashioned relationship-based finance industry only reinforced my perception that the society is full of shit. To downsize the bullshit, a major reset was in order.</p>
             <p>Technology and science are at the centre of life 2.0. Time is spent thinking about ideas and working on things. I am transitioning towards a quant analyst, data scientist, and full-stack programmer.</p>
             <p>My intellectual interests include statistical inference, random processes, econometrics, statistical learning, neural networks, and game theory. </p>
           </div>
-            
-        </section>
 
+        </div>
+        
 
-        <section id="about-bayesian" class="about">
+        <div class="row about-row justify-content-center">
 
-          <div class="contents">
-            <h1> Bayesian Bread and Butter </h1>
+          <div class="col-10 col-md-6">
+            <h2> Bayesian Bread and Butter </h2>
             <p>I think risky inductive reasoning is much more appropriate than objective deductive logic in learning about and navigating a chaotic environment. </p>
-
           </div>
 
-          <div id="bayesian-hero" class="hero">
+          <div class="d-none d-md-block col-md-6">
             <div id="bayesian-hero-bg"></div>
           </div>
-            
-        </section>
+        
+        </div>
 
-        <!--what I do in a typically day-->
-        <section id="about-daily" class="about">
-          <!--hero in this section is a code snippet, formatted using html <pre> to imitate code lines, with common-ide colors added using <span class="color">-->
-          <div id="daily-hero" class="hero"> 
 
-          <pre>
-            
+        <div class="row about-row justify-content-center">
           
+          <div class="d-none d-md-block col-md-6">
+          <div id="daily-hero-highlighter"></div>
+
+          <pre>         
             
       <span class="red">while</span> (<span class="green">alive</span>) {
         <span class="blue">Day</span> <span class="green">today</span> = <span class="red">new</span> Day(); <span class="gray">//everyday is a new instance</span>
@@ -146,88 +157,93 @@ using: manually written html/css
         <span class="green">today</span>.<span class="purple">sleep</span>();
       }               
           </pre>
-              <div id="daily-hero-highlighter"></div>
+              
           </div>
 
 
-          <div class="contents">
+          <div class="col-10 col-md-6">
 
-            <h1>Read, Code, Trade, Repeat.</h1>
+            <h2>Read, Code, Repeat.</h2>
 
-            <p><b>Zermatt</b> is a systematic strategy under research. </p>
-              <div class="strategy"> 
-                <span class="hashtag"> #Technical Analysis </span>
-                <span class="hashtag"> #Directional </span>
-                <span class="hashtag"> #Econometrics </span>
-                <span class="hashtag"> #Statistical Learning</span>
-                <span class="hashtag"> #FX </span>
-                <span class="hashtag"> #Futures </span>
-              </div> 
+            <div class="row">
+            <div class="col-12 strategy-title"><b>Zermatt</b> is a systematic strategy under research.</div>
+                <div class="strategy-items">
+                <span class="hashtag">#Technical Analysis</span>
+                <span class="hashtag">#Directional</span>
+                <span class="hashtag">#Time Series Analysis</span>
+                <span class="hashtag">#Statistical Learning</span>
+                <span class="hashtag">#FX</span>
+                <span class="hashtag">#Futures</span>
+                </div>
+            </div> 
 
-            <p><b>Interlaken</b> is a statistical arbitrage strategy under research. </p>
-              <div class="strategy"> 
-                <span class="hashtag"> #Mean Reversion </span>
-                <span class="hashtag"> #Multivariate Statistics </span>
-                <span class="hashtag"> #Causality </span>
-                <span class="hashtag"> #Stochastic Dependence </span>
-                <span class="hashtag"> #Equities </span>
-                <span class="hashtag"> #ETFs </span>
-              </div> 
+            <div class="row">
+            <div class="col-12 strategy-title"><b>Interlaken</b> is a statistical arbitrage strategy under research.</div>
+                <div class="strategy-items">
+                <span class="hashtag">#Mean Reversion</span>
+                <span class="hashtag">#Multivariate Statistics</span>
+                <span class="hashtag">#Causality</span>
+                <span class="hashtag">#Stochastic Dependence</span>
+                <span class="hashtag">#Equities</span>
+                <span class="hashtag">#ETFs</span>
+                </div>
+            </div> 
 
-              <p><b>Bern</b> is a volatility arbitrage strategy under research. </p>
-              <div class="strategy"> 
-                <span class="hashtag"> #GARCH </span>
-                <span class="hashtag"> #Stochastic Volatility </span>
-                <span class="hashtag"> #Parametric </span>
-                <span class="hashtag"> #Dispersion </span>
-                <span class="hashtag"> #Options </span>
-                <span class="hashtag"> #VIX </span>
-              </div> 
+            <div class="row">
+            <div class="col-12 strategy-title"><b>Bern</b> is a volatility arbitrage strategy under research.</div>
+                <div class="strategy-items">
+                <span class="hashtag">#GARCH</span>
+                <span class="hashtag">#Stochastic Volatility</span>
+                <span class="hashtag">#Relative Volatility</span>
+                <span class="hashtag">#Dispersion</span>
+                <span class="hashtag">#Options</span>
+                <span class="hashtag">#VIX</span>
+                </div>
+            </div> 
             
-          </div>            
-        </section>
+          </div>  
+
+        </div>
 
 
-        <section id="about-language" class="about">
+        <div class="row about-row justify-content-center">
 
-          <div id="" class="contents">
-            <h1>Old, Verbose, Unfunctional</h1>
+          <div class="col-10 col-md-6">
+            <h2>Old, Verbose, Unfunctional</h2>
             <p>As a traditional finance guy without any formal programming training and experience, I self-learn programming from books and VS Code. </p>
             <p>I've adopted <a href="https://docs.oracle.com/en/java/javase/15/">Java</a> as the core language. Despite complaints about Java's legacy baggage and verbosity, I find it an excellent first langauge because it is formal, structured, and strong/statically-typed, as well as more than well-documented. </p>
             <p>My data analysis and computing stack includes <a href="https://www.python.org/">Python</a>, <a href="https://www.gnu.org/software/octave/">Octave</a>, <a href="https://www.r-project.org/">R</a>, and <a href="https://mc-stan.org/">Stan</a>. Database knowledge is mainly relational (<a href="https://www.sqlite.org/">SQLite</a>, <a href="https://www.mysql.com/">MySQL</a>) with a bit of non-relational (<a href="https://www.mongodb.com/2">Mongo</a>, <a href="https://redis.io/">Redis</a>, <a href="https://www.influxdata.com/">Influx</a>). </p>
             
-
           </div>
 
-          <div id="language-hero" class="hero">
+          <div class="d-none d-md-block col-md-6">
             <div id="language-dog"></div> 
           </div>
-          
-        </section>
+        
+        </div>
 
         
-        <section id="about-revolution" class="about">
+        <div class="row about-row justify-content-center">
 
-          <div id="revolution-hero" class="hero">
+          <div class="d-none d-md-block col-md-6">
             <div id="revolution-hero-bg"></div>            
           </div>
 
 
-          <div id="" class="contents">
+          <div class="col-10 col-md-6">
             <h1>Technology is Democracy</h1>
             <p>Fairness and democracy are theoretical ideals in this structurally rigged world. Others have more money, more power, more connections. We are underdogs. We work much harder for much less. They do business on relationship. My data are already relational. They call their connections for favours. My codes call APIs for data. They like networking and handshaking with who's who. My programs are constantly networking and handshaking with MySQL.</p> 
             <p>All I have are a pair of working hands, a functioning brain, and a von Neumann machine. Imagination is innate. Knowledge is unbiased. Technology is empowerment. Data simulate experience. These are my sole weapons to levelling the playing field. </p>
           </div>        
             
-        </section>   
+        </div>
 
 
 
-
-
+      </div>
+      <!--end of container-->
       </main>
       <!--end of about page-->
-
       </main>
       <!--end of main page contents-->
 
