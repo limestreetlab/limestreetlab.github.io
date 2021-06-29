@@ -1,7 +1,7 @@
 <!--
 description:the landing page for books, where all subject bookshelves are displayed in fullscreen.
             the individual subject bookshelves are stored in their respective folders.
-date: 16/05/2020
+date: 16/05/2021
 author: Dean Street
 using: manually written html/css 
 
@@ -12,69 +12,72 @@ using: manually written html/css
         <title>
             Dean Street :: Bookshelf
         </title>
+
+        <!--meta for google-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Dean Street, Statistics&#8745;Technology">
+        <meta name="keywords" content="Dean Street Lab, Dean Street">
+        <meta name="author" content="Dean Street">
+        <meta name="robots" content="max-snippet:35, index, follow">
         
+        <!--JQuery and Bootstrap-->
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css" type="text/css"><!--Bootstrap CSS-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--jquery-->
+        <script src="../assets/js/bootstrap.min.js"></script><!--Bootstrap JS-->
+
         <!--styling, internal files-->
         <link rel="stylesheet" href="css/subjectshelf_main.css" type="text/css">
-
-        <!--jquery-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        
        
-        <!--script to load navigation menu into #nav-menu-container-->
-        <script src="../assets/js/navbar.js"></script>
-
         <!--icons-->
         <link rel="icon" type="image/png" href="../assets/images/d-favicon.png">
         <link rel="apple-touch-icon" href="../assets/images/d-apple-touch-icon.png">
+        
+        <!--script to load navigation menu into #nav-menu-container-->
+        <script src="../assets/js/navbar.js"></script>
 
     </head>
 
 
     <body ontouchstart="">
 
-        
+      
+
     <!--start, navigation menu--> 
-    <main id="nav-menu-container">  
-    </main>
+        <main id="nav-menu-container"></main>
     <!--end, navigation menu-->
 
-
     <!--start of main page contents-->
-    <main id="container">
+    <main class="container-fluid">
 
+    <section class="row" id="bookshelf">
 
-        <!--start of page 1-->
-        <main class="pages" id="top">
-
-            <div id="top_body">
-                Curiosity is a <strong>Virtue</strong>
-                    <br>
-                Knowledge is <strong>Power</strong>
-                    <br>
-                Intellect is <strong>Wealth</strong>                    
-            </div>
-
-            <footer class="footer">
-                <a href="#statistics"><img src="images/arrow-down-white.png"></a>
-            </footer>
-
-        </main>
+    <section class="col-12 align-self-start">
+                
+        <nav>
+        <div class="nav nav-tabs" role="tablist">
+            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#bookshelf-statistics" type="button" role="tab">Probability & Statistics</button>
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#bookshelf-mathematics" type="button" role="tab">Mathematics</button>
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#bookshelf-computerscience" type="button" role="tab">Computer Science</button>
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#bookshelf-programming" type="button" role="tab">Programming</button>
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#bookshelf-technologies" type="button" role="tab">Technologies</button>
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#bookshelf-finance" type="button" role="tab">Finance</button>
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#bookshelf-economics" type="button" role="tab">Economics</button>
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#bookshelf-games" type="button" role="tab">Games</button>
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#bookshelf-business" type="button" role="tab">Business</button>
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#bookshelf-others" type="button" role="tab">Science & Others</button>
+        </div>
+        </nav>
         
-        <!--end of page 1-->
+        <!--contents for the tabs-->
+        <div class="tab-content" id="nav-tabContent">
 
+        <!--statistics tab-->
+        <div class="tab-pane fade show active" id="bookshelf-statistics" role="tabpanel">
 
-        <!--start of page 2-->
-        <main class="pages" id="statistics">
-                
-                <header class="header">
-                    <a href="#top"><img src="images/arrow-up.png"></a>
-                </header>
-                
-                <div class="shelfname">
-                    Probability & Statistics
-                </div>                    
-                
-                <!--subjectshelf for startistics books, copied and pasted, with file paths adjusted-->
+        <!--start of statistics bookshelf-->
+        <main id="statistics">             
+        
                 <div class="subjectshelf">
 
                     <a href="statistics/probabilitystatisticsbooks.html" class="subject" id="statistics_r1c1"><div class="subjectname"><span>Probability & Statistics</span></div></a>
@@ -108,31 +111,19 @@ using: manually written html/css
                     <a href="statistics/otherstatisticsbooks.html" class="subject" id="statistics_r5c5"><div class="subjectname"><span>Others</span></div></a>
                                 
                 </div>                         
-                <!--end of statistics subjectshelf-->
-
-
-                <footer class="footer">
-                    <a href="#mathematics"><img src="images/arrow-down.png"></a>
-                </footer>
-
-            
+               
         </main>
-        <!--end of page 2-->
-
-
-        <!--start of page 3-->
-        <main class="pages" id="mathematics">
+        <!--end of statistics bookshelf-->      
+        
+        </div>
+               
+        
+        <!--mathematics tab-->        
+        <div class="tab-pane fade" id="bookshelf-mathematics" role="tabpanel">
+        
+        <!--start of mathematics bookshelf-->
+        <main id="mathematics">
                 
-                <header class="header">
-                    <a href="#statistics"><img src="images/arrow-up.png"></a>
-                </header>
-                
-                <div class="shelfname">
-                    Mathematics
-                </div>
-
-                
-                <!--subjectshelf for mathematics books, copied and pasted, with file paths adjusted-->
                 <div class="subjectshelf">
 
                     <a href="mathematics/calculusbooks.html" class="subject" id="mathematics_r1c1"><div class="subjectname"><span>Calculus</span></div></a>
@@ -151,31 +142,19 @@ using: manually written html/css
                     <a href="mathematics/othermathematicsbooks.html" class="subject" id="mathematics_r5c2"><div class="subjectname"><span>Other Mathematics</span></div></a>
                             
                 </div>    
-                <!--end of mathematics subjectshelf-->
-
-
-                <footer class="footer">
-                    <a href="#computerscience"><img src="images/arrow-down.png"></a>
-                </footer>
-
             
         </main>
-        <!--end of page 3-->
+        <!--end of mathematics bookshelf-->
+        
+        </div>
 
 
-        <!--start of page 4-->
-        <main class="pages" id="computerscience">
-                
-                <header class="header">
-                    <a href="#mathematics"><img src="images/arrow-up.png"></a>
-                </header>
-                
-                <div class="shelfname">
-                    Computer Science
-                </div>
-
-                
-                <!--subjectshelf for computer science books, copied and pasted, with file paths adjusted-->
+        <!--computer science tab-->
+        <div class="tab-pane fade" id="bookshelf-computerscience" role="tabpanel">
+        
+        <!--start of computer science bookshelf-->
+        <main id="computerscience">                
+               
                 <div class="subjectshelf">
             
                     <a href="computer science/algorithmtheorybooks.html" class="subject" id="computerscience_r1c1"><div class="subjectname"><span>Algorithms (Theory)</span></div></a>
@@ -198,31 +177,21 @@ using: manually written html/css
                     <a class="emptysubject" id="computerscience_r5c2"></a>
                     <a class="emptysubject" id="computerscience_r5c3"></a>
 
-                </div>                         
-                <!--end of computer science subjectshelf-->
-
-                <footer class="footer">
-                    <a href="#programming"><img src="images/arrow-down.png"></a>
-                </footer>
-                
+                </div> 
 
         </main>
-        <!--end of page 4-->
-
-
-        <!--start of page 5-->
-        <main class="pages" id="programming">
+        <!--end of computer science bookshelf-->
                 
-                <header class="header">
-                    <a href="#computerscience"><img src="images/arrow-up.png"></a>
-                </header>
-                
-                <div class="shelfname">
-                    Programming Languages
-                </div>
+        </div>
 
-                                
-                <!--subjectshelf for programming books, copied and pasted, with file paths adjusted-->
+
+        <!--programming tab-->
+        <div class="tab-pane fade" id="bookshelf-programming" role="tabpanel">
+        
+        
+        <!--start of programming bookshelf-->
+        <main id="programming">
+                
                 <div class="subjectshelf">
                     
                     <a href="programming/javalanguagebooks.html" class="subject" id="programming_r1c1"><div class="subjectname"><span>Java Language</span></div></a>
@@ -260,33 +229,21 @@ using: manually written html/css
                     <a href="programming/haskellbooks.html" class="subject" id="programming_r5c5"><div class="subjectname"><span>Haskell</span></div></a>
                     <a href="programming/golangbooks.html" class="subject" id="programming_r5c6"><div class="subjectname"><span>Go</span></div></a>
                     
-                     
                 </div>  
-                <!--end of programming subjectshelf-->
-
-
-                <footer class="footer">
-                    <a href="#technology"><img src="images/arrow-down.png"></a>
-                </footer>
-
-            
+                
         </main>
-        <!--end of page 5-->
+        <!--end of programming bookshelf-->
+        
+        </div>
 
 
-        <!--start of page 6-->
-        <main class="pages" id="technology">
+        <!--technology tab-->
+        <div class="tab-pane fade" id="bookshelf-technologies" role="tabpanel">
+        
+            
+        <!--start of technology bookshelf-->
+        <main id="technology">
                 
-                <header class="header">
-                    <a href="#programming"><img src="images/arrow-up.png"></a>
-                </header>
-                
-                <div class="shelfname">
-                    Technology
-                </div>
-                
-                
-                <!--subjectshelf for technology books, copied and pasted, with file paths adjusted-->
                 <div class="subjectshelf">
                     
                     <a href="technology/osbooks.html" class="subject" id="technology_r1c1"><div class="subjectname"><span>OS</span></div></a>
@@ -330,30 +287,20 @@ using: manually written html/css
                     <a href="technology/othercomputerbooks.html" class="subject" id="technology_r5c7"><div class="subjectname"><span>Others</span></div></a>  
                         
                 </div>    
-                <!--end of technology subjectshelf-->
-
-
-                <footer class="footer">
-                    <a href="#finance"><img src="images/arrow-down.png"></a>
-                </footer>
 
         </main>
-        <!--end of page 6-->
+        <!--end of technology bookshelf-->
+        
+        </div>
 
 
-        <!--start of page 7-->
-        <main class="pages" id="finance">
-                
-                <header class="header">
-                    <a href="#technology"><img src="images/arrow-up.png"></a>
-                </header>
-                
-                <div class="shelfname">
-                    Finance
-                </div>
 
+        <!--finance tab-->
+        <div class="tab-pane fade" id="bookshelf-finance" role="tabpanel">
+        
+        <!--start of finance bookshelf-->
+        <main id="finance">
                 
-                <!--subjectshelf for finance books, copied and pasted, with file paths adjusted-->
                 <div class="subjectshelf">
 
                     <a href="finance/generalfinancebooks.html" class="subject" id="finance_r1c1"><div class="subjectname"><span>General Finance</span></div></a>
@@ -392,31 +339,18 @@ using: manually written html/css
                     <a href="finance/financebackofficebooks.html" class="subject" id="finance_r5c6"><div class="subjectname"><span>Backoffice</span></div></a>
                             
                 </div>    
-                <!--end of finance subjectshelf-->
 
-                
-                <footer class="footer">
-                    <a href="#economics"><img src="images/arrow-down.png"></a>
-                </footer>
-
-            
         </main>
-        <!--end of page 7-->
+        <!--end of finance bookshelf-->
+        
+        </div>
 
-
-        <!--start of page 8-->
-        <main class="pages" id="economics">
+        <!--economics tab-->
+        <div class="tab-pane fade" id="bookshelf-economics" role="tabpanel">
+        
+        <!--start of economics bookshelf-->
+        <main id="economics">
                 
-                <header class="header">
-                    <a href="#finance"><img src="images/arrow-up.png"></a>
-                </header>
-                
-                <div class="shelfname">
-                    Economics
-                </div>
-
-                
-                <!--subjectshelf for economics books, copied and pasted, with file paths adjusted-->
                 <div class="subjectshelf">
 
                     <a href="economics/economicsbooks.html" class="subject" id="economics_r1c1"><div class="subjectname"><span>Economics</span></div></a>
@@ -439,33 +373,51 @@ using: manually written html/css
                     <a href="economics/foreignexchangeeconomicsbooks.html" class="subject" id="economics_r5c2"><div class="subjectname"><span>Currency Economics</span></div></a>
                     <a class="emptysubject" id="economics_r5c3"></a>
                 
+                </div>    
+
+        </main>
+        <!--end of economics bookshelf-->
+        
+        </div>
+
+
+        <!--games tab-->
+        <div class="tab-pane fade" id="bookshelf-games" role="tabpanel">
+        
+        <!--start of games bookshelf-->
+        <main id="games">
+                
+                <div class="subjectshelf">
+        
+                    <a href="games/gamblebooks.html" class="subject subject_gamble" id="games_r1c1"><div class="subjectname"><span>Gambling</span></div></a>
+                    <a class="emptysubject emptysubject_gamble" id="games_r1c2"></a>
+
+                    <a href="games/gametheorybooks.html" class="subject subject_gametheory" id="games_r2c1"><div class="subjectname"><span>Game Theory</span></div></a>
+                    <a class="emptysubject emptysubject_gametheory" id="games_r2c2"></a>
+                
+                    <a href="games/pokerbooks.html" class="subject" id="games_r3c1"><div class="subjectname"><span>Poker</span></div></a>
+                    <a href="games/blackjackbooks.html" class="subject" id="games_r3c2"><div class="subjectname"><span>Blackjack</span></div></a>
+                
+                    <a href="games/sportsbetbooks.html" class="subject" id="games_r4c1"><div class="subjectname"><span>Sports Betting</span></div></a>
+                    <a href="games/horseracebooks.html" class="subject" id="games_r4c2"><div class="subjectname"><span>Horse Racing</span></div></a>
+                
+                    <a class="emptysubject" id="games_r5c1"></a>
+                    <a class="emptysubject" id="games_r5c2"></a>
                         
                 </div>    
-                <!--end of economics subjectshelf-->
 
-                
-                <footer class="footer">
-                    <a href="#business"><img src="images/arrow-down.png"></a>
-                </footer>
-
-            
         </main>
-        <!--end of page 8-->
+        <!--end of games bookshelf-->
+        
+        </div>
 
-
-        <!--start of page 9-->
-        <main class="pages" id="business">
+        <!--business tab-->
+        <div class="tab-pane fade" id="bookshelf-business" role="tabpanel">
+        
+        
+        <!--start of business bookshelf-->
+        <main id="business">
                 
-                <header class="header">
-                    <a href="#economics"><img src="images/arrow-up.png"></a>
-                </header>
-                
-                <div class="shelfname">
-                    Business
-                </div>
-
-                
-                <!--subjectshelf for business books, copied and pasted, with file paths adjusted-->
                 <div class="subjectshelf">
 
                     <a href="business/businessbooks.html" class="subject" id="business_r1c1"><div class="subjectname"><span>Business</span></div></a>
@@ -494,72 +446,20 @@ using: manually written html/css
                     <a href="business/transportsectorbooks.html.html" class="subject" id="business_r5c4"><div class="subjectname"><span>Transport</span></div></a>
             
                 </div>    
-                <!--end of business subjectshelf-->
 
-
-                <footer class="footer">
-                    <a href="#games"><img src="images/arrow-down.png"></a>
-                </footer>
-
-            
         </main>
-        <!--end of page 9-->
+        <!--end of business bookshelf-->
+
+        </div>
 
 
-        <!--start of page 10-->
-        <main class="pages" id="games">
-                
-                <header class="header">
-                    <a href="#business"><img src="images/arrow-up.png"></a>
-                </header>
-                
-                <div class="shelfname">
-                    Games
-                </div>
-
-                
-                <!--subjectshelf for games books, copied and pasted, with file paths adjusted-->
-                <div class="subjectshelf">
+        <!--others tab-->
+        <div class="tab-pane fade" id="bookshelf-others" role="tabpanel">
         
-                    <a href="games/gamblebooks.html" class="subject subject_gamble" id="games_r1c1"><div class="subjectname"><span>Gambling</span></div></a>
-                    <a class="emptysubject emptysubject_gamble" id="games_r1c2"></a>
-
-                    <a href="games/gametheorybooks.html" class="subject subject_gametheory" id="games_r2c1"><div class="subjectname"><span>Game Theory</span></div></a>
-                    <a class="emptysubject emptysubject_gametheory" id="games_r2c2"></a>
-                
-                    <a href="games/pokerbooks.html" class="subject" id="games_r3c1"><div class="subjectname"><span>Poker</span></div></a>
-                    <a href="games/blackjackbooks.html" class="subject" id="games_r3c2"><div class="subjectname"><span>Blackjack</span></div></a>
-                
-                    <a href="games/sportsbetbooks.html" class="subject" id="games_r4c1"><div class="subjectname"><span>Sports Betting</span></div></a>
-                    <a href="games/horseracebooks.html" class="subject" id="games_r4c2"><div class="subjectname"><span>Horse Racing</span></div></a>
-                
-                    <a class="emptysubject" id="games_r5c1"></a>
-                    <a class="emptysubject" id="games_r5c2"></a>
-                        
-                </div>    
-                <!--end of games subjectshelf-->
-
-                <footer class="footer">
-                    <a href="#science_others"><img src="images/arrow-down.png"></a>
-                </footer>
-
             
-        </main>
-        <!--end of page 10-->
-
-            <!--start of page 11-->
-            <main class="pages" id="science_others">
+            <!--start of others bookshelf-->
+            <main id="science_others">
                 
-                <header class="header">
-                    <a href="#games"><img src="images/arrow-up.png"></a>
-                </header>
-                
-                <div class="shelfname">
-                    Science & Others
-                </div>
-
-                
-                <!--subjectshelf for science books, copied and pasted, with file paths adjusted-->
                 <div class="subjectshelf">
 
                     <a href="science & others/sciencebooks.html" class="subject" id="science_others_r1c1"><div class="subjectname"><span>General Science</span></div></a>
@@ -593,21 +493,22 @@ using: manually written html/css
                     <a href="science & others/otherbooks.html" class="subject" id="science_others_r5c5"><div class="subjectname"><span>Others</span></div></a>   
                         
                 </div>    
-                <!--end of science subjectshelf-->
-
-                <footer class="footer">
-                    
-                </footer>
 
         </main>
-        <!--end of page 11-->
+        <!--end of others bookshelf-->
+        
+        </div>
+
+        <!--close the tab contents-->
+        </div>
+
+    </section>
+    </section><!--close the column and row-->
+   
 
 
 
-
-
-
-    </main><!--end for container main tag-->
+    </main><!--end for container tag-->
 
     </body>
 </html>

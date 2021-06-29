@@ -9,45 +9,17 @@
 @import url("../../assets/css/colors.css");
 @import url("../../assets/css/global_styles.css");
 
-#nav-menu-container { /*landing page bg is dark, whose color overlaps with hamburger lines. So change bg color of the pre-defined containt to light color*/
-    background-color: rgba(var(--background-color-rgb), 0.7);
+#bookshelf {
+    margin-top: 100px;
 }
 
-/*start of styling for top page*/
-#top {
-    background-image: url(../images/bookshelf_top_1000px.jpg); /*default image 1000px wide, list 1x and 2x resolutions below*/
-    background-image: -webkit-image-set(url(../images/bookshelf_top_1000px.jpg) 1x, url(../images/bookshelf_top_1920px.jpg) 2x);
-    background-size: cover;
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    z-index: -1;
+.nav-tabs {
+    margin: 0 25px 0 25px;
+    font-size: 1.5em;
 }
-
-#top_body {
-    margin-top: 20vh;
-    color: var(--background-color);
-    text-align: center;
-    line-height: 1.6;
-    font-size: 5.5em;
-    font-style: normal;
-}
-  
-#top_body strong {
-    background-color: var(--background-color);
-    color: var(--blue-color);
-    padding-top: 0.05em;
-    padding-bottom: 0.05em;
-    padding-left: 0.2em;
-    padding-right: 0.2em;
-}
-
-/*end of styling for top page*/
-
-
 
 
 /*start of styling for 2nd page (statistics)*/
-
 
 /*overriding flex*/
 #statistics .subjectshelf a { 
@@ -60,7 +32,6 @@
 
 
 /*start of styling for 3rd page (mathematics)*/
-
 
 /*overriding flex */
 #mathematics .subjectshelf a { 
