@@ -100,3 +100,10 @@ a {
   font-size: 100%;
 }
 
+/*for mobile screens*/
+@media (max-width: 576px) { 
+  a {
+    flex: 0 0 80%;
+  } 
+}
+

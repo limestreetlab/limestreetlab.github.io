@@ -65,7 +65,7 @@ body {
   cursor: pointer;
   padding: 1.5rem;
   text-align: left;
-  font-size: 1rem;
+  font-size: 1.4em;
   font-weight: bold;
   width: 80%;
   background-color: var(--background-color);
@@ -99,7 +99,7 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
-  font-size: 1rem;
+  font-size: 1.2em;
 }
 
 .folded-content a {
@@ -108,4 +108,13 @@ body {
 .folded-content a:hover {
   color: var(--blue-color);
   font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  .foldable {
+    font-size: 1em;
+  }
+  .folded-content {
+    font-size: 0.8em;
+  }
 }
