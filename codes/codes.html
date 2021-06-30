@@ -1,0 +1,156 @@
+<!--
+description:the landing page for codes.
+date: 16/10/2021
+author: Dean Street
+using: manually written html/css 
+
+-->
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>
+            Dean Street :: Codes
+        </title>
+        
+        <!--meta for google-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Dean Street, Statistics&#8745;Technology">
+        <meta name="keywords" content="Dean Street Lab, Dean Street">
+        <meta name="author" content="Dean Street">
+        <meta name="robots" content="max-snippet:35, index, follow">
+        
+        <!--JQuery and Bootstrap-->
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css" type="text/css"><!--Bootstrap CSS-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--jquery-->
+        <script src="../assets/js/bootstrap.min.js"></script><!--Bootstrap JS-->
+
+        <!--styling, internal files-->
+        <link rel="stylesheet" href="css/codes.css" type="text/css">
+
+        <!--icons-->
+        <link rel="icon" type="image/png" href="../assets/images/d-favicon.png">
+        <link rel="apple-touch-icon" href="../assets/images/d-apple-touch-icon.png">
+        
+        <!--script to load navigation menu into #nav-menu-container-->
+        <script src="../assets/js/navbar.js"></script>
+
+    </head>
+
+
+    <body ontouchstart="">
+
+        
+    <!--start, navigation menu--> 
+    <main id="nav-menu-container">
+
+    </main>
+    <!--end, navigation menu--> 
+
+
+    <header id="page-top-container">
+
+          <div id="page-top-content">
+            <h1>Codes</h1>            
+          </div>
+
+    </header>
+         
+
+    <main id="codebase-container">
+
+      <main class="row justify-content-start">
+
+        <section class="col-12 col-sm-6 col-lg-4">
+
+          <div class="card">
+            <div class="card-body">
+            <div class="row">
+            <div class="col-8">
+              <h6 class="card-title">IB Data Downloader</h6>
+            </div>
+            <div class="col-4">
+              <div class="java"></div>
+            </div>
+            </div><!--close row-->
+              <p class="card-text">Download historical equity price data from Interactive Brokers.</p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#code-ib-data-downloader">More</button>
+            
+            <!--modal contents below-->
+            <div class="modal fade" id="code-ib-data-downloader">
+              <div class="modal-dialog">
+                
+                <div class="modal-content">
+                  
+                  <div class="modal-header">
+                    <h5 class="modal-title">Doggy Title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  
+                  <div class="modal-body">
+                    Labrador retrievers are awesome because they are angels.<br>
+                    Everyone should have a labrador and anyone who ever hurts a dog should be burned alive.
+                   
+                  </div>
+                  
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Download</button>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <!--end of modal-->            
+            
+            </div><!--close card-body-->
+          </div><!--close card-->
+
+        </section>
+
+        <section class="col-12 col-sm-6 col-lg-4">
+
+          <div class="card">
+            <div class="card-body">
+            <div class="row">
+            <div class="col-8">
+              <h6 class="card-title">ChaChaChat</h6>
+            </div>
+            <div class="col-4">
+              <div class="php"></div>
+            </div>
+            </div>
+              <p class="card-text">A simple web chat app.</p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#">More</button>
+            </div>
+          </div>
+        </section>
+
+       <section class="col-12 col-sm-6 col-lg-4">
+
+          <div class="card">
+            <div class="card-body">
+            <div class="row">
+            <div class="col-8">
+              <h6 class="card-title">Tiger Notes</h6>
+            </div>
+            <div class="col-4">
+              <div class="android"></div>
+            </div>
+            </div>
+              <p class="card-text">A simple app for storing reminder notes.</p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#">More</button>
+            </div>
+          </div>
+        </section>
+
+
+      </main>            
+
+    </main> 
+
+
+
+    </body>
+</html>
+

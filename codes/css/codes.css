@@ -1,0 +1,114 @@
+@import url("../../assets/css/colors.css");
+@import url("../../assets/css/global_styles.css");
+
+
+#page-top-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1vh;
+}
+
+#page-top-content {
+  width: 30%;
+}
+
+#page-top-content h1 {
+  font-size: 3rem;
+  text-shadow: 1px 1px 0px lightgrey;
+  animation: page-top-content 3s ease forwards;
+}
+@keyframes page-top-content {
+  0% {color: var(--background-color);}
+  100% {color: var(--font-color);}
+}
+
+#codebase-container {
+  margin: 50px 30px 0 30px;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.card-text {
+  height: 80px;
+}
+
+.modal-body {
+  min-height: 60vh;
+  width: auto;
+  overflow-y: scroll;
+}
+
+.modal-body img {
+  border: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.java {
+  width: auto;
+  height: 80%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../images/java.png);
+}
+.python {
+  width: auto;
+  height: 80%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../images/python.png);
+}
+.r {
+  width: auto;
+  height: 80%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../images/r.png);
+}
+.octave {
+  width: auto;
+  height: 80%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../images/octave.png);
+}
+.php {
+  width: auto;
+  height: 80%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../images/php.png);
+}
+.javascript {
+  width: auto;
+  height: 80%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../images/js.png);
+}
+.html {
+  width: auto;
+  height: 80%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../images/html.png);
+}
+.excel {
+  width: auto;
+  height: 80%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../images/excel.png);
+}
+.android {
+  width: auto;
+  height: 80%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../images/android.png);
+}
