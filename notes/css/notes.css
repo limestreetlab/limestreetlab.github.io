@@ -65,7 +65,7 @@ body {
 }
 
 /*a links are the flex items, directly below notebook containers (flexbox)*/
-a { 
+#notebooks-container a { 
   flex: 0 0 28%;
   margin: 20px 20px 10px 20px;
 }
@@ -102,7 +102,7 @@ a {
 
 /*for mobile screens*/
 @media (max-width: 576px) { 
-  a {
+  #notebooks-container a {
     flex: 0 0 80%;
   } 
 }
