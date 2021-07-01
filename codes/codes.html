@@ -61,6 +61,7 @@ using: manually written html/css
 
       <main class="row justify-content-start">
 
+        <!--start of a codebase-->
         <section class="col-12 col-sm-6 col-lg-4">
 
           <div class="card">
@@ -74,11 +75,11 @@ using: manually written html/css
             </div>
             </div><!--close row-->
               <p class="card-text">Download historical equity price data from Interactive Brokers.</p>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#code-ib-data-downloader">More</button>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#code-ib-data-downloader">&LongRightArrow;</button>
             
             <!--modal contents below-->
             <div class="modal fade" id="code-ib-data-downloader">
-              <div class="modal-dialog">
+              <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered"><!--specify modal size, scrollable content, vertically centered position-->
                 
                 <div class="modal-content">
                   
@@ -95,7 +96,7 @@ using: manually written html/css
                   
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Download</button>
+                    <button type="button" class="btn btn-primary">Source</button>
                   </div>
                   
                 </div>
@@ -107,7 +108,62 @@ using: manually written html/css
           </div><!--close card-->
 
         </section>
+        <!--end of a codebase-->
 
+        
+        <!--start of a codebase-->
+        <section class="col-12 col-sm-6 col-lg-4">
+
+          <div class="card">
+            <div class="card-body">
+            <div class="row">
+            <div class="col-8">
+              <h6 class="card-title">PDF Paper Title Parser</h6>
+            </div>
+            <div class="col-4">
+              <div class="python"></div>
+            </div>
+            </div><!--close row-->
+              <p class="card-text">Using <i>pdfminer</i>, it [attempts to] to return a PDF paper's title.</p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#pdf-paper-parser">&LongRightArrow;</button>
+            
+            <!--modal contents below-->
+            <div class="modal fade" id="pdf-paper-parser">
+              <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered"><!--specify modal size, scrollable content, vertically centered position-->
+                
+                <div class="modal-content">
+                  
+                  <div class="modal-header">
+                    <h5 class="modal-title">PDF Paper Title Parser</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  
+                  <div class="modal-body">
+                    While a paper's title and author are obvious to the human eyes, it is difficult to parse given the pdf file format and layout variety, without using some sort of NPL.<br>
+                    This parser is straight-forward and dumb in that it simply assumes the title must exist in the first page and has the largest font size. <br>
+                    It utilizes <i>pdfminer</i> functions to read the pdf file and tokenize the texts.<br>
+                    Parsing of author and date will be gradually added. 
+                   
+                  </div>
+                  
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Source</button>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <!--end of modal-->            
+            
+            </div><!--close card-body-->
+          </div><!--close card-->
+
+        </section>
+        <!--end of a codebase-->
+
+        
+        <!--start of a codebase-->
         <section class="col-12 col-sm-6 col-lg-4">
 
           <div class="card">
@@ -119,14 +175,96 @@ using: manually written html/css
             <div class="col-4">
               <div class="php"></div>
             </div>
+            </div><!--close row-->
+              <p class="card-text">A simple old-style 2-person web chat app.</p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#">&LongRightArrow;</button>
+            
+            <!--modal contents below-->
+            <div class="modal fade" id="">
+              <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered"><!--specify modal size, scrollable content, vertically centered position-->
+                
+                <div class="modal-content">
+                  
+                  <div class="modal-header">
+                    <h5 class="modal-title">Doggy Title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  
+                  <div class="modal-body">
+                    Labrador retrievers are awesome because they are angels.<br>
+                    Everyone should have a labrador and anyone who ever hurts a dog should be burned alive.
+                   
+                  </div>
+                  
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Source</button>
+                  </div>
+                  
+                </div>
+              </div>
             </div>
-              <p class="card-text">A simple web chat app.</p>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#">More</button>
-            </div>
-          </div>
-        </section>
+            <!--end of modal-->            
+            
+            </div><!--close card-body-->
+          </div><!--close card-->
 
-       <section class="col-12 col-sm-6 col-lg-4">
+        </section>
+        <!--end of a codebase-->
+
+        
+        <!--start of a codebase-->
+        <section class="col-12 col-sm-6 col-lg-4">
+
+          <div class="card">
+            <div class="card-body">
+            <div class="row">
+            <div class="col-8">
+              <h6 class="card-title">Poutine</h6>
+            </div>
+            <div class="col-4">
+              <div class="php"></div>
+            </div>
+            </div><!--close row-->
+              <p class="card-text">A basic web-based social network prototype.</p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#">&LongRightArrow;</button>
+            
+            <!--modal contents below-->
+            <div class="modal fade" id="">
+              <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered"><!--specify modal size, scrollable content, vertically centered position-->
+                
+                <div class="modal-content">
+                  
+                  <div class="modal-header">
+                    <h5 class="modal-title">Doggy Title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  
+                  <div class="modal-body">
+                    Labrador retrievers are awesome because they are angels.<br>
+                    Everyone should have a labrador and anyone who ever hurts a dog should be burned alive.
+                   
+                  </div>
+                  
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Source</button>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <!--end of modal-->            
+            
+            </div><!--close card-body-->
+          </div><!--close card-->
+
+        </section>
+        <!--end of a codebase-->
+
+        
+        <!--start of a codebase-->
+        <section class="col-12 col-sm-6 col-lg-4">
 
           <div class="card">
             <div class="card-body">
@@ -137,14 +275,148 @@ using: manually written html/css
             <div class="col-4">
               <div class="android"></div>
             </div>
+            </div><!--close row-->
+              <p class="card-text">A basic text-based reminder and note app.</p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#">&LongRightArrow;</button>
+            
+            <!--modal contents below-->
+            <div class="modal fade" id="">
+              <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered"><!--specify modal size, scrollable content, vertically centered position-->
+                
+                <div class="modal-content">
+                  
+                  <div class="modal-header">
+                    <h5 class="modal-title">Doggy Title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  
+                  <div class="modal-body">
+                    Labrador retrievers are awesome because they are angels.<br>
+                    Everyone should have a labrador and anyone who ever hurts a dog should be burned alive.
+                   
+                  </div>
+                  
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Source</button>
+                  </div>
+                  
+                </div>
+              </div>
             </div>
-              <p class="card-text">A simple app for storing reminder notes.</p>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#">More</button>
-            </div>
-          </div>
+            <!--end of modal-->            
+            
+            </div><!--close card-body-->
+          </div><!--close card-->
+
         </section>
+        <!--end of a codebase-->
+
+        
+        <!--start of a codebase-->
+        <section class="col-12 col-sm-6 col-lg-4">
+
+          <div class="card">
+            <div class="card-body">
+            <div class="row">
+            <div class="col-8">
+              <h6 class="card-title">Statistical Tests</h6>
+            </div>
+            <div class="col-4">
+              <div class="octave"></div>
+            </div>
+            </div><!--close row-->
+              <p class="card-text">Using the <i>statistics package</i>, some basic scripts that output statistical test conclusions. </p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#">&LongRightArrow;</button>
+            
+            <!--modal contents below-->
+            <div class="modal fade" id="">
+              <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered"><!--specify modal size, scrollable content, vertically centered position-->
+                
+                <div class="modal-content">
+                  
+                  <div class="modal-header">
+                    <h5 class="modal-title">Doggy Title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  
+                  <div class="modal-body">
+                    Labrador retrievers are awesome because they are angels.<br>
+                    Everyone should have a labrador and anyone who ever hurts a dog should be burned alive.
+                   
+                  </div>
+                  
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Source</button>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <!--end of modal-->            
+            
+            </div><!--close card-body-->
+          </div><!--close card-->
+
+        </section>
+        <!--end of a codebase-->
+
+        
+        <!--start of a codebase-->
+        <section class="col-12 col-sm-6 col-lg-4">
+
+          <div class="card">
+            <div class="card-body">
+            <div class="row">
+            <div class="col-8">
+              <h6 class="card-title">MS Excel Utility</h6>
+            </div>
+            <div class="col-4">
+              <div class="excel"></div>
+            </div>
+            </div><!--close row-->
+              <p class="card-text">MS Excel macro add-in for spreadsheet utilities, such as distinct cell counting and hardcoded cells colouring. </p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#">&LongRightArrow;</button>
+            
+            <!--modal contents below-->
+            <div class="modal fade" id="">
+              <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered"><!--specify modal size, scrollable content, vertically centered position-->
+                
+                <div class="modal-content">
+                  
+                  <div class="modal-header">
+                    <h5 class="modal-title">Doggy Title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  
+                  <div class="modal-body">
+                    Labrador retrievers are awesome because they are angels.<br>
+                    Everyone should have a labrador and anyone who ever hurts a dog should be burned alive.
+                   
+                  </div>
+                  
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Source</button>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <!--end of modal-->            
+            
+            </div><!--close card-body-->
+          </div><!--close card-->
+
+        </section>
+        <!--end of a codebase-->
 
 
+
+
+
+      <!--end of page-->
       </main>            
 
     </main> 
