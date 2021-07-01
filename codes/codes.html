@@ -142,8 +142,10 @@ using: manually written html/css
                     While a paper's title and author are obvious to the human eyes, it is difficult to parse given the pdf file format and layout variety, without using some sort of NPL.<br><br>
                     This parser is straight-forward and dumb in that it simply assumes the title exists in the first page and has the largest font size. <br>
                     It utilizes <i>pdfminer</i> functions to read the pdf file and tokenize the texts.<br>
-                    Apparently, if the title doesn't have the largest font size or other metadata also have the same size, then the parse will fail.<br><br>
-                    Parsing of author and date will be gradually added. 
+                    Apparently, if the title doesn't have the largest font size or other metadata also have the same size, then the parse will fail.<br>
+                    Also, parsing can fail due to pdf file permission settings.<br><br>
+                    
+                    <br><img src="readme/titleParser.png">
                    
                   </div>
                   

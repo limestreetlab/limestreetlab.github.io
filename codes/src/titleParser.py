@@ -20,13 +20,13 @@ def getTitle(filepath):
     texts = data[0]
     fonts = data[1]
 
-    if len(texts) == 0: #in case no text is read, either the pdf text is not readable or first page is blank
-        title = "Unknown"
+    if len(texts) == 0: #in case no text is read, either the texts are not readable or first page is blank
+        title = "unknown title"
     else:
         maxFontPos = extractTitlePos(fonts)
         uncleanedTitle = extractTitle(texts, maxFontPos)
         title = cleanTitle(uncleanedTitle)
-  
+    
     return title
 
 
@@ -42,10 +42,10 @@ def extractFirstPageElements(filepath):
                     for character in text_line:
                         if isinstance(character, LTChar):
                             font_size = character.size
-                            break
+                            break #first character only, assuming others in text_line have the same size
                 fonts.append(font_size)
                 elements.append(element.get_text())
-        break
+        break #read first page only
     return [elements, fonts]
 
 
@@ -68,11 +68,24 @@ def extractTitle(elements, positions):
 
 
 def cleanTitle(title):
-    """helper method to clean the title by removing \n and :"""
+    """helper method to clean the title by removing \n and illegal filename symbols"""
+    
+    englishArticles = ("A", "An", "The") #to remove if start word of title
+    
     title = title.strip() #remove whitespaces
     title = title.replace("\n", " ") #remove any inline \n
     title = title.replace(":", " -") #replace invalid filename : symbol
     title = title.replace("?", " ") #replace invalid filename ? symbol
+    title = title.replace("*", "") #replace invalid filename * symbol
+    title = title.replace("  ", " ") #remove potential double whitespaces
+    title = title.title() #capitalize every word in the title
+    
+    firstWord = title.split()[0] #first word of title
+    if firstWord in englishArticles:
+        secondWord = title.split()[1] #second word of title
+        secondWordPos = title.index(secondWord)
+        title = title[secondWordPos:] #remove the starting article off title   
+   
     return title
 
 if __name__ == "__main__":
