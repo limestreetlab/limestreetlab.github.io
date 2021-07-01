@@ -36,7 +36,8 @@ body {
     margin-bottom: 30px;
 }
 
-#social-media a {
+#social-media {
+    min-height: 230px; /*height for the entire social media block should relate to the email column*/
     font-size: 2.6em;
     text-align: center;
 }
