@@ -124,11 +124,11 @@ using: manually written html/css
               <div class="python"></div>
             </div>
             </div><!--close row-->
-              <p class="card-text">Using <i>pdfminer</i>, it [attempts to] to return a PDF paper's title.</p>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#pdf-paper-parser">&LongRightArrow;</button>
+              <p class="card-text">Using <i>pdfminer</i>, it retrieves and returns a PDF paper's title.</p>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#pdf-title-parser">&LongRightArrow;</button>
             
             <!--modal contents below-->
-            <div class="modal fade" id="pdf-paper-parser">
+            <div class="modal fade" id="pdf-title-parser">
               <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered"><!--specify modal size, scrollable content, vertically centered position-->
                 
                 <div class="modal-content">
@@ -139,16 +139,17 @@ using: manually written html/css
                   </div>
                   
                   <div class="modal-body">
-                    While a paper's title and author are obvious to the human eyes, it is difficult to parse given the pdf file format and layout variety, without using some sort of NPL.<br>
-                    This parser is straight-forward and dumb in that it simply assumes the title must exist in the first page and has the largest font size. <br>
+                    While a paper's title and author are obvious to the human eyes, it is difficult to parse given the pdf file format and layout variety, without using some sort of NPL.<br><br>
+                    This parser is straight-forward and dumb in that it simply assumes the title exists in the first page and has the largest font size. <br>
                     It utilizes <i>pdfminer</i> functions to read the pdf file and tokenize the texts.<br>
+                    Apparently, if the title doesn't have the largest font size or other metadata also have the same size, then the parse will fail.<br><br>
                     Parsing of author and date will be gradually added. 
                    
                   </div>
                   
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Source</button>
+                    <button type="button" class="btn btn-primary"><a href="src/titleParser.py" download>Source</a></button>
                   </div>
                   
                 </div>
