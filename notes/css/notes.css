@@ -33,11 +33,6 @@ body {
   justify-content: flex-start;
 }
 
-#page-top-content {
-  width: 30%;
-  white-space: nowrap;
-}
-
 #page-top-content h1 {
   font-size: 3rem;
   text-shadow: 1px 1px 0px lightgrey;
