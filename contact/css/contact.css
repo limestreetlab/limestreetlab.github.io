@@ -24,7 +24,7 @@ body {
 #mail-open {
     height: 200px;
     width: 100%;
-    background-image: url("../images/mail-open.svg");
+    background-image: url("../img/mail-open.svg");
     background-repeat: no-repeat;
     background-position: top center;
     background-size: contain;

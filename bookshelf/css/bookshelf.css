@@ -158,22 +158,22 @@
 }
 
 .star0 {
-  content: url("../images/review stars/0star.png");
+  content: url("../img/review stars/0star.png");
 }
 .star1{
-  content: url("../images/review stars/1star.png");
+  content: url("../img/review stars/1star.png");
 }
 .star2{
-  content: url("../images/review stars/2star.png");
+  content: url("../img/review stars/2star.png");
 }
 .star3{
-  content: url("../images/review stars/3star.png");
+  content: url("../img/review stars/3star.png");
 }
 .star4{
-  content: url("../images/review stars/4star.png");
+  content: url("../img/review stars/4star.png");
 }
 .star5{
-  content: url("../images/review stars/5star.png");
+  content: url("../img/review stars/5star.png");
 }
 
 /*each shelf row is defined to carry 6 books*/

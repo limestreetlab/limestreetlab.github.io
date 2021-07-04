@@ -16,7 +16,7 @@ body {
 #showcase-cover {
   width: 100%;
   height: 100%;
-  background-image: url(../images/photos-bg.png);
+  background-image: url(../img/photos-bg.png);
   background-repeat: no-repeat;
   background-position: top 20% center;
   background-size: 75% auto;
@@ -111,7 +111,7 @@ body {
   left: 0;
   width: 400%;
   height: 8px;
-  background: url(../images/rope.jpg);
+  background: url(../img/rope.jpg);
   z-index: 3;
 }
 
@@ -121,7 +121,7 @@ body {
   content: "";
   width: 20px;
   height: 80px;
-  background: url(../images/clip.jpg);
+  background: url(../img/clip.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;

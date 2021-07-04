@@ -59,61 +59,61 @@
   height: 80%;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url(../images/java.png);
+  background-image: url(../img/java.png);
 }
 .python {
   width: auto;
   height: 80%;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url(../images/python.png);
+  background-image: url(../img/python.png);
 }
 .r {
   width: auto;
   height: 80%;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url(../images/r.png);
+  background-image: url(../img/r.png);
 }
 .octave {
   width: auto;
   height: 80%;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url(../images/octave.png);
+  background-image: url(../img/octave.png);
 }
 .php {
   width: auto;
   height: 80%;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url(../images/php.png);
+  background-image: url(../img/php.png);
 }
 .javascript {
   width: auto;
   height: 80%;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url(../images/js.png);
+  background-image: url(../img/js.png);
 }
 .html {
   width: auto;
   height: 80%;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url(../images/html.png);
+  background-image: url(../img/html.png);
 }
 .excel {
   width: auto;
   height: 80%;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url(../images/excel.png);
+  background-image: url(../img/excel.png);
 }
 .android {
   width: auto;
   height: 80%;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url(../images/android.png);
+  background-image: url(../img/android.png);
 }

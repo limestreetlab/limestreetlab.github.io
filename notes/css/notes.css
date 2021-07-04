@@ -75,10 +75,10 @@ body {
     background-size: contain;
 }
 .notebook_blank { /*notebook image, lined note or blank note*/
-  background-image: url(../images/notepad_blank.png);
+  background-image: url(../img/notepad_blank.png);
 }
 .notebook_lined {
-  background-image: url(../images/notepad_lined.png);
+  background-image: url(../img/notepad_lined.png);
 }
 
 .notebook p {

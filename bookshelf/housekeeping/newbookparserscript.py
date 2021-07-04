@@ -14,7 +14,7 @@ def getLeftIndent(thisline):
 
 titles = [] #list variables to store data read from csvfile
 links = []
-images = []
+img = []
 authors =[]
 
 for row in csvreader: #reading the csv file and storing info into list variables
@@ -23,7 +23,7 @@ for row in csvreader: #reading the csv file and storing info into list variables
     try:
         titles.append(row[0])
         links.append(row[1])
-        images.append(row[2])
+        img.append(row[2])
         authors.append(row[3])
     except:
         print("Error occured in processing: ")
@@ -41,7 +41,7 @@ while (not "</html>" in line): #until EOF signaled by </html>
     if ("--book image--" in line):
         ibook = ibook + 1 #working on a new book, increment the counter
         writefile.write(line)
-        writefile.write(getLeftIndent(line) + images[ibook])
+        writefile.write(getLeftIndent(line) + img[ibook])
     elif ("--book title--" in line):
         writefile.write(line)
         writefile.write(getLeftIndent(line) +  titles[ibook])

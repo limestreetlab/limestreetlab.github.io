@@ -35,7 +35,7 @@ body {
 /*the underneath background layer*/
 #landing-page::before {
     content: "";
-    background-image: url("../images/hill_portrait.jpg"); /*default to portrait version*/
+    background-image: url("../img/hill_portrait.jpg"); /*default to portrait version*/
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute; 
@@ -46,7 +46,7 @@ body {
     z-index: -1;
 } 
 /*change attributes for landscape viewport*/
-@media (orientation: landscape) {#landing-page::before {background-image: url("../images/hill_landscape.jpg");} }
+@media (orientation: landscape) {#landing-page::before {background-image: url("../img/hill_landscape.jpg");} }
 
 #box {
     width: 100%;
@@ -186,7 +186,7 @@ body {
     position: relative;
     width: 70%;
     height: 70%;
-    background-image: url(../images/bayes-toast.png);
+    background-image: url(../img/bayes-toast.png);
     background-size: contain;
     background-repeat: no-repeat;
     left: 10%;
@@ -242,7 +242,7 @@ body {
     height: 50%;
     top: 20%;
     left: 25%;
-    background-image: url(../images/language-dog.png);
+    background-image: url(../img/language-dog.png);
     background-size: contain;
     background-repeat: no-repeat;
   }
@@ -251,7 +251,7 @@ body {
     content: "";
     width: 100%;
     height: 50%;
-    background-image: url(../images/speech-bubble.png);
+    background-image: url(../img/speech-bubble.png);
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -277,18 +277,18 @@ body {
   }
   @keyframes speech-bubble {
     0% {background-image: none;}
-    20% {background-image: url(../images/julia-logo.png); background-repeat: no-repeat; background-size: contain; background-position: center center;}
-    40% {background-image: url(../images/stan-logo.png); background-repeat: no-repeat; background-size: contain; background-position: center center;}
-    60% {background-image: url(../images/numpy-logo.png); background-repeat: no-repeat; background-size: contain; background-position: center center;}
-    80% {background-image: url(../images/java-logo.png); background-repeat: no-repeat; background-size: contain; background-position: center center;}
-    100% {background-image: url(../images/mysql-logo.png); background-repeat: no-repeat; background-size: contain; background-position: center center;}
+    20% {background-image: url(../img/julia-logo.png); background-repeat: no-repeat; background-size: contain; background-position: center center;}
+    40% {background-image: url(../img/stan-logo.png); background-repeat: no-repeat; background-size: contain; background-position: center center;}
+    60% {background-image: url(../img/numpy-logo.png); background-repeat: no-repeat; background-size: contain; background-position: center center;}
+    80% {background-image: url(../img/java-logo.png); background-repeat: no-repeat; background-size: contain; background-position: center center;}
+    100% {background-image: url(../img/mysql-logo.png); background-repeat: no-repeat; background-size: contain; background-position: center center;}
   }
   
   #revolution-hero-bg {
     position: relative;
     width: 70%;
     height: 70%;
-    background-image: url(../images/revolution.png);
+    background-image: url(../img/revolution.png);
     background-size: contain;
     background-repeat: no-repeat;
     top: 0%;
