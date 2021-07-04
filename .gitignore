@@ -1,3 +1,6 @@
 
 #ignore bootstrap folder containing source files
 assets/bootstrap/
+
+#ignore the papers folder because I deleted all local folders after uploading them to github
+papers/papers/
