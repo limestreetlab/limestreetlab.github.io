@@ -158,7 +158,8 @@ body {
   /*START of ABOUT section hereafter*/
 #about-page {
     scroll-snap-align: start;
-    overflow: auto;
+    scroll-snap-type: y mandatory;
+    overflow: visible;
   }
 
   #about-title h1 {
