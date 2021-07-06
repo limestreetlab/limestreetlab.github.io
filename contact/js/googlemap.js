@@ -1,8 +1,8 @@
 function initMap() {
 
     var myLatLng = {
-        lat: 55.948517, //51.4662 bristol
-        lng: -3.191521 //-2.6200 bristol
+        lat: 51.4662, // 55.948517 edinburgh 51.4662 bristol
+        lng: -2.6200//-3.191521 edinburgh -2.6200 bristol
     };
 
     var map = new google.maps.Map(document.getElementById('map'), {
