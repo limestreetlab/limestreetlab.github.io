@@ -15,7 +15,7 @@ body {
     position: relative;
 }
 
-#landing-page {
+#landing {
     scroll-snap-align: start;
     margin: 0;
     padding: 0;
@@ -32,7 +32,7 @@ body {
 }
 
 /*the underneath background layer*/
-#landing-page::before {
+#landing::before {
     content: "";
     background-image: url("../img/hill_portrait.jpg"); /*default to portrait version*/
     background-repeat: no-repeat;
@@ -45,7 +45,7 @@ body {
     z-index: -1;
 } 
 /*change attributes for landscape viewport*/
-@media (orientation: landscape) {#landing-page::before {background-image: url("../img/hill_landscape.jpg");} }
+@media (orientation: landscape) {#landing::before {background-image: url("../img/hill_landscape.jpg");} }
 
 #box {
     width: 100%;
@@ -155,7 +155,7 @@ body {
 }
 
   /*START of ABOUT section hereafter*/
-#about-page {
+#about {
     scroll-snap-align: start;
   }
 
