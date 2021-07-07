@@ -4,16 +4,17 @@ $(document).ready(function() {
   var platform = navigator.platform.toLowerCase();
   var safari = ["iphone", "ipad", "mac"]; //keyword that should appear in navigator.platform is browser is safari
   
-  var iOS = 0; //a boolean flag
+  //set boolean to check if device is iOS 
+  var iOS = 0;
   for (var i = 0; i < safari.length; i++) {
     if ( platform.includes(safari[i]) ) {
       iOS = 1;
     }
   }
 
+  //disable scroll snapping by setting scroll-snap-type to none if iOS detected
   if (iOS) {
     $("#mainpage-container").css("scroll-snap-type", "none");
-    alert("snap disabled!")
   }
 
 }
