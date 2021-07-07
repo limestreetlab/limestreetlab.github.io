@@ -1,5 +1,6 @@
 //script to detect if broser is Safari, if yes then turn off CSS scroll-snapping
 $(document).ready(function() {
+
   var platform = navigator.platform.toLowerCase();
   var safari = ["iphone", "ipad", "mac"]; //keyword that should appear in navigator.platform is browser is safari
   
@@ -10,8 +11,10 @@ $(document).ready(function() {
     }
   }
 
-  alert(iOS);
-
+  if (iOS) {
+    $("#mainpage-container").css("scroll-snap-type", "none");
+    alert("snap disabled!")
+  }
 
 }
 );
