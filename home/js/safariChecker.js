@@ -3,9 +3,9 @@
 $(document).ready(function() {
 
   var platform = navigator.platform.toLowerCase();
-  var safari = ["iphone", "ipad", "mac"]; //keyword that should appear in navigator.platform is browser is safari
+  var safari = ["iphone", "ipad", "mac"]; //keyword that should show in navigator.platform if browser is safari
   
-  //set boolean to check if device is iOS 
+  //set boolean to check if device is apple 
   var iOS = 0;
   for (var i = 0; i < safari.length; i++) {
     if ( platform.includes(safari[i]) ) {
