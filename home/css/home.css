@@ -159,6 +159,7 @@ body {
     scroll-snap-align: start;
     scroll-snap-stop: normal;
     overflow-y: scroll;
+    height: auto;
   }
 
   #about-title h1 {
