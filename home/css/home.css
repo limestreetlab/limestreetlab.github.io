@@ -170,6 +170,7 @@ body {
 
   .about-row { 
     min-height: 500px;
+    margin-top: 20px;
   }
    
   #particles-js { 
