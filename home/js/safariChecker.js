@@ -1,4 +1,5 @@
-//script to detect if broser is Safari, if yes then turn off CSS scroll-snapping
+//script to detect if broswer is Safari, if yes then turn off CSS scroll-snapping
+//reason is that safari behaves differently on scroll-snapping; when a page height is above 100vh, it keeps snapping back
 $(document).ready(function() {
 
   var platform = navigator.platform.toLowerCase();
