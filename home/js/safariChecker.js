@@ -3,18 +3,18 @@
 $(document).ready(function() {
 
   var platform = navigator.platform.toLowerCase();
-  var safari = ["iphone", "ipad", "mac"]; //keyword that should show in navigator.platform if browser is safari
+  var ios = ["iphone", "ipad", "mac"]; //keyword that should show in navigator.platform if browser is safari
   
   //set boolean to check if device is apple 
-  var iOS = 0;
-  for (var i = 0; i < safari.length; i++) {
-    if ( platform.includes(safari[i]) ) {
-      iOS = 1;
+  var isSafari = 0;
+  for (var i = 0; i < ios.length; i++) {
+    if ( platform.includes(ios[i]) ) {
+      isSafari = 1;
     }
   }
 
   //disable scroll snapping by setting scroll-snap-type to none if iOS detected
-  if (iOS) {
+  if (isSafari) {
     $("#mainpage-container").css("scroll-snap-type", "none");
   }
 
