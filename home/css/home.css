@@ -7,7 +7,7 @@ body {
 }
 
 #mainpage-container {
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     overflow-y: scroll;
@@ -157,9 +157,6 @@ body {
   /*START of ABOUT section hereafter*/
 #about-page {
     scroll-snap-align: start;
-    scroll-snap-stop: normal;
-    overflow-y: scroll;
-    height: auto;
   }
 
   #about-title h1 {
