@@ -109,6 +109,10 @@
     max-width: 100vw;
 }
 
+#nav-menu-content ul {
+    list-style-type: none;
+}
+
 .nav-menu-content-column > li {
     padding: 1em 1em;
     font-size: 2em;

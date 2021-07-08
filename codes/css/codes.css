@@ -20,8 +20,8 @@
   100% {color: var(--font-color);}
 }
 
-#codebase-container {
-  margin: 50px 30px 0 30px;
+.container {
+  margin-top: 50px;
 }
 
 .card {

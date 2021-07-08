@@ -20,10 +20,14 @@ using: manually written html/css
         <meta name="author" content="Dean Street">
         <meta name="robots" content="max-snippet:35, index, follow">
         
-        <!--JQuery and Bootstrap-->
+        <!--JQuery, Bootstrap, Markdown-->
         <link rel="stylesheet" href="../assets/css/bootstrap.min.css" type="text/css"><!--Bootstrap CSS-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--jquery-->
         <script src="../assets/js/bootstrap.min.js"></script><!--Bootstrap JS-->
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script><!--markdown rendered-->
+
+        <!--script to render markdown files in this file-->
+        <script src="js/readmeMarkdownRenderer.js" ></script>
 
         <!--styling, internal files-->
         <link rel="stylesheet" href="css/codes.css" type="text/css">
@@ -56,8 +60,8 @@ using: manually written html/css
 
     </header>
          
-
-    <main id="codebase-container">
+                
+    <main class="container">
 
       <main class="row justify-content-start">
 
@@ -75,24 +79,22 @@ using: manually written html/css
             </div>
             </div><!--close row-->
               <p class="card-text">Download historical equity price data from Interactive Brokers.</p>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#code-ib-data-downloader">&LongRightArrow;</button>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ib-data-downloader">&LongRightArrow;</button>
             
             <!--modal contents below-->
-            <div class="modal fade" id="code-ib-data-downloader">
+            <div class="modal fade" id="ib-data-downloader">
               <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered"><!--specify modal size, scrollable content, vertically centered position-->
                 
                 <div class="modal-content">
                   
                   <div class="modal-header">
-                    <h5 class="modal-title">Doggy Title</h5>
+                    <h5 class="modal-title">IB Data Downloader</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                   </div>
                   
-                  <div class="modal-body">
-                    Labrador retrievers are awesome because they are angels.<br>
-                    Everyone should have a labrador and anyone who ever hurts a dog should be burned alive.
-                   
-                  </div>
+                  <div class="modal-body" id="ib-data-downloader-readme">                  
+                  
+                  </div>           
                   
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -180,28 +182,26 @@ using: manually written html/css
             </div>
             </div><!--close row-->
               <p class="card-text">A simple old-style 2-person web chat app.</p>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#">&LongRightArrow;</button>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#chachachat">&LongRightArrow;</button>
             
             <!--modal contents below-->
-            <div class="modal fade" id="">
+            <div class="modal fade" id="chachachat">
               <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered"><!--specify modal size, scrollable content, vertically centered position-->
                 
                 <div class="modal-content">
                   
                   <div class="modal-header">
-                    <h5 class="modal-title">Doggy Title</h5>
+                    <h5 class="modal-title">ChaChaChat</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                   </div>
                   
-                  <div class="modal-body">
-                    Labrador retrievers are awesome because they are angels.<br>
-                    Everyone should have a labrador and anyone who ever hurts a dog should be burned alive.
-                   
+                  <div class="modal-body" id="chachachat-readme">
+                    
                   </div>
                   
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Source</button>
+                    <button type="button" class="btn btn-primary"><a href="src/chachachat.zip" download>Source</a></button>
                   </div>
                   
                 </div>
@@ -423,9 +423,7 @@ using: manually written html/css
       </main>            
 
     </main> 
-
-
-
+  
     </body>
 </html>
 
