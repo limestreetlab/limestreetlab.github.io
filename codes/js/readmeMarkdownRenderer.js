@@ -11,6 +11,44 @@ $(document).ready(
       $('#chachachat-readme').html(marked(readme)) ;
     }
 
+    $.get('readme/pdf-title-parser.md', pdfTitleParserReadme, "text");
+    function pdfTitleParserReadme(contents) {
+      var readme = $.trim(contents);
+      $('#pdf-title-parser-readme').html(marked(readme)) ;
+    }
+
+    $.get('readme/id-data-downloader.md', ibDataDownloaderReadme, "text");
+    function ibDataDownloaderReadme(contents) {
+      var readme = $.trim(contents);
+      $('#ib-data-downloader-readme').html(marked(readme)) ;
+    }
+
+    $.get('readme/wasabi.md', wasabiReadme, "text");
+    function wasabiReadme(contents) {
+      var readme = $.trim(contents);
+      $('#wasabi-readme').html(marked(readme)) ;
+    }
+
+    $.get('readme/oh-my-notes.md', ohMyNotesReadme, "text");
+    function ohMyNotesReadme(contents) {
+      var readme = $.trim(contents);
+      $('#oh-my-notes-readme').html(marked(readme)) ;
+    }
+
+    $.get('readme/octave-statistical-tests.md', octaveStatisticalTestsReadme, "text");
+    function octaveStatisticalTestsReadme(contents) {
+      var readme = $.trim(contents);
+      $('#octave-statistical-tests-readme').html(marked(readme)) ;
+    }
+
+    $.get('readme/sally-utility.md', sallyUtilityReadme, "text");
+    function sallyUtilityReadme(contents) {
+      var readme = $.trim(contents);
+      $('#sally-utility-readme').html(marked(readme)) ;
+    }
+
+
+
  
     
   });
