@@ -40,6 +40,18 @@ $(document).ready(
       var readme = $.trim(contents);
       $('#octave-statistical-tests-readme').html(marked(readme)) ;
     }
+    
+    $.get('readme/rchartist.md', rchartistReadme, "text");
+    function rchartistReadme(contents) {
+      var readme = $.trim(contents);
+      $('#rchartist-readme').html(marked(readme)) ;
+    }
+    
+    $.get('readme/pychartist.md', pychartistReadme, "text");
+    function pychartistReadme(contents) {
+      var readme = $.trim(contents);
+      $('#pychartist-readme').html(marked(readme)) ;
+    }
 
     $.get('readme/sally-utility.md', sallyUtilityReadme, "text");
     function sallyUtilityReadme(contents) {
