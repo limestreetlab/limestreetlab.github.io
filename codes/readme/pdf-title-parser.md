@@ -1,6 +1,6 @@
  ![screenshot](readme/titleParser.png)
  
- While a paper's title and author are obvious to the human eyes, it is difficult to parse given the pdf file format and layout variety, without using sorting to NPL.
+ While a paper's title and author are obvious to the human eyes, it is difficult to parse given the pdf file format and layout variety, without resorting to NPL.
 
 Nonetheless, this parser is a quick and dumb attempt to parse out the title of a typical research paper.
 
