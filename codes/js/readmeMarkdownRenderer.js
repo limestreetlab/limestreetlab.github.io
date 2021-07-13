@@ -52,6 +52,12 @@ $(document).ready(
       var readme = $.trim(contents);
       $('#sally-utility-readme').html(marked(readme)) ;
     }
+    
+    $.get('readme/excel-adf.md', excelAdfReadme, "text");
+    function excelAdfReadme(contents) {
+      var readme = $.trim(contents);
+      $('#excel-adf-readme').html(marked(readme)) ;
+    }
 
 
 

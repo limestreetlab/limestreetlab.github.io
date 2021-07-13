@@ -1,0 +1,1 @@
+A quick and simple augmented Dickey-Fuller test to check an individual stock and two-stock residuals, using Bloomberg DDE.
