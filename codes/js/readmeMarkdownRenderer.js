@@ -23,10 +23,10 @@ $(document).ready(
       $('#ib-data-downloader-readme').html(marked(readme)) ;
     }
 
-    $.get('readme/wasabi.md', wasabiReadme, "text");
-    function wasabiReadme(contents) {
+    $.get('readme/cuckoo.md', cuckooReadme, "text");
+    function cuckooReadme(contents) {
       var readme = $.trim(contents);
-      $('#wasabi-readme').html(marked(readme)) ;
+      $('#cuckoo-readme').html(marked(readme)) ;
     }
 
     $.get('readme/oh-my-notes.md', ohMyNotesReadme, "text");
@@ -41,10 +41,10 @@ $(document).ready(
       $('#octave-statistical-tests-readme').html(marked(readme)) ;
     }
     
-    $.get('readme/pychartist.md', pychartistReadme, "text");
-    function pychartistReadme(contents) {
+    $.get('readme/tata.md', tataReadme, "text");
+    function tataReadme(contents) {
       var readme = $.trim(contents);
-      $('#pychartist-readme').html(marked(readme)) ;
+      $('#tata-readme').html(marked(readme)) ;
     }
 
     $.get('readme/sally-utility.md', sallyUtilityReadme, "text");
@@ -57,6 +57,12 @@ $(document).ready(
     function excelAdfReadme(contents) {
       var readme = $.trim(contents);
       $('#excel-adf-readme').html(marked(readme)) ;
+    }
+    
+    $.get('readme/binomial-tree.md', binomialTreeReadme, "text");
+    function binomialTreeReadme(contents) {
+      var readme = $.trim(contents);
+      $('#binomial-tree-readme').html(marked(readme)) ;
     }
 
 
