@@ -70,6 +70,7 @@
   margin: 0px 0px 0px 0px;
   padding: 2px 2px 0px 2px;
   width: 100%;
+  max-width: 182px; /*calculated by max-width of bookinfo img x scale of img:hover*/
   height: 100%;
   position: absolute;
   top: 100%;
