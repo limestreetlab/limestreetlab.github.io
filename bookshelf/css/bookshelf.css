@@ -178,7 +178,7 @@
 }
 
 /*each shelf row is defined to carry 6 books*/
-.book:nth-child(6n+1)::before{
+.book:nth-child(6n+1)::before {
     display: block;
     content: "";
     width: 630%;
