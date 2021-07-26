@@ -23,10 +23,10 @@ $(document).ready(
       $('#ib-data-downloader-readme').html(marked(readme)) ;
     }
 
-    $.get('readme/cuckoo.md', cuckooReadme, "text");
-    function cuckooReadme(contents) {
+    $.get('readme/saorio.md', saorioReadme, "text");
+    function saorioReadme(contents) {
       var readme = $.trim(contents);
-      $('#cuckoo-readme').html(marked(readme)) ;
+      $('#saorio-readme').html(marked(readme)) ;
     }
 
     $.get('readme/oh-my-notes.md', ohMyNotesReadme, "text");
