@@ -26,6 +26,8 @@ using: manually written html/css
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--jquery-->
         <script src="../assets/js/bootstrap.min.js"></script><!--Bootstrap JS-->
 
+        <!--script for changing bootstrap active tab-->
+        <script src="js/activateTab.js"></script><!--Bootstrap JS-->
         <!--styling, internal files-->
         <link rel="stylesheet" href="css/subjectshelf_main.css" type="text/css">
        
@@ -57,16 +59,16 @@ using: manually written html/css
         <!--the tabs themselves-->       
         <nav>
         <div class="nav nav-tabs" role="tablist">
-            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#bookshelf-statistics" type="button" role="tab">Statistics</button>
-            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#bookshelf-mathematics" type="button" role="tab">Mathematics</button>
-            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#bookshelf-computerscience" type="button" role="tab">Computer Science</button>
-            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#bookshelf-programming" type="button" role="tab">Programming</button>
-            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#bookshelf-technologies" type="button" role="tab">Technologies</button>
-            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#bookshelf-finance" type="button" role="tab">Finance</button>
-            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#bookshelf-economics" type="button" role="tab">Economics</button>
-            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#bookshelf-games" type="button" role="tab">Games</button>
-            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#bookshelf-business" type="button" role="tab">Business</button>
-            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#bookshelf-others" type="button" role="tab">Others</button>
+            <button class="nav-link active" id="statistics" data-bs-toggle="tab" data-bs-target="#bookshelf-statistics" type="button" role="tab">Statistics</button>
+            <button class="nav-link" id="mathematics" data-bs-toggle="tab" data-bs-target="#bookshelf-mathematics" type="button" role="tab">Mathematics</button>
+            <button class="nav-link" id="computerscience" data-bs-toggle="tab" data-bs-target="#bookshelf-computerscience" type="button" role="tab">Computer Science</button>
+            <button class="nav-link" id="programming" data-bs-toggle="tab" data-bs-target="#bookshelf-programming" type="button" role="tab">Programming</button>
+            <button class="nav-link" id="technologies" data-bs-toggle="tab" data-bs-target="#bookshelf-technologies" type="button" role="tab">Technologies</button>
+            <button class="nav-link" id="finance" data-bs-toggle="tab" data-bs-target="#bookshelf-finance" type="button" role="tab">Finance</button>
+            <button class="nav-link" id="economics" data-bs-toggle="tab" data-bs-target="#bookshelf-economics" type="button" role="tab">Economics</button>
+            <button class="nav-link" id="games" data-bs-toggle="tab" data-bs-target="#bookshelf-games" type="button" role="tab">Games</button>
+            <button class="nav-link" id="business" data-bs-toggle="tab" data-bs-target="#bookshelf-business" type="button" role="tab">Business</button>
+            <button class="nav-link" id="others" data-bs-toggle="tab" data-bs-target="#bookshelf-others" type="button" role="tab">Others</button>
         </div>
         </nav>
         
