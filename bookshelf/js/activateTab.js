@@ -7,9 +7,8 @@ then bookshelf.html retrieves the data after #, by reading the url and spliting 
 */ 
 $(document).ready(function(){
   
-  var tab = window.location.href.split("#")[1]; //retrieving anything following # from the url, if # doesn't exist it is undefined
-  var tabID = "#" + tab; //make it html ID
-  $(tabID).trigger("click"); //trigger a click
-  $(tabID).blur(); //make it lose focus after a click
+  var tab = "#" + window.location.href.split("#")[1]; //retrieving anything following # from the url, if # doesn't exist it is undefined
+  $(tab).trigger("click"); //trigger a click
+  $(tab).blur(); //make it lose focus after a click
 
 });
