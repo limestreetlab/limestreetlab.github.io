@@ -3,7 +3,7 @@ description:the landing page for books, where all subject bookshelves are displa
             the individual subject bookshelves are stored in their respective folders.
 date: 16/05/2021
 author: Dean Street
-using: manually written html/css 
+using: manually written html/css
 
 -->
 <!doctype html>
@@ -20,7 +20,7 @@ using: manually written html/css
         <meta name="keywords" content="Dean Street Lab, Dean Street">
         <meta name="author" content="Dean Street">
         <meta name="robots" content="max-snippet:35, index, follow">
-        
+
         <!--JQuery and Bootstrap-->
         <link rel="stylesheet" href="../assets/css/bootstrap.min.css" type="text/css"><!--Bootstrap CSS-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--jquery-->
@@ -30,11 +30,11 @@ using: manually written html/css
         <script src="js/activateTab.js"></script><!--Bootstrap JS-->
         <!--styling, internal files-->
         <link rel="stylesheet" href="css/subjectshelf_main.css" type="text/css">
-       
+
         <!--icons-->
         <link rel="icon" type="image/png" href="../assets/img/d-favicon.png">
         <link rel="apple-touch-icon" href="../assets/img/d-apple-touch-icon.png">
-        
+
         <!--script to load navigation menu into #nav-menu-container-->
         <script src="../assets/js/navbar.js"></script>
 
@@ -43,9 +43,9 @@ using: manually written html/css
 
     <body ontouchstart="">
 
-      
 
-    <!--start, navigation menu--> 
+
+    <!--start, navigation menu-->
         <main id="nav-menu-container"></main>
     <!--end, navigation menu-->
 
@@ -56,7 +56,7 @@ using: manually written html/css
 
     <section class="col-12 align-self-start">
 
-        <!--the tabs themselves-->       
+        <!--the tabs themselves-->
         <nav>
         <div class="nav nav-tabs" role="tablist">
             <button class="nav-link active" id="statistics" data-bs-toggle="tab" data-bs-target="#bookshelf-statistics" type="button" role="tab">Statistics</button>
@@ -71,7 +71,7 @@ using: manually written html/css
             <button class="nav-link" id="others" data-bs-toggle="tab" data-bs-target="#bookshelf-others" type="button" role="tab">Others</button>
         </div>
         </nav>
-        
+
         <!--contents associated with the tabs below-->
         <div class="tab-content" id="nav-tabContent">
 
@@ -79,8 +79,8 @@ using: manually written html/css
         <div class="tab-pane fade show active" id="bookshelf-statistics" role="tabpanel">
 
         <!--start of statistics bookshelf-->
-        <main id="statistics">             
-        
+        <main id="statistics">
+
                 <div class="subjectshelf">
 
                     <a href="statistics/probabilitystatisticsbooks.html" class="subject" id="statistics_r1c1"><div class="subjectname"><span>Probability & Statistics</span></div></a>
@@ -112,91 +112,91 @@ using: manually written html/css
                     <a href="statistics/signalprocessingbooks.html" class="subject" id="statistics_r5c3"><div class="subjectname"><span>Signal Processing</span></div></a>
                     <a href="statistics/probabilityproblembooks.html" class="subject" id="statistics_r5c4"><div class="subjectname"><span>Exercises</span></div></a>
                     <a href="statistics/otherstatisticsbooks.html" class="subject" id="statistics_r5c5"><div class="subjectname"><span>Others</span></div></a>
-                                
-                </div>                         
-               
+
+                </div>
+
         </main>
-        <!--end of statistics bookshelf-->      
-        
+        <!--end of statistics bookshelf-->
+
         </div>
-               
-        
-        <!--mathematics tab-->        
+
+
+        <!--mathematics tab-->
         <div class="tab-pane fade" id="bookshelf-mathematics" role="tabpanel">
-        
+
         <!--start of mathematics bookshelf-->
         <main id="mathematics">
-                
+
                 <div class="subjectshelf">
 
                     <a href="mathematics/calculusbooks.html" class="subject" id="mathematics_r1c1"><div class="subjectname"><span>Calculus</span></div></a>
                     <a href="mathematics/linearalgebrabooks.html" class="subject" id="mathematics_r1c2"><div class="subjectname"><span>Linear Algebra</span></div></a>
-        
+
                     <a href="mathematics/differentialequationsbooks.html" class="subject" id="mathematics_r2c1"><div class="subjectname"><span>Differential Equations</span></div></a>
                     <a href="mathematics/stochasticcalculusbooks.html" class="subject" id="mathematics_r2c2"><div class="subjectname"><span>Stochastic Calculus</span></div></a>
-                    
+
                     <a href="mathematics/optimizationbooks.html" class="subject" id="mathematics_r3c1"><div class="subjectname"><span>Optimization</span></div></a>
                     <a href="mathematics/appliedmathematicsbooks.html" class="subject" id="mathematics_r3c2"><div class="subjectname"><span>Applied Mathematics</span></div></a>
-                    
+
                     <a href="mathematics/mathlogicbooks.html" class="subject" id="mathematics_r4c1"><div class="subjectname"><span>Logic and Analysis</span></div></a>
                     <a href="mathematics/mathfunbooks.html" class="subject" id="mathematics_r4c2"><div class="subjectname"><span>Problems & Fun</span></div></a>
-                    
+
                     <a href="mathematics/variationalcalculusbooks.html" class="subject" id="mathematics_r5c1"><div class="subjectname"><span>Calculus of Variations</span></div></a>
                     <a href="mathematics/othermathematicsbooks.html" class="subject" id="mathematics_r5c2"><div class="subjectname"><span>Other Mathematics</span></div></a>
-                            
-                </div>    
-            
+
+                </div>
+
         </main>
         <!--end of mathematics bookshelf-->
-        
+
         </div>
 
 
         <!--computer science tab-->
         <div class="tab-pane fade" id="bookshelf-computerscience" role="tabpanel">
-        
+
         <!--start of computer science bookshelf-->
-        <main id="computerscience">                
-               
+        <main id="computerscience">
+
                 <div class="subjectshelf">
-            
+
                     <a href="computer science/algorithmtheorybooks.html" class="subject" id="computerscience_r1c1"><div class="subjectname"><span>Algorithms (Theory)</span></div></a>
                     <a href="computer science/algorithmpracticebooks.html" class="subject" id="computerscience_r1c2"><div class="subjectname"><span>Algorithms (Practice)</span></div></a>
                     <a href="computer science/functionalprogrammingbooks.html" class="subject" id="computerscience_r1c3"><div class="subjectname"><span>Algorithms (Functional)</span></div></a>
-        
+
                     <a href="computer science/aibooks.html" class="subject" id="computerscience_r2c1"><div class="subjectname"><span>Artificial Intelligence</span></div></a>
                     <a href="computer science/machinelearningbooks.html" class="subject subject_machinelearning" id="computerscience_r2c2"><div class="subjectname"><span>Machine Learning</span></div></a>
                     <a class="emptysubject emptysubject_machinelearning" id="computerscience_r2c3"></a>
-                    
+
                     <a href="computer science/neuralnetworksbooks.html" class="subject" id="computerscience_r3c1"><div class="subjectname"><span>Neural Networks</span></div></a>
                     <a href="computer science/reinforcementlearningbooks.html" class="subject" id="computerscience_r3c2"><div class="subjectname"><span>Reinforcement Learning</span></div></a>
                     <a href="computer science/bayesiannetworksbooks.html" class="subject" id="computerscience_r3c3"><div class="subjectname"><span>Bayesian Networks</span></div></a>
-                    
-                    <a href="computer science/geneticalgorithmsbooks.html" class="subject" id="computerscience_r4c1"><div class="subjectname"><span>Genetic Algorithms</span></div></a>        
+
+                    <a href="computer science/geneticalgorithmsbooks.html" class="subject" id="computerscience_r4c1"><div class="subjectname"><span>Genetic Algorithms</span></div></a>
                     <a href="computer science/classificationbooks.html" class="subject" id="computerscience_r4c2"><div class="subjectname"><span>Classification</span></div></a>
                     <a href="computer science/naturallanguageprocessingbooks.html" class="subject" id="computerscience_r4c3"><div class="subjectname"><span>NLP</span></div></a>
-                    
+
                     <a href="computer science/computerorganizationbooks.html" class="subject" id="computerscience_r5c1"><div class="subjectname"><span>Computer Organization</span></div></a>
                     <a class="emptysubject" id="computerscience_r5c2"></a>
                     <a class="emptysubject" id="computerscience_r5c3"></a>
 
-                </div> 
+                </div>
 
         </main>
         <!--end of computer science bookshelf-->
-                
+
         </div>
 
 
         <!--programming tab-->
         <div class="tab-pane fade" id="bookshelf-programming" role="tabpanel">
-        
-        
+
+
         <!--start of programming bookshelf-->
         <main id="programming">
-                
+
                 <div class="subjectshelf">
-                    
+
                     <a href="programming/javalanguagebooks.html" class="subject" id="programming_r1c1"><div class="subjectname"><span>Java Language</span></div></a>
                     <a href="programming/javalibrariesbooks.html" class="subject" id="programming_r1c2"><div class="subjectname"><span>Java Libraries</span></div></a>
                     <a href="programming/javapatternsbooks.html" class="subject" id="programming_r1c3"><div class="subjectname"><span>Java Patterns</span></div></a>
@@ -231,24 +231,24 @@ using: manually written html/css
                     <a class="emptysubject emptysubject_r" id="programming_r5c4"></a>
                     <a class="emptysubject emptysubject_r" id="programming_r5c5"></a>
                     <a class="emptysubject emptysubject_r" id="programming_r5c6"></a>
-                   
-                </div>  
-                
+
+                </div>
+
         </main>
         <!--end of programming bookshelf-->
-        
+
         </div>
 
 
         <!--technology tab-->
         <div class="tab-pane fade" id="bookshelf-technologies" role="tabpanel">
-        
-            
+
+
         <!--start of technology bookshelf-->
         <main id="technology">
-                
+
                 <div class="subjectshelf">
-                    
+
                     <a href="technology/osbooks.html" class="subject" id="technology_r1c1"><div class="subjectname"><span>OS</span></div></a>
                     <a href="technology/frontendhtmlcssbooks.html" class="subject" id="technology_r1c2"><div class="subjectname"><span>HTML/CSS</span></div></a>
                     <a href="technology/frontendjavascriptbooks.html" class="subject" id="technology_r1c3"><div class="subjectname"><span>Javascript</span></div></a>
@@ -256,7 +256,7 @@ using: manually written html/css
                     <a href="technology/frontendmobilebooks.html" class="subject" id="technology_r1c5"><div class="subjectname"><span>Mobile Dev</span></div></a>
                     <a href="technology/androidbooks.html" class="subject" id="technology_r1c6"><div class="subjectname"><span>Android</span></div></a>
                     <a href="technology/iosbooks.html" class="subject" id="technology_r1c7"><div class="subjectname"><span>iOS</span></div></a>
-                    
+
                     <a href="technology/frontendframeworksbooks.html" class="subject" id="technology_r2c1"><div class="subjectname"><span>Frameworks</span></div></a>
                     <a href="technology/contentmanagementsystembooks.html" class="subject" id="technology_r2c2"><div class="subjectname"><span>CMS</span></div></a>
                     <a class="emptysubject" id="technology_r2c3"></a>
@@ -264,7 +264,7 @@ using: manually written html/css
                     <a class="emptysubject" id="technology_r2c5"></a>
                     <a href="technology/sqlbooks.html" class="subject" id="technology_r2c6"><div class="subjectname"><span>SQL</span></div></a>
                     <a href="technology/nosqlbooks.html" class="subject" id="technology_r2c7"><div class="subjectname"><span>NoSQL</span></div></a>
-        
+
                     <a href="technology/webtechnologiesbooks.html" class="subject" id="technology_r3c1"><div class="subjectname"><span>Web Tech</span></div></a>
                     <a href="technology/webservicesbooks.html" class="subject" id="technology_r3c2"><div class="subjectname"><span>Web Services</span></div></a>
                     <a href="technology/webscrapingbooks.html" class="subject" id="technology_r3c3"><div class="subjectname"><span>Web Scraping</span></div></a>
@@ -272,7 +272,7 @@ using: manually written html/css
                     <a href="technology/socialwebdatabooks.html" class="subject" id="technology_r3c5"><div class="subjectname"><span>Social Data</span></div></a>
                     <a href="technology/datavisualizationbooks.html" class="subject" id="technology_r3c6"><div class="subjectname"><span>Visualization</span></div></a>
                     <a href="technology/javascriptchartingbooks.html" class="subject" id="technology_r3c7"><div class="subjectname"><span>JS Charting</span></div></a>
-        
+
                     <a href="technology/dockerbooks.html" class="subject" id="technology_r4c1"><div class="subjectname"><span>Docker</span></div></a>
                     <a href="technology/gitbooks.html" class="subject" id="technology_r4c2"><div class="subjectname"><span>Version Control</span></div></a>
                     <a href="technology/searchenginebooks.html" class="subject" id="technology_r4c3"><div class="subjectname"><span>Search Engines</span></div></a>
@@ -280,30 +280,30 @@ using: manually written html/css
                     <a href="technology/mapbooks.html" class="subject" id="technology_r4c5"><div class="subjectname"><span>Geolocation</span></div></a>
                     <a href="technology/cloudcomputebooks.html" class="subject" id="technology_r4c6"><div class="subjectname"><span>Cloud/AWS</span></div></a>
                     <a href="technology/computernetworkbooks.html" class="subject" id="technology_r4c7"><div class="subjectname"><span>Networking</span></div></a>
-        
+
                     <a href="technology/machinelearninglibrarybooks.html" class="subject" id="technology_r5c1"><div class="subjectname"><span>AI Libraries</span></div></a>
                     <a href="technology/spreadsheetbooks.html" class="subject" id="technology_r5c2"><div class="subjectname"><span>Spreadsheet</span></div></a>
                     <a href="technology/writingbooks.html" class="subject" id="technology_r5c3"><div class="subjectname"><span>Writing</span></div></a>
                     <a class="emptysubject" id="technology_r5c4"></a>
                     <a href="technology/securitybooks.html" class="subject" id="technology_r5c5"><div class="subjectname"><span>Security</span></div></a>
                     <a href="technology/buildtoolsbooks.html" class="subject" id="technology_r5c6"><div class="subjectname"><span>Tools</span></div></a>
-                    <a href="technology/othercomputerbooks.html" class="subject" id="technology_r5c7"><div class="subjectname"><span>Others</span></div></a>  
-                        
-                </div>    
+                    <a href="technology/othercomputerbooks.html" class="subject" id="technology_r5c7"><div class="subjectname"><span>Others</span></div></a>
+
+                </div>
 
         </main>
         <!--end of technology bookshelf-->
-        
+
         </div>
 
 
 
         <!--finance tab-->
         <div class="tab-pane fade" id="bookshelf-finance" role="tabpanel">
-        
+
         <!--start of finance bookshelf-->
         <main id="finance">
-                
+
                 <div class="subjectshelf">
 
                     <a href="finance/generalfinancebooks.html" class="subject" id="finance_r1c1"><div class="subjectname"><span>General Finance</span></div></a>
@@ -312,21 +312,21 @@ using: manually written html/css
                     <a href="finance/mathematicalfinancebooks.html" class="subject" id="finance_r1c4"><div class="subjectname"><span>Mathematical Finance</span></div></a>
                     <a href="finance/riskmanagementbooks.html" class="subject" id="finance_r1c5"><div class="subjectname"><span>Risk Management</span></div></a>
                     <a href="finance/assetpricingtheorybooks.html" class="subject" id="finance_r1c6"><div class="subjectname"><span>Asset Pricing</span></div></a>
-        
+
                     <a href="finance/derivativesbooks.html" class="subject" id="finance_r2c1"><div class="subjectname"><span>Derivatives</span></div></a>
                     <a href="finance/ratesderivativesbooks.html" class="subject" id="finance_r2c2"><div class="subjectname"><span>Rates Derivatives</span></div></a>
                     <a href="finance/equityderivativesbooks.html" class="subject" id="finance_r2c3"><div class="subjectname"><span>Equity Derivatives</span></div></a>
                     <a href="finance/creditderivativesbooks.html" class="subject" id="finance_r2c4"><div class="subjectname"><span>Credit Derivatives</span></div></a>
                     <a href="finance/commodityderivativesbooks.html" class="subject" id="finance_r2c5"><div class="subjectname"><span>Commodities</span></div></a>
                     <a href="finance/volatilitybooks.html" class="subject" id="finance_r2c6"><div class="subjectname"><span>Volatility</span></div></a>
-        
+
                     <a href="finance/tradingbooks.html" class="subject" id="finance_r3c1"><div class="subjectname"><span>Trading</span></div></a>
                     <a href="finance/systematictradingbooks.html" class="subject" id="finance_r3c2"><div class="subjectname"><span>Systematic Trading</span></div></a>
                     <a href="finance/optionstradingbooks.html" class="subject" id="finance_r3c3"><div class="subjectname"><span>Options Trading</span></div></a>
                     <a href="finance/technicalanalysisbooks.html" class="subject" id="finance_r3c4"><div class="subjectname"><span>Technical Analysis</span></div></a>
                     <a href="finance/highfrequencyfinancebooks.html" class="subject" id="finance_r3c5"><div class="subjectname"><span>HFT</span></div></a>
                     <a href="finance/marketmicrostructurebooks.html" class="subject" id="finance_r3c6"><div class="subjectname"><span>Market Microstructure</span></div></a>
-        
+
                     <a href="finance/econophysicsbooks.html" class="subject" id="finance_r4c1"><div class="subjectname"><span>Econophysics</span></div></a>
                     <a href="finance/valueinvestingbooks.html" class="subject" id="finance_r4c2"><div class="subjectname"><span>Value Investing</span></div></a>
                     <a href="finance/corporatefinancebooks.html" class="subject" id="finance_r4c3"><div class="subjectname"><span>Corporate Finance</span></div></a>
@@ -340,94 +340,94 @@ using: manually written html/css
                     <a href="finance/cryptocurrencybooks.html" class="subject" id="finance_r5c4"><div class="subjectname"><span>Crypto Assets</span></div></a>
                     <a href="finance/profilebooks.html" class="subject" id="finance_r5c5"><div class="subjectname"><span>Stories</span></div></a>
                     <a href="finance/financebackofficebooks.html" class="subject" id="finance_r5c6"><div class="subjectname"><span>Backoffice</span></div></a>
-                            
-                </div>    
+
+                </div>
 
         </main>
         <!--end of finance bookshelf-->
-        
+
         </div>
 
         <!--economics tab-->
         <div class="tab-pane fade" id="bookshelf-economics" role="tabpanel">
-        
+
         <!--start of economics bookshelf-->
         <main id="economics">
-                
+
                 <div class="subjectshelf">
 
                     <a href="economics/economicsbooks.html" class="subject" id="economics_r1c1"><div class="subjectname"><span>Economics</span></div></a>
                     <a href="economics/macroeconomicsbooks.html" class="subject" id="economics_r1c2"><div class="subjectname"><span>Macroeconomics</span></div></a>
                     <a href="economics/microeconomicsbooks.html" class="subject" id="economics_r1c3"><div class="subjectname"><span>Microeconomics</span></div></a>
-        
+
                     <a href="economics/mathematicaleconomicsbooks.html" class="subject" id="economics_r2c1"><div class="subjectname"><span>Mathematical Economics</span></div></a>
                     <a href="economics/internationaleconomicsbooks.html" class="subject" id="economics_r2c2"><div class="subjectname"><span>International Economics</span></div></a>
                     <a href="economics/economichistorybooks.html" class="subject" id="economics_r2c3"><div class="subjectname"><span>Economic History</span></div></a>
-                    
+
                     <a href="economics/econometricsbooks.html" class="subject subject_econometrics" id="economics_r3c1"><div class="subjectname"><span>Econometrics</span></div></a>
                     <a class="emptysubject emptysubject_econometrics" id="economics_r3c2"></a>
                     <a class="emptysubject emptysubject_econometrics" id="economics_r3c3"></a>
-        
+
                     <a href="economics/financialeconometricsbooks.html" class="subject subject_financialmetrics" id="economics_r4c1"><div class="subjectname"><span>Financial Econometrics</span></div></a>
                     <a class="emptysubject emptysubject_financialmetrics" id="economics_r4c2"></a>
                     <a class="emptysubject emptysubject_financialmetrics" id="economics_r4c3"></a>
-        
+
                     <a href="economics/monetaryeconomicsbooks.html" class="subject" id="economics_r5c1"><div class="subjectname"><span>Monetary Economics</span></div></a>
                     <a href="economics/foreignexchangeeconomicsbooks.html" class="subject" id="economics_r5c2"><div class="subjectname"><span>Currency Economics</span></div></a>
                     <a class="emptysubject" id="economics_r5c3"></a>
-                
-                </div>    
+
+                </div>
 
         </main>
         <!--end of economics bookshelf-->
-        
+
         </div>
 
 
         <!--games tab-->
         <div class="tab-pane fade" id="bookshelf-games" role="tabpanel">
-        
+
         <!--start of games bookshelf-->
         <main id="games">
-                
+
                 <div class="subjectshelf">
 
-                
-                    <a href="games/gametheorybooks.html" class="subject" id="games_r1c1"><div class="subjectname"><span>Game Theory</span></div></a>        
+
+                    <a href="games/gametheorybooks.html" class="subject" id="games_r1c1"><div class="subjectname"><span>Game Theory</span></div></a>
                     <a href="games/gamblebooks.html" class="subject" id="games_r1c2"><div class="subjectname"><span>Gamble Theory</span></div></a>
 
                     <a href="games/pokerbooks.html" class="subject" id="games_r2c1"><div class="subjectname"><span>Poker</span></div></a>
                     <a href="games/blackjackbooks.html" class="subject" id="games_r2c2"><div class="subjectname"><span>Blackjack</span></div></a>
-                
+
                     <a href="games/horseracebooks.html" class="subject" id="games_r3c1"><div class="subjectname"><span>Horses</span></div></a>
                     <a href="games/sportsbetbooks.html" class="subject" id="games_r3c2"><div class="subjectname"><span>Sports</span></div></a>
-                   
+
                     <a href="games/footballbooks.html" class="subject" id="games_r4c1"><div class="subjectname"><span>Football</span></div></a>
                     <a href="games/basketballbooks.html" class="subject" id="games_r4c2"><div class="subjectname"><span>Basketball</span></div></a>
 
                      <a class="emptysubject" id="games_r5c1"></a>
                     <a href="games/othergamesbooks.html" class="subject" id="games_r5c2"><div class="subjectname"><span>Others</span></div></a>
-                        
-                </div>    
+
+                </div>
 
         </main>
         <!--end of games bookshelf-->
-        
+
         </div>
 
         <!--business tab-->
         <div class="tab-pane fade" id="bookshelf-business" role="tabpanel">
-        
-        
+
+
         <!--start of business bookshelf-->
         <main id="business">
-                
+
                 <div class="subjectshelf">
 
                     <a href="business/businessbooks.html" class="subject" id="business_r1c1"><div class="subjectname"><span>Business</span></div></a>
                     <a href="business/startupbooks.html" class="subject" id="business_r1c2"><div class="subjectname"><span>Startups</span></div></a>
                     <a href="business/strategybooks.html" class="subject" id="business_r1c3"><div class="subjectname"><span>Strategy</span></div></a>
-                    <a class="emptysubject" id="business_r1c4"></a>
+                    <a href="business/marketingbooks.html" class="subject" id="business_r1c4"><div class="subjectname"><span>Marketing</span></div></a>
 
                     <a href="business/financialstatementanalysisbooks.html" class="subject" id="business_r2c1"><div class="subjectname"><span>Financial Analysis</span></div></a>
                     <a href="business/accountingbooks.html" class="subject" id="business_r2c2"><div class="subjectname"><span>Accounting</span></div></a>
@@ -448,8 +448,8 @@ using: manually written html/css
                     <a href="business/miningsectorbooks.html" class="subject" id="business_r5c2"><div class="subjectname"><span>Mining</span></div></a>
                     <a href="business/autosectorbooks.html" class="subject" id="business_r5c3"><div class="subjectname"><span>Auto</span></div></a>
                     <a href="business/transportsectorbooks.html.html" class="subject" id="business_r5c4"><div class="subjectname"><span>Transport</span></div></a>
-            
-                </div>    
+
+                </div>
 
         </main>
         <!--end of business bookshelf-->
@@ -459,11 +459,11 @@ using: manually written html/css
 
         <!--others tab-->
         <div class="tab-pane fade" id="bookshelf-others" role="tabpanel">
-        
-            
+
+
             <!--start of others bookshelf-->
             <main id="science_others">
-                
+
                 <div class="subjectshelf">
 
                     <a href="science & others/sciencebooks.html" class="subject" id="science_others_r1c1"><div class="subjectname"><span>General Science</span></div></a>
@@ -471,36 +471,36 @@ using: manually written html/css
                     <a href="science & others/universebooks.html" class="subject" id="science_others_r1c3"><div class="subjectname"><span>Universe</span></div></a>
                     <a href="science & others/complexitybooks.html" class="subject" id="science_others_r1c4"><div class="subjectname"><span>Complexity</span></div></a>
                     <a href="science & others/networkbooks.html" class="subject" id="science_others_r1c5"><div class="subjectname"><span>Networks</span></div></a>
-                    
+
                     <a href="science & others/informationtheorybooks.html" class="subject" id="science_others_r2c1"><div class="subjectname"><span>Information</span></div></a>
                     <a href="science & others/biologybooks.html" class="subject" id="science_others_r2c2"><div class="subjectname"><span>Biology</span></div></a>
                     <a href="science & others/technologynonfictionbooks.html" class="subject" id="science_others_r2c3"><div class="subjectname"><span>Tech Nonfiction</span></div></a>
                     <a href="science & others/logicbooks.html" class="subject" id="science_others_r2c4"><div class="subjectname"><span>Logic</span></div></a>
                     <a href="science & others/philosophybooks.html" class="subject" id="science_others_r2c5"><div class="subjectname"><span>Philosophy</span></div></a>
-                    
+
                     <a href="science & others/psychologybooks.html" class="subject" id="science_others_r3c1"><div class="subjectname"><span>Psychology</span></div></a>
                     <a href="science & others/naturalresourcesbooks.html" class="subject" id="science_others_r3c2"><div class="subjectname"><span>Natural Resources</span></div></a>
                     <a href="science & others/geographybooks.html" class="subject" id="science_others_r3c3"><div class="subjectname"><span>Geography</span></div></a>
                     <a href="science & others/regionbooks.html" class="subject" id="science_others_r3c4"><div class="subjectname"><span>Regions</span></div></a>
                     <a href="science & others/journalismbooks.html" class="subject" id="science_others_r3c5"><div class="subjectname"><span>Journalism</span></div></a>
-                    
+
                     <a href="science & others/photoeditingbooks.html" class="subject" id="science_others_r4c1"><div class="subjectname"><span>Image Editing</span></div></a>
                     <a href="science & others/photographybooks.html" class="subject" id="science_others_r4c2"><div class="subjectname"><span>Photography</span></div></a>
                     <a href="science & others/sportbooks.html" class="subject" id="science_others_r4c3"><div class="subjectname"><span>Sports</span></div></a>
                     <a href="science & others/dogbooks.html" class="subject" id="science_others_r4c4"><div class="subjectname"><span>Pets</span></div></a>
                     <a href="science & others/childrenbooks.html" class="subject" id="science_others_r4c5"><div class="subjectname"><span>Children</span></div></a>
-                    
+
                     <a href="science & others/biographybooks.html" class="subject" id="science_others_r5c1"><div class="subjectname"><span>Biography</span></div></a>
                     <a href="science & others/frenchbooks.html" class="subject" id="science_others_r5c2"><div class="subjectname"><span>French</span></div></a>
                     <a href="science & others/spanishbooks.html" class="subject" id="science_others_r5c3"><div class="subjectname"><span>Spanish</span></div></a>
                     <a class="emptysubject" id="science_others_r5c4"></a>
-                    <a href="science & others/otherbooks.html" class="subject" id="science_others_r5c5"><div class="subjectname"><span>Others</span></div></a>   
-                        
-                </div>    
+                    <a href="science & others/otherbooks.html" class="subject" id="science_others_r5c5"><div class="subjectname"><span>Others</span></div></a>
+
+                </div>
 
         </main>
         <!--end of others bookshelf-->
-        
+
         </div>
 
         <!--close the tab contents-->
@@ -508,7 +508,7 @@ using: manually written html/css
 
     </section>
     </section><!--close the column and row-->
-   
+
 
 
 
@@ -516,4 +516,3 @@ using: manually written html/css
 
     </body>
 </html>
-
