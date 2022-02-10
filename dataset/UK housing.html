@@ -6,259 +6,141 @@ using: highcharts
 -->
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>
-            UK Housing Data
-        </title>
+  <head>
+      <title>
+          UK Housing Data
+      </title>
 
-        <!--meta for google-->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Dean Street, Statistics&#8745;Technology">
-        <meta name="keywords" content="Dean Street Lab, Dean Street">
-        <meta name="author" content="Dean Street">
-        <meta name="robots" content="max-snippet:35, index, follow">
+      <!--meta for google-->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Dean Street, Statistics&#8745;Technology">
+      <meta name="keywords" content="Dean Street Lab, Dean Street">
+      <meta name="author" content="Dean Street">
+      <meta name="robots" content="max-snippet:35, index, follow">
 
-        <!--JQuery and Bootstrap-->
-        <link rel="stylesheet" href="../assets/css/bootstrap.min.css" type="text/css"><!--Bootstrap CSS-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--jquery-->
-        <script src="../assets/js/bootstrap.min.js"></script><!--Bootstrap JS-->
-        <script src="https://code.highcharts.com/highcharts.js"></script><!--Highcharts-->
+      <!--JQuery and Bootstrap-->
+      <link rel="stylesheet" href="../assets/css/bootstrap.min.css" type="text/css"><!--Bootstrap CSS-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--jquery-->
+      <script src="../assets/js/bootstrap.min.js"></script><!--Bootstrap JS-->
+      <script src="https://code.highcharts.com/highcharts.js"></script><!--Highcharts-->
 
-        <!--icons-->
-        <link rel="icon" type="image/png" href="../assets/img/d-favicon.png">
-        <link rel="apple-touch-icon" href="../assets/img/d-apple-touch-icon.png">
+      <!--icons-->
+      <link rel="icon" type="image/png" href="../assets/img/d-favicon.png">
+      <link rel="apple-touch-icon" href="../assets/img/d-apple-touch-icon.png">
 
-    </head>
+      <!--internal scripts-->        
+      <script src="UK housing/highcharts.js"></script>
+
+  </head>
 
 
-    <body ontouchstart="" class="text-center bg-white">
+  <body ontouchstart="">
+  <main class="container">
 
-    <h2 class="mt-4 text-primary display-6">Taking a look at UK property price trends</h2>
+  <h1 class="mt-4 text-primary display-4 mb-5">Taking a look at UK property price trends</h1>
+  
+  <br>
+  
+  <section class="row">
 
-    <button type="button" class="btn btn-primary mt-5 mb-0" id="change-start-btn">
+  <h4 class="col-12 text-primary text-start ms-5 mb-3">Price Appreciation Comparison</h4>
+  <div class="col-12 text-center">
+    <button type="button" class="btn btn-primary btn-lg float-end me-5" id="percentage-start-btn">
       Start    
     </button>
-    
-    <figure id="change-chart" class="mt-2 ms-5 me-5 mb-3"></figure>
+  </div>
+  <figure id="percentage-chart" class="col-12 mt-2 ms-5 me-5 mb-3"></figure>
 
-    <script>
-      /*
-globally used variables
-*/
-let dataBundle = []; //to hold chart data
-let chart; //the chart object
+  </section>
 
-const duration = 300; // how long animation between new points should take (in milliseconds)
-const startIterator = 1; // how many points to render on init
-let currentIterator = startIterator; //initialized
-let maxIterator = 1; //maximum available data points
-
-const guiButton = document.querySelector('#change-start-btn'); //the click button
-let guiButtonState = 'Start'; //[Start, Stop, Resume, Restart] where Restart to chart again at end of data
-let intervalId; //identifies an interval set by setInterval(), so can remove it later by clearInterval()
-
-// Fetch data from URL and start things
-fetch('./UK house prices/UK_property_price_trend_by_cities.json')
-  .then(streamData => streamData.json()) //parse response stream to JSON
-  .then(JSONdata => { 
-    prepareData(JSONdata);
-    makeChart();
-    initEvents();
-  });
+  <br><br>
   
-/*
-function to prepare data
-convert JSON data into Highcharts-ready format and assign to a global variable
-*/
-function prepareData(data) {
+  <section class="row">
+  <h4 class="col-12 text-primary text-start ms-5 mb-4">Average Property Values by City and Type</h4>
   
-  //loop through JSON to construct data suitable for Highcharts
-  //[ {city: city, data: [ [x, y], [x, y], ..., [x, y] ]}, ...]
-  for (let key in data) {
-    dataBundle.push({
-      "city": key, 
-      "data": data[key].map(datapoint => [datapoint.date, datapoint.change*100])
-    });
-  }
-  
-  maxIterator = dataBundle[0].data.length; //assuming all city series have the same number of data observations
-  
-}
+    <div class="col-5 ms-5">
+      <select name="city-select" id="city-select" class="form-select">
 
-/*
-function setting Highchart parameters and creating a Highchart chart object
-*/
-function makeChart() {
-  
-  const chartParams = {
-    
-    chart: {
-      type: 'line',
-      marginBottom: 50
-    },
-    
-    title: {
-      floating: true, //can float above other elements
-      align: 'left',
-      text: 'Property price appreciation in UK cities',
-      x: 80,
-      y: 20,
-      style: {
-        fontSize: '18px'
-      }
-    },
-    
-    xAxis: {
-      min: 2004, //set x-axis to start from 2004
-      softMax: 2006, //flexible max to expand if exceeded
-      tickInterval: 1, //increment by 1 year
-    },
-    
-    yAxis: {
-      title: {
-        text: 'Price appreciation (indexed at 2004)',
-        margin: 15
-      },
-      softMax: 120
-    }, 
-    
-    legend: {
-      layout: 'proximate',
-      align: 'right'
-    }, 
-    
-    tooltip: {
-      style: {
-        fontSize: '9px' 
-      },
-      split: true,
-      useHTML: true,
-      formatter:  function() { 
-        return [""].concat(
-          this.points.map(point => 
-            "<span style='color:" + point.series.color + "'>\u25CF </span>" + 
-            point.series.name + ": " + (point.y).toFixed(0)
-          )          
-        );
-      }
-    },
-    
-    series: dataBundle.map(dataObj => {
-      return {
-        name: dataObj.city,
-        data: dataObj.data.slice(0, startIterator).map(point => point[1])
-      }
-    }), 
-    
-    plotOptions: {
-       series: {
-         pointStart: 2004, //data start from 2004
-         pointInterval: 1/12, //monthly data, each point represents 1/12 of a year
-         animation: {
-          defer: 500,
-          duration: duration
-         },
-         marker: {
-           symbol: 'circle',
-           enabled: false
-         }
-       }
-    },
-    
-    credits: {
-      enabled: true,
-      text: 'Source: HM Land Registry (UK House Price Index)',
-      style: {
-        fontSize: '7px'
-      },
-      position: {
-        align: 'right'
-      }
-    }
-    
-  };
-  
-  chart = Highcharts.chart("change-chart", chartParams);
-    
-}
+        <optgroup label="London">
+          <option value="barnet" selected>Barnet</option>
+          <option value="camden">Camden</option>
+          <option value="croydon">Croydon</option>
+          <option value="ealing">Ealing</option>
+          <option value="hammersmith and fulham">Hammersmith and Fulham</option>
+          <option value="harrow">Harrow</option>
+          <option value="kensington and chelsea">Kensington and Chelsea</option>
+          <option value="kingston upon thames">Kingston upon Thames</option>
+          <option value="richmond upon thames">Richmond upon Thames</option>
+          <option value="sutton">Sutton</option>
+          <option value="wandsworth">Wandsworth</option>
+        </optgroup>
 
+        <optgroup label="Scotland">
+          <option value="aberdeen">Aberdeen</option>
+          <option value="edinburgh">Edinburgh</option>
+          <option value="glasgow">Glasgow</option>
+        </optgroup>
 
-/*
+        <optgroup label="East of England">
+          <option value="cambridge">Cambridge</option>
+          <option value="colchester">Colchester</option>
+          <option value="norwich">Norwich</option>
+        </optgroup>
 
-*/
-function initEvents() {
-  
-  guiButton.addEventListener('click', function() {
-    
-    if (guiButtonState === 'Stop') { //user clicked btn when showing Stop
-      
-      intervalId = clearInterval(intervalId); //clear setInterval()
-      guiButton.innerText = guiButtonState = 'Resume'; //set button text and state to 'Resume'
-      
-    } else { //start charting
-      
-      // If animation has finished, recreate chart
-      if (guiButtonState === 'Restart') {
-        makeChart();
-      }
-      
-      guiButton.innerText = guiButtonState = 'Stop'; //starting chart and setting button text and state to 'Stop'
-      redrawChart(++currentIterator); //pre-increment iterator and remake chart
-      
-      //repeatedly call function at set interval using setInterval(callback, interval)
-      intervalId = setInterval( function() {
-        
-        if (currentIterator == maxIterator) { //reached end of data observations, stop animation
-          
-          intervalId = clearInterval(intervalId); //clear setInterval()
-          currentIterator = startIterator; //reset iterator
-          guiButton.innerText = guiButtonState = 'Restart'; //set button text and state variable
-          
-        } else {
-          
-          redrawChart(++currentIterator); //pre-increment iterator and remake chart
-          
-        }
-      }, duration);
-      
-    }
-    
-  });
-  
-}
+        <optgroup label="South East">
+          <option value="brighton">Brighton</option>
+          <option value="milton keynes">Milton Keynes</option>
+          <option value="oxford">Oxford</option>
+          <option value="reading">Reading</option>
+          <option value="southampton">Southampton</option>
+        </optgroup>
 
-/*
+        <optgroup label="South West">
+          <option value="bristol">Bristol</option>
+          <option value="cheltenham">Cheltenham</option>
+          <option value="exeter">Exeter</option>
+          <option value="gloucester">Gloucester</option>
+        </optgroup>
 
-*/
-function redrawChart(iteration) {
+        <optgroup label="East Midlands">
+          <option value="leicester">Leicester</option>
+          <option value="nottingham">Nottingham</option>
+        </optgroup>
 
-  // To each series, add a point:
-  chart.series.forEach(
-    function(series, seriesIndex) {
-      
-      //series.addPoint(options [, redraw] [, shift] [, animation] [, withEvent]) where redraw is to redraw after an added point
-      series.addPoint( 
-				{
-          y: dataBundle[seriesIndex].data[iteration][1],
-					dataLabels: {
-						enabled: false
-					},
-					marker: {
-						enabled: false
-					}
-        },
-        false, false, false, true
-      );
-    }
-  );
-  
-  // Now, once everything is updated, redraw chart:
-  chart.redraw({
-    duration
-  });
-  
-}
-</script> 
-    
+        <optgroup label="West Midlands">
+          <option value="birmingham">Birmingham</option>
+          <option value="coventry">Coventry</option>
+        </optgroup>
+
+        <optgroup label="Yorkshire">
+          <option value="leeds">Leeds</option>
+          <option value="sheffield">Sheffield</option>
+          <option value="york">York</option>
+        </optgroup>
+
+        <optgroup label="North East">
+          <option value="county durham">County Durham</option>
+          <option value="newcastle">Newcastle</option>
+          <option value="sunderland">Sunderland</option>
+        </optgroup>
+
+        <optgroup label="North West">
+          <option value="liverpool">Liverpool</option>
+          <option value="manchester">Manchester</option>
+        </optgroup>
+
+      </select>
+    </div>
+
+    <div class="col">
+      <button type="button" class="btn btn-primary btn-lg float-end me-5" id="price-start-btn">
+      Start    
+      </button>
+    </div>  
+
+  <figure id="price-chart" class="col-12 mt-2 ms-5 me-5 mb-3"></figure>
+  </section>
+   
+  </main>
   </body>
