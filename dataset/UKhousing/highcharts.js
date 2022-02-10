@@ -3,12 +3,14 @@
 $(document).ready( () => {
   
   compare();
-  const citySelect = document.querySelector("#city-select"); //dropdown select box for cities
-  display(citySelect.value);
-  citySelect.addEventListener('change', (evt) => {
-    document.querySelector('#price-start-btn').innerText = 'Start';
-    display(citySelect.value);
-  });
+  
+  display($("#city-select").val());
+
+  $("#city-select").change( () => {
+    $('#price-start-btn').text('Start');
+    let city = $("#city-select").val();
+    display(city);
+  }) 
 
 });//end of document.ready wrapper
 
