@@ -160,6 +160,7 @@ function display(city) {
       credits: {
         enabled: true,
         text: 'Source: HM Land Registry (House Price Index)',
+        href: 'https://landregistry.data.gov.uk/',
         style: {
           fontSize: '8px'
         },
@@ -384,6 +385,7 @@ function compare() {
       credits: {
         enabled: true,
         text: 'Source: HM Land Registry (House Price Index)',
+        href: 'https://landregistry.data.gov.uk/',
         style: {
           fontSize: '8px'
         },
