@@ -13,7 +13,6 @@ $(document).ready( () => {
   }) 
 
 });//end of document.ready wrapper
-
 function display(city) {
 
   let cityData = []; //to hold chart data
@@ -26,7 +25,7 @@ function display(city) {
 
   const priceChartButton = document.querySelector('#price-start-btn'); //the click button
   let priceChartButtonState = 'Start'; //[Start, Stop, Resume, Restart] where Restart to chart again at end of data
-  let intervalId; //identifies an interval set by setInterval(), so can remove it later by clearInterval()
+  let priceChartIntervalId; //identifies an interval set by setInterval(), so can remove it later by clearInterval()
   
   // Fetch JSON data from file and start things
   fetch('./UKhousing/aggregated_data.json')
@@ -186,7 +185,7 @@ function display(city) {
       
       if (priceChartButtonState === 'Stop') { //user clicked btn when showing Stop
 
-        intervalId = clearInterval(intervalId); //clear setInterval()
+        priceChartIntervalId = clearInterval(priceChartIntervalId); //clear setInterval()
         priceChartButton.innerText = priceChartButtonState = 'Resume'; //set button text and state to 'Resume'
 
       } else { //start charting
@@ -200,11 +199,11 @@ function display(city) {
         redrawChart(++currentIterator); //pre-increment iterator and remake chart
 
         //repeatedly call function at set interval using setInterval(callback, interval)
-        intervalId = setInterval( function() {
+        priceChartIntervalId = setInterval( function() {
           
           if (currentIterator == maxIterator) { //reached end of data observations, stop animation
             
-            intervalId = clearInterval(intervalId); //clear setInterval()
+            priceChartIntervalId = clearInterval(priceChartIntervalId); //clear setInterval()
             currentIterator = startIterator; //reset iterator
             priceChartButton.innerText = priceChartButtonState = 'Restart'; //set button text and state variable
             
