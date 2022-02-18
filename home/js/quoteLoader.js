@@ -27,8 +27,9 @@ $(document).ready(function() {
     ["Life is hard, but it's harder if you're stupid.", "John Michael Crichton"],
     ["The universe consists of 5% protons, 5% neutrons, 5% electrons and 85% morons.", "Frank Zappa"],
     ["The modern society is full of smart phones and stupid people.", "Tiger Tanaka"],
-    ["Stupidity is the most widespread virus. We're living in the stupidity pandemic.","Tiger Tanaka"],
+    ["Stupidity is the most widespread virus. We're living in the stupidity pandemic.", "Tiger Tanaka"],
     ["Talk sense to a fool and he calls you foolish.", "Euripides"],
+    ["It is not how things are in the world that is mystical, but that it exists.", "Ludwig Wittgenstein"],
     ["Have the courage to follow your heart and intuition. They somehow know what you truly want to become.", "Steve Jobs"],
     ["Each problem that I solve became a rule, which served afterwards to solve other problems.","Rene Descartes"],
     ["Most things worth doing aren't easy, and they aren't fast. You play with what you got, and how things turn out, that's the way they are supposed to be. The right thing to do is choose something you love, go after it with everything you got, and that's what life is about.","William Whittaker"]
