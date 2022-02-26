@@ -3,6 +3,7 @@
 // - getting the readme file in the readme folder and pass it to a callback
 // - the callback renders the readme string to the relevant display area
 // - the callback uses Marked.js to render the markdown string by calling marked.parse(markdown string)
+
 $(document).ready(
 
   function() {

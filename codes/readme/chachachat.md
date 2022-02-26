@@ -34,8 +34,3 @@ User ID assigned using session ID, time standardized to UCT.
 **check message** selects all queries since *lastCheckTime*, modifies the *sender* column to "self" or "nonself" strings, and stores into a *unreadMessages* array var. It then returns success/failure status boolean and *unreadMessages* in json.  
 
 **send messages** takes the entered message, sanitizes it, inserts it into DB using prepared statement, and return success/failture status boolean in json.
- 
-
-
-
-

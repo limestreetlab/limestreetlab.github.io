@@ -19,6 +19,4 @@ Also, parsing can fail due to inability to properly read the file texts or the f
 File read permission can also prohibit parsing.
 
 ##### Dependencies
-- [pdfminer](https://github.com/pdfminer/pdfminer.six)
-
-                   
+- [pdfminer](https://github.com/pdfminer/pdfminer.six)                   
