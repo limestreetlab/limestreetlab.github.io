@@ -132,7 +132,7 @@
 
 
 /*secondary subject/emptysubject class tags for hover effects*/
-.subject_econometrics:hover ~ .emptysubject_econometrics, .subject_financialmetrics:hover ~ .emptysubject_financialmetrics {
+.subject_econometrics:hover ~ .emptysubject_econometrics {
     opacity: 1;
 } 
 /*end of styling for 8th page*/
