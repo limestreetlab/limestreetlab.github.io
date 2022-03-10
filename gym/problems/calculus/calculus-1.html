@@ -1,11 +1,31 @@
 <div id="problem">
 
-
+Find $\int \arcsin(x) \,dx $.
 
 </div>
 
 <div id="solution">
 
-
+Use integration by parts, $\int u \, dv = uv - \int v \, du$.
+<br><br>
+Let $ u = \arcsin(x)$ s.t. $ \frac{du}{dx} = \frac{1}{\sqrt{1-x^2}} \implies du = \frac{dx}{\sqrt{1-x^2}}$ , and $ dv = dx $ s.t. $ v = x$,
+<br>
+then,
+$$
+\int \arcsin(x) \,dx = x\arcsin(x) - \int \frac{x}{\sqrt{1 - x^2}}\, dx 
+$$
+For the second integral, let $ t = 1 - x^2 \implies \frac{dt}{dx} = -2x \implies dt = -2x\, dx$,
+<br>
+then,
+\begin{align}
+\int \frac{x}{\sqrt{1 - x^2}}\, dx & = \int \frac{-2}{-2} \frac{x}{\sqrt{1 - x^2}} \, dx \\
+& = \int -\frac{1}{2} \frac{1}{\sqrt{t}} \, dt \\
+&= -\frac{1}{2} \cdot 2t^\frac{1}{2} \\
+&= -t^\frac{1}{2} = -\sqrt{1 - x^2}
+\end{align}
+Giving,
+$$
+\int \arcsin(x) \,dx = x\arcsin(x) - -\sqrt{1 - x^2} = x\arcsin(x) + \sqrt{1 - x^2}
+$$
 
 </div>

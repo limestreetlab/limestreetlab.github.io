@@ -1,11 +1,27 @@
 <div id="problem">
-
-
-
+Find $ \int x^2e^{-x}\,dx $.
 </div>
 
 <div id="solution">
 
+Use integration by parts, namely $\int u\,dv = uv - \int v\,du$.
+<br><br>
+Let $ u = x^2 \implies \frac{du}{dx} = 2x \implies du = 2x\,dx $, and $ dv = e^{-x}\,dx \implies v = -e^{-x}$,
+<br>
+then,
+$$
+\int x^2e^{-x}\,dx = -x^2 e^{-x} + 2\int xe^{-x}\,dx 
+$$
+The second integral is simpler than the original integral, so should keep going.
+<br>
+Let $ t = x \implies dt = dx $ and $ dz = e^{-x}\,dx \implies z = -e^{-x} $,
+$$
+\int xe^{-x}\,dx = -x e^{-x} + \int e^{-x}\,dx = -x e^{-x} - e^{-x}
+$$
+So,
+$$
+\int x^2e^{-x}\,dx = -x^2e^{-x} + 2(-xe^{-x} - e^{-x}) = -x^2e^{-x} - 2xe^{-x} -2e^{-x}
 
-
+$$
 </div>
+  

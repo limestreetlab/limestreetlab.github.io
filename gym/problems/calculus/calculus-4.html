@@ -1,11 +1,33 @@
 <div id="problem">
-
-
-
+Find $ \int e^{-4x} \cos(2x)\,dx$
 </div>
 
 <div id="solution">
 
+Use integration by parts, namely $\int u\,dv = uv - \int v\,du$.
+<br><br>
+Let $ u = e^{-4x} \implies \frac{du}{dx} = -4e^{-4x} \implies du = -4e^{-4x}\,dx $, and $ dv = \cos(2x)\,dx \implies v = \frac{1}{2}\sin(2x) $,
+<br>
+So,
+\begin{align}
+\int e^{-4x} \cos(2x)\,dx & = \frac{1}{2}e^{-4x}\sin(2x) - \int \frac{1}{2}\sin(2x)(-4e^{-4x}\,dx) \\
+& = \frac{1}{2}e^{-4x}\sin(2x) + 2\int e^{-4x}\sin(2x)\,dx
+\end{align}
 
+For the second integral, let $ t = e^{-4x} \implies \frac{dt}{dx} = -4e^{-4x}\implies dt = -4e^{-4x}\,dx$, and $dz = \sin(2x)\,dx \implies z = -\frac{1}{2}\cos(2x)$,
+<br>
+so,
+$$
+\int e^{-4x}\sin(2x)\,dx = -\frac{e^{-4x}}{2}\cos(2x) - 2\int e^{-4x}\cos(2x)\,dx
+$$
+
+Note that the third integral is equal to the integral in question, so
+\begin{align}
+\int e^{-4x}\sin(2x)\,dx & = \frac{1}{2}e^{-4x}\sin(2x) + 2 \left(  -\frac{e^{-4x}}{2}\cos(2x) - 2\int e^{-4x}\cos(2x)\,dx \right) \\
+&= \frac{1}{2}e^{-4x}\sin(2x) - e^{-4x}\cos(2x) - 4\int e^{-4x}\cos(2x)\,dx \\
+&= \frac{1}{5}\left( \frac{1}{2}e^{-4x}\sin(2x) - e^{-4x}\cos(2x) \right) \\
+&= \frac{1}{10}e^{-4x}\sin(2x) - \frac{1}{5}e^{-4x}\cos(2x)
+\end{align}
 
 </div>
+  

@@ -1,11 +1,76 @@
 <div id="problem">
-
-
-
+Find $\int \frac{x + 1}{(x-1)^2(x-2)}\,dx $.
 </div>
 
 <div id="solution">
+The factors in the denominator are linear so can integrate by partial fractions.
+<br>
+Let $I = \frac{x + 1}{(x-1)^2(x-2)}$,
 
+\begin{align}
+I & = \frac{a}{(x-1)^2} + \frac{b}{x-1} + \frac{c}{x-2} \\
+& = \frac{a(x-2) + b(x-1)(x-2) + c(x-1)^2}{(x-1)^2(x-2)}
+\end{align}
+
+Equating the numerators on both sides, 
+
+\begin{align}
+x + 1 & = a(x-2) + b(x-1)(x-2) + c(x-1)^2 \\
+& = ax - 2a + bx^2 - 3bx + 2b + cx^2 - 2cx + c \\
+& = (b + c)x^2 + (a - 3b - 2c)x + (-2a + 2b + c) 
+\end{align}
+
+we then see,
+\begin{cases}
+b + c & = 0 \\
+a - 3b - 2c & = 1 \\
+-2a + 2b + c & = 1
+\end{cases}
+
+or equivalently,
+
+\begin{align}
+
+  \begin{pmatrix}
+  0 & 1 & 1 & \big| & 0 \\
+  1 & -3 & -2 & \big| & 1 \\
+  -2 & 2 & 1 & \big| & 1
+  \end{pmatrix} 
+
+  \longrightarrow
+
+  \begin{pmatrix}
+  0 & 1 & 1 & \big| & 0 \\
+  1 & -3 & -2 & \big| & 1 \\
+  0 & -4 & -3 & \big| & 3
+  \end{pmatrix}
+
+  \\ \\
+
+  \longrightarrow
+
+  \begin{pmatrix}
+  0 & 1 & 1 & \big| & 0 \\
+  1 & 0 & 1 & \big| & 1 \\
+  0 & 0 & 1 & \big| & 3
+  \end{pmatrix} 
+
+  \longrightarrow
+
+  \begin{pmatrix}
+  1 & 0 & 0 & \big| & -2 \\
+  0 & 1 & 0 & \big| & -3 \\
+  0 & 0 & 1 & \big| & 3
+  \end{pmatrix} 
+
+\end{align}
+
+Hence, $a = -2, b = -3, c = 3$, and so
+\begin{align}
+\int I\,dx & = \int \frac{-2}{(x-1)^2}\,dx + \int\frac{-3}{(x-1)}\,dx + \int\frac{3}{(x-2)}\,dx  \\
+& = \frac{2}{x-1} -3\ln{(x-1)} + 3\ln{(x-2)}
+\end{align}
 
 
 </div>
+  

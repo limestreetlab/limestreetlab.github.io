@@ -1,11 +1,35 @@
 <div id="problem">
 
-
+Find $\int e^x \sin x \, dx $.
 
 </div>
 
 <div id="solution">
 
+Use integration by parts, $\int u \, dv = uv - \int v \, du$.
+<br><br>
+Let $ u = e^x \implies \frac{du}{dx} = e^x$ and $du = e^x\, dx$, $dv = \sin x \,dx \implies v = -\cos x $,
+<br>
+then,
+$$
+\int e^x \sin x \,dx = -e^x\cos x + \int e^x \cos x \,dx
+$$
+<br>
+For the second integral, let $t = e^x \implies dt = e^x\,dx$, $dz = \cos x \,dx \implies z = \sin x$,
+<br>
+then,
+$$
+\int e^x \cos x\,dx = e^x \sin x - \int e^x \sin x \,dx
+$$
 
+Note the third integral is the original integral, so
+\begin{align}
+
+\int e^x \sin x \,dx & = -e^x \cos x + \int e^x \cos x \,dx \\
+& = -e^x\cos x + e^x \sin x - \int e^x\sin x \,dx  \\
+& =  \frac{ e^x \sin x -e^x\cos x }{2}
+
+\end{align}
 
 </div>
+  

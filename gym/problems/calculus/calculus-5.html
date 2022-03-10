@@ -1,11 +1,26 @@
 <div id="problem">
-
-
-
+Find $ \int(\ln{x})^2\,dx $.
 </div>
 
 <div id="solution">
 
-
-
+Use integration by parts, namely $\int u\,dv = uv - \int v\,du$.
+<br><br>
+Let $ u = (\ln{x})^2 \implies \frac{du}{dx} = \frac{2}{x}\ln{x} \implies du = \frac{2}{x}\ln{x}\,dx $, and $ dv = dx \implies v = x $,
+<br>
+then,
+$$
+\int(\ln{x})^2\,dx = x(\ln{x})^2 - 2 \int \ln{x}\,dx 
+$$ 
+For $\int \ln{x}\,dx$, let $ t = \ln{x} \implies \frac{dt}{dx} = \frac{1}{x} \implies dt = \frac{dx}{x} $, and $ dz = dx \implies z = x $,
+<br>
+$$
+\int \ln{x}\,dx = x\ln{x} - \int x \frac{1}{x}\,dx = x\ln{x} - \int 1\,dx = x\ln{x} - x
+$$
+Hence,
+$$
+\int(\ln{x})^2\,dx =  x(\ln{x})^2 - 2x\ln{x} + 2x
+$$
+  
 </div>
+  

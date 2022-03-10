@@ -1,11 +1,28 @@
 <div id="problem">
 
-
+Find $ \int \arctan(x)\,dx $ . 
 
 </div>
 
 <div id="solution">
 
-
+Use integration by parts, namely $\int u \, dv = uv - \int v \, du$.
+<br><br>
+Let $u = \arctan(x) \implies \frac{du}{dx} = \frac{1}{1 + x^2} \implies du = \frac{dx}{1 + x^2}$, and $ dv = dx \implies v = x $,
+<br>
+then,
+$$
+\int \arctan(x)\,dx = x\arctan(x) - \int \frac{x}{1 + x^2}\,dx
+$$
+For the second integral, let $ t = 1 + x^2 \implies \frac{dt}{dx} = 2x \implies dt = 2x\,dx$,
+<br>
+giving,
+$$
+\int\frac{x}{1+x^2}dx = \int\frac{2}{2}\frac{x}{1+x^2}dx = \frac{1}{2} \int\frac{1}{t}dt = \frac{1}{2}\ln{(t)} = \frac{1}{2}\ln{(1+x^2)}
+$$
+Hence,
+$$
+\int \arctan(x)\,dx = x\arctan(x) -\frac{1}{2}\ln{(1+x^2)}
+$$
 
 </div>

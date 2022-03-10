@@ -1,11 +1,24 @@
 <div id="problem">
-
-
-
+Find $ \int x^2\sin(x)\,dx $.
 </div>
 
 <div id="solution">
 
-
+Use integration by parts, namely $\int u\,dv = uv - \int v\,du$.
+<br><br>
+Let $ u = x^2 \implies du = 2x\,dx $, and $ dv = \sin(x)\,dx \implies v = -\cos(x) $, giving
+<br>
+$$
+\int x^2\sin(x)\,dx = -x^2\cos(x) + 2\int x\cos(x)\,dx
+$$
+Now let $ t = x \implies dt = dx$, and $ dz = \cos(x)\,dx \implies x = \sin(x)$,
+$$
+\int x\cos(x)\,dx = x\sin(x) - \int\sin(x)\,dx = x\sin(x) + \cos(x)
+$$
+Hence,
+$$
+\int x^2\sin(x)\,dx = -x^2\cos(x) + 2x\sin(x) + 2\cos(x)
+$$
 
 </div>
+  
