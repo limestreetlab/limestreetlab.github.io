@@ -1,11 +1,17 @@
 <div id="problem">
-
-
+Check whether the series $\sum_{n=2}^\infty \frac{1}{n(\ln{(n)})^3}$ converges.
 
 </div>
 
 <div id="solution">
-
-
-
+Let's use the integral test and let $f(x) = \frac{1}{x\ln^3{(x)}}$, which is a decreasing function.
+<br><br>
+Let $u = \ln(x) \implies du = \frac{dx}{x}$,
+\begin{align} 
+\int_2^\infty \frac{1}{x(\ln{(x)})^3}\,dx & = \int_{\ln{(2)}}^\infty \frac{1}{u^3}\,du\\
+& = \left. -\frac{1}{2}u^{-2} \right|_{\ln{(2)}}^{\infty} \\
+& = \frac{1}{2(\ln{2})^2}
+\end{align}
+As the improper integral has a limit, the series converges. 
 </div>
+  

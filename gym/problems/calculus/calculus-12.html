@@ -1,11 +1,17 @@
 <div id="problem">
-
-
+Check whether the series $\sum_{n=1}^\infty ne^{-n^2}$ converges.
 
 </div>
 
 <div id="solution">
-
-
-
+Let's use the integral test and let $f(x) = xe^{-x^2}$, which is a decreasing function.
+<br><br>
+Let $u = -x^2 \implies du = -2x\,dx$,
+\begin{align} 
+\int_1^\infty xe^{-x^2}\,dx & = -\frac{1}{2}\int_{-1}^{-\infty}e^u\,du \\
+& = \left. -\frac{1}{2}e^u \right|_{-1}^{-\infty} \\
+& = \frac{1}{2e}
+\end{align}
+As the improper integral has a limit, the series converges. 
 </div>
+  

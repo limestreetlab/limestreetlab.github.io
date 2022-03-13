@@ -1,11 +1,22 @@
 <div id="problem">
-
-
-
+Check whether the series $\sum_{n=1}^\infty \frac{n!}{n^n}$ converges.
 </div>
 
 <div id="solution">
-
-
+Use the ratio test.
+\begin{align}
+\frac{(n+1)!}{(n+1)^{n+1}} / \frac{n!}{n^n} & = \frac{(n+1)!}{(n+1)^{n+1}} \cdot \frac{n^n}{n!} \\
+& = \frac{(n+1)n!}{(n+1)^{n+1}} \cdot \frac{n^n}{n!} \\
+& = \frac{n^n}{(n+1)^n} \\
+& = \left(\frac{n}{n+1}\right)^n \\
+& = \left( \frac{1}{1+\frac{1}{n}} \right)^n \\
+& = \frac{1}{(1+\frac{1}{n})^n} \\
+\end{align}
+As $n$ becomes large,
+$$
+\lim_{n \to \infty} \frac{1}{(1+\frac{1}{n})^n} = \frac{1}{e} < 1
+$$
+Thus, the series $\sum_{n=1}^\infty \frac{n!}{n^n}$ converges. 
 
 </div>
+  

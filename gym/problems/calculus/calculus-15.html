@@ -1,11 +1,16 @@
 <div id="problem">
-
-
-
+Find the radius of convergence for series $\sum_{n=1}^\infty 2^n x^n$.
 </div>
 
 <div id="solution">
+Recall we can find the radius of convergence $R$ of a power series $\sum a_n x^n$ using either $ L = \lim_{n\to\infty}|\frac{a_{n+1}}{a_n}|$ or $L = \lim_{n\to\infty}\sqrt[n]{|a_n|}$, and let $R = \frac{1}{L}$.
+<br><br>
+\begin{align}
+\left|\frac{a_{n+1}}{a_n}\right| & = \frac{2^{n+1}}{2^n} \\
+& = \frac{2 \cdot 2^n}{2^n} \\
+& = 2\\
+& \implies L = 2
+\end{align}
 
-
-
+Hence, $R = \frac{1}{L} = \frac{1}{2}$.
 </div>

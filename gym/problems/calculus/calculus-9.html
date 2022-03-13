@@ -1,11 +1,70 @@
 <div id="problem">
-
-
-
+Check whether below series converge.
+<br>
+$ \sum_{n=1}^{\infty}\frac{1}{2^n}, \quad \sum_{n=1}^{\infty}\frac{1}{3^n}, \quad \sum_{n=1}^{\infty}\frac{1}{n}, \quad \sum_{n=1}^{\infty}\frac{1}{n^2}$
 </div>
 
 <div id="solution">
 
-
-
+For $\sum_{n=1}^{\infty}\frac{1}{2^n}$, it is a geometric series with $r = \frac{1}{2}$,
+<br>
+$$
+S = \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \frac{1}{16} + ...
+$$ 
+Recall sum of a geometric series is
+$$
+S = \frac{a(1 - r^{n+1})}{1 - r}
+$$
+So,
+$$
+\lim_{n\to\infty}S = \frac{a}{1-r} 
+$$
+The series converges (to 1).
+<br><br>
+It is obvious that 
+$$
+\sum_{n=1}^{\infty}\frac{1}{3^n} < \sum_{n=1}^{\infty}\frac{1}{2^n}
+$$
+Being bounded by a convergent series implies the series also converges.
+<br><br>
+For $\sum_{n=1}^{\infty}\frac{1}{n}$,
+$$
+S = 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \cdots + \frac{1}{n} + \cdots
+$$
+If we identify those denominators that are $ x = 2^i$ and group the terms between them as follows,
+$$
+1 + \frac{1}{2} + \underbrace{ \frac{1}{3} + \frac{1}{4} } + \underbrace{ \frac{1}{5} + \cdots + \frac{1}{8} } + \underbrace{ \frac{1}{9} + \cdots + \frac{1}{16} } + \cdots
+$$
+We replace the denominators in each group by that of the rightest term, so each of those terms becomes smaller,
+\begin{align}
+S & = 1 + \frac{1}{2} + \underbrace{ \frac{1}{3} + \frac{1}{4} } + \underbrace{ \frac{1}{5} + \cdots + \frac{1}{8} } + \underbrace{ \frac{1}{9} + \cdots + \frac{1}{16} } + \cdots
+\\
+& > 1 + \frac{1}{2} + \underbrace{ \frac{1}{4} + \frac{1}{4} } + \underbrace{ \frac{1}{8} + \cdots + \frac{1}{8} } + \underbrace{ \frac{1}{16} + \cdots + \frac{1}{16} } + \cdots
+\\
+& = 1 + \frac{1}{2} +  \frac{1}{2} + \frac{1}{2} + \frac{1}{2} + \frac{1}{2} + \cdots
+\end{align}
+Thus, we see $\sum_{n=1}^\infty\frac{1}{n}$ does not converge.
+<br><br>
+Lastly, for $\sum_{n=1}^\infty\frac{1}{n^2}$,
+$$
+S = \frac{1}{1^2} + \frac{1}{2^2} + \frac{1}{3^2} + \frac{1}{4^2} + \cdots + \frac{1}{8^2} + \cdots + \frac{1}{16^2} + \cdots
+$$
+If we identify those denominators that are $ x = 2^i$ and group the terms between them as follows,
+$$
+S = \frac{1}{1^2} + \underbrace{ \frac{1}{2^2} + \frac{1}{3^2} } + \underbrace{ \frac{1}{4^2} + \cdots } + \underbrace{ \frac{1}{8^2} + \cdots } + \underbrace{ \frac{1}{16^2} + \cdots } + \cdots
+$$
+We replace the denominators in each group by that of the leftest term, so each of those terms becomes larger,
+\begin{align}
+S & = \frac{1}{1^2} + \underbrace{ \frac{1}{2^2} + \frac{1}{3^2} } + \underbrace{ \frac{1}{4^2} + \cdots + \frac{1}{7^2}} + \underbrace{ \frac{1}{8^2} + \cdots + \frac{1}{15^2} } + \underbrace{ \frac{1}{16^2} + \cdots } + \cdots
+\\
+& < \frac{1}{1^2} + \underbrace{ \frac{1}{2^2} + \frac{1}{2^2} } + \underbrace{ \frac{1}{4^2} + \cdots + \frac{1}{4^2} } + \underbrace{ \frac{1}{8^2} + \cdots + \frac{1}{8^2}} + \underbrace{ \frac{1}{16^2} + \cdots } + \cdots
+\\
+& = 1 + 2\frac{1}{2^2} + 4\frac{1}{4^2} + 8\frac{1}{8^2} + \cdots 
+\\
+& = 1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \frac{1}{16} + \cdots
+\\
+& = \sum_{n=1}^\infty\frac{1}{2^n}
+\end{align}
+Being bounded by a convergent series, the series converges.
 </div>
+  

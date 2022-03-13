@@ -9,8 +9,8 @@ $(document).ready( function() {
   
   //list of subjects to draw the question from; elements must reflect questions directory structure
   const questionSubject = ["calculus", "probability"];
-   //total number of available questions, positions directly correspond to subjects, should be updated as questions are added
-  const questionsAvailable = [1, 0]; //exact number of question files in each directory
+  //total number of available questions, positions directly correspond to subjects, should be updated as questions are added
+  const questionsAvailable = [17, 42]; //exact number of question files in each directory
 
     //codes hereafter need no maintenance
     let numberOfSubjects = questionSubject.length; 
