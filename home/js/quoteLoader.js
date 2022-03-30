@@ -29,6 +29,7 @@ $(document).ready(function() {
     ["The modern society is full of smart phones and stupid people.", "Tiger Tanaka"],
     ["Stupidity is the most widespread virus. We're living in the stupidity pandemic.", "Tiger Tanaka"],
     ["Talk sense to a fool and he calls you foolish.", "Euripides"],
+    ["Luck is probability taken personally.", "Penn Jillette"],
     ["It is not how things are in the world that is mystical, but that it exists.", "Ludwig Wittgenstein"],
     ["Have the courage to follow your heart and intuition. They somehow know what you truly want to become.", "Steve Jobs"],
     ["Each problem that I solve became a rule, which served afterwards to solve other problems.","Rene Descartes"],
