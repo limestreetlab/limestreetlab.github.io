@@ -13,6 +13,7 @@ $(document).ready( () => {
   }) 
 
 });//end of document.ready wrapper
+
 function display(city) {
 
   let cityData = []; //to hold chart data
