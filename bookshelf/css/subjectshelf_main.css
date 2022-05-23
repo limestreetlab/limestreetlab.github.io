@@ -10,6 +10,9 @@
 
 #bookshelf {
     margin-top: 80px;
+    max-width: 3000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .nav-tabs {
