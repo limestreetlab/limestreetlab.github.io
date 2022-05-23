@@ -32,9 +32,11 @@
   margin-right: auto;
 }
 
+/*for large screens*/
 @media (min-width: 2500px) {
   #bookshelf {
     width: 70%;
+    max-width: 3500px;
   }
 }
 
