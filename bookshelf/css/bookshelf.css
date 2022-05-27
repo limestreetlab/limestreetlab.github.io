@@ -32,21 +32,14 @@
   margin-right: auto;
 }
 
-/*for large screens*/
-@media (min-width: 2500px) {
-  #bookshelf {
-    width: 70%;
-    max-width: 3500px;
-  }
-}
-
 .book {
   margin: 10px 0px 10px 0px;
-  flex: 0 0 16.5%;
+  flex: 0 0 16.5%; /*how many books per row*/
   height: 230px;
   overflow: visible;
   position: relative;
 }
+
 
 .book .bookinfo img {
   border: none;
@@ -185,14 +178,70 @@
   content: url("../img/review stars/5star.png");
 }
 
-/*each shelf row is defined to carry 6 books*/
-.book:nth-child(6n+1)::before {
+
+/*responsive to screen sizes*/
+
+/*regular screens*/
+@media (min-width: 950px) and (max-width: 2000px) {
+
+  /*each shelf row is defined to carry 6 books*/
+  .book:nth-child(6n+1)::before {
     display: block;
     content: "";
-    width: 630%;
+    width: 600%;
     height: 95px;
     background: url(https://i.ibb.co/0QdBdbv/abc-bookshelf.png);
     position: absolute;
     bottom: 0%;
-  	z-index: 1;
+    z-index: 1;
+  }
+
 }
+
+/*for small mobile screens*/
+@media (max-width: 950px) {
+
+  .book {
+    flex: 0 0 33%; /*3 books per row*/
+  }
+
+  /*each shelf row is defined to carry 3 books*/
+  .book:nth-child(3n+1)::before {
+    display: block;
+    content: "";
+    width: 300%;
+    height: 95px;
+    background: url(https://i.ibb.co/0QdBdbv/abc-bookshelf.png);
+    position: absolute;
+    bottom: 0%;
+    z-index: 1;
+  }
+
+}
+
+/*for large desktop screens*/
+@media (min-width: 2000px) {
+
+  #bookshelf {
+    width: 70%; /*shrink shelf size to x% of screen*/
+    max-width: 3400px; /*limit the shelf size*/
+  }
+
+  .book {
+    flex: 0 0 11%; /*9 books per row*/
+  }
+
+  /*each shelf row is defined to carry 9 books*/
+  .book:nth-child(9n+1)::before {
+    display: block;
+    content: "";
+    width: 900%;
+    height: 95px;
+    background: url(https://i.ibb.co/0QdBdbv/abc-bookshelf.png);
+    position: absolute;
+    bottom: 0%;
+    z-index: 1;
+  }
+
+}
+
