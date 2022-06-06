@@ -161,7 +161,7 @@
 }
 
 .nav-menu-content-column > li:hover {
-    color: var(--blue-color);
+    color: var(--red-color);
 }
 
 .nav-menu-content-column > li:hover::before {

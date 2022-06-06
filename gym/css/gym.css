@@ -87,7 +87,7 @@ body {
   text-decoration: underline;
 }
 .foldable:hover {
-  color: var(--blue-color);
+  color: var(--red-color);
 }
 
 #answer {
@@ -110,5 +110,5 @@ body {
   justify-content: center; 
 }
 .reload-button:hover {
-  color: var(--blue-color);
+  color: var(--red-color);
 }

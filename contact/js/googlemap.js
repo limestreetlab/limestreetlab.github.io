@@ -20,7 +20,7 @@ function initMap() {
         position: myLatLng,
         icon: "https://i.ibb.co/8KnRjYg/map-cursor.png",
         map: map,
-        title: "Dean Street",
+        title: "Houghton Street",
         optimized: false
     });
 

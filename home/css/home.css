@@ -76,7 +76,7 @@ body {
 }
 
 .primary-color {
-    color: var(--blue-color);
+    color: var(--red-color);
 }
 
 #box1 h1::after {
@@ -201,10 +201,10 @@ body {
     animation: highlighter 20s linear infinite;
   }
 
-  .red {color: var(--red-color);}
+  .red {color: crimson;}
   .gray {color: lightslategrey;}
-  .green {color: var(--green-color)}
-  .blue {color: var(--blue-color);}
+  .green {color: limegreen;}
+  .blue {color: dodgerblue;}
   .purple {color: blueviolet;}
 
   #daily-hero-highlighter:hover { /*pause the highlighter's animation state when hovered*/
@@ -227,7 +227,7 @@ body {
   }
 
   .strategy-items .hashtag { /*the hashtag elements*/
-    background-color: rgba(var(--blue-color-rgb),0.30);
+    background-color: rgba(var(--red-color-rgb),0.30);
     color: var(--font-color);
     padding: 0.3em 0.5em 0.3em 0.5em;
     margin: 0.5em 0.5em 0.5em 0.5em;

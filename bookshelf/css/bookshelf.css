@@ -17,8 +17,8 @@
 
 #top_nav a:hover {
   text-decoration: underline overline;
-  text-decoration-color: var(--blue-color);
-  color: var(--blue-color);
+  text-decoration-color: var(--red-color);
+  color: var(--red-color);
 }
 
 #bookshelf {
@@ -147,7 +147,7 @@
 
 .booklink a:link, .booklink a:visited, .booklink a:hover {
   text-decoration: none;
-  color: rgba(var(--light-blue-color-rgb), 0.7); 
+  color: snow; 
   cursor: url("https://i.ibb.co/YDWTh6R/cursor-book1.png") 10 3, auto;
 }
 

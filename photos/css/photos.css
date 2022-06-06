@@ -193,6 +193,6 @@ select {
 }
 
 .dropdown:hover::after {
-  color: var(--blue-color);
+  color: var(--red-color);
 }
   

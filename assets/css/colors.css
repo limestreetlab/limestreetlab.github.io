@@ -1,21 +1,19 @@
 :root {
+
     /*default background color and font color are simple white and black*/
     --background-color: rgb(245,245,245);
     --background-color-rgb: 245, 245, 245; /*rgb for each color is included in case for rgba*/
     --font-color: rgb(72, 72, 72);
     --font-color-rgb: 72, 72, 72;
+
     /*reverse default background and font color for a dark theme*/
     --dark-background-color: rgb(72,72,72);
     --dark-background-color-rgb: 72, 72, 72;
     --dark-bg-font-color: rgb(245,245,245);
     --dark-bg-font-color-rgb: 245, 245, 245;
-    /*various colours, blue main*/
-    --red-color: rgb(230, 63, 90);
-    --red-color-rgb: 230, 63, 90; 
-    --green-color: rgb(88, 183, 146);
-    --green-color-rgb: 88, 183, 146;
-    --blue-color: rgb(49, 140, 231); /*bleu de france*/
-    --blue-color-rgb: 49, 140, 231;
-    --light-blue-color: rgb(97, 200, 225);
-    --light-blue-color-rgb: 97, 200, 225;
+
+    /*various colours, red main (=LSE logo)*/
+    --red-color: rgb(237, 28, 46);
+    --red-color-rgb: 237, 28, 46; 
+
   }

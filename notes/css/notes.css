@@ -91,7 +91,7 @@ body {
 }
 
 .notebook:hover {
-  color: var(--blue-color);
+  color: var(--red-color);
   font-size: 100%;
 }
 

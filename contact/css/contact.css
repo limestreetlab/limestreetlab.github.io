@@ -10,7 +10,7 @@ body {
 
 #top-msg1 {
     margin-top: 50px;
-    color: var(--blue-color);
+    color: var(--red-color);
     font-size: calc(1em + 6vw); 
     font-weight: bold;
 }
@@ -43,7 +43,7 @@ body {
 }
 
 #social-media a:hover > .iconify {
-    color: var(--blue-color);
+    color: var(--red-color);
 }
 
 #map-container {
