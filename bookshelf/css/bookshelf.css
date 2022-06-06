@@ -147,7 +147,7 @@
 
 .booklink a:link, .booklink a:visited, .booklink a:hover {
   text-decoration: none;
-  color: snow; 
+  color: var(--red-color); 
   cursor: url("https://i.ibb.co/YDWTh6R/cursor-book1.png") 10 3, auto;
 }
 
