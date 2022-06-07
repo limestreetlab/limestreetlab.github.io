@@ -10,15 +10,16 @@ body {
 
 #top-msg1 {
     margin-top: 50px;
+    margin-bottom: 0px;
     color: var(--red-color);
-    font-size: calc(1em + 6vw); 
+    font-size: min(calc(1em + 5vw), 80px ); /*pick the smaller value for font*/
     font-weight: bold;
 }
 
 #top-msg2 {
-    font-size: calc(1em + 4vw);
-    margin-top: 0;
-    margin-bottom: 60px;
+    font-size: min(calc(1em + 4vw), 60px); /*pick the smaller value for font*/
+    margin-top: 0px;
+    margin-bottom: 50px;
 }
 
 #mail-open {
