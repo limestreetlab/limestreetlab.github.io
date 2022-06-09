@@ -75,10 +75,6 @@ body {
     overflow: hidden; /*used for ::after masking*/
 }
 
-.primary-color {
-    color: var(--red-color);
-}
-
 #box1 h1::after {
     content: "";
     background-color: var(--font-color);

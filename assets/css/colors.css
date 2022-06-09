@@ -17,3 +17,8 @@
     --red-color-rgb: 237, 28, 46; 
 
   }
+
+ /*color definitions*/
+.primary-color {
+  color: var(--red-color);
+}
