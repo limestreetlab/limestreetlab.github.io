@@ -14,8 +14,7 @@ body {
 
 /*the cover image to display in the showcase container, before any photo load*/
 #showcase-cover {
-  width: 100%;
-  height: 100%;
+  height: 80vh; /*width controlled by Bootstrap col*/
   background-image: url(../img/photos-bg.png);
   background-repeat: no-repeat;
   background-position: top 20% center;
