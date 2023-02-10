@@ -20,7 +20,7 @@ function initMap() {
         position: myLatLng,
         icon: "https://i.ibb.co/8KnRjYg/map-cursor.png",
         map: map,
-        title: "Houghton Street",
+        title: "Lime Street",
         optimized: false
     });
 
