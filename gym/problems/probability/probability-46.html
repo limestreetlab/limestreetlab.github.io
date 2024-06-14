@@ -1,11 +1,95 @@
 <div id="problem">
-
-
+Dealing from a standard 52-card deck, how many possible 5-card hands are there of:
+<ol>
+    <li>full-house (3 same values and 2 same values)</li>
+    <li>straight flush (straight and flush), royal flush (straight flush of 10JQKA)</li>
+    <li>flush</li>
+    <li>straight</li>
+    <li>one pair</li>
+    <li>two pairs</li>
+    <li>three of a kind</li>
+    <li>four of a kind</li>
+</ol>
 
 </div>
 
 <div id="solution">
 
+<ol>
+    <li>
+        <b>Full-house</b>
+        <br>
+        For the $3$ having the same value, there are $\binom{13}{1}$ for the value and $\binom{4}{3}$ for the suit. 
+        For the $2$ having the same value, there are $\binom{12}{1}$ for the value and $\binom{4}2{}$ for the suit.
+        The number of possible full-house hands is therefore
+        $$
+        \binom{13}{1} \cdot \binom{4}{3} \cdot \binom{12}{1} \cdot \binom{4}{2} = 13 \cdot 4 \cdot 12 \cdot 6 = 3744
+        $$
+    </li>
+    <li>
+        <b>Straight flush</b>
+        <br>
+        A straight can range from A2345 to 10JQKA; there are $10$ of these and there are $4$ suits. 
+        There are therefore $10 \cdot 4 = 40$ such hands, among which $4$ are royal flush.
+    </li>
+    <li>
+        <b>Flush</b>
+        <br>
+        Each suit consists of $13$ cards and there are $4$ suits; straight flush hands should be substracted as well.
+        $$
+        \binom{13}{5} \cdot 4 - 40 = 5108
+        $$
+    </li>
+    <li>
+        <b>Straight</b>
+        <br>
+        There are 10 possible consecutive sequences and each card can have any of the $4$ suits; straight flush hands should be substracted as well. 
+        $$
+        10 \cdot 4^5 - 40 = 10200
+        $$
+    </li>
+    <li>
+        <b>One pair</b>
+        <br>
+        The pair can be picked from any $13$ values and there are $_4 C_2$ ways for their suits. The remaining $3$ cards must take the remaining $12$ values and can be of any suits. 
+        There are $_12 C_3 \cdot 4^3$ ways for the remaining cards; alternatively, there are $48, 44, 40$ possible cards for the remaining cards but $48 \cdot 44 \cdot 40$ gives the <b>ordered</b> permutations so must be discounted by $3!$.
+        $$
+        \binom{13}{1} \cdot \binom{4}{2} \cdot \binom{12}{3} \cdot 4^3 \text{or} \binom{13}{1} \cdot \binom{4}{2} \cdot 48 \cdot 44 \cdot 40 \cdot \frac{1}{3!} = 1098240
+        $$
+    </li>
+    <li>
+        <b>Two pairs</b>
+        <br>
+        There are $_13 C_2$ ways for the two pairs and for each pair there are $_4 C_2$ ways for the suits. There are then $(13 - 2) \cdot 4 $ remaining cards for the last card.
+        $$
+        \binom{13}{2} \cdot {\binom{4}{2}}^2 \cdot 44 = 123552
+        $$
+    </li>
+    <li>
+        <b>Three of a kind</b>
+        <br>
+        There are $_13 C_1$ ways for the same value and $_4 C_3$ for the suits. There are $_12 C_2$ ways for the two values and each of them can have any suits. 
+        $$
+        \binom{13}{1} \cdot \binom{4}{3} \cdot \binom{12}{2} \cdot 4^2 = 54912
+        $$
+    </li>
+    <li>
+        <b>Four of a kind</b>
+        <br>
+        There are $_13 C_1$ ways for the same value and $_4 C_4$ for the suits. There are $_12 C_1$ ways for the remaining one value that can be of any suits. 
+        $$
+        \binom{13}{1} \cdot \binom{4}{4} \cdot \binom{12}{1} \cdot 4 = 624
+        $$
+    </li>
+    <li>
+        There are $\binom{52}{5}$ possible hands, the probabilities for the above hands are:
+        \begin{center}\begin{tabular}{c c c c c c c c c}
+            full-house & straight flush & royal flush & flush & straight & 1 pair & 2 pairs & 3 of a kind & 4 of a kind \\
+            0.14\% & 0.0014\% & 0.0001\% & 0.20\% & 0.39\% & 42.3\% & 4.8\% & 2.1\% & 0.024\%
+        \end{tabular}\end{center}
+    </li>
+    
+</ol>
 
 
 </div>

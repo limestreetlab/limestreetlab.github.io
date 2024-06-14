@@ -1,0 +1,52 @@
+---
+title: "Power Law and Log-Log Plot"
+output: 
+  html_document:
+    code_folding: hide
+---
+
+**Work in progress on power law, dynamics, distribution pdf, and real-world data**
+
+
+### The Power Law
+Many real-world phenomena in nature and society exhibit the power law distributions, including word occurrences in a book and company sizes in an industry. Unlike the normal distribution, power law distribution is a heavy-tailed distribution, such that its tail is not expoentially bounded and allows for very large observations. The symmetric normal distribution is intuitive in the sense that there is a *typical* observation (ie an average) at the centre and large variations on either side are rare. On the other hand, phenomena following the power law distributions vary substantially in size such that there isn't a sample representative and the simple average tends to be much larger than the supermajority of observations. 
+
+The power law dependencies can be characterized by $y = f(x) = ax^{-k}$, where $a$ is a scaling parameter and $k$ is an exponent parameter.    
+An important feature of the power law is scale-invariance; that is, scaling $x$ by a constant $c$ results only in a proportionate scaling of $f(x)$, so all power laws with a particular exponent parameter are simply scaled versions of each other. 
+
+\begin{align}
+f(cx) & = a(cx)^{-k} \\
+& = c^{-k} ax^{-k} = c^{-k}f(x)\\
+& \propto f(x)
+\end{align}
+
+### Disorder-Order
+The presence of power law is also said to signal some form of self-organization or order in a system. It often surfaces during the phase transition of a system between disorder and order. It is caused by positive feedback loop in many systems which amplifies oscillations exponentially manifesting as power law. 
+
+### Signature in Log-Log Plot
+If data follow the power law, plotting $\ln(y)$ and $\ln(x)$ should end up with a straight line, even if we don't know the parameters $a$ and $k$. Such a **log-log** plot is a common way to linearize and detect the power law footprint as logarithms are the inverse of exponential functions.   
+
+Using basic logarithmic properties $\log(ab) = \log(a) + \log(b)$ and $\log(a^k) = k \log(a)$, and taking log of the power law relationship, we see:
+
+\begin{align}
+\log{f(x)} & = \log(ax^{-k}) \\
+& = \log(a) + \log(x^{-k}) \\ 
+& = \log(a) - k\log(x)
+\end{align}
+
+This is the equation of a straight line for $\log(y)$ on $\log(x)$, with $\log(a)$ as the y-intercept and $-k$ as the slope. 
+
+A quick illustration of such log-log plot,
+```{r, echo=TRUE}
+L <- function(x, a, k) { #power law function
+  return (a * x^(-k));
+}
+a <- 3; #arbitrary a and k parameters
+k <- 8; 
+x <- seq(10, 200, by=5); #arbitrary x values
+y <- L(x, a, k); 
+par(mfrow = c(1, 2)); #split plot frame
+plot(x, y, main="Linear plot", col="blue"); 
+plot(log(x), log(y), main="Log-log plot", xlab = "Ln(x)", ylab = "Ln(y)", col="blue"); 
+abline(a = log(a), b = -k); #adding a straight line
+```

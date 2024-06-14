@@ -46,7 +46,7 @@
 
 /*overriding flex */
 #mathematics .subjectshelf a { 
-    flex: 1 1 50%;
+    flex: 1 1 33.33%;
 }
 
 /*secondary subject/emptysubject class tags for hover effects*/
@@ -83,7 +83,7 @@
 
 
 /*secondary subject/emptysubject class tags for hover effects*/
-.subject_pythonlib:hover ~ .emptysubject_pythonlib, .subject_r:hover ~ .emptysubject_r {
+.subject_pythonlib:hover ~ .emptysubject_pythonlib {
     opacity: 1;
 }  
 /*end of styling for 4th page*/

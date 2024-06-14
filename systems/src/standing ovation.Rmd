@@ -1,0 +1,10 @@
+---
+title: "Standing Ovation Model"
+output: html_document
+---
+
+### Standing Ovation 
+
+
+### References 
+1. Miller J, & Page S (2007). Complex Adaptive Systems: An Introduction to Computational Models of Social Life. Princeton University Press.

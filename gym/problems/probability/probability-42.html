@@ -1,11 +1,25 @@
 <div id="problem">
 
-
+From a group of 10 people, how many ways can we form a team of 7 consisting of 1 leader, 2 managers, and 4 members?
 
 </div>
 
 <div id="solution">
 
+The number of ordered set in picking 7 people out of 10 is $_10 P_7 $, which overcounts the subset of managers by $2!$ and the subset of members by $4!$, so 
+the number of ways in picking our group is 
+$$
+\frac{_10 P_7}{4!2!} = \frac{10!}{3!4!2!} = \frac{(10)(9)(8)(7)(6)(5)}{3!2!} = \frac{151200}{12} = 12600
+$$
 
+Alternatively, we can pick the leader out of $10$, then managers out of $9$, and then members out of $7$, or members out of $10$ then leader out of $6$ then managers out of the remaining $5$.
+The number of ways in picking the group is
+$$
+\binom{10}{1}\binom{9}{2}\binom{7}{4} = \binom{10}{4}\binom{6}{1}\binom{5}{2} = 12600
+$$
+Alternatively, we can pick all $7$ people out of the $10$ first, then we assign the leader role to $1$ of the $7$, manager role to $2$ of the $6$, and member role to $4$ of the remaining $4$.
+$$
+\binom{10}{7}  \binom{7}{1} \binom{6}{2} \binom{4}{4} = \binom{10}{7} \binom{7}{4} \binom{3}{1} \binom{2}{2} = 12600
+$$
 
 </div>

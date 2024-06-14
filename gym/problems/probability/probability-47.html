@@ -1,11 +1,35 @@
 <div id="problem">
-
-
+When rolling $6$ dice, 
+<ol>
+<li>What's the probability that all numbers are different?</li>
+<li>What's the probability that there are three pairs?</li>
+</ol>
 
 </div>
 
 <div id="solution">
+<ol>
+<li>
+Assume rolling the dice in sequence, the first roll can be any number, the second has to be the remaining $5$ numbers, the third the remaining $4$ numbers, \dots . 
+$$
+\frac{6}{6} \cdot \frac{5}{6} \cdot \frac{4}{6} \cdot \frac{3}{6} \cdot \frac{2}{6} \cdot \frac{1}{6} = \frac{720}{46656} \approx 1.5\%
+$$
+Alternatively, the number of possible ordered outcomes for $6$ dice is $6^6$ and number of outcomes of each number appearing once is $6!$, so 
+$$
+\frac{6!}{6^6} = \frac{720}{46656} \approx 1.5\%
+$$
+</li>
 
+<li>
+The $3$ different numbers can be picked in $\binom{6}{3}$ ways. After the $3$ numbers are picked, each of them has to fill $2$ <i>slots</i> in the $6$ <i>slots</i>.
+There are \binom{6}{2} ways for the first number, \binom{4}{2} ways for the second number, and \binom{2}{2} for the third number. 
+The probability of three pairs is therefore
+$$
+\frac{\binom{6}{3} \cdot \binom{6}{2} \cdot \binom{4}{2} \cdot \binom{2}{2} }{6^6} = \frac{1800}{46656} \approx 3.9\%
+$$
+</li>
+
+</ol>
 
 
 </div>

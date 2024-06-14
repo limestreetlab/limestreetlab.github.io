@@ -1,11 +1,16 @@
 <div id="problem">
-
-
+In a standard 5-card poker hand dealt from a 52 card deck, how many possible ways can it contain exactly one diamond card and exactly one ace card?
 
 </div>
 
 <div id="solution">
-
-
-
+First note that the hand having the ace of diamonds meets both requirements. 
+So there are two cases, one having the ace of diamonds and one not having the ace of diamonds.
+<br><br>
+For the hand not containing the ace of diamonds, there are $12$ possible cards of diamonds (excluding the ace card) and $3$ possible cards of aces (excluding the ace of diamonds).
+There are $52 - 1 - 12 - 3 = 36$ remaining cards for the remaining hand. Thus, the number of possible hands is $\binom{12}{1} \cdot \binom{3}{1} \cdot \binom{36}{3} = 12 \cdot 3 \cdot 7140 = 257040$.
+<br><br>
+For the hand containing the ace of diamonds, the remaining cards can come from $52 - 13 - 3 = 36$ cards, so the number of possible hands is $1 \cdot \binom{36}{4} = 58905$.
+<br><br>
+Thus, the number of possible hands is $257040 + 58905 = 315945$. It is $\frac{315945}{_52 C_5} \approx 12\%$ of all possible hands. 
 </div>

@@ -1,11 +1,35 @@
 <div id="problem">
 
-
+<ol>
+    <li>A random person met on the street says that she has two children and the older one is a boy. What's the probability that the other is also a boy?</li>
+    <li>A random person met on the street says that she has two children and the boy standing next to her is one of them. What's the probability that the other is also a boy?</li>
+    <li>A random person met on the street says that she has two children and at least one of them is a boy. What's the probability that the other is also a boy?</li>
+</ol>
 
 </div>
 
 <div id="solution">
 
+<ol>
+    <li>The probability is simply $\frac{1}{2}$ as the younger child has equal chance to be a boy or a girl. <br>
+        The original permutations of the two children are $\{BB\}$, $\{BG\}$, $\{GB\}$, $\{GG\}$, where the first letter denotes the first (older) child. 
+        After knowing the older child is a boy, only $\{BB\}$ and $\{BG\}$ remain, so the probability is $\frac{1}{2}$. 
+    </li>
+
+    <li>
+        The probability is simply $\frac{1}{2}$ as the absent child has equal chance to be a boy or a girl. <br>
+        Let <b>bold</b> letter denote one of the two children she is with, the permutations are $\{\textbf{B}B\}$, $\{B\textbf{B}\}$, $\{\textbf{B}G\}$, $\{B\textbf{G}\}$, $\{\textbf{G}B\}$, $\{G\textbf{B}\}$, $\{\textbf{G}G\}$, $\{G\textbf{G}\}$.
+        But the present child is a boy, so only $\{\textbf{B}B\}$, $\{B\textbf{B}\}$, $\{\textbf{B}G\}$, and $\{G\textbf{B}\}$ remain, of which only two indicate the other child is also a boy. Hence, the probability is $\frac{2}{4} = \frac{1}{2}$.
+    </li>
+
+    <li>
+        There are $2^2 = 4$ possible arrangements for two children, $\{BB\}$, $\{BG\}$, $\{GB\}$, $\{GG\}$. 
+        Having the information that at least one is a boy eliminates $\{GG\}$, so the probability becomes $\frac{1}{3}$, higher than the uninformed probability of two boys $\frac{1}{4}$.
+    </li>
+    
+</ol>
+
+Basically, the first and second give information only about one specific child and nothing at all about the other child individually so probability remains at $\frac{1}{2}$, wheras the last adds information to the collective set of two children so probability improves on the set. 
 
 
 </div>

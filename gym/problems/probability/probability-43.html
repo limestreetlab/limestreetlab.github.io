@@ -1,11 +1,19 @@
 <div id="problem">
-
-
+In poker, a full-house comprises $3$ of a kind and $2$ of another kind in a standard $5$ card hand. 
+<br>
+How many full-house hands are possible? What is the probability of being dealt a full-house out of $52$ cards?
 
 </div>
 
 <div id="solution">
 
-
+If we focus on one specific <i>type</i> or <i>face</i> of full-house, say $3$ cards of $7$s and $2$ cards of Ks such as $77K7K$ and $K777K$, then
+we have $\binom{4}{3} = 4$ ways in picking the first kind and $\binom{4}{2} = 6$ ways in picking the second kind. Thus, there are $4 \cdot 6 = 24$ possible ways in getting one specific full-house <i>type</i>.
+<br><br>
+Next, we ask how many full-house <i>types</i> are there in total. There are $13$ kinds for the first and then $12$ for the second, so there are $_13 P_2 = 13 \cdot 12 = 156$ types of full-house. 
+<br><br>
+Thus, the number of possible full-house hands are $24 \cdot 156 = 3744$. 
+<br><br>
+There are $\binom{52}{5} = 2598960$ possible hands, so probability of dealing a full-house is $\frac{3744}{2598960} \approx 0.14\%$.
 
 </div>
