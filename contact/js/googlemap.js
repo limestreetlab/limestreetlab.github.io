@@ -1,8 +1,8 @@
 function initMap() {
 
     var myLatLng = {
-        lat: 55.948517, // 
-        lng: -3.191521//-3.191521 edinburgh -2.6200 bristol
+        lat: 51.5092,  
+        lng: -0.1175
     };
 
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -18,7 +18,7 @@ function initMap() {
 
     var marker = new google.maps.Marker({
         position: myLatLng,
-        icon: "https://i.ibb.co/8KnRjYg/map-cursor.png",
+        //icon: "https://i.ibb.co/8KnRjYg/map-cursor.png",
         map: map,
         title: "Lime Street",
         optimized: false
