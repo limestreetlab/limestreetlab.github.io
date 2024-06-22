@@ -6,24 +6,24 @@ new = open("C:/Users/bluer/Dropbox//Website/books/abc_csv.txt", "w", encoding="u
 
 #function identifying, extracting and returning the link portion of a line input
 def linkSearch(thisline):
-	     substart = "https://app.box"
-	     subend = '"'
-	     substartindex = thisline.index(substart)
-	     subendindex = thisline.index(subend, substartindex, len(thisline))
-	     return thisline[substartindex:subendindex]
+	substart = "https://app.box"
+	subend = '"'
+	substartindex = thisline.index(substart)
+	subendindex = thisline.index(subend, substartindex, len(thisline))
+	return thisline[substartindex:subendindex]
 
 #function identifying, extracting and returning the title portion of a line input
 def titleSearch(thisline):
-	     substart = "_blank"
-	     subenda = "</a>"
-	     subendb = "</B>"
-	     subendu = "</U>"
-	     substartindex = thisline.index(substart) + 8
-	     subendindexa = thisline.index(subenda)
-	     subendindexb = thisline.index(subendb)
-	     subendindexu = thisline.index(subendu)
-	     subendindex = min(subendindexa, subendindexb, subendindexu)
-	     return thisline[substartindex:subendindex].strip()
+	substart = "_blank"
+	subenda = "</a>"
+	subendb = "</B>"
+	subendu = "</U>"
+	substartindex = thisline.index(substart) + 8
+	subendindexa = thisline.index(subenda)
+	subendindexb = thisline.index(subendb)
+	subendindexu = thisline.index(subendu)
+	subendindex = min(subendindexa, subendindexb, subendindexu)
+	return thisline[substartindex:subendindex].strip()
 
 line = "" #initiation  to empty string
 titles = [] #titles list
