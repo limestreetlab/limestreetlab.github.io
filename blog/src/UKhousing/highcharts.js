@@ -29,7 +29,7 @@ function display(city) {
   let priceChartIntervalId; //identifies an interval set by setInterval(), so can remove it later by clearInterval()
   
   // Fetch JSON data from file and start things
-  fetch('./UKhousing/aggregated_data.json')
+  fetch('../src/UKhousing/aggregated_data.json')
   .then(streamData => streamData.json()) //parse response stream to JSON
   .then(JSONdata => { 
     grabData(JSONdata);
@@ -271,7 +271,7 @@ function compare() {
   let intervalId; //identifies an interval set by setInterval(), so can remove it later by clearInterval()
 
   // Fetch JSON data from file and start things
-  fetch('./UKhousing/aggregated_data.json')
+  fetch('../src/UKhousing/aggregated_data.json')
   .then(streamData => streamData.json()) //parse response stream to JSON
   .then(JSONdata => { 
     prepareData(JSONdata);

@@ -1,3 +1,7 @@
 
 #ignore bootstrap folder containing source files
 /assets/bootstrap/
+
+#iOs
+.DS_Store
+**/.DS_Store
