@@ -52,11 +52,22 @@ body {
 }
 
 .post {
-    margin: 20px;
+    margin: 10px;
+}
+
+.post:after {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+  padding: 0;
+  content: "";
 }
 
 .post .title {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    font-weight: bolder;
 }
 
 
