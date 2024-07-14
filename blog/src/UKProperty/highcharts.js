@@ -1,4 +1,5 @@
-const propertyDataFile= "../data/property_data.json"; //INPUT path to data file
+//INPUT parameters, path to data files to be plotted
+const propertyDataFile= "../data/property_data.json"; 
 
 //wrap things in document.ready
 $(document).ready( () => {
@@ -20,7 +21,7 @@ function display(city) {
   let cityData = []; //to hold chart data
   let chart; //the chart object
   
-  const duration = 200; // how long animation between new points should take (in milliseconds)
+  const duration = 100; // how long animation between new points should take (in milliseconds)
   const startIterator = 1; // how many points to render on init
   let currentIterator = startIterator; //initialized
   let maxIterator = 1; //maximum available data points
@@ -262,7 +263,7 @@ function compare() {
   let dataBundle = []; //to hold chart data
   let chart; //the chart object
 
-  const duration = 300; // how long animation between new points should take (in milliseconds)
+  const duration = 150; // how long animation between new points should take (in milliseconds)
   const startIterator = 1; // how many points to render on init
   let currentIterator = startIterator; //initialized
   let maxIterator = 1; //maximum available data points
