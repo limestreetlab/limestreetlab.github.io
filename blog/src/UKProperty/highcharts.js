@@ -1,10 +1,16 @@
-//INPUT parameters, path to data files to be plotted
-const propertyDataFile= "../data/property_data.json"; 
+//INPUT parameters, paths to data files to be plotted
+const propertyDataFile= "../data/housing_data.json"; 
 
 //wrap things in document.ready
 $(document).ready( () => {
   
-  compare();
+  compare($("#group-select").val());
+
+  $("#group-select").change( () => {
+    $('#percentage-start-btn').text('Start');
+    let group = $("#group-select").val();
+    compare(group);
+  }) 
   
   display($("#city-select").val());
 
@@ -16,12 +22,20 @@ $(document).ready( () => {
 
 });//end of document.ready wrapper
 
+//lists of areas applied to each series (national, london, commuters)
+const nationalCities = ["birmingham", "bristol", "cambridge", "cardiff", "edinburgh", "glasgow", "inner london", "leeds", "liverpool", "manchester", "newcastle", "nottingham", "outer london", "oxford", "sheffield", "york"]; //names of cities to include
+const londonCouncils = ["barnet", "brent", "camden", "croydon", "ealing", "greenwich", "hackney", "hammersmith and fulham", "islington", "kensington and chelsea", "kingston upon thames", "lambeth", "lewisham", "richmond upon thames", "southwark", "sutton", "tower hamlets", "wandsworth"]; //london areas
+const londonCommuters = ["chelmsford", "colchester", "dartford", "guildford", "milton keynes", "reading", "sevenoaks", "st albans", "tonbridge", "tunbridge wells", "watford", "windsor and maidenhead", "woking"]; //london commuter towns
+
+/*
+function to display property prices in a city
+*/
 function display(city) {
 
   let cityData = []; //to hold chart data
   let chart; //the chart object
   
-  const duration = 100; // how long animation between new points should take (in milliseconds)
+  const duration = 120; // how long animation between new points should take (in milliseconds)
   const startIterator = 1; // how many points to render on init
   let currentIterator = startIterator; //initialized
   let maxIterator = 1; //maximum available data points
@@ -166,7 +180,7 @@ function display(city) {
         text: 'Source: HM Land Registry (House Price Index)',
         href: 'https://landregistry.data.gov.uk/',
         style: {
-          fontSize: '8px'
+          fontSize: '10px'
         },
         position: {
           align: 'right'
@@ -256,14 +270,31 @@ function display(city) {
 
 } //end city price chart function
 
-function compare() {
+/*
+function to compare different area/city indexed prices
+*/
+function compare(group) {
+
+  let selectedGroup = [];
+  switch(group) {
+    case "national":
+      selectedGroup = nationalCities;
+      break;
+    case "london":
+      selectedGroup = londonCouncils;
+      break;
+    case "london commuters":
+      selectedGroup = londonCommuters;
+      break;    
+  }
+  
   /*
   globally used variables
   */
   let dataBundle = []; //to hold chart data
   let chart; //the chart object
 
-  const duration = 150; // how long animation between new points should take (in milliseconds)
+  const duration = 120; // how long animation between new points should take (in milliseconds)
   const startIterator = 1; // how many points to render on init
   let currentIterator = startIterator; //initialized
   let maxIterator = 1; //maximum available data points
@@ -287,13 +318,11 @@ function compare() {
   */
   function prepareData(data) {
 
-    const cities = ["york", "manchester", "edinburgh", "glasgow", "birmingham", "bristol", "inner london", "outer london", "liverpool", "newcastle", "oxford"]; //names of cities to include
-
     //loop through JSON to construct data suitable for Highcharts
     //[ {city: city, data: [ [date, %], [date, %], ..., [date, %] ]}, ...]
     for (let key in data) {
 
-      if ( cities.includes(key.toLowerCase()) ) { 
+      if ( selectedGroup.includes(key.toLowerCase()) ) { 
         dataBundle.push({
           "city": key, 
           "data": data[key].map(datapoint => [datapoint.date, datapoint.change*100])
@@ -350,7 +379,7 @@ function compare() {
 
       tooltip: {
         style: {
-          fontSize: '9px' 
+          fontSize: '7px' 
         },
         split: true,
         useHTML: true,
@@ -391,7 +420,7 @@ function compare() {
         text: 'Source: HM Land Registry (House Price Index)',
         href: 'https://landregistry.data.gov.uk/',
         style: {
-          fontSize: '8px'
+          fontSize: '10px'
         },
         position: {
           align: 'right'

@@ -38,14 +38,23 @@ using: highcharts
   <body ontouchstart="">
   <main class="container">
 
-  <h1 class="mt-4 text-primary display-4 mb-5">Taking a look at UK property price trends</h1>
+  <h1 class="mt-4 text-primary display-6 mb-5 text-center">Taking a look at UK historical property prices</h1>
   
   <br>
   
   <section class="row">
 
-  <h4 class="col-12 text-primary text-start ms-5 mb-3">Price Appreciation Comparison</h4>
-  <div class="col-12 text-center">
+  <h4 class="col-12 text-primary text-start ms-5 mb-3">Price Trend Comparison</h4>
+  
+  <div class="col-5 ms-5">
+    <select name="group-select" id="group-select" class="form-select">
+      <option value="national">National cities</option>
+      <option value="london">London areas</option>
+      <option value="london commuters">London Commuters</option>
+    </select>
+  </div>
+
+  <div class="col">
     <button type="button" class="btn btn-primary btn-lg float-end me-5" id="percentage-start-btn">
       Start    
     </button>
@@ -64,15 +73,27 @@ using: highcharts
 
         <optgroup label="London">
           <option value="barnet" selected>Barnet</option>
+          <option value="bexley" selected>Bexley</option>
+          <option value="brent" selected>Brent</option>
+          <option value="bromley" selected>Bromley</option>
           <option value="camden">Camden</option>
           <option value="croydon">Croydon</option>
           <option value="ealing">Ealing</option>
+          <option value="greenwich">Greenwich</option>
+          <option value="hackney">Hackney</option>
           <option value="hammersmith and fulham">Hammersmith and Fulham</option>
           <option value="harrow">Harrow</option>
+          <option value="islington">Islington</option>
           <option value="kensington and chelsea">Kensington and Chelsea</option>
           <option value="kingston upon thames">Kingston upon Thames</option>
+          <option value="lambeth">Lambeth</option>
+          <option value="lewisham">Lewisham</option>
+          <option value="merton">Merton</option>
+          <option value="newham">Newham</option>
           <option value="richmond upon thames">Richmond upon Thames</option>
+          <option value="southwark">Southwark</option>
           <option value="sutton">Sutton</option>
+          <option value="tower hamlets">Tower Hamlets</option>
           <option value="wandsworth">Wandsworth</option>
         </optgroup>
 
@@ -84,26 +105,32 @@ using: highcharts
 
         <optgroup label="East of England">
           <option value="cambridge">Cambridge</option>
+          <option value="chelmsford">Chelmsford</option>
           <option value="colchester">Colchester</option>
           <option value="norwich">Norwich</option>
         </optgroup>
 
         <optgroup label="South East">
           <option value="brighton">Brighton</option>
+          <option value="chichester">Chichester</option>
           <option value="milton keynes">Milton Keynes</option>
           <option value="oxford">Oxford</option>
           <option value="reading">Reading</option>
           <option value="southampton">Southampton</option>
+          <option value="winchester">Winchester</option>
         </optgroup>
 
         <optgroup label="South West">
+          <option value="bath">Bath</option>
           <option value="bristol">Bristol</option>
+          <option value="cardiff">Cardiff</option>
           <option value="cheltenham">Cheltenham</option>
           <option value="exeter">Exeter</option>
           <option value="gloucester">Gloucester</option>
         </optgroup>
 
         <optgroup label="East Midlands">
+          <option value="derby">Derby</option>
           <option value="leicester">Leicester</option>
           <option value="nottingham">Nottingham</option>
         </optgroup>
@@ -111,6 +138,7 @@ using: highcharts
         <optgroup label="West Midlands">
           <option value="birmingham">Birmingham</option>
           <option value="coventry">Coventry</option>
+          <option value="warwick">Warwick</option>
         </optgroup>
 
         <optgroup label="Yorkshire">
