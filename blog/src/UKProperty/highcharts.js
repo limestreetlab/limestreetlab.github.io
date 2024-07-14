@@ -1,5 +1,6 @@
-//wrap things in document.ready
+const propertyDataFile= "../data/property_data.json"; //INPUT path to data file
 
+//wrap things in document.ready
 $(document).ready( () => {
   
   compare();
@@ -29,7 +30,7 @@ function display(city) {
   let priceChartIntervalId; //identifies an interval set by setInterval(), so can remove it later by clearInterval()
   
   // Fetch JSON data from file and start things
-  fetch('../src/UKhousing/aggregated_data.json')
+  fetch(propertyDataFile)
   .then(streamData => streamData.json()) //parse response stream to JSON
   .then(JSONdata => { 
     grabData(JSONdata);
@@ -271,7 +272,7 @@ function compare() {
   let intervalId; //identifies an interval set by setInterval(), so can remove it later by clearInterval()
 
   // Fetch JSON data from file and start things
-  fetch('../src/UKhousing/aggregated_data.json')
+  fetch(propertyDataFile)
   .then(streamData => streamData.json()) //parse response stream to JSON
   .then(JSONdata => { 
     prepareData(JSONdata);
