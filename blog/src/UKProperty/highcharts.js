@@ -64,7 +64,7 @@ function display(city) {
       
       if ( key.toLowerCase() === city.toLowerCase() ) { 
         cityData.push(
-          data[key].map(datapoint => [datapoint.date, datapoint.allPrice, datapoint.detachedPrice, datapoint.semidetachedPrice, datapoint.terracedPrice, datapoint.flatPrice])
+          data[key].map(datapoint => [datapoint.date, datapoint.detachedPrice, datapoint.semidetachedPrice, datapoint.terracedPrice, datapoint.flatPrice])
         );
       }
 
@@ -83,8 +83,7 @@ function display(city) {
     const chartParams = {
 
       chart: {
-        type: 'line',
-        marginBottom: 50
+        type: 'column'
       },
 
       title: {
@@ -99,7 +98,7 @@ function display(city) {
       },
 
       xAxis: {
-        min: 2004, //set x-axis to start from 2004
+        min: 2003.7, //set x-axis to start from 2004, give some space for the initial left-side column bars which get cut off if started right at 2004
         softMax: 2006, //flexible max to expand if exceeded
         tickInterval: 1, //increment by 1 year
       },
@@ -123,7 +122,7 @@ function display(city) {
 
       tooltip: {
         style: {
-          fontSize: '9px' 
+          fontSize: '10px' 
         },
         split: true,
         useHTML: true,
@@ -139,24 +138,20 @@ function display(city) {
 
       series: [
         {
-          name: "All types",
-          data: cityData.slice(0, startIterator).map(point => point[1])
-        }, 
-        {
           name: "Detached",
-          data: cityData.slice(0, startIterator).map(point => point[2])
+          data: cityData.slice(0, startIterator).map(point => point[1])
         },
         {
           name: "Semi-detached",
-          data: cityData.slice(0, startIterator).map(point => point[3])
+          data: cityData.slice(0, startIterator).map(point => point[2])
         },
         {
           name: "Terraced",
-          data: cityData.slice(0, startIterator).map(point => point[4])
+          data: cityData.slice(0, startIterator).map(point => point[3])
         },
         {
           name: "Flat",
-          data: cityData.slice(0, startIterator).map(point => point[5])
+          data: cityData.slice(0, startIterator).map(point => point[4])
         }
       ], 
 
@@ -172,6 +167,10 @@ function display(city) {
             symbol: 'circle',
             enabled: false
           }
+        }, 
+        column: {
+          borderWidth: 0,
+          pointPadding: 0
         }
       },
 
