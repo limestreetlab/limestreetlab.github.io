@@ -99,7 +99,7 @@ function display(city) {
 
       xAxis: {
         min: 2003.7, //set x-axis to start from 2004, give some space for the initial left-side column bars which get cut off if started right at 2004
-        softMax: 2006, //flexible max to expand if exceeded
+        softMax: 2010, //flexible max to expand if exceeded
         tickInterval: 1, //increment by 1 year
       },
 
@@ -359,7 +359,7 @@ function compare(group) {
 
       xAxis: {
         min: 2004, //set x-axis to start from 2004
-        softMax: 2006, //flexible max to expand if exceeded
+        softMax: 2010, //flexible max to expand if exceeded
         tickInterval: 1, //increment by 1 year
       },
 
