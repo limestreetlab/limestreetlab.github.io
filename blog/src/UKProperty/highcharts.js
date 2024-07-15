@@ -7,7 +7,7 @@ $(document).ready( () => {
   compare($("#group-select").val());
 
   $("#group-select").change( () => {
-    $('#percentage-start-btn').text('Start');
+    $('#percentage-start-btn').text('Start').off(); //reset the button text and evt handler
     let group = $("#group-select").val();
     compare(group);
   }) 
@@ -15,7 +15,7 @@ $(document).ready( () => {
   display($("#city-select").val());
 
   $("#city-select").change( () => {
-    $('#price-start-btn').text('Start');
+    $('#price-start-btn').text('Start').off(); //reset the button text and evt handler
     let city = $("#city-select").val();
     display(city);
   }) 
@@ -35,13 +35,13 @@ function display(city) {
   let cityData = []; //to hold chart data
   let chart; //the chart object
   
-  const duration = 120; // how long animation between new points should take (in milliseconds)
+  const duration = 100; // how long animation between new points should take (in milliseconds)
   const startIterator = 1; // how many points to render on init
   let currentIterator = startIterator; //initialized
   let maxIterator = 1; //maximum available data points
 
-  const priceChartButton = document.querySelector('#price-start-btn'); //the click button
-  let priceChartButtonState = 'Start'; //[Start, Stop, Resume, Restart] where Restart to chart again at end of data
+  const priceChartButton = $("#price-start-btn"); //the click button
+  let priceChartButtonState = "Start"; //[Start, Stop, Resume, Restart] where Restart to chart again at end of data
   let priceChartIntervalId; //identifies an interval set by setInterval(), so can remove it later by clearInterval()
   
   // Fetch JSON data from file and start things
@@ -197,12 +197,13 @@ function display(city) {
   */
   function initEvents() {
 
-    priceChartButton.addEventListener('click', function() {
+    priceChartButton.on("click", function() {
       
       if (priceChartButtonState === 'Stop') { //user clicked btn when showing Stop
 
         priceChartIntervalId = clearInterval(priceChartIntervalId); //clear setInterval()
-        priceChartButton.innerText = priceChartButtonState = 'Resume'; //set button text and state to 'Resume'
+        priceChartButton.text("Resume");
+        priceChartButtonState = "Resume"; //set button text and state to 'Resume'
 
       } else { //start charting
 
@@ -211,7 +212,8 @@ function display(city) {
           makeChart();
         }
 
-        priceChartButton.innerText = priceChartButtonState = 'Stop'; //starting chart and setting button text and state to 'Stop'
+        priceChartButton.text("Stop"); //starting chart and setting button text and state to 'Stop'
+        priceChartButtonState = "Stop"; 
         redrawChart(++currentIterator); //pre-increment iterator and remake chart
 
         //repeatedly call function at set interval using setInterval(callback, interval)
@@ -221,7 +223,8 @@ function display(city) {
             
             priceChartIntervalId = clearInterval(priceChartIntervalId); //clear setInterval()
             currentIterator = startIterator; //reset iterator
-            priceChartButton.innerText = priceChartButtonState = 'Restart'; //set button text and state variable
+            priceChartButton.text("Restart");  //set button text and state variable
+            priceChartButtonState = "Restart"; 
             
           } else {
             
@@ -292,14 +295,14 @@ function compare(group) {
   */
   let dataBundle = []; //to hold chart data
   let chart; //the chart object
+  const percentageChartButton = $("#percentage-start-btn"); //the click button
+  let percentageChartButtonState = "Start"; //[Start, Stop, Resume, Restart] where Restart to chart again at end of data
 
-  const duration = 120; // how long animation between new points should take (in milliseconds)
+  const duration = 100; // how long animation between new points should take (in milliseconds)
   const startIterator = 1; // how many points to render on init
   let currentIterator = startIterator; //initialized
   let maxIterator = 1; //maximum available data points
 
-  const percentageChartButton = document.querySelector('#percentage-start-btn'); //the click button
-  let percentageChartButtonState = 'Start'; //[Start, Stop, Resume, Restart] where Restart to chart again at end of data
   let intervalId; //identifies an interval set by setInterval(), so can remove it later by clearInterval()
 
   // Fetch JSON data from file and start things
@@ -438,12 +441,13 @@ function compare(group) {
   */
   function initEvents() {
 
-    percentageChartButton.addEventListener('click', function() {
+    percentageChartButton.on('click', function() {
       
       if (percentageChartButtonState === 'Stop') { //user clicked btn when showing Stop
 
         intervalId = clearInterval(intervalId); //clear setInterval()
-        percentageChartButton.innerText = percentageChartButtonState = 'Resume'; //set button text and state to 'Resume'
+        percentageChartButton.text("Resume"); //set button text and state to 'Resume'
+        percentageChartButtonState = 'Resume'; 
 
       } else { //start charting
 
@@ -452,7 +456,8 @@ function compare(group) {
           makeChart();
         }
 
-        percentageChartButton.innerText = percentageChartButtonState = 'Stop'; //starting chart and setting button text and state to 'Stop'
+        percentageChartButton.text("Stop"); //starting chart and setting button text and state to 'Stop'
+        percentageChartButtonState = 'Stop'; 
         redrawChart(++currentIterator); //pre-increment iterator and remake chart
 
         //repeatedly call function at set interval using setInterval(callback, interval)
@@ -462,7 +467,8 @@ function compare(group) {
             
             intervalId = clearInterval(intervalId); //clear setInterval()
             currentIterator = startIterator; //reset iterator
-            percentageChartButton.innerText = percentageChartButtonState = 'Restart'; //set button text and state variable
+            percentageChartButton.text("Restart"); //set button text and state variable
+            percentageChartButtonState = 'Restart'; 
             
           } else {
             
