@@ -1,5 +1,5 @@
 <!--
-description:the landing page for systems blog posts.
+description:the landing page for dataset
 date: 12/07/2024
 author: Lime Street
 using: manually written html/css
@@ -9,7 +9,7 @@ using: manually written html/css
 <html lang="en">
     <head>
         <title>
-            Lime Street :: Systems
+            Lime Street :: Dataset
         </title>
 
         <!--meta for google-->
@@ -26,7 +26,7 @@ using: manually written html/css
         <script src="../assets/js/bootstrap.min.js"></script><!--Bootstrap JS-->
 
         <!--styling, internal files-->
-        <link rel="stylesheet" href="css/systems.css" type="text/css">
+        <link rel="stylesheet" href="css/dataset.css" type="text/css">
 
         <!--icons-->
         <link rel="icon" type="image/png" href="../assets/img/red-favicon.png">
@@ -51,15 +51,21 @@ using: manually written html/css
     <main id="main-container">
 
         <header id="page-top-container">
-          <div id="page-top-content"><h1>Systems</h1></div>
+          <div id="page-top-content"><h1>Dataset</h1></div>
         </header>
 
         <main class="container">
 
             <section class="post">
-                <div class="title"><a href="renders/log-log-plot.html">Power law and log-log plot</a></div>
-                <div class="date">June 2024</div>
+                <div class="title"><a href="data/dailyStockOHLC.zip" download>Daily US stock OHLC</a></div>
+                <div class="description">ticker universe from S&P500 (excluding real estate) and Nasdaq100 in July 2024, from 2014</div>
             </section>
+
+            <section class="post">
+                <div class="title"><a href="data/UKPropertyPrices.zip" download>UK property prices</a></div>
+                <div class="description">average property prices of selected cities and regions, from 2004</div>
+            </section>
+
 
 
 
