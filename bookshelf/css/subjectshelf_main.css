@@ -164,28 +164,12 @@
 
 /*overriding flex*/
 #business .subjectshelf a { 
-    flex: 1 1 25%;
+    flex: 1 1 50%;
 }
 
 
 /*secondary subject/emptysubject class tags for hover effects*/
-
-
 /*end of styling for 9th page*/
-
-
-/*start of styling for 10th page (laws)*/
-
-/*overriding flex*/
-#laws .subjectshelf a { 
-    flex: 1 1 33.33%;
-}
-
-/*secondary subject/emptysubject class tags for hover effects*/
-
-
-/*end of styling for 10th page*/
-
 
 
 /*start of styling for 11th page (science & others)*/
@@ -193,12 +177,10 @@
 
 /*overriding flex*/
 #science_others .subjectshelf a { 
-    flex: 1 1 20%;
+    flex: 1 1 33.33%;
 }
 
 
 /*secondary subject/emptysubject class tags for hover effects*/
-
-
 /*end of styling for 11th page*/
 
