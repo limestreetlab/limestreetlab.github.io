@@ -28,6 +28,7 @@ $(document).ready(function() {
     ["The universe consists of 5% protons, 5% neutrons, 5% electrons and 85% morons.", "Frank Zappa"],
     ["The modern society is full of smart phones and stupid people.", "Tiger Tanaka"],
     ["Stupidity is the most widespread virus. We're living in the stupidity pandemic.", "Tiger Tanaka"],
+    ["Probability is a possibility quantified.", "Isabel Scarlett Tanaka"],
     ["Talk sense to a fool and he calls you foolish.", "Euripides"],
     ["Luck is probability taken personally.", "Penn Jillette"],
     ["It is not how things are in the world that is mystical, but that it exists.", "Ludwig Wittgenstein"],
