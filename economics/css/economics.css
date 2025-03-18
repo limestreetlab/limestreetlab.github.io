@@ -69,5 +69,12 @@ body {
     font-weight: bolder;
 }
 
+.post .subtitle {
+  font-size: 1.0rem;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
 
 

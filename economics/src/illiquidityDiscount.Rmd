@@ -1,0 +1,203 @@
+---
+title: "Discounting for Illiquidity in Unlisted Stocks"
+subtitle: "Why and Why Not Use Put Options"
+output: html_document
+bibliography: illiquidity_references.bib
+biblio-style: apalike
+nocite: '@*'
+link-citations: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Liquidity is a complex and abstract concept. Simply put, it refers to the flexibility and ease of trading an asset with minimal price impact. Liquidity has wide ranging applications and implications in finance from market microstructure to financial market stability. It is particularly pertinent in the valuations of hard-to-trade and unlisted securities, such as private company shares. It is widely agreed that liquidity is valuable; the disagreement lies in how to quantify the value of liquidity or, conversely, cost of illiquidity. Over the past decade, option-theoretic approaches have been proposed to measure illiquidity discounts by academics and consulting practitioners. This article aims to review the basic concepts and opine on the efficacy of the commonly cited models. 
+
+## The IPEV Says Nothing
+Although closely intertwined and often used interchangeably, marketability and liquidity are different concepts according to the [IPEV Valuation Guidelines](https://www.privateequityvaluation.com/Portals/0/Documents/Guidelines/IPEV%20Valuation%20Guidelines%20-%20December%202022.pdf). IPEV states that a valuation discount for marketability is not appropriate, wheras one to account for illiquidity is appropriate. 
+
+> Liquidity is a measure of the ease with which an asset may be converted into cash. A highly liquid asset can be easily converted into cash; an illiquid asset may be difficult to convert into cash. Liquidity represents the relative ease and promptness with which an instrument may be sold when desired.
+
+> Marketability is the time required to complete a transaction or sell an Investment.
+
+IPEV defines marketability as the transaction time typically required for the type of asset under consideration. Fair value estimation is premised on an orderly transaction, not a forced liquidation, where the required time to consummate, how ever long it might be, is already taken into account. In other words, IPEV stipulates that factors related to a specific investor, such as his deal timeline, should not be reflected while factors related to the underlying asset, such as liquidity and voting rights, should be. That is, just because unlisted shares take longer to market and transact than listed shares does not in itself warrant a discount, according to IPEV. It is their liquidity characteristics that justify a discount. 
+
+Without suggesting particular methodologies in the guidelines, the application of illiquidity discount is left to the practitioner's judgement, but option pricing is put forward as a potential approach. Practitioners tend to apply an ad-hoc discount in the range of 15-35%, which is based primarily on historical private placements. Option-theoretic approaches have been proposed and increasingly applied in recent years. Given the wide range of justifiable methods, it seems to me practitioners can easily choose a liquidity discount to suit their valuation targets. 
+
+## Stylized Facts of Liquidity
+Liquidity is like oxygen; we all know it is needed, but we don't know how much is needed at what time and how to put a price on it. To gauge its value, we must first define precisely what we mean by illiquidity. We view illiquidity essentially as a constraint on an investor's decision set related to selling the asset whose price follows some random process such as Brownian motion.   
+
+Let $\Omega$ be the decision set of an investor if the stock is entirely liquid, and $\psi \subseteq \Omega$ the liquidity-constrained decision set.
+If the investor can realise present value $A$ under $\Omega$, but only $B$ under $\psi$, where $A \geq B$ ^[It is entirely possible that $B > A$ as flexibility in a decision does not guarantee optimality but we ignore such cases for simplicity.], then $(A-B)$ can be viewed as the cost of illiquidity and $\frac{A-B}{A}$ the illiquidity discount. $A$ and $B$ can be calculated using a binomial tree representing the investor's real options under his decision sets at time $T_0$. 
+
+While we think this perspective succinctly captures the nature of illiquidity, the lack of a generally optimal decision set renders it impracticable ^[It is similar to money, which more is unambiguously better, but the incremental value depends on the person's subjective utility function, which resembles the investor's subjective decision function here.]. Nonetheless, it illustrates that different investors with different horizons and decision sets value liquidity differently, and that the estimated illiquidity discount can be viewed as the equilibrium cost of restrictions resulting from such hypothetical decision set interactions, reflecting an appropriate fair value adjustment.
+
+
+Moreover, it has been documented that it is not so much a stock's liquidity per se that matters in asset pricing, but its covariance to market liquidity. A stock with high liquidity beta is priced more negatively than one with low liquidity beta. That is, investors should require a higher return for a stock that becomes more illiquid when the market encounters diminished liquidity, which often coincides with market sell-offs and volatility spikes, than an identical one that is illiquid when the market is liquid.    
+
+We also make an important distinction between exogenous liquidity risk, which is a function of the market and outside of the investor's control, and endogenous liquidity risk, which is tied to the investor's position and within his control. For private company equity illiquidity, we think only exogenous liquidity risk should be priced.  
+
+Lastly, illiquidity and immediacy are fundamentally different in nature. Immediacy is valued markedly higher than *medium-term* liquidity. The former is usually triggered by financial distress and extreme volatility, and is not relevant to private company equity valuation. 
+
+## Literature Review
+Methodologies can be generally categorized as either empirical or theoretical. Empirical approaches focus on realized market data from private placements, pre-IPO trades, and cross-sectional statistical analyses. One then has to extrapolate from the approach to his particular assignment, which can be quite tenuous. 
+
+Theoretical approaches are preferred if available as they specify a parsimonious set of parameters and tend to be logically explainable.
+
+## Empirical Studies
+
+### Private Placements
+
+### IPOs
+
+### Cross-Sectional Liquidity Return Factor
+
+### Cross-Sectional Bid-Ask Spreads
+The bid-ask spread is a key source of profit for making a market in a stock; it represents an option written by the market maker to a liquidity taker to buy at the ask and to sell at the bid. 
+
+
+## Theoretical Models
+
+
+### DCF-Based
+
+### Option-Based
+Option-theoretic approaches to estimate the illiquidity discounts have been created and promulgated in recent years. They are primarily based around the idea of owning a put option underwritten by a hypothetical creditworthy counterparty making a market on an illiquid stock, such that:
+
+\begin{equation}
+\text{illiquid stock} + \text{put option} = \text{liquid stock} \implies \text{liquid stock} - \text{illiquid stock} = \text{put option} \tag{1}\label{eq:chaffe}
+\end{equation}
+It follows that liquidity premium $=$ put premium or, conversely, illiquidity discount $=$ cost of put. The estimation then centers on option pricing. These approaches have become increasingly popular among practitioners. 
+
+#### Chaffe's Plain Vanilla Put
+@chaffe1993 was the first to introduce the concept of equation $\eqref{eq:chaffe}$. He stated that by purchasing a put option, the illiquid stock owner has effectively purchased liquidity as the option underwriter is now his liquidity provider. The price of the put is then the illiquidity discount. 
+
+Chaffe proposed to use a plain vanilla European put to resemble the SEC rule 144 restricted period in private placements and strike set to spot price. As such, he suggested to use the Black-Scholes formula with the following parameters:
+
+| Spot | Strike | Maturity | Interest rate | Volatility |
+| :---: | :---: | :---: | :---: | :---: |
+| Stock price at valuation time | Spot | -- | Cost of capital | Public comparable |
+
+Below is a plot of the Black-Scholes values using different time to maturity and volatility parameters.
+
+```{r, chaffe, fig.align = 'center', fig.show="hold", out.width="60%", echo=FALSE, warning=FALSE}
+library(ggplot2);
+
+#defining BS put function with S and K at 100
+blackscholes <- function(r, t, v) {
+  d1 <- (log(1) + (r + v^2/2)*t) / (v*sqrt(t));
+  d2 <- d1 - v*sqrt(t);
+  out <- (100*exp(-r*t)*pnorm(-d2) - 100*pnorm(-d1));
+  return(out);
+}
+#empty vectors to be populated for varying vol inputs
+series30 <- c();
+series40 <- c();
+series50 <- c();
+series60 <- c();
+series70 <- c();
+years <- seq(0.5, 5, by=0.5); #years to maturity
+#loop through T to populate different vectors
+for (t in years) {
+  series30 <- append(series30, blackscholes(0.05, t, 0.3));
+  series40 <- append(series40, blackscholes(0.05, t, 0.4));
+  series50 <- append(series50, blackscholes(0.05, t, 0.5));
+  series60 <- append(series60, blackscholes(0.05, t, 0.6));
+  series70 <- append(series70, blackscholes(0.05, t, 0.7));
+}
+
+data <- data.frame(years, series30, series40, series50, series60, series70);
+bs <- ggplot(data, aes(x=years, y = value)) + labs(x="Year to maturity", y="Percentage") + ggtitle("Illiquidity discounts based on Black-Scholes") + theme_bw() + theme(plot.title = element_text(hjust = 0.5)) + theme(legend.position="none") + annotate(geom="text", x=1.0, y=40, label="interest rate = 5%");
+bs <- bs + geom_text(aes(x = 4, y = 40, label = "70% volatility"), stat = "unique") + geom_text(aes(x = 4, y = 34, label = "60% volatility"), stat = "unique") + geom_text(aes(x = 4, y = 28, label = "50% volatility"), stat = "unique") + geom_text(aes(x = 4, y = 22, label = "40% volatility"), stat = "unique") + geom_text(aes(x = 4, y = 15, label = "30% volatility"), stat = "unique");
+bs <- bs + geom_line(aes(y = series30), color = "midnightblue") + geom_line(aes(y = series40), color = "deepskyblue") + geom_line(aes(y = series50), color = "firebrick") + geom_line(aes(y = series60), color = "darkcyan") + geom_line(aes(y = series70), color = "darkgrey");
+bs <- bs + scale_x_continuous(expand = c(0, 0), limits = c(0.5, 5)) + scale_y_continuous(expand = c(0 ,0), limits = c(0, 45));
+bs <- bs + theme(axis.line = element_line(colour = "black"), panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.border = element_blank(), panel.background = element_blank());
+bs;
+```
+
+Chaffe found that the discount range of 30-50% was *quite similar* to private placement data and *seemed more than coincidental*. While he did not believe investors consciously applied option pricing in determining the discounts, he viewed put option premium as a valid proxy for illiquidity.   
+
+#### Longstaff's Lookback Put
+@longstaff1995 considered a hypothetical investor with perfect market-timing skills but was subject to sales restrictions for a fixed period. The forgone profit opportunity caused by the restrictions could be represented by a lookback option, which allows the investor to retroactively reference the maximum price point over a period as the strike price. He considered the result an analytical upper bound of illiquidity discount rather than the discount per se. For any reasonably high volatility and/or long illiquid period parameters, the modelled values^[They are calculated using $F(\sigma, T) = \left( 2 + \frac{\sigma^2 T}{2} \right)\mathcal{N}\left(\frac{\sqrt{\sigma^2 T}}{2} \right) + \sqrt{\frac{\sigma^2 T}{2 \pi}} \exp \left(-\frac{\sigma^2 T}{8} \right) - 1$] can easily exceed $100\%$ as shown below, making it difficult to interpret and apply in practice.  
+
+```{r longstaff, fig.align="center", fig.show="hold", out.width="60%", echo=FALSE, warning=FALSE}
+library(ggplot2)
+#define function for a lookback as shown in paper
+lookback <- function(v, t) {
+  return( 100* ((2 + (t*v^2)/2) * pnorm(sqrt(t*v^2)/2) + sqrt((t*v^2)/(2*pi)) * exp(-((t*v^2)/8)) - 1) ); 
+}
+series30 <- c();
+series40 <- c();
+series50 <- c();
+series60 <- c();
+series70 <- c();
+years <- seq(0.5, 5, by=0.5); #years to maturity
+#loop through T to populate different vectors
+for (t in years) {
+  series30 <- append(series30, lookback(0.3, t));
+  series40 <- append(series40, lookback(0.4, t));
+  series50 <- append(series50, lookback(0.5, t));
+  series60 <- append(series60, lookback(0.6, t));
+  series70 <- append(series70, lookback(0.7, t));
+}
+
+data <- data.frame(years, series30, series40, series50, series60, series70);
+lookbackplot <- ggplot(data, aes(x=years, y = value)) + labs(x="Year to maturity", y="Percentage") + ggtitle("Upper bounds based on lookback options") + theme_bw() + theme(plot.title = element_text(hjust = 0.5)) + theme(legend.position="none");
+lookbackplot <- lookbackplot + geom_text(aes(x = 4, y = 185, label = "70% volatility"), stat = "unique") + geom_text(aes(x = 4, y = 150, label = "60% volatility"), stat = "unique") + geom_text(aes(x = 4, y = 120, label = "50% volatility"), stat = "unique") + geom_text(aes(x = 4, y = 90, label = "40% volatility"), stat = "unique") + geom_text(aes(x = 4, y = 65, label = "30% volatility"), stat = "unique");
+lookbackplot <- lookbackplot + geom_line(aes(y = series30), color = "midnightblue") + geom_line(aes(y = series40), color = "deepskyblue") + geom_line(aes(y = series50), color = "firebrick") + geom_line(aes(y = series60), color = "darkcyan") + geom_line(aes(y = series70), color = "darkgrey");
+lookbackplot <- lookbackplot + scale_x_continuous(expand = c(0, 0), limits = c(0.5, 5)) + scale_y_continuous(expand = c(0 ,0), limits = c(0, 200));
+lookbackplot <- lookbackplot + theme(axis.line = element_line(colour = "black"), panel.grid.major = element_blank(), panel.grid.minor = element_blank(), panel.border = element_blank(), panel.background = element_blank());
+lookbackplot;
+```
+
+#### Finnerty's Asian Put
+@finnerty2012 did not assume a skilled investor
+
+#### Ghaidarov's Forward Start Put
+
+#### Barenbaum & Schubert's Synthetic Forward
+
+## Putting Them Together 
+### Practitioner Survey
+A [Business Valuation Resources survey in 2021](https://sub.bvresources.com/pdfs/BVR-2021-DLOM-Survey-Results.pdf) indicates that the majority of practitioners apply illiquidity discounts based on empirical studies of private placements or pre-IPO trades, followed by option-theoretic models. Among the option models, the Finnerty's Asian Put is most commonly used. 
+
+```{r surveyPlot, fig.show="hold", out.width="50%", echo=FALSE}
+library(ggplot2);
+
+methods <- c("Private placements", "Pre-IPOs", "Option pricing", "Others");
+responses <- c(90, 45, 48, 74);
+df <- data.frame(methods, responses);
+allResponses <- ggplot(data = df, aes(x = methods, y = responses)) + geom_col(width=0.75) + scale_y_continuous(limits=c(0,100), breaks=seq(0,100,20), expand=c(0,0)) +  labs(x="", y="Responses %") + ggtitle("Methodologies Used") + theme_bw() + theme(plot.title = element_text(hjust = 0.5));
+
+options <- c("Finnerty", "Longstaff", "Chaffe", "Ghaidarov");
+choices <- c(57, 25, 27, 10);
+data <- data.frame(options, choices);
+optionResponses <- ggplot(data = data, aes(x = options, y = choices)) + geom_col(width=0.75) + scale_y_continuous(limits=c(0, 60), breaks=seq(0, 60, 10), expand=c(0,0)) + labs(x="", y="Responses %") + ggtitle("Option Models Used") + theme_bw() + theme(plot.title = element_text(hjust = 0.5));
+
+par(mfrow=c(1,2));
+allResponses;
+optionResponses;
+par(mfrow=c(1,1));
+
+```
+
+### Others' Opinions
+Harry Fuhrman, an analyst at the Internal Revenue Service, critiqued^[See https://www.bvresources.com/articles/bvwire/the-debate-on-discounts-for-lack-of-marketability-dlom-continues-76-4] an option-based approach for overstating illiquidity discounts due to it focusing solely on downside protection and disregarding upside retention. His critique is equally valid in other option-theoretic approaches. 
+
+### My Thoughts
+We think option-theoretic approaches are inadequate and overstate the illiquidity discounts. We agree with others' criticism that by neglecting upside retention, a put option alone fails to properly represent the underlying illiquidity problem. We think equation $\eqref{eq:chaffe}$, the foundation of option-theoretic models, is flawed; hence, we boldly argue that their estimated values being close to actual private placement data is more a coincidence rather than logical necessity. By truncating downside risk but leaving upside potential intact, in the case of Chaffe, the investor's payoff is shifted from a long $100 \delta$ stock position to one of long $50 \delta$ call with breakeven at spot $+$ premium.  
+
+The put option proposition is implicitly centered on hedging opportunities. If hedging opportunities can be pursued, then illiquidity discount shall only apply to the proportion of risks that cannot be hedged. If a put option is assumed to be available, then a call option of identical terms must also be assumed available; thus, the investor can then effect a synthetic forward sale by going long put and short call. As all risks are now hedged, the illiquidity discount must only reflect the cost of carry^[An investor holding an illiquid non-dividend-paying stock has a positive cost of carry, so he should get paid by going long put and short call, which is essentially a synthetic lending trade.] and trade costs such as bid-ask spread. This must be true based on put-call parity irrespective of modelling assumptions.
+
+The only way to arrive at interpretable illiquidity discounts with the availability of call options is then a collar position as suggested by @barenbaum2015. However, the resulting discounts are too low to reconcile with reality even considering an at-the-money put and a far out-of-the-money call using any realistic parameters, as illustrated below.
+
+
+
+Based on our definition of illiquidity discounts in terms of a constrained decision set, unless $\Omega$ is a function of either $\delta, \gamma, \nu$, we think options fail to capture the nature of liquidity or liquidity risk under normal conditions. In brief, we see liquidity risk as a standalone risk from option Greeks. 
+
+## Conclusion
+
+
+## References
+
