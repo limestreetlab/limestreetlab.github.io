@@ -22,9 +22,9 @@ $(document).ready( () => {
 
 });//end of document.ready wrapper
 
-//lists of areas applied to each series (national, london, commuters)
+//lists of areas applied to each series (national, london, commuters). note the city name used here must exactly match the city name in the aggregated data file
 const nationalCities = ["birmingham", "bristol", "cambridge", "cardiff", "edinburgh", "glasgow", "inner london", "leeds", "liverpool", "manchester", "newcastle", "nottingham", "outer london", "oxford", "sheffield", "york"]; //names of cities to include
-const londonCouncils = ["barnet", "brent", "camden", "croydon", "ealing", "greenwich", "hackney", "hammersmith and fulham", "islington", "kensington and chelsea", "kingston upon thames", "lambeth", "lewisham", "richmond upon thames", "southwark", "sutton", "tower hamlets", "wandsworth"]; //london areas
+const londonCouncils = ["barnet", "brent", "camden", "croydon", "ealing", "greenwich", "hackney", "hammersmith and fulham", "islington", "kensington and chelsea", "kingston upon thames", "lambeth", "richmond upon thames", "southwark", "sutton", "tower hamlets", "wandsworth", "westminster"]; //london areas
 const londonCommuters = ["chelmsford", "colchester", "dartford", "guildford", "milton keynes", "reading", "sevenoaks", "st albans", "tonbridge", "tunbridge wells", "watford", "windsor and maidenhead", "woking"]; //london commuter towns
 
 /*

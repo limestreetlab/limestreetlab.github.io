@@ -2,8 +2,8 @@
 script to parse wanted data from individual property price csv files and aggregate them into one file
 csv files are expected to contain data file per city/region. 
 file format expected:
-- first column be city/area name
-- column names of "Period", "Average price All Property types", "Average price Detached houses", "Average price Semi-detached houses", "Average price Terraced houses", "Average price Flats and maisonettes"
+- first column be city/area name, which will be used as the city name
+- column names (case-sensitive, all of followings) of "Period", "Average price All Property types", "Average price Detached houses", "Average price Semi-detached houses", "Average price Terraced houses", "Average price Flats and maisonettes"
 */
 
 const fs = require('fs'); //file system lib
