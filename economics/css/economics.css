@@ -65,8 +65,9 @@ body {
 }
 
 .post .title {
-    font-size: 1.7rem;
-    font-weight: bolder;
+  font-size: 1.7rem;
+  font-weight: bolder;
+  text-transform: capitalize;
 }
 
 .post .subtitle {
@@ -74,6 +75,10 @@ body {
   font-weight: normal;
   margin-top: 0;
   margin-bottom: 4px;
+}
+
+.post .subtitle::first-letter {
+  text-transform: capitalize;
 }
 
 
