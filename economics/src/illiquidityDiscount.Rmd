@@ -23,7 +23,7 @@ Although often used interchangeably, marketability and liquidity are different c
 
 IPEV defines marketability as the transaction time typically required for the type of asset under consideration. Fair value estimation is premised on an orderly transaction, not a forced liquidation, where the required time to consummate, how ever long it might be, is already taken into account. In other words, IPEV stipulates that factors related to a specific investor, such as his deal timeline, should not be reflected while factors related to the underlying asset, such as liquidity and voting rights, should be. That is, just because unlisted shares take longer to market and transact than listed shares does not in itself warrant a discount, according to IPEV. It is their liquidity characteristics that justify a discount. I find it an oxymoron and marketability and liquidity are basically the same thing.
 
-Without suggesting particular methodologies in the guidelines, the application of illiquidity discount is left to the practitioner's judgement, but option pricing is put forward as a potential approach. Practitioners tend to apply an ad-hoc discount in the range of 15-35%, which is based primarily on historical private placements. Option-theoretic approaches have been proposed and increasingly applied in recent years. 
+Without suggesting particular methodologies in the guidelines, the application of illiquidity discount is left to the practitioner's judgement, but option pricing is put forward as a potential approach. Practitioners tend to apply an ad-hoc discount in the range of 15-35%, which is based primarily on historical private placements. 
 
 ### What the heck is liquidity
 Liquidity is like oxygen; we all know it is needed, but we don't know how much is needed at what time and how to put a price on it. To gauge its value, we must first define precisely what we mean by illiquidity. I view illiquidity essentially as a constraint on an investor's decision set related to selling the asset whose price follows some random process.   
@@ -173,7 +173,7 @@ The only way to arrive at interpretable illiquidity discounts with the availabil
 
 [table comes here]
 
-Based on my definition of illiquidity discounts in terms of a constrained decision set, unless $\Omega$ is a function of either $\delta, \gamma, \nu$, I think options simply cannot capture the nature of liquidity or liquidity risk under normal conditions, so bringing option methodologies into the mix cannot remedy illiquidity. The hypothetical option writer is where illiquidity is transformed into perfect liquidity. Pricing the option without considering illiquidity is simply assuming away the very problem; attempting to incorporate illiquidity into the pricing is circling back to the very estimation issue. In sum, I find the logic problematic and put options are not a viable option. 
+Based on my definition of illiquidity discounts in terms of a constrained decision set, unless $\Omega$ is a function of either $\delta, \gamma, \nu$, I think options simply cannot capture the nature of liquidity, so bringing option methodologies into the mix cannot address the question. The hypothetical option writer is where illiquidity is transformed into perfect liquidity. Pricing the option without considering illiquidity is simply assuming away the very problem; attempting to incorporate illiquidity into the pricing is circling back to the very estimation issue. In sum, I find the logic problematic and put options are not a viable option. 
 
 
 ### References
