@@ -1,0 +1,8 @@
+cambridge files are cleaned, so use cambridge as benchmark list for school list
+
+oxford admission statistics published in a tabulated format at https://public.tableau.com/views/UniversityofOxford-UCASApplyCentre2023/UCASApplyCentre?:embed=y&:display_count=yes&:showTabs=y&:showVizHome=no
+
+pdf downloads are not properly formatted. 
+grey cells represent less than 3 (ie 0-2). 
+
+column names are ucas number, school name, application number, offer number, offer%, offer acceptance number, offer acceptance %(of applicants)

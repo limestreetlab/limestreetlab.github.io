@@ -1,0 +1,8 @@
+raw data are in pdf formats by year
+cambridge table formats are different from oxford, so must be read and parsed individually 
+one pdf2csv script is for cambridge, one for oxford
+raw yearly data file is converted into csv one by one, based on input and output paths provided by user
+
+after the raw pdf files are converted into csv, another script aggregates the data in all csv files in the input folder into one json file
+
+cambridge files can show NA if original file postcodes are inputted incorrectly, ignore those

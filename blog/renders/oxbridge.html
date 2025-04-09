@@ -1,0 +1,90 @@
+<!--
+description: oxbridge admissio stats
+date: 6/4/2025
+author: Lime Street
+using: js
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+      <title>
+          Oxbridge admission statistics
+      </title>
+
+      <!--meta for google-->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Lime Street, Statistics&#8745;Technology">
+      <meta name="keywords" content="Lime Street, Lime Street Lab">
+      <meta name="author" content="Lime Street">
+      <meta name="robots" content="noindex">
+
+      <!--JQuery and Bootstrap-->
+      <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" type="text/css"><!--Bootstrap CSS-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--jquery-->
+      <script src="../../assets/js/bootstrap.min.js"></script><!--Bootstrap JS-->
+
+      <!--icons-->
+      <link rel="icon" type="image/png" href="../../assets/img/red-favicon.png">
+      <link rel="apple-touch-icon" href="../../assets/img/red-apple-touch-icon.png">
+
+      <!--internal scripts-->        
+      <script src="../src/oxbridge/oxbridge.js"></script>
+
+  </head>
+
+
+  <body ontouchstart="">
+  <main class="container">
+
+  <h1 class="mt-4 text-primary display-6 mb-5 text-center">Oxbridge admission by schools</h1>
+    
+  <section class="row">
+
+  <h5 class="col-3 text-primary text-start">Rank by</h5>
+  <h5 class="col-3 text-primary text-start">University</h5>
+  <h5 class="col-3 text-primary text-start">Year</h5>
+  <h5 class="col-3 text-primary text-start">School type</h5>
+
+  <div class="col-3">
+    <select name="rank-by" id="rank-by" class="form-select">
+      <option value="offers" selected>Offer number</option>
+      <option value="offer rate">Offer/application ratio</option>
+    </select>
+  </div>
+  <div class="col-3">
+    <select name="university" id="university" class="form-select">
+      <option value="oxbridge">Oxbridge</option>
+      <option value="cambridge" selected>Cambridge</option>
+      <option value="oxford">Oxford</option>
+    </select>
+  </div>
+  <div class="col-3">
+    <select name="year" id="year" class="form-select">
+      <option value="2023" selected>2023</option>
+      <option value="2022">2022</option>
+      <option value="2021">2021</option>
+      <option value="2020">2020</option>
+      <option value="2019">2019</option>
+    </select>
+  </div>
+  <div class="col-3">
+    <select name="school-type" id="school-type" class="form-select">
+      <option value="all" selected>All</option>
+      <option value="public">Public</option>
+      <option value="private">Private</option>
+    </select>
+  </div>
+
+  <figure class="col-12 mt-4 ms-2 me-2">
+    <table id="league-table" class="table table-striped">
+    </table>
+  </figure>
+
+
+
+
+  </section>
+   
+  </main>
+  </body>
