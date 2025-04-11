@@ -6,3 +6,5 @@ pdf downloads are not properly formatted.
 grey cells represent less than 3 (ie 0-2). 
 
 column names are ucas number, school name, application number, offer number, offer%, offer acceptance number, offer acceptance %(of applicants)
+
+a manually compiled 6form college list by ucas number, to re-classify them later

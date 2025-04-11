@@ -108,7 +108,7 @@ function addOxbridge(startYear, endYear) {
       if ( Number.isInteger(Number(data[i]["cambridge_application_" + year])) & Number.isInteger(Number(data[i]["oxford_application_" + year])) ) { //when both cambridge and oxford data are numeric
         data[i]["oxbridge_application_" + year] = Number(data[i]["cambridge_application_" + year]) + Number(data[i]["oxford_application_" + year]); //add the numbers
       } else if ( !Number.isInteger(Number(data[i]["cambridge_application_" + year])) & Number.isInteger(Number(data[i]["oxford_application_" + year])) ) { //oxford is numeric but not cambridge
-        data[i]["oxbridge_application_" + year] = Number(data[i]["oxford_application_"] + year); //add only oxford
+        data[i]["oxbridge_application_" + year] = Number(data[i]["oxford_application_" + year]); //add only oxford
       } else if ( !Number.isInteger(Number(data[i]["oxford_application_" + year])) & Number.isInteger(Number(data[i]["cambridge_application_" + year])) ) { //cambridge is numeric but not oxford
         data[i]["oxbridge_application_" + year] = Number(data[i]["cambridge_application_" + year]); //add only cambridge
       } else { //both are non-numeric
@@ -119,7 +119,7 @@ function addOxbridge(startYear, endYear) {
       if ( Number.isInteger(Number(data[i]["cambridge_offer_" + year])) & Number.isInteger(Number(data[i]["oxford_offer_" + year])) ) { //when both cambridge and oxford data are numeric
         data[i]["oxbridge_offer_" + year] = Number(data[i]["cambridge_offer_" + year]) + Number(data[i]["oxford_offer_" + year]); //add the numbers
       } else if ( !Number.isInteger(Number(data[i]["cambridge_offer_" + year])) & Number.isInteger(Number(data[i]["oxford_offer_" + year])) ) { //oxford is numeric but not cambridge
-        data[i]["oxbridge_offer_" + year] = Number(data[i]["oxford_offer_"] + year); //add only oxford
+        data[i]["oxbridge_offer_" + year] = Number(data[i]["oxford_offer_" + year]); //add only oxford
       } else if ( !Number.isInteger(Number(data[i]["oxford_offer_" + year])) & Number.isInteger(Number(data[i]["cambridge_offer_" + year])) ) { //cambridge is numeric but not oxford
         data[i]["oxbridge_offer_" + year] = Number(data[i]["cambridge_offer_" + year]); //add only cambridge
       } else { //both are non-numeric

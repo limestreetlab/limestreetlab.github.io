@@ -8,7 +8,7 @@ out <- "/Users/houghtonstreet/Dropbox/Lime Street/limestreetlab.github.io/blog/d
 str <- pdf_text(filepath);
 
 line_regex <- "[0-9]{5}\\s{2,}.+?\\n";
-regex <- "([0-9]{5})\\s{2,}(\\D+)((?<!-)\\d*)(\\s+\\d*)";
+regex <- "([0-9]{5})\\s+(\\D+(?:\\s\\D{1,2}\\d{1,2})?)\\s+((?<!-)\\d+)?(\\s+\\d+)?"; #capture 5-digit postcode, characters in beween which optionally can contain 1-2 alphabets followed by 1-2 digits (like SW9), digits, digits
 
 lines <- str_extract_all(str, line_regex);
 lines <- unlist(lines);
@@ -24,14 +24,19 @@ for (i in 1:length(lines)) {
     matches <- str_match(line, regex);
     ucasNumber <- matches[,2];
     name <- trimws( matches[,3] );
-    application <- trimws( matches[,4] );
-    offer <- trimws( matches[,5] );
+    application <- if (!is.na(matches[,4])) trimws( matches[,4] ) else "";
+    offer <- if (!is.na(matches[,5])) trimws( matches[,5] ) else "";
+    
+    if ( all(is.na(matches[1, ])) ) { #skip iteration if regex fails, due to messy pdf data, give up this school
+      next;
+    }
     
     #chunk to check if extracted applications number is indeed above offer number, sometimes when only application number exists (offer <3 = ""), it can show erroneously as offer number instead
-    if ( application == "" & offer != "" & as.integer(offer) > 0 ) { #application is 0 but offer above 0, makes no sense, swap places
-      application <- offer;
-      offer <- "";
+    if ( (application == "") & (offer != "") & (as.integer(offer) > 0) ) { #application is 0 but offer above 0, makes no sense, swap places
+        application <- offer;
+        offer <- "";
     }
+    
     
     if (application == "") {
       application <- "<3";

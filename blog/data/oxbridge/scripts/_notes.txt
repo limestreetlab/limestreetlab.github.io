@@ -3,6 +3,6 @@ cambridge table formats are different from oxford, so must be read and parsed in
 one pdf2csv script is for cambridge, one for oxford
 raw yearly data file is converted into csv one by one, based on input and output paths provided by user
 
-after the raw pdf files are converted into csv, another script aggregates the data in all csv files in the input folder into one json file
+after the raw pdf files are converted into csv, another script aggregates the data in all individual csv files into one master json file; when the master file is ready, another script changes any sixth form colleges to sixth form instead of public, base on a sixth form school list.
 
 cambridge files can show NA if original file postcodes are inputted incorrectly, ignore those
