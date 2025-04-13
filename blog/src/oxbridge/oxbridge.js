@@ -1,12 +1,15 @@
-//const fs = require("fs");
+/*
+script for displaying oxbridge admission stats collected from a data file
+*/
 
-const dataFile = "../data/oxbridge/data.json";
+const dataFile = "../data/oxbridge/data.json"; //master data file, json format with stats as array of objects, a school per obj
 
 //wrap things in document.ready
 $(document).ready( () => {
   
     rank($("#rank-by").val(), $("#university").val(), $("#year").val(), $("#school-type").val());
 
+    //when droplist changes, re-call function
     $("#university").change( () => {
         rank($("#rank-by").val(), $("#university").val(), $("#year").val(), $("#school-type").val());
     }); 
@@ -19,6 +22,9 @@ $(document).ready( () => {
   
 });//end of document.ready wrapper
 
+/*
+function to fetch data, organise data, display data as table
+*/
 function rank(by, university, year, status) {
 
     let token1;
@@ -44,7 +50,7 @@ function rank(by, university, year, status) {
     .then((jsonData) => {
         const filteredData = jsonData.filter( filterSchool ); 
         const sortedData = filteredData.sort( compareOffer );
-        const html = generateTableHTML(sortedData, 50);
+        const html = generateTableHTML(sortedData, 50); //the number of rows shown is inputted here
         createTable(html);
     });
 
@@ -86,10 +92,10 @@ function rank(by, university, year, status) {
     }
 
     function filterSchool(element) {
-        if (filter !== "all") {
+        if (filter !== "all") { //a particular school type is selected, show only that selection
             return element.status.toLowerCase() === filter; 
-        } else {
-            return true;
+        } else { // all is selected, show public and private (6th form colleges are not shown)
+            return (element.status.toLowerCase() === "private" || element.status.toLowerCase() === "public"); 
         }
     }
     
