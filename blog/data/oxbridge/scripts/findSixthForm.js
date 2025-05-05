@@ -9,7 +9,7 @@ const sixthFormFilePath = "/Users/houghtonstreet/Dropbox/Lime Street/limestreetl
 
 fs.readFile(sixthFormFilePath, "utf8", function(err, contents) {
     
-    const sixthFormList = contents.split(/\r?\n/); //break the read data (ucas) line by line to an array
+    const sixthFormList = contents.split("\n"); //break the read data (ucas) line by line to an array
     const data = JSON.parse( fs.readFileSync(filePath, "utf8") ); //read in the json data file to be checked
     
     for (let i = 0; i < sixthFormList.length; i++) {

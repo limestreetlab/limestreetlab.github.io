@@ -28,8 +28,9 @@ using: js
       <link rel="icon" type="image/png" href="../../assets/img/red-favicon.png">
       <link rel="apple-touch-icon" href="../../assets/img/red-apple-touch-icon.png">
 
-      <!--internal scripts-->        
+      <!--internal-->        
       <script src="../src/oxbridge/oxbridge.js"></script>
+
 
   </head>
 
@@ -44,12 +45,12 @@ using: js
   <h5 class="col-3 text-primary text-start">Rank by</h5>
   <h5 class="col-3 text-primary text-start">University</h5>
   <h5 class="col-3 text-primary text-start">Year</h5>
-  <h5 class="col-3 text-primary text-start">School type</h5>
+  <h5 class="col-3 text-primary text-start">School</h5>
 
   <div class="col-3">
     <select name="rank-by" id="rank-by" class="form-select">
       <option value="offers" selected>Offer number</option>
-      <option value="offer rate">Offer/application ratio</option>
+      <option value="offer rate" disabled>Offer/application ratio</option>
     </select>
   </div>
   <div class="col-3">
@@ -69,7 +70,7 @@ using: js
     </select>
   </div>
   <div class="col-3">
-    <select name="school-type" id="school-type" class="form-select">
+    <select class="form-select js-example-basic-single" name="school-type" id="school-type">
       <option value="all" selected>All</option>
       <option value="public">Public</option>
       <option value="private">Private</option>
