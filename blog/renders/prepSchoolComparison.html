@@ -1,6 +1,6 @@
 <!--
-description: plotting data using highcharts
-date: 6/2/2022
+description: comparing london prep schools
+date: 6/5/2025
 author: Lime Street
 using: highcharts
 -->
@@ -8,7 +8,7 @@ using: highcharts
 <html lang="en">
   <head>
       <title>
-          London Prep School Comparison
+          London prep schools
       </title>
 
       <!--meta for google-->
@@ -37,89 +37,490 @@ using: highcharts
 
   <body>
 
+    <main class="container">
+        <h1 class="mt-4 text-primary display-6 mb-4 text-center">Evaluating prep schools</h1>
+        <p class="mt-4 mb-4">
+        Despite the notoriously and astonishingly high cost of private school education in England, we still believe it is worth pursuing given the very mixed populations and dubious quality of public schools in many parts of London.
+        <br><br>
+        We have high expectations for Easy Baby. We want her to achieve very high academic success while pursuing music and sports at a competitive level. 
+        We aim for an environment that is academically ambitious and rigorous to stretch Easy Baby's mind but also offers rich extra-curricular activities to broaden her experience and pastoral care to build happiness and confidence.
+        It is critical to identify the right prep schools having the right ethos and offering Easy Baby a home-away-from-home to grow intellectually and personally in her formative years.
+        <br><br>
+        While an excellent all-through school such as Highgate, NLCS, and Alleyns is attractive, all prep schools are considered on equal basis because St Paul's and public grammar schools Pate's and Tiffin are the primary exit goals. 
+        The base case is for Easy Baby to exit at 11+, but 7+ is not totally written off. Given the competitive nature of admission, a wide range of schools are considered to balance entry reality and our objectives. Location is a secondary consideration as we are <i>just</i> renting and can move to accomodate. 
+        <br><br>
+        To evaluate and compare, we select academic quality, exit track record, music program, sport offerings, foreign language curriculum, facilities, niceness and convenience of its location, and cost as our evaluation criteria, to which we assign weights of 30%, 5%, 15%, 5%, 20%, 10%, 5%, 10%, accordingly.
+
+        </p>
+
+    <main class="accordion">
 
 
-    <figure class="highcharts-figure">
-        <div id="devonshirehouse"></div>
-    </figure>
+        <section class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#alleyns">
+            Alleyns
+            </button>
+            </h2>
+            <div id="alleyns" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <figure class="highcharts-figure">
+                    <div id="alleyns_chart"></div>
+                </figure>
+            </div>
+            </div>
+        </section>
 
-    <figure class="highcharts-figure">
-        <div id="newton"></div>
-    </figure>
+        <section class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#brightoncollege">
+            Brighton College
+            </button>
+            </h2>
+            <div id="brightoncollege" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <figure class="highcharts-figure">
+                    <div id="brightoncollege_chart"></div>
+                </figure>
+            </div>
+            </div>
+        </section>
 
-    <figure class="highcharts-figure">
-        <div id="eatonhouse"></div>
-    </figure>
+        <section class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#butehouse">
+            Bute House
+            </button>
+            </h2>
+            <div id="butehouse" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <figure class="highcharts-figure">
+                    <div id="butehouse_chart"></div>
+                </figure>
+                <span id="butehouse_score"></span>
+            
+            </div>
+            </div>
+        </section>
 
-    <figure class="highcharts-figure">
-        <div id="merlin"></div>
-    </figure>
-
-    <figure class="highcharts-figure">
-        <div id="butehouse"></div>
-    </figure>
-
-    <figure class="highcharts-figure">
-        <div id="glendower"></div>
-    </figure>
-
-    <figure class="highcharts-figure">
-        <div id="pembridgehall"></div>
-    </figure>
-
-    <figure class="highcharts-figure">
-        <div id="kensingtonprep"></div>
-    </figure>
-
-    <figure class="highcharts-figure">
-        <div id="hillhouse"></div>
-    </figure>
-
-    <figure class="highcharts-figure">
-        <div id="knightbridge"></div>
-    </figure>
-
-    <figure class="highcharts-figure">
-        <div id="brightoncollegeprep"></div>
-    </figure>
-
-    <figure class="highcharts-figure">
-        <div id="gardenhouse"></div>
-    </figure>
-
-    <figure class="highcharts-figure">
-        <div id="stpaulscathedral"></div>
-    </figure>
-
-    <figure class="highcharts-figure">
-        <div id="kensingtonwade"></div>
-    </figure>
-
-    <figure class="highcharts-figure">
-        <div id="kewcollege"></div>
-    </figure>
-
-    <figure class="highcharts-figure">
-        <div id="kingshouse"></div>
-    </figure>
-
-    <figure class="highcharts-figure">
-        <div id="holycross"></div>
-    </figure>
-
-    <figure class="highcharts-figure">
-        <div id="jeanninemanuel"></div>
-    </figure>
-
-    <figure class="highcharts-figure">
-        <div id="cfbl"></div>
-    </figure>
-
-    <figure class="highcharts-figure">
-        <div id="ecoledebattersea"></div>
-    </figure>
+        <section class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cfbl">
+            CFBL
+            </button>
+            </h2>
+            <div id="cfbl" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <figure class="highcharts-figure">
+                    <div id="cfbl_chart"></div>
+                </figure>
+            
+            </div>
+            </div>
+        </section>
 
 
+        <section class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#devonshirehouse">
+            Devonshire House
+            </button>
+            </h2>
+            <div id="devonshirehouse" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                    
+            <figure class="highcharts-figure">
+                <div id="devonshirehouse_chart"></div>
+            </figure>
+            
+            </div>
+            </div>
+        </section>
+
+        <section class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#eatonhouse">
+            Eaton House the Manor
+            </button>
+            </h2>
+            <div id="eatonhouse" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <figure class="highcharts-figure">
+                    <div id="eatonhouse_chart"></div>
+                </figure>
+            
+            </div>
+            </div>
+        </section>
+
+        <section class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ecoledebattersea">
+            Ecole de Battersea
+            </button>
+            </h2>
+            <div id="ecoledebattersea" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <figure class="highcharts-figure">
+                    <div id="ecoledebattersea_chart"></div>
+                </figure>
+            
+            </div>
+            </div>
+        </section>
+
+        <section class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#gardenhouse">
+            Garden House
+            </button>
+            </h2>
+            <div id="gardenhouse" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <figure class="highcharts-figure">
+                    <div id="gardenhouse_chart"></div>
+                </figure>
+            
+            </div>
+            </div>
+        </section>
+
+        <section class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#glendower">
+            Glendower
+            </button>
+            </h2>
+            <div id="glendower" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <figure class="highcharts-figure">
+                    <div id="glendower_chart"></div>
+                </figure>
+            
+            </div>
+            </div>
+        </section>
+
+        <section class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#hampsteadhill">
+            Hampstead Hill
+            </button>
+            </h2>
+            <div id="hampsteadhill" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <figure class="highcharts-figure">
+                    <div id="hampsteadhill_chart"></div>
+                </figure>
+            
+            </div>
+            </div>
+        </section>
+
+        <section class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#highgate">
+            Highgate
+            </button>
+            </h2>
+            <div id="highgate" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <figure class="highcharts-figure">
+                    <div id="highgate_chart"></div>
+                </figure>
+            
+            </div>
+            </div>
+        </section>
+
+        <section class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#hillhouse">
+            Hill House
+            </button>
+            </h2>
+            <div id="hillhouse" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <figure class="highcharts-figure">
+                    <div id="hillhouse_chart"></div>
+                </figure>
+            
+            </div>
+            </div>
+        </section>
+
+        <section class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#holycross">
+            Holy Cross
+            </button>
+            </h2>
+            <div id="holycross" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <figure class="highcharts-figure">
+                    <div id="holycross_chart"></div>
+                </figure>
+            
+            </div>
+            </div>
+        </section>
+
+        <section class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#jeanninemanuel">
+            Jeannine Manuel
+            </button>
+            </h2>
+            <div id="jeanninemanuel" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <figure class="highcharts-figure">
+                    <div id="jeanninemanuel_chart"></div>
+                </figure>
+            <span id="jeanninemanuel_score"></span>
+            </div>
+            </div>
+        </section>
+
+        <section class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kensingtonprep">
+            Kensington
+            </button>
+            </h2>
+            <div id="kensingtonprep" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <figure class="highcharts-figure">
+                    <div id="kensingtonprep_chart"></div>
+                </figure>
+            
+            </div>
+            </div>
+        </section>
+
+        <section class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kensingtonwade">
+            Kensington Wade
+            </button>
+            </h2>
+            <div id="kensingtonwade" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <figure class="highcharts-figure">
+                    <div id="kensingtonwade_chart"></div>
+                </figure>
+            
+            </div>
+            </div>
+        </section>
+
+        <section class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kewcollege">
+            Kew College
+            </button>
+            </h2>
+            <div id="kewcollege" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <figure class="highcharts-figure">
+                    <div id="kewcollege_chart"></div>
+                </figure>
+            
+            </div>
+            </div>
+        </section>
+
+        <section class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kingshouse">
+            King's House
+            </button>
+            </h2>
+            <div id="kingshouse" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <figure class="highcharts-figure">
+                    <div id="kingshouse_chart"></div>
+                </figure>
+            
+            </div>
+            </div>
+        </section>
+
+
+
+        <section class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#knightbridge">
+            Knightbridge
+            </button>
+            </h2>
+            <div id="knightbridge" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <figure class="highcharts-figure">
+                    <div id="knightbridge_chart"></div>
+                </figure>
+            
+            </div>
+            </div>
+        </section>
+
+
+        <section class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#merlin">
+            Merlin
+            </button>
+            </h2>
+            <div id="merlin" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <figure class="highcharts-figure">
+                    <div id="merlin_chart"></div>
+                </figure>
+            
+            </div>
+            </div>
+        </section>
+
+
+        <section class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mulberry">
+            Mulberry House
+            </button>
+            </h2>
+            <div id="mulberry" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <figure class="highcharts-figure">
+                    <div id="mulberry_chart"></div>
+                </figure>
+            
+            </div>
+            </div>
+        </section>
+
+
+        <section class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#newton">
+            Newton
+            </button>
+            </h2>
+            <div id="newton" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                    
+            <figure class="highcharts-figure">
+                <div id="newton_chart"></div>
+            </figure>
+            <span id="newton_score"></span>
+            
+            </div>
+            </div>
+        </section>
+
+
+        <section class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#northlondon">
+            North London Collegiate
+            </button>
+            </h2>
+            <div id="northlondon" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                    
+            <figure class="highcharts-figure">
+                <div id="northlondon_chart"></div>
+            </figure>
+            
+            </div>
+            </div>
+        </section>
+
+        <section class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pembridgehall">
+            Pembridge Hall
+            </button>
+            </h2>
+            <div id="pembridgehall" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <figure class="highcharts-figure">
+                    <div id="pembridgehall_chart"></div>
+                </figure>
+            
+            </div>
+            </div>
+        </section>
+
+        <section class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#roche">
+            Roche
+            </button>
+            </h2>
+            <div id="roche" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <figure class="highcharts-figure">
+                    <div id="roche_chart"></div>
+                </figure>
+            
+            </div>
+            </div>
+        </section>
+
+
+        <section class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#stpaulscathedral">
+            St Paul's Cathedral School
+            </button>
+            </h2>
+            <div id="stpaulscathedral" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <figure class="highcharts-figure">
+                    <div id="stpaulscathedral_chart"></div>
+                </figure>
+            
+            </div>
+            </div>
+        </section>
+
+        <section class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#thomas">
+            Thomas's
+            </button>
+            </h2>
+            <div id="thomas" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <figure class="highcharts-figure">
+                    <div id="thomas_chart"></div>
+                </figure>
+            
+            </div>
+            </div>
+        </section>
+
+        <section class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#westminster">
+            Westminster Under
+            </button>
+            </h2>
+            <div id="westminster" class="accordion-collapse collapse">
+            <div class="accordion-body">
+                <figure class="highcharts-figure">
+                    <div id="westminster_chart"></div>
+                </figure>
+            
+            </div>
+            </div>
+        </section>
+
+
+
+
+
+
+    </main></main>
 
   </body>
 

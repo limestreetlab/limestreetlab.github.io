@@ -1,6 +1,4 @@
 $(document).ready( () => {
-    
-    const weights = [0.3, 0.05, 0.15, 0.05, 0.2, 0.10, 0.05, 0.1]; //weights to corresponding categories in %
 
     let chartParams = {
 
@@ -8,7 +6,6 @@ $(document).ready( () => {
             polar: true,
             type: 'area'
         },
-
         xAxis: {
             categories: [
                 'Academics', 'Placements', 'Music',
@@ -17,7 +14,6 @@ $(document).ready( () => {
             tickmarkPlacement: 'on',
             lineWidth: 0
         },
-
         yAxis: {
             gridLineInterpolation: 'polygon',
             lineWidth: 0,
@@ -26,202 +22,339 @@ $(document).ready( () => {
             tickInterval: 10,
             labels: {enabled: false}
             },
-
-
         title: {
             text: ''    
         },
-        
         legend: {
             enabled: false
         },
-        
         credits: {
             enabled: false
         } 
 
     };
     
-    //holy cross
+    
+    //holycross
+    const holycross_score = [7, 7, 7, 8, 5, 10, 7, 7]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const holycross_overall_score = dot(holycross_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
         pointPlacement: 'on',
-        data: [7, 7, 7, 8, 5, 10, 7, 8]
+        data: holycross_score
     }];
-    chartParams.title.text = "Holy Cross";
-    Highcharts.chart('holycross', chartParams);
+    Highcharts.chart('holycross_chart', chartParams); //plot chart
+    $("#holycross_score").text(holycross_overall_score); //show score
     
     //newton
+    const newton_score = [7, 7, 7, 7, 5, 9, 4, 4]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const newton_overall_score = dot(newton_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
         pointPlacement: 'on',
-        data: [7, 7, 7, 7, 5, 9, 4, 5]
+        data: newton_score
     }];
-    chartParams.title.text = "Newton";
-    Highcharts.chart('newton', chartParams);
+    Highcharts.chart('newton_chart', chartParams); //plot chart
+    $("#newton_score").text(newton_overall_score); //show score
+    
 
     //bute house
+    const butehouse_score = [10, 10, 8, 7, 6, 8, 8, 5]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const butehouse_overall_score = dot(butehouse_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
         pointPlacement: 'on',
-        data: [10, 10, 8, 7, 6, 8, 8, 5]
+        data: butehouse_score
     }];
-    chartParams.title.text = "Bute House";
-    Highcharts.chart('butehouse', chartParams);
+    Highcharts.chart('butehouse_chart', chartParams); //plot chart
+    $("#butehouse_score").text(butehouse_overall_score); //show score
 
     //cfbl
+    const cfbl_score = [6, 4, 5, 5, 9, 5, 3, 8]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const cfbl_overall_score = dot(cfbl_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
         pointPlacement: 'on',
-        data: [6, 4, 6, 5, 9, 6, 5, 8]
+        data: cfbl_score
     }];
-    chartParams.title.text = "College Francais Bilingue de Londres";
-    Highcharts.chart('cfbl', chartParams);
+    Highcharts.chart('cfbl_chart', chartParams); //plot chart
+    $("#cfbl_score").text(cfbl_overall_score); //show score
 
-    //ecole battersea
+    //ecole de battersea
+    const ecoledebattersea_score = [5, 5, 3, 3, 9, 3, 3, 7]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const ecoledebattersea_overall_score = dot(ecoledebattersea_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
         pointPlacement: 'on',
-        data: [5, 5, 3, 3, 9, 3, 3, 8]
+        data: ecoledebattersea_score
     }];
-    chartParams.title.text = "Ecole de Battersea";
-    Highcharts.chart('ecoledebattersea', chartParams);
+    Highcharts.chart('ecoledebattersea_chart', chartParams); //plot chart
+    $("#ecoledebattersea_score").text(ecoledebattersea_overall_score); //show score
+    
 
     //jeannine manuel
+    const jeanninemanuel_score = [7, 6, 6, 5, 10, 6, 8, 5]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const jeanninemanuel_overall_score = dot(jeanninemanuel_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
         pointPlacement: 'on',
-        data: [7, 6, 7, 5, 10, 6, 8, 5]
+        data: jeanninemanuel_score
     }];
-    chartParams.title.text = "Ecole Jeannine Manuel";
-    Highcharts.chart('jeanninemanuel', chartParams);
+    Highcharts.chart('jeanninemanuel_chart', chartParams); //plot chart
+    $("#jeanninemanuel_score").text(jeanninemanuel_overall_score); //show score
 
     //glendower
+    const glendower_score = [0, 0, 0, 0, 0, 0, 9, 0]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const glendower_overall_score = dot(glendower_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
         pointPlacement: 'on',
-        data: [0, 0, 0, 0, 0, 0, 9, 0]
+        data: glendower_score
     }];
-    chartParams.title.text = "Glendower";
-    Highcharts.chart('glendower', chartParams);
+    Highcharts.chart('glendower_chart', chartParams); //plot chart
+    $("#glendower_score").text(glendower_overall_score); //show score
 
     //pembridge hall
+    const pembridgehall_score = [0, 0, 0, 0, 0, 0, 9, 0]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const pembridgehall_overall_score = dot(pembridgehall_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
         pointPlacement: 'on',
-        data: [0, 0, 0, 0, 0, 0, 9, 0]
+        data: pembridgehall_score
     }];
-    chartParams.title.text = "Pembridge Hall";
-    Highcharts.chart('pembridgehall', chartParams);
+    Highcharts.chart('pembridgehall_chart', chartParams); //plot chart
+    $("#pembridgehall_score").text(pembridgehall_overall_score); //show score
 
     //kensington prep
+    const kensingtonprep_score = [0, 0, 0, 0, 0, 0, 8, 0]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const kensingtonprep_overall_score = dot(kensingtonprep_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
         pointPlacement: 'on',
-        data: [0, 0, 0, 0, 0, 0, 0, 0]
+        data: kensingtonprep_score
     }];
-    chartParams.title.text = "Kensington Prep";
-    Highcharts.chart('kensingtonprep', chartParams);
+    Highcharts.chart('kensingtonprep_chart', chartParams); //plot chart
+    $("#kensingtonprep_score").text(kensingtonprep_overall_score); //show score
 
     //kensington wade
+    const kensingtonwade_score = [0, 0, 0, 0, 0, 0, 7, 0]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const kensingtonwade_overall_score = dot(kensingtonwade_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
         pointPlacement: 'on',
-        data: [0, 0, 0, 0, 9, 0, 0, 4]
+        data: kensingtonwade_score
     }];
-    chartParams.title.text = "Kensington Wade";
-    Highcharts.chart('kensingtonwade', chartParams);
+    Highcharts.chart('kensingtonwade_chart', chartParams); //plot chart
+    $("#kensingtonwade_score").text(kensingtonwade_overall_score); //show score
 
     //knightbridge school
+    const knightbridge_score = [0, 0, 0, 0, 0, 0, 9, 2]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const knightbridge_overall_score = dot(knightbridge_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
         pointPlacement: 'on',
-        data: [0, 0, 0, 0, 0, 0, 8, 2]
+        data: knightbridge_score
     }];
-    chartParams.title.text = "Knightbridge School";
-    Highcharts.chart('knightbridge', chartParams);
+    Highcharts.chart('knightbridge_chart', chartParams); //plot chart
+    $("#knightbridge_score").text(knightbridge_overall_score); //show score
+
 
     //hill house
+    const hillhouse_score = [7, 6, 6, 5, 6, 5, 8, 6]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const hillhouse_overall_score = dot(hillhouse_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
         pointPlacement: 'on',
-        data: [0, 0, 0, 0, 0, 0, 8, 6]
+        data: hillhouse_score
     }];
-    chartParams.title.text = "Hill House";
-    Highcharts.chart('hillhouse', chartParams);
-
+    Highcharts.chart('hillhouse_chart', chartParams); //plot chart
+    $("#hillhouse_score").text(hillhouse_overall_score); //show score
+   
     //brighton college
+    const brightoncollege_score = [0, 0, 0, 0, 0, 0, 0, 0]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const brightoncollege_overall_score = dot(brightoncollege_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
         pointPlacement: 'on',
-        data: [0, 0, 0, 0, 0, 0, 9, 2]
+        data: brightoncollege_score
     }];
-    chartParams.title.text = "Brighton College Prep Kensington";
-    Highcharts.chart('brightoncollegeprep', chartParams);
+    Highcharts.chart('brightoncollege_chart', chartParams); //plot chart
+    $("#brightoncollege_score").text(brightoncollege_overall_score); //show score
 
     //eaton house
+    const eatonhouse_score = [7, 7, 6, 5, 4, 4, 8, 5]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const eatonhouse_overall_score = dot(eatonhouse_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
         pointPlacement: 'on',
-        data: [0, 0, 0, 0, 0, 0, 8, 4]
+        data: eatonhouse_score
     }];
-    chartParams.title.text = "Eaton House Manor";
-    Highcharts.chart('eatonhouse', chartParams);
+    Highcharts.chart('eatonhouse_chart', chartParams); //plot chart
+    $("#eatonhouse_score").text(eatonhouse_overall_score); //show score
 
     //kew college
+    const kewcollege_score = [0, 0, 0, 0, 0, 0, 0, 0]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const kewcollege_overall_score = dot(kewcollege_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
         pointPlacement: 'on',
-        data: [0, 0, 0, 0, 0, 0, 0, 8]
+        data: kewcollege_score
     }];
-    chartParams.title.text = "Kew College";
-    Highcharts.chart('kewcollege', chartParams);
+    Highcharts.chart('kewcollege_chart', chartParams); //plot chart
+    $("#kewcollege_score").text(kewcollege_overall_score); //show score
 
     //kings house
+    const kingshouse_score = [0, 0, 0, 0, 0, 0, 0, 0]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const kingshouse_overall_score = dot(kingshouse_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
         pointPlacement: 'on',
-        data: [0, 0, 0, 0, 0, 0, 0, 6]
+        data: kingshouse_score
     }];
-    chartParams.title.text = "King's House";
-    Highcharts.chart('kingshouse', chartParams);
+    Highcharts.chart('kingshouse_chart', chartParams); //plot chart
+    $("#kingshouse_score").text(kingshouse_overall_score); //show score
 
     //devonshire
+    const devonshirehouse_score = [0, 0, 0, 0, 0, 0, 7, 0]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const devonshirehouse_overall_score = dot(devonshirehouse_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
         pointPlacement: 'on',
-        data: [0, 0, 0, 0, 0, 0, 7, 0]
+        data: devonshirehouse_score
     }];
-    chartParams.title.text = "Devonshire House";
-    Highcharts.chart('devonshirehouse', chartParams);
+    Highcharts.chart('devonshirehouse_chart', chartParams); //plot chart
+    $("#devonshirehouse_score").text(devonshirehouse_overall_score); //show score
+    
 
     //st pauls cathedral
+    const stpaulscathedral_score = [0, 0, 0, 0, 0, 0, 7, 0]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const stpaulscathedral_overall_score = dot(stpaulscathedral_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
         pointPlacement: 'on',
-        data: [0, 0, 0, 0, 0, 0, 7, 6]
+        data: stpaulscathedral_score
     }];
-    chartParams.title.text = "St Paul's Cathedral School";
-    Highcharts.chart('stpaulscathedral', chartParams);
+    Highcharts.chart('stpaulscathedral_chart', chartParams); //plot chart
+    $("#stpaulscathedral_score").text(stpaulscathedral_overall_score); //show score
 
     //garden house
+    const gardenhouse_score = [0, 0, 0, 0, 0, 0, 8, 4]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const gardenhouse_overall_score = dot(gardenhouse_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
         pointPlacement: 'on',
-        data: [0, 0, 0, 0, 0, 0, 0, 4]
+        data: gardenhouse_score
     }];
-    chartParams.title.text = "Garden House";
-    Highcharts.chart('gardenhouse', chartParams);
+    Highcharts.chart('gardenhouse_chart', chartParams); //plot chart
+    $("#gardenhouse_score").text(gardenhouse_overall_score); //show score
 
     //merlin school
+    const merlin_score = [0, 0, 0, 0, 0, 0, 0, 7]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const merlin_overall_score = dot(merlin_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
         pointPlacement: 'on',
-        data: [0, 0, 0, 0, 0, 0, 0, 7]
+        data: merlin_score
     }];
-    chartParams.title.text = "Merlin";
-    Highcharts.chart('merlin', chartParams);
+    Highcharts.chart('merlin_chart', chartParams); //plot chart
+    $("#merlin_score").text(merlin_overall_score); //show score
 
-  
-  
+    //hampstead hill
+    const hampsteadhill_score = [0, 0, 0, 0, 0, 0, 0, 0]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const hampsteadhill_overall_score = dot(hampsteadhill_score, weights); //overall score
+    chartParams.series = [{
+        name: 'score',
+        pointPlacement: 'on',
+        data: hampsteadhill_score
+    }];
+    Highcharts.chart('hampsteadhill_chart', chartParams); //plot chart
+    $("#hampsteadhill_score").text(hampsteadhill_overall_score); //show score
+
+    //mulberry
+    const mulberry_score = [0, 0, 0, 0, 0, 0, 0, 0]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const mulberry_overall_score = dot(mulberry_score, weights); //overall score
+    chartParams.series = [{
+        name: 'score',
+        pointPlacement: 'on',
+        data: mulberry_score
+    }];
+    Highcharts.chart('mulberry_chart', chartParams); //plot chart
+    $("#mulberry_score").text(mulberry_overall_score); //show score
+
+    //north london
+    const northlondon_score = [0, 0, 0, 0, 0, 0, 0, 0]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const northlondon_overall_score = dot(northlondon_score, weights); //overall score
+    chartParams.series = [{
+        name: 'score',
+        pointPlacement: 'on',
+        data: northlondon_score
+    }];
+    Highcharts.chart('northlondon_chart', chartParams); //plot chart
+    $("#northlondon_score").text(northlondon_overall_score); //show score
+
+    //thomas
+    const thomas_score = [0, 0, 0, 0, 0, 0, 0, 0]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const thomas_overall_score = dot(thomas_score, weights); //overall score
+    chartParams.series = [{
+        name: 'score',
+        pointPlacement: 'on',
+        data: thomas_score
+    }];
+    Highcharts.chart('thomas_chart', chartParams); //plot chart
+    $("#thomas_score").text(thomas_overall_score); //show score
+
+    //highgate
+    const highgate_score = [0, 0, 0, 0, 0, 0, 0, 0]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const highgate_overall_score = dot(highgate_score, weights); //overall score
+    chartParams.series = [{
+        name: 'score',
+        pointPlacement: 'on',
+        data: highgate_score
+    }];
+    Highcharts.chart('highgate_chart', chartParams); //plot chart
+    $("#highgate_score").text(highgate_overall_score); //show score
+
+    //alleyns
+    const alleyns_score = [0, 0, 0, 0, 0, 0, 0, 0]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const alleyns_overall_score = dot(alleyns_score, weights); //overall score
+    chartParams.series = [{
+        name: 'score',
+        pointPlacement: 'on',
+        data: alleyns_score
+    }];
+    Highcharts.chart('alleyns_chart', chartParams); //plot chart
+    $("#alleyns_score").text(alleyns_overall_score); //show score
+
+    //roche
+    const roche_score = [0, 0, 0, 0, 0, 0, 0, 0]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const roche_overall_score = dot(roche_score, weights); //overall score
+    chartParams.series = [{
+        name: 'score',
+        pointPlacement: 'on',
+        data: roche_score
+    }];
+    Highcharts.chart('roche_chart', chartParams); //plot chart
+    $("#roche_score").text(roche_overall_score); //show score
+
+    //westminster
+    const westminster_score = [0, 0, 0, 0, 0, 0, 0, 0]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const westminster_overall_score = dot(westminster_score, weights); //overall score
+    chartParams.series = [{
+        name: 'score',
+        pointPlacement: 'on',
+        data: westminster_score
+    }];
+    Highcharts.chart('westminster_chart', chartParams); //plot chart
+    $("#westminster_score").text(westminster_overall_score); //show score
+
+
+
 });//end of document.ready wrapper
+
+const weights = [0.30, 0.05, 0.15, 0.05, 0.20, 0.10, 0.05, 0.10]; //weights to corresponding categories in %, sum to 100%
+//helper function to calculate the dot product of two arrays of equal lengths
+function dot(x, y) {
+    let multipliedArray = x.map((v, i) => x[i] * y[i]); //scalar multiplication of array elements
+    let sum = multipliedArray.reduce((m, n) => m + n); //sum over the elements
+    return sum.toFixed(1); //return rounded value
+}
