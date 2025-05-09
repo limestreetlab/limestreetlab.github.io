@@ -39,6 +39,7 @@ using: highcharts
 
     <main class="container">
         <h1 class="mt-4 text-primary display-6 mb-4 text-center">Evaluating prep schools</h1>
+
         <p class="mt-4 mb-4">
         Despite the notoriously and astonishingly high cost of private school education in England, we still believe it is worth pursuing given the very mixed populations and dubious quality of public schools in many parts of London.
         <br><br>
@@ -46,16 +47,15 @@ using: highcharts
         We aim for an environment that is academically ambitious and rigorous to stretch Easy Baby's mind but also offers rich extra-curricular activities to broaden her experience and pastoral care to build happiness and confidence.
         It is critical to identify the right prep schools having the right ethos and offering Easy Baby a home-away-from-home to grow intellectually and personally in her formative years.
         <br><br>
-        While an excellent all-through school such as Highgate, NLCS, and Alleyns is attractive, all prep schools are considered on equal basis because St Paul's and public grammar schools Pate's and Tiffin are the primary exit goals. 
-        The base case is for Easy Baby to exit at 11+, but 7+ is not totally written off. Given the competitive nature of admission, a wide range of schools are considered to balance entry reality and our objectives. Location is a secondary consideration as we are <i>just</i> renting and can move to accomodate. 
+        While an excellent all-through school such as Highgate, NLCS, and Alleyns is attractive, all prep schools are considered on equal basis because Perse and St Paul's and public grammar schools Pate's and Tiffin remain our primary exit goals. 
+        The base case exit point is 11+, but 7+ is not totally written off. Given the competitive nature of admission, a variety of schools is  considered to balance entry reality and our objectives. Location is a secondary consideration as we are <i>just</i> renting and can move to accomodate. 
         <br><br>
-        To evaluate and compare, we select academic quality, exit track record, music program, sport offerings, foreign language curriculum, facilities, niceness and convenience of its location, and cost as our evaluation criteria, to which we assign weights of 30%, 5%, 15%, 5%, 20%, 10%, 5%, 10%, accordingly.
-
+        To evaluate and compare, we select academic quality, exit track record, music program, sport offerings, foreign language curriculum, facilities, niceness and convenience of location, and cost as evaluation criteria, to which we assign weights of 30%, 5%, 15%, 5%, 20%, 10%, 5%, 10%, accordingly.
         </p>
 
-    <main class="accordion">
+    <main class="accordion mt-5 mb-5">
 
-
+        <!--Alleyns-->
         <section class="accordion-item">
             <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#alleyns">
@@ -64,13 +64,29 @@ using: highcharts
             </h2>
             <div id="alleyns" class="accordion-collapse collapse">
             <div class="accordion-body">
-                <figure class="highcharts-figure">
-                    <div id="alleyns_chart"></div>
-                </figure>
+                
+               
+                <div class="row justify-content-center">
+          
+                    <div class="col-10 col-md-6 mt-3">
+                        <span class="text-primary h4"><span id="alleyns_score"></span>/10</span> &nbsp;&nbsp;&nbsp; Co-educational, 4-18, Dulwich
+                        <div class="mt-2 small"><!--review here-->
+                    
+                        </div>
+                    </div>
+
+                    <figure class="d-none d-md-block col-md-6 highcharts-figure">
+                        <div id="alleyns_chart"></div>
+                    </figure>
+          
+                </div>
+
+
             </div>
             </div>
         </section>
 
+        <!--Brighton College Prep Kensington-->
         <section class="accordion-item">
             <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#brightoncollege">
@@ -79,13 +95,27 @@ using: highcharts
             </h2>
             <div id="brightoncollege" class="accordion-collapse collapse">
             <div class="accordion-body">
-                <figure class="highcharts-figure">
-                    <div id="brightoncollege_chart"></div>
-                </figure>
+
+                <div class="row justify-content-center">
+          
+                    <div class="col-10 col-md-6 mt-3">
+                        <span class="text-primary h4"><span id="brightoncollege_score"></span>/10</span> &nbsp;&nbsp;&nbsp; Co-educational, 2-13, South Kensington
+                        <div class="mt-2 small"><!--review here-->
+                    
+                        </div>
+                    </div>
+
+                    <figure class="d-none d-md-block col-md-6 highcharts-figure">
+                        <div id="brightoncollege_chart"></div>
+                    </figure>
+          
+                </div>
+                
             </div>
             </div>
         </section>
 
+        <!--bute house-->
         <section class="accordion-item">
             <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#butehouse">
@@ -94,15 +124,31 @@ using: highcharts
             </h2>
             <div id="butehouse" class="accordion-collapse collapse">
             <div class="accordion-body">
-                <figure class="highcharts-figure">
-                    <div id="butehouse_chart"></div>
-                </figure>
-                <span id="butehouse_score"></span>
+
+                <div class="row justify-content-center">
+          
+                    <div class="col-10 col-md-6 mt-3">
+                        <span class="text-primary h4"><span id="butehouse_score"></span>/10</span> &nbsp;&nbsp;&nbsp; Girls, 4-11, Hammersmith
+                        <div class="mt-2 small"><!--review here-->
+                        Unargurably the top girls school. Academic attainments and placements are top-notch. Academic outcomes are achieved without sacrificing extracurricular experience, as music, languages, and art offerings are beyond an average prep.
+                        <br><br>
+                        Girls are very ambitious, high-achieving, and mature. Facilities are very good, with access to some of St Pauls Girls'. 
+                        <br><br>
+                        Entry is so competitive that reception entry is by ballot only. With historically over 300 applicants and an automatic sibling policy for 30 places, selection probability is in mid-single digit. Entry is not a matter of if I want but if I can.
+                        </div>
+                    </div>
+
+                    <figure class="d-none d-md-block col-md-6 highcharts-figure">
+                        <div id="butehouse_chart"></div>
+                    </figure>
+          
+                </div>
             
             </div>
             </div>
         </section>
 
+        <!--College Francais Bilingue de Londres-->
         <section class="accordion-item">
             <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cfbl">
@@ -111,15 +157,31 @@ using: highcharts
             </h2>
             <div id="cfbl" class="accordion-collapse collapse">
             <div class="accordion-body">
-                <figure class="highcharts-figure">
-                    <div id="cfbl_chart"></div>
-                </figure>
+
+                <div class="row justify-content-center">
+          
+                    <div class="col-10 col-md-6 mt-3">
+                        <span class="text-primary h4"><span id="cfbl_score"></span>/10</span> &nbsp;&nbsp;&nbsp; Co-educational, 3-15, Kentish Town
+                        <div class="mt-2 small"><!--review here-->
+                        A large French bilingual school spanning primary and secondary. It follows the French curriculum and mixes French/English instructions, leading to bilingual fluency. Facilities are new and good with science lab, playgrouynd, gym, and music room on site. 
+                        <br><br>
+                        Extracurricular activities are basic, which is common in the French system. Academically it is not ambitious and made clear that it is a French school not a prep school. Parents looking to exit at 11+ are frankly told substantial external tutoring and extra efforts are needed, because the French curriculum does not cover as much breadth as required for 11+.
+                        <br><br>
+                        Pupils are comfortably bilingual but look intellectually mediocre. The fee level is competitive and the school is popular with French families. It should suit families emphasising bilingualism rather than academics. 
+                        </div>
+                    </div>
+
+                    <figure class="d-none d-md-block col-md-6 highcharts-figure">
+                        <div id="cfbl_chart"></div>
+                    </figure>
+          
+                </div>
             
             </div>
             </div>
         </section>
 
-
+        <!--Devonshire house-->
         <section class="accordion-item">
             <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#devonshirehouse">
@@ -129,14 +191,30 @@ using: highcharts
             <div id="devonshirehouse" class="accordion-collapse collapse">
             <div class="accordion-body">
                     
-            <figure class="highcharts-figure">
-                <div id="devonshirehouse_chart"></div>
-            </figure>
+                <div class="row justify-content-center">
+          
+                    <div class="col-10 col-md-6 mt-3">
+                        <span class="text-primary h4"><span id="devonshirehouse_score"></span>/10</span> &nbsp;&nbsp;&nbsp; Co-educational, 2-11, Hampstead
+                        <div class="mt-2 small"><!--review here-->
+                        It is a beautiful school, in a leafy area at the top of the hill towards Hampstead, aiming to provide a well-rounded education and nurturing experience without sacrificing academic quality, which I think it does well. In fact, the school explicitly states it sits in the middle between academic rigour and happiness. 
+                        <br><br>
+                        Music and language offerings are not excellent, with merely 30mins per week. French lessons increase to 3 per week from year 3, but most pupils admit they can not speak much. Music clubs, individual lessons, and choirs are available, but music does not seem an integral part of school. Senior school placement record is good but not excellent.
+                        <br><br>
+                        Teachers and staffs are approachable, professional, and honest. Pupils looked happy, friendly, confident, and polished. Pupil body is relatively diverse, mostly drawn from wealthy Hampstead families. The school consists of 3 buildings nearby with spacious and well-maintained sport facilities and playgrounds at the back, enjoying leafy and open views. There is even a cozy forest school area, but the library is just average. Science lab, music room, and IT room are good. Class rooms are spacious and do not feel crammed at all. A school bus is available from St Johns Wood. The fee level is high and above other Hampstead preps. 
+                        </div>
+                    </div>
+
+                    <figure class="d-none d-md-block col-md-6 highcharts-figure">
+                        <div id="devonshirehouse_chart"></div>
+                    </figure>
+          
+                </div>
             
             </div>
             </div>
         </section>
 
+        <!--Eaton House Manor-->
         <section class="accordion-item">
             <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#eatonhouse">
@@ -145,14 +223,32 @@ using: highcharts
             </h2>
             <div id="eatonhouse" class="accordion-collapse collapse">
             <div class="accordion-body">
-                <figure class="highcharts-figure">
-                    <div id="eatonhouse_chart"></div>
-                </figure>
+                <div class="row justify-content-center">
+          
+                    <div class="col-10 col-md-6 mt-3">
+                        <span class="text-primary h4"><span id="eatonhouse_score"></span>/10</span> &nbsp;&nbsp;&nbsp; Girls, 2-11, Clapham
+                        <div class="mt-2 small"><!--review here-->
+                        Located across Clapham Common, the school site is split into a boys and a girls school, seperated only by classrooms and activities. Key facilities such as canteen, science lab, gym, and playground are shared between the two <i>schools</i>. The school feels quite crowded and facilities look mediocre. The views are either surrounding buildings or indoor, not of nature even the Common is opposite.
+                        <br><br>
+                        In terms of academics and placements, it meets my expectations of a prep school, but does not exceed. During the visit, reception and year 6 girls proactively and correctly answered questions; but those questions were not particularly challenging. Girls looked hardworking and well-mannered, but intellectually below Bute House's level.  
+                        <br><br>
+                        Music is 1 hour/week with optional private lessons on site; French is 30mins/week which is very little; language doesn't seem a priority as a nursery staff teaches Spanish just because she speaks Spanish and then it changes to French from reception. Sports should be mediocre given the limited facilities and often having to use the Common. The weekly ballet lesson is interesting thoughg.
+                        <br><br>
+                        In conclusion, this is an average school without any particular selling points.
+                        </div>
+                    </div>
+
+                    <figure class="d-none d-md-block col-md-6 highcharts-figure">
+                        <div id="eatonhouse_chart"></div>
+                    </figure>
+          
+                </div>
             
             </div>
             </div>
         </section>
 
+        <!--ecole de battersea-->
         <section class="accordion-item">
             <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ecoledebattersea">
@@ -161,14 +257,27 @@ using: highcharts
             </h2>
             <div id="ecoledebattersea" class="accordion-collapse collapse">
             <div class="accordion-body">
-                <figure class="highcharts-figure">
-                    <div id="ecoledebattersea_chart"></div>
-                </figure>
+
+                <div class="row justify-content-center">
+          
+                    <div class="col-10 col-md-6 mt-3">
+                        <span class="text-primary h4"><span id="ecoledebattersea_score"></span>/10</span> &nbsp;&nbsp;&nbsp; Co-educational, 3-11, Battersea & Fulham
+                        <div class="mt-2 small"><!--review here-->
+                        Ecole de Battersea and Ecole des Petits teach the French curriculum by incorporating English instructions. Pupils and staffs are all fully bilingual. Academically it is not ambitious and will certainly not suffice to prepare for 11+. The school is rather small and very crammed. Student-teacher ratio is high. Facilities including the library are poor. Extracurricular offerings are very limited. It is by and large <i>just</i> a French school in London. 
+                        </div>
+                    </div>
+
+                    <figure class="d-none d-md-block col-md-6 highcharts-figure">
+                        <div id="ecoledebattersea_chart"></div>
+                    </figure>
+          
+                </div>
             
             </div>
             </div>
         </section>
 
+        <!--garden house school-->
         <section class="accordion-item">
             <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#gardenhouse">
@@ -177,14 +286,27 @@ using: highcharts
             </h2>
             <div id="gardenhouse" class="accordion-collapse collapse">
             <div class="accordion-body">
-                <figure class="highcharts-figure">
-                    <div id="gardenhouse_chart"></div>
-                </figure>
+
+                <div class="row justify-content-center">
+          
+                    <div class="col-10 col-md-6 mt-3">
+                        <span class="text-primary h4"><span id="gardenhouse_score"></span>/10</span> &nbsp;&nbsp;&nbsp; Girls, 3-11, Chelsea
+                        <div class="mt-2 small"><!--review here-->
+                    
+                        </div>
+                    </div>
+
+                    <figure class="d-none d-md-block col-md-6 highcharts-figure">
+                        <div id="gardenhouse_chart"></div>
+                    </figure>
+          
+                </div>
             
             </div>
             </div>
         </section>
 
+        <!--glendower-->
         <section class="accordion-item">
             <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#glendower">
@@ -193,14 +315,27 @@ using: highcharts
             </h2>
             <div id="glendower" class="accordion-collapse collapse">
             <div class="accordion-body">
-                <figure class="highcharts-figure">
-                    <div id="glendower_chart"></div>
-                </figure>
+
+                <div class="row justify-content-center">
+          
+                    <div class="col-10 col-md-6 mt-3">
+                        <span class="text-primary h4"><span id="glendower_score"></span>/10</span> &nbsp;&nbsp;&nbsp; Girls, 3-11, South Kensington
+                        <div class="mt-2 small"><!--review here-->
+                    
+                        </div>
+                    </div>
+
+                    <figure class="d-none d-md-block col-md-6 highcharts-figure">
+                        <div id="glendower_chart"></div>
+                    </figure>
+          
+                </div>
             
             </div>
             </div>
         </section>
 
+        <!--hampstead hill school-->
         <section class="accordion-item">
             <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#hampsteadhill">
@@ -209,14 +344,27 @@ using: highcharts
             </h2>
             <div id="hampsteadhill" class="accordion-collapse collapse">
             <div class="accordion-body">
-                <figure class="highcharts-figure">
-                    <div id="hampsteadhill_chart"></div>
-                </figure>
+                
+                <div class="row justify-content-center">
+          
+                    <div class="col-10 col-md-6 mt-3">
+                        <span class="text-primary h4"><span id="hampsteadhill_score"></span>/10</span> &nbsp;&nbsp;&nbsp; Co-educational, 2-11, Hampstead
+                        <div class="mt-2 small"><!--review here-->
+                    
+                        </div>
+                    </div>
+
+                    <figure class="d-none d-md-block col-md-6 highcharts-figure">
+                        <div id="hampsteadhill_chart"></div>
+                    </figure>
+          
+                </div>
             
             </div>
             </div>
         </section>
 
+        <!--highgate-->
         <section class="accordion-item">
             <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#highgate">
@@ -225,14 +373,27 @@ using: highcharts
             </h2>
             <div id="highgate" class="accordion-collapse collapse">
             <div class="accordion-body">
-                <figure class="highcharts-figure">
-                    <div id="highgate_chart"></div>
-                </figure>
+               
+                <div class="row justify-content-center">
+          
+                    <div class="col-10 col-md-6 mt-3">
+                        <span class="text-primary h4"><span id="highgate_score"></span>/10</span> &nbsp;&nbsp;&nbsp; Co-educational, 4-18, Highgate
+                        <div class="mt-2 small"><!--review here-->
+                    
+                        </div>
+                    </div>
+
+                    <figure class="d-none d-md-block col-md-6 highcharts-figure">
+                        <div id="highgate_chart"></div>
+                    </figure>
+          
+                </div>
             
             </div>
             </div>
         </section>
 
+        <!--hill house-->
         <section class="accordion-item">
             <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#hillhouse">
@@ -241,14 +402,27 @@ using: highcharts
             </h2>
             <div id="hillhouse" class="accordion-collapse collapse">
             <div class="accordion-body">
-                <figure class="highcharts-figure">
-                    <div id="hillhouse_chart"></div>
-                </figure>
+               
+                <div class="row justify-content-center">
+          
+                    <div class="col-10 col-md-6 mt-3">
+                        <span class="text-primary h4"><span id="hillhouse_score"></span>/10</span> &nbsp;&nbsp;&nbsp; Co-educational, 4-11, Knightbridge
+                        <div class="mt-2 small"><!--review here-->
+                    
+                        </div>
+                    </div>
+
+                    <figure class="d-none d-md-block col-md-6 highcharts-figure">
+                        <div id="hillhouse_chart"></div>
+                    </figure>
+          
+                </div>
             
             </div>
             </div>
         </section>
 
+        <!--holy cross prep-->
         <section class="accordion-item">
             <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#holycross">
@@ -257,14 +431,27 @@ using: highcharts
             </h2>
             <div id="holycross" class="accordion-collapse collapse">
             <div class="accordion-body">
-                <figure class="highcharts-figure">
-                    <div id="holycross_chart"></div>
-                </figure>
+               
+                <div class="row justify-content-center">
+          
+                    <div class="col-10 col-md-6 mt-3">
+                        <span class="text-primary h4"><span id="holycross_score"></span>/10</span> &nbsp;&nbsp;&nbsp; Girls, 3-11, Kingston
+                        <div class="mt-2 small"><!--review here-->
+                    
+                        </div>
+                    </div>
+
+                    <figure class="d-none d-md-block col-md-6 highcharts-figure">
+                        <div id="holycross_chart"></div>
+                    </figure>
+          
+                </div>
             
             </div>
             </div>
         </section>
 
+        <!--ecole jeannine manuel-->
         <section class="accordion-item">
             <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#jeanninemanuel">
@@ -273,14 +460,27 @@ using: highcharts
             </h2>
             <div id="jeanninemanuel" class="accordion-collapse collapse">
             <div class="accordion-body">
-                <figure class="highcharts-figure">
-                    <div id="jeanninemanuel_chart"></div>
-                </figure>
-            <span id="jeanninemanuel_score"></span>
+               
+                <div class="row justify-content-center">
+          
+                    <div class="col-10 col-md-6 mt-3">
+                        <span class="text-primary h4"><span id="jeanninemanuel_score"></span>/10</span> &nbsp;&nbsp;&nbsp; Co-educational, 3-18, Russell Square
+                        <div class="mt-2 small"><!--review here-->
+                    
+                        </div>
+                    </div>
+
+                    <figure class="d-none d-md-block col-md-6 highcharts-figure">
+                        <div id="jeanninemanuel_chart"></div>
+                    </figure>
+          
+                </div>
+
             </div>
             </div>
         </section>
 
+        <!--kensington prep-->
         <section class="accordion-item">
             <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kensingtonprep">
@@ -289,14 +489,27 @@ using: highcharts
             </h2>
             <div id="kensingtonprep" class="accordion-collapse collapse">
             <div class="accordion-body">
-                <figure class="highcharts-figure">
-                    <div id="kensingtonprep_chart"></div>
-                </figure>
+               
+                <div class="row justify-content-center">
+          
+                    <div class="col-10 col-md-6 mt-3">
+                        <span class="text-primary h4"><span id="kensingtonprep_score"></span>/10</span> &nbsp;&nbsp;&nbsp; Girls, 4-11, Fulham
+                        <div class="mt-2 small"><!--review here-->
+                    
+                        </div>
+                    </div>
+
+                    <figure class="d-none d-md-block col-md-6 highcharts-figure">
+                        <div id="kensingtonprep_chart"></div>
+                    </figure>
+          
+                </div>
             
             </div>
             </div>
         </section>
 
+        <!--kensington wade-->
         <section class="accordion-item">
             <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kensingtonwade">
@@ -305,14 +518,27 @@ using: highcharts
             </h2>
             <div id="kensingtonwade" class="accordion-collapse collapse">
             <div class="accordion-body">
-                <figure class="highcharts-figure">
-                    <div id="kensingtonwade_chart"></div>
-                </figure>
+                
+                <div class="row justify-content-center">
+          
+                    <div class="col-10 col-md-6 mt-3">
+                        <span class="text-primary h4"><span id="kensingtonwade_score"></span>/10</span> &nbsp;&nbsp;&nbsp; Co-educational, 4-11, Fulham
+                        <div class="mt-2 small"><!--review here-->
+                    
+                        </div>
+                    </div>
+
+                    <figure class="d-none d-md-block col-md-6 highcharts-figure">
+                        <div id="kensingtonwade_chart"></div>
+                    </figure>
+          
+                </div>
             
             </div>
             </div>
         </section>
 
+        <!--kew college prep-->
         <section class="accordion-item">
             <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kewcollege">
@@ -321,14 +547,35 @@ using: highcharts
             </h2>
             <div id="kewcollege" class="accordion-collapse collapse">
             <div class="accordion-body">
-                <figure class="highcharts-figure">
-                    <div id="kewcollege_chart"></div>
-                </figure>
+                
+                <div class="row justify-content-center">
+          
+                    <div class="col-10 col-md-6 mt-3">
+                        <span class="text-primary h4"><span id="kewcollege_score"></span>/10</span> &nbsp;&nbsp;&nbsp; Co-educational, 3-11, Kew
+                        <div class="mt-2 small"><!--review here-->
+                        A popular prep in the Richmond area located near Kew Gardens, having about 300 pupils. 
+                        <br><br>
+                        Strong academics and placements are its key selling points for a nonselective school, with Latymer Upper/Godolphin Latymer/Hampton/LEH being key destinations. French is only 30mins/week and not a school priority.
+                        <br><br>
+                        The school is compact and comprises 3 buildings (early years, senior years, and lab/art/music rooms) with a small playground at the centre. There are no sport facilities on site, so it rents surrounding facilities for sports. Music is decent with private lessons available.
+                        <br><br>
+                        Pupils look happy and well-mannered. The body is diverse, about 50% white, 30% Asian, 20% brown. Staffs are friendly and approachable.   
+                        <br><br>
+                        In sum, I find it a friendly school offering above-average academics and average extracurriculars at below-average fee in a cozy environment.   
+                        </div>
+                    </div>
+
+                    <figure class="d-none d-md-block col-md-6 highcharts-figure">
+                        <div id="kewcollege_chart"></div>
+                    </figure>
+          
+                </div>
             
             </div>
             </div>
         </section>
 
+        <!--kings house school-->
         <section class="accordion-item">
             <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kingshouse">
@@ -337,16 +584,28 @@ using: highcharts
             </h2>
             <div id="kingshouse" class="accordion-collapse collapse">
             <div class="accordion-body">
-                <figure class="highcharts-figure">
-                    <div id="kingshouse_chart"></div>
-                </figure>
+               
+                <div class="row justify-content-center">
+          
+                    <div class="col-10 col-md-6 mt-3">
+                        <span class="text-primary h4"><span id="kingshouse_score"></span>/10</span> &nbsp;&nbsp;&nbsp; Co-educational, 3-11, Richmond
+                        <div class="mt-2 small"><!--review here--><!--review here-->
+                        A boys school transitioned to co-education only in 2024 so student body is predominantly boys. 
+                        </div>
+                    </div>
+
+                    <figure class="d-none d-md-block col-md-6 highcharts-figure">
+                        <div id="kingshouse_chart"></div>
+                    </figure>
+          
+                </div>
             
             </div>
             </div>
         </section>
 
 
-
+        <!--knightbridge school-->
         <section class="accordion-item">
             <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#knightbridge">
@@ -355,15 +614,27 @@ using: highcharts
             </h2>
             <div id="knightbridge" class="accordion-collapse collapse">
             <div class="accordion-body">
-                <figure class="highcharts-figure">
-                    <div id="knightbridge_chart"></div>
-                </figure>
+               
+                <div class="row justify-content-center">
+          
+                    <div class="col-10 col-md-6 mt-3">
+                        <span class="text-primary h4"><span id="knightbridge_score"></span>/10</span> &nbsp;&nbsp;&nbsp; Co-educational, 3-11, Knightbridge
+                        <div class="mt-2 small"><!--review here--><!--review here-->
+                    
+                        </div>
+                    </div>
+
+                    <figure class="d-none d-md-block col-md-6 highcharts-figure">
+                        <div id="knightbridge_chart"></div>
+                    </figure>
+          
+                </div>
             
             </div>
             </div>
         </section>
 
-
+        <!--merlin school-->
         <section class="accordion-item">
             <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#merlin">
@@ -372,15 +643,27 @@ using: highcharts
             </h2>
             <div id="merlin" class="accordion-collapse collapse">
             <div class="accordion-body">
-                <figure class="highcharts-figure">
-                    <div id="merlin_chart"></div>
-                </figure>
+               
+                <div class="row justify-content-center">
+          
+                    <div class="col-10 col-md-6 mt-3">
+                        <span class="text-primary h4"><span id="merlin_score"></span>/10</span> &nbsp;&nbsp;&nbsp; Co-educational, 3-7, Putney
+                        <div class="mt-2 small"><!--review here-->
+                    
+                        </div>
+                    </div>
+
+                    <figure class="d-none d-md-block col-md-6 highcharts-figure">
+                        <div id="merlin_chart"></div>
+                    </figure>
+          
+                </div>
             
             </div>
             </div>
         </section>
 
-
+        <!--mulberry house school-->
         <section class="accordion-item">
             <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mulberry">
@@ -389,15 +672,27 @@ using: highcharts
             </h2>
             <div id="mulberry" class="accordion-collapse collapse">
             <div class="accordion-body">
-                <figure class="highcharts-figure">
-                    <div id="mulberry_chart"></div>
-                </figure>
+                
+                <div class="row justify-content-center">
+          
+                    <div class="col-10 col-md-6 mt-3">
+                        <span class="text-primary h4"><span id="mulberry_score"></span>/10</span> &nbsp;&nbsp;&nbsp; Co-educational, 2-7, West Hampstead
+                        <div class="mt-2 small"><!--review here-->
+                    
+                        </div>
+                    </div>
+
+                    <figure class="d-none d-md-block col-md-6 highcharts-figure">
+                        <div id="mulberry_chart"></div>
+                    </figure>
+          
+                </div>
             
             </div>
             </div>
         </section>
 
-
+        <!--newton prep-->
         <section class="accordion-item">
             <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#newton">
@@ -407,16 +702,27 @@ using: highcharts
             <div id="newton" class="accordion-collapse collapse">
             <div class="accordion-body">
                     
-            <figure class="highcharts-figure">
-                <div id="newton_chart"></div>
-            </figure>
-            <span id="newton_score"></span>
+            
+                <div class="row justify-content-center">
+          
+                    <div class="col-10 col-md-6 mt-3">
+                        <span class="text-primary h4"><span id="newton_score"></span>/10</span> &nbsp;&nbsp;&nbsp; Co-educational, 3-11, Battersea
+                        <div class="mt-2 small"><!--review here-->
+                        With over 600 pupils, it is a large prep school in a relatively central area. Academics, placements, and extracurriculars are those generally expected of a prep school. Facilities are abundant and good for a London prep, with a music hall, music rooms, gym, playgrounds, labs, and IT rooms. The school is surrounded by rails and highways, without view of nature; the benefits of its good facilities are offset by the above-average cost and poor location.
+                        </div>
+                    </div>
+
+                    <figure class="d-none d-md-block col-md-6 highcharts-figure">
+                        <div id="newton_chart"></div>
+                    </figure>
+          
+                </div>
             
             </div>
             </div>
         </section>
 
-
+        <!--north london collegiate-->
         <section class="accordion-item">
             <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#northlondon">
@@ -426,14 +732,27 @@ using: highcharts
             <div id="northlondon" class="accordion-collapse collapse">
             <div class="accordion-body">
                     
-            <figure class="highcharts-figure">
-                <div id="northlondon_chart"></div>
-            </figure>
+           
+                <div class="row justify-content-center">
+          
+                    <div class="col-10 col-md-6 mt-3">
+                        <span class="text-primary h4"><span id="northlondon_score"></span>/10</span> &nbsp;&nbsp;&nbsp; Girls, 4-18, Edgware
+                        <div class="mt-2 small"><!--review here-->
+                    
+                        </div>
+                    </div>
+
+                    <figure class="d-none d-md-block col-md-6 highcharts-figure">
+                        <div id="northlondon_chart"></div>
+                    </figure>
+          
+                </div>
             
             </div>
             </div>
         </section>
 
+        <!--Pembridge hall-->
         <section class="accordion-item">
             <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pembridgehall">
@@ -442,14 +761,27 @@ using: highcharts
             </h2>
             <div id="pembridgehall" class="accordion-collapse collapse">
             <div class="accordion-body">
-                <figure class="highcharts-figure">
-                    <div id="pembridgehall_chart"></div>
-                </figure>
+               
+                <div class="row justify-content-center">
+          
+                    <div class="col-10 col-md-6 mt-3">
+                        <span class="text-primary h4"><span id="pembridgehall_score"></span>/10</span> &nbsp;&nbsp;&nbsp; Girls, 4-11, Notting Hill
+                        <div class="mt-2 small"><!--review here-->
+                    
+                        </div>
+                    </div>
+
+                    <figure class="d-none d-md-block col-md-6 highcharts-figure">
+                        <div id="pembridgehall_chart"></div>
+                    </figure>
+          
+                </div>
             
             </div>
             </div>
         </section>
 
+        <!--Roche-->
         <section class="accordion-item">
             <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#roche">
@@ -458,15 +790,27 @@ using: highcharts
             </h2>
             <div id="roche" class="accordion-collapse collapse">
             <div class="accordion-body">
-                <figure class="highcharts-figure">
-                    <div id="roche_chart"></div>
-                </figure>
+               
+                <div class="row justify-content-center">
+          
+                    <div class="col-10 col-md-6 mt-3">
+                        <span class="text-primary h4"><span id="roche_score"></span>/10</span> &nbsp;&nbsp;&nbsp; Co-educational, 2-11, Wandsworth
+                        <div class="mt-2 small"><!--review here-->
+                    
+                        </div>
+                    </div>
+
+                    <figure class="d-none d-md-block col-md-6 highcharts-figure">
+                        <div id="roche_chart"></div>
+                    </figure>
+          
+                </div>
             
             </div>
             </div>
         </section>
 
-
+        <!--St Pauls Cathedral-->
         <section class="accordion-item">
             <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#stpaulscathedral">
@@ -475,14 +819,27 @@ using: highcharts
             </h2>
             <div id="stpaulscathedral" class="accordion-collapse collapse">
             <div class="accordion-body">
-                <figure class="highcharts-figure">
-                    <div id="stpaulscathedral_chart"></div>
-                </figure>
+               
+                <div class="row justify-content-center">
+          
+                    <div class="col-10 col-md-6 mt-3">
+                        <span class="text-primary h4"><span id="stpaulscathedral_score"></span>/10</span> &nbsp;&nbsp;&nbsp; Co-educational, 4-11, City of London
+                        <div class="mt-2 small"><!--review here-->
+                    
+                        </div>
+                    </div>
+
+                    <figure class="d-none d-md-block col-md-6 highcharts-figure">
+                        <div id="stpaulscathedral_chart"></div>
+                    </figure>
+          
+                </div>
             
             </div>
             </div>
         </section>
 
+        <!--Thomas-->
         <section class="accordion-item">
             <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#thomas">
@@ -491,14 +848,27 @@ using: highcharts
             </h2>
             <div id="thomas" class="accordion-collapse collapse">
             <div class="accordion-body">
-                <figure class="highcharts-figure">
-                    <div id="thomas_chart"></div>
-                </figure>
+               
+                <div class="row justify-content-center">
+          
+                    <div class="col-10 col-md-6 mt-3">
+                        <span class="text-primary h4"><span id="thomas_score"></span>/10</span> &nbsp;&nbsp;&nbsp; Co-educational, 4-11, South Kensington & Battersea
+                        <div class="mt-2 small"><!--review here-->
+                    
+                        </div>
+                    </div>
+
+                    <figure class="d-none d-md-block col-md-6 highcharts-figure">
+                        <div id="thomas_chart"></div>
+                    </figure>
+          
+                </div>
             
             </div>
             </div>
         </section>
 
+        <!--Westminster-->
         <section class="accordion-item">
             <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#westminster">
@@ -507,9 +877,21 @@ using: highcharts
             </h2>
             <div id="westminster" class="accordion-collapse collapse">
             <div class="accordion-body">
-                <figure class="highcharts-figure">
-                    <div id="westminster_chart"></div>
-                </figure>
+               
+                <div class="row justify-content-center">
+          
+                    <div class="col-10 col-md-6 mt-3">
+                        <span class="text-primary h4"><span id="westminster_score"></span>/10</span> &nbsp;&nbsp;&nbsp; Co-educational, 4-13, Westminster
+                        <div class="mt-2 small"><!--review here-->
+                    
+                        </div>
+                    </div>
+
+                    <figure class="d-none d-md-block col-md-6 highcharts-figure">
+                        <div id="westminster_chart"></div>
+                    </figure>
+          
+                </div>
             
             </div>
             </div>
