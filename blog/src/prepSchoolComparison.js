@@ -104,7 +104,7 @@ $(document).ready( () => {
     
 
     //jeannine manuel
-    const jeanninemanuel_score = [7, 6, 6, 5, 10, 6, 8, 1]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const jeanninemanuel_score = [7, 6, 6, 5, 10, 6, 7, 2]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const jeanninemanuel_overall_score = dot(jeanninemanuel_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
@@ -158,16 +158,16 @@ $(document).ready( () => {
     Highcharts.chart('kensingtonwade_chart', chartParams); //plot chart
     $("#kensingtonwade_score").text(kensingtonwade_overall_score); //show score
 
-    //knightbridge school
-    const knightbridge_score = [0, 0, 0, 0, 0, 0, 8, 1]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
-    const knightbridge_overall_score = dot(knightbridge_score, weights); //overall score
+    //knightsbridge school
+    const knightsbridge_score = [7, 6, 6, 6, 6, 7, 8, 0]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const knightsbridge_overall_score = dot(knightsbridge_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
         pointPlacement: 'on',
-        data: knightbridge_score
+        data: knightsbridge_score
     }];
-    Highcharts.chart('knightbridge_chart', chartParams); //plot chart
-    $("#knightbridge_score").text(knightbridge_overall_score); //show score
+    Highcharts.chart('knightsbridge_chart', chartParams); //plot chart
+    $("#knightsbridge_score").text(knightsbridge_overall_score); //show score
 
 
     //hill house
@@ -337,7 +337,7 @@ $(document).ready( () => {
     $("#alleyns_score").text(alleyns_overall_score); //show score
 
     //roche
-    const roche_score = [0, 0, 0, 0, 0, 0, 0, 7]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const roche_score = [6, 6, 6, 6, 8, 5, 4, 7]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const roche_overall_score = dot(roche_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
