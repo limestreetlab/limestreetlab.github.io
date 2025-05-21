@@ -159,7 +159,7 @@ $(document).ready( () => {
     $("#kensingtonwade_score").text(kensingtonwade_overall_score); //show score
 
     //knightsbridge school
-    const knightsbridge_score = [7, 6, 6, 6, 6, 7, 8, 0]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const knightsbridge_score = [7, 5, 6, 5, 6, 7, 8, 0]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const knightsbridge_overall_score = dot(knightsbridge_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
@@ -248,17 +248,6 @@ $(document).ready( () => {
     Highcharts.chart('stpaulscathedral_chart', chartParams); //plot chart
     $("#stpaulscathedral_score").text(stpaulscathedral_overall_score); //show score
 
-    //garden house
-    const gardenhouse_score = [0, 0, 0, 0, 0, 0, 8, 3]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
-    const gardenhouse_overall_score = dot(gardenhouse_score, weights); //overall score
-    chartParams.series = [{
-        name: 'score',
-        pointPlacement: 'on',
-        data: gardenhouse_score
-    }];
-    Highcharts.chart('gardenhouse_chart', chartParams); //plot chart
-    $("#gardenhouse_score").text(gardenhouse_overall_score); //show score
-
     //merlin school
     const merlin_score = [0, 0, 0, 0, 0, 0, 0, 6]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const merlin_overall_score = dot(merlin_score, weights); //overall score
@@ -292,52 +281,8 @@ $(document).ready( () => {
     Highcharts.chart('mulberry_chart', chartParams); //plot chart
     $("#mulberry_score").text(mulberry_overall_score); //show score
 
-    //north london
-    const northlondon_score = [8, 9, 0, 0, 0, 0, 3, 5]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
-    const northlondon_overall_score = dot(northlondon_score, weights); //overall score
-    chartParams.series = [{
-        name: 'score',
-        pointPlacement: 'on',
-        data: northlondon_score
-    }];
-    Highcharts.chart('northlondon_chart', chartParams); //plot chart
-    $("#northlondon_score").text(northlondon_overall_score); //show score
-
-    //thomas
-    const thomas_score = [7, 7, 7, 6, 5, 7, 8, 0]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
-    const thomas_overall_score = dot(thomas_score, weights); //overall score
-    chartParams.series = [{
-        name: 'score',
-        pointPlacement: 'on',
-        data: thomas_score
-    }];
-    Highcharts.chart('thomas_chart', chartParams); //plot chart
-    $("#thomas_score").text(thomas_overall_score); //show score
-
-    //highgate
-    const highgate_score = [8, 9, 0, 0, 0, 8, 7, 6]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
-    const highgate_overall_score = dot(highgate_score, weights); //overall score
-    chartParams.series = [{
-        name: 'score',
-        pointPlacement: 'on',
-        data: highgate_score
-    }];
-    Highcharts.chart('highgate_chart', chartParams); //plot chart
-    $("#highgate_score").text(highgate_overall_score); //show score
-
-    //alleyns
-    const alleyns_score = [8, 9, 0, 0, 0, 0, 6, 3]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
-    const alleyns_overall_score = dot(alleyns_score, weights); //overall score
-    chartParams.series = [{
-        name: 'score',
-        pointPlacement: 'on',
-        data: alleyns_score
-    }];
-    Highcharts.chart('alleyns_chart', chartParams); //plot chart
-    $("#alleyns_score").text(alleyns_overall_score); //show score
-
     //roche
-    const roche_score = [6, 6, 6, 6, 8, 5, 4, 7]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const roche_score = [6, 6, 6, 5, 8, 5, 4, 7]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const roche_overall_score = dot(roche_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
