@@ -70,7 +70,7 @@ $(document).ready( () => {
     $("#butehouse_score").text(butehouse_overall_score); //show score
 
     //cfbl
-    const cfbl_score = [6, 4, 5, 5, 9, 5, 3, 9]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const cfbl_score = [5, 4, 5, 5, 9, 5, 3, 9]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const cfbl_overall_score = dot(cfbl_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
@@ -148,7 +148,7 @@ $(document).ready( () => {
     $("#kensingtonprep_score").text(kensingtonprep_overall_score); //show score
 
     //kensington wade
-    const kensingtonwade_score = [7, 7, 6, 5, 9, 3, 6, 2]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const kensingtonwade_score = [7, 7, 5, 5, 9, 3, 6, 2]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const kensingtonwade_overall_score = dot(kensingtonwade_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
@@ -249,7 +249,7 @@ $(document).ready( () => {
     $("#stpaulscathedral_score").text(stpaulscathedral_overall_score); //show score
 
     //merlin school
-    const merlin_score = [6, 6, 5, 4, 5, 6, 7, 6]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const merlin_score = [6, 6, 6, 5, 5, 6, 7, 6]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const merlin_overall_score = dot(merlin_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
