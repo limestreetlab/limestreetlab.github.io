@@ -249,7 +249,7 @@ $(document).ready( () => {
     $("#stpaulscathedral_score").text(stpaulscathedral_overall_score); //show score
 
     //merlin school
-    const merlin_score = [0, 0, 0, 0, 0, 0, 0, 6]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const merlin_score = [6, 6, 6, 5, 6, 6, 7, 6]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const merlin_overall_score = dot(merlin_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
@@ -271,7 +271,7 @@ $(document).ready( () => {
     $("#hampsteadhill_score").text(hampsteadhill_overall_score); //show score
 
     //mulberry
-    const mulberry_score = [0, 0, 0, 0, 0, 0, 4, 3]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const mulberry_score = [9, 8, 5, 4, 5, 5, 5, 3]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const mulberry_overall_score = dot(mulberry_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
