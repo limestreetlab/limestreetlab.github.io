@@ -204,7 +204,7 @@ $(document).ready( () => {
     $("#eatonhouse_score").text(eatonhouse_overall_score); //show score
 
     //kew college
-    const kewcollege_score = [8, 7, 7, 7, 5, 6, 8, 7]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const kewcollege_score = [8, 8, 7, 6, 5, 6, 8, 7]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const kewcollege_overall_score = dot(kewcollege_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
@@ -215,7 +215,7 @@ $(document).ready( () => {
     $("#kewcollege_score").text(kewcollege_overall_score); //show score
 
     //kings house
-    const kingshouse_score = [0, 0, 0, 0, 0, 0, 8, 5]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const kingshouse_score = [8, 8, 7, 7, 6, 7, 8, 5]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const kingshouse_overall_score = dot(kingshouse_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
@@ -238,7 +238,7 @@ $(document).ready( () => {
     
 
     //st pauls cathedral
-    const stpaulscathedral_score = [6, 6, 9, 5, 5, 6, 7, 6]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const stpaulscathedral_score = [6, 6, 9, 4, 5, 5, 8, 6]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const stpaulscathedral_overall_score = dot(stpaulscathedral_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
@@ -282,7 +282,7 @@ $(document).ready( () => {
     $("#mulberry_score").text(mulberry_overall_score); //show score
 
     //roche
-    const roche_score = [6, 6, 6, 5, 8, 4, 4, 7]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const roche_score = [6, 6, 5, 5, 8, 4, 4, 7]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const roche_overall_score = dot(roche_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
