@@ -271,7 +271,7 @@ $(document).ready( () => {
     $("#hampsteadhill_score").text(hampsteadhill_overall_score); //show score
 
     //mulberry
-    const mulberry_score = [9, 8, 5, 4, 5, 5, 5, 3]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const mulberry_score = [9, 8, 4, 4, 4, 5, 5, 3]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const mulberry_overall_score = dot(mulberry_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
