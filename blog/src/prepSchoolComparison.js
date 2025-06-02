@@ -303,6 +303,17 @@ $(document).ready( () => {
     Highcharts.chart('westminster_chart', chartParams); //plot chart
     $("#westminster_score").text(westminster_overall_score); //show score
 
+    //wimbledon common
+    const wimbledoncommon_score = [9, 9, 6, 5, 5, 6, 7, 6]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const wimbledoncommon_overall_score = dot(wimbledoncommon_score, weights); //overall score
+    chartParams.series = [{
+        name: 'score',
+        pointPlacement: 'on',
+        data: wimbledoncommon_score
+    }];
+    Highcharts.chart('wimbledoncommon_chart', chartParams); //plot chart
+    $("#wimbledoncommon_score").text(wimbledoncommon_overall_score); //show score
+
 
 
 });//end of document.ready wrapper
