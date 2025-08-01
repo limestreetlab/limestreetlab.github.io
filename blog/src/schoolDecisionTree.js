@@ -23,23 +23,26 @@ Highcharts.chart('decisionTreeChart', {
              dataLabels: {
                 pointFormat: '{point.id}'
             },
-            keys: ['id', 'parent', 'level'],
+            tooltip: {
+                pointFormat: '{point.name}'
+            },
+            keys: ['name', 'id', 'parent', 'level'],
             data: [
-                ['Decisions'],
-                ['WUS &#10003;', 'Decisions'],
-                ['WUS &#10007;', 'Decisions'],
-                ['Westminster', 'WUS &#10003;', 5],
-                ['KP &#10003;', 'WUS &#10007;'],
-                ['KP &#10007;', 'WUS &#10007;'],
-                ['Kensington', 'KP &#10003;', 5],
-                ['WP &#10003; GP &#10003;', 'KP &#10007;'],
-                ['WP &#10007; GP &#10003;', 'KP &#10007;'],
-                ['WP &#10003; GP &#10007;', 'KP &#10007;'],
-                ['WP &#10007; GP &#10007;', 'KP &#10007;'],
-                ['Glendower', 'WP &#10003; GP &#10003;'],
-                ['Glendower', 'WP &#10007; GP &#10003;'],
-                ['Wimbledon', 'WP &#10003; GP &#10007;'],
-                ["Ecole des Petits", 'WP &#10007; GP &#10007;']
+                ['School decisions', '4+ results'],
+                ['Offer from Westminster', 'WUS &#10003;', '4+ results'],
+                ['No offer from Westminster', 'WUS &#10007;', '4+ results'],
+                ['Westminster Under School', 'Westminster', 'WUS &#10003;', 5],
+                ['Offer from Ken Prep', 'KP &#10003;', 'WUS &#10007;'],
+                ['No offer from Ken Prep', 'KP &#10007;', 'WUS &#10007;'],
+                ['Kensington Prep', 'Kensington', 'KP &#10003;', 5],
+                ['Offers from Wimbledon and Glendower', 'WP &#10003; GP &#10003;', 'KP &#10007;'],
+                ['Offer from Glendower', 'WP &#10007; GP &#10003;', 'KP &#10007;'],
+                ['Offer from Wimbledon', 'WP &#10003; GP &#10007;', 'KP &#10007;'],
+                ['No offer from Wimbledon and Glendower', 'WP &#10007; GP &#10007;', 'KP &#10007;'],
+                ['Glendower Prep', 'Glendower', 'WP &#10003; GP &#10003;'],
+                ['Glendower Prep', 'Glendower', 'WP &#10007; GP &#10003;'],
+                ['Wimbledon Prep', 'Wimbledon', 'WP &#10003; GP &#10007;'],
+                ['Stay at Ecole des Petits', "Ecole des Petits", 'WP &#10007; GP &#10007;']
                 
             ]
         }
