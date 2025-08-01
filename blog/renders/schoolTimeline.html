@@ -8,7 +8,7 @@ using: highcharts
 <html lang="en">
   <head>
       <title>
-          Planned school timeline
+          School timeline
       </title>
 
       <!--meta for google-->
@@ -25,7 +25,10 @@ using: highcharts
       <script src="../../assets/js/bootstrap.min.js"></script><!--Bootstrap JS-->
       <script src="https://code.highcharts.com/highcharts.js"></script><!--Highcharts-->
       <script src="https://code.highcharts.com/highcharts-more.js"></script>
-      <script src="https://code.highcharts.com/modules/timeline.js"></script>
+      <script src="https://code.highcharts.com/modules/timeline.js"></script><!--for time chart-->
+      <script src="https://code.highcharts.com/modules/treemap.js"></script><!--for decision tree chart-->
+      <script src="https://code.highcharts.com/modules/treegraph.js"></script>
+
 
 
       <!--icons-->
@@ -34,6 +37,8 @@ using: highcharts
 
       <!--internal scripts-->        
       <script src="../src/schoolTimeline.js"></script>
+      <script src="../src/schoolDecisionTree.js"></script>
+
 
   </head>
 
@@ -43,16 +48,17 @@ using: highcharts
         <h1 class="mt-4 text-primary display-6 mb-4 text-center">School plan and timeline</h1>
 
         <p class="mt-4 mb-4">
-        After many <a href="./prepSchoolComparison.html">school visits</a>, we have come to the conclusion that London schools offer very diverse value propositions, ranging from exam orientation (such as Hampstead Hill) and musical culture (especially St Paul's Cathedral) to language immersion (like Jeannine Manuel) and exclusiveness (such as Knightsbridge). The more a school offers, the more we want it but also more selective it becomes, introducing contingencies into our school planning process. 
+        After many <a href="./prepSchoolComparison.html">school visits</a>, we have come to the conclusion that London schools offer very diverse value propositions, ranging from exam orientation (such as Hampstead Hill) and musical culture (especially St Paul's Cathedral) to language immersion (like Jeannine Manuel) and exclusiveness (such as Knightsbridge). 
         <br><br>
         We have decided that while bilingual schools excel at language acquisition, transition into selective secondary schools can be difficult; all prep schools tend to be weak in foreign languages, and academically-oriented schools offer nothing in music and sports. Hence, no one school ticks all our boxes, so whatever school we pick, out-of-school classes are necessary to fill the gaps in French, music, academics, and sports. 
         <br><br>
-        Our decision is a bilingual school first to take advantage of early years language development. The timing of switching to an English school will depend on the admission results of a few selective schools; it will occur at reception (2027) if admitted or at Y2 (2029) after L'Ecole des Petits. 
+        Our decision is a bilingual school first to take advantage of early years language development, and then an English prep school to prepare for selective school entry later. 
         </p>
 
-    <main class="mt-5 h-75" id="timelineChart">
+    <main class="mt-1" id="timelineChart"></main>
+    <main class="mt-1" id="decisionTreeChart"></main>
 
-    </main></main>
+    </main>
 
   </body>
 

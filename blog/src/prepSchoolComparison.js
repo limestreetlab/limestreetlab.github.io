@@ -182,7 +182,7 @@ $(document).ready( () => {
     $("#hillhouse_score").text(hillhouse_overall_score); //show score
    
     //brighton college
-    const brightoncollege_score = [6, 5, 6, 5, 4, 6, 9, 1]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const brightoncollege_score = [5, 4, 5, 5, 4, 6, 9, 1]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const brightoncollege_overall_score = dot(brightoncollege_score, weights); //overall score
     chartParams.series = [{
         name: 'score',

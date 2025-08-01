@@ -2,11 +2,8 @@ $(document).ready( () => {
 
 Highcharts.chart('timelineChart', {
     chart: {
-      zooming: {
-        type: 'x'
-      },
       type: 'timeline',
-      inverted: true
+      inverted: false
     },
     credits: {
       enabled: false
@@ -26,7 +23,7 @@ Highcharts.chart('timelineChart', {
       enabled: false
     },
     title: {
-      text: 'Base case timeline'
+      text: ''
     },
     tooltip: {
       style: {
@@ -47,35 +44,35 @@ Highcharts.chart('timelineChart', {
         symbol: 'circle'
       },
       data: [{
-        x: '2025-06',
-        name: 'School change',
-        label: 'School change',
-        description: "Ending Stewart and starting Warwick Preschool until L'Ecole des Petits."
+        x: '2025-09',
+        name: 'School start',
+        label: 'School start',
+        description: "Starting at Putney Little Fingers."
       }, {
         x: '2025-10',
         name: 'Ballot',
         label: 'Ballot',
-        description: 'Bute House ballot is drawn.'
+        description: 'Bute House ballot drawn.'
       }, {
         x: '2026-01',
         name: 'School start',
         label: "School start",
-        description: "Starting petite section at L'Ecole des Petits from January 2026, but will repeat it from September 2026."
+        description: "Starting petite section at L'Ecole des Petits from January 2026."
       }, {
         x: '2026-02',
         name: 'Assessment',
         label: 'Assessment',
-        description: 'Wimbledon Common Prep assessment takes place 18 months prior to 2027 September reception entry.'
+        description: 'Wimbledon Common Prep assessment takes place 18 months prior to entry.'
       }, {
         x: '2026-09',
-        name: 'School start',
-        label: "School start",
-        description: "Starting petite section at L'Ecole des Petits."
+        name: 'Assessment',
+        label: "Assessment",
+        description: "Newton Prep, as a practice."
       }, {
         x: '2026-10',
         name: 'Assessment',
         label: 'Assessment',
-        description: 'Westminster Under assessment takes place on a rolling basis starting 12 months prior to 2027 September reception entry.'
+        description: 'Westminster Under assessment takes place on a rolling basis starting 12 months prior to entry.'
       }, {
         x: '2027-01',
         name: 'Assessment',
@@ -84,18 +81,8 @@ Highcharts.chart('timelineChart', {
       }, {
         x: '2027-09',
         name: 'School start',
-        label: "Moyenne section at L'Ecole des Petits",
-        description: "Starting moyenne section at L'Ecole des Petits."
-      },{
-        x: '2028-09',
-        name: 'School start',
-        label: "Grande section at L'Ecole des Petits",
-        description: "Starting grande section at L'Ecole des Petits."
-      },{
-        x: '2029-09',
-        name: 'School start',
-        label: "Starting new English school",
-        description: "After exit from L'Ecole des Petits, starting Year2 at an English school, such as Kings House/Kew College/Fulham Bilingual, until 11+."
+        label: "School start",
+        description: "New school year at either new English school or L'Ecole des Petits."
       }]
     }]
   });
