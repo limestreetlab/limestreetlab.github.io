@@ -58,7 +58,7 @@ using: js
 
 
   <body ontouchstart="">
-  <main class="container">
+  <main class="container mb-4">
 
   <h1 class="mt-4 text-primary display-6 mb-4 text-center">Tiffin Girls School</h1>
   
@@ -68,7 +68,7 @@ using: js
     On average, 10-15% gain offers from Oxbridge and another 10-15% from Imperial/LSE. Many girls choose to read STEM and medicine subjects. 
   </p>
   <p>
-    Admission is solely based on test scores, without interviews and consideration of extracurricular achievements. There are two test stages, only successful stage one sitters can proceed to stage two. Both stages consist of English and maths.
+    Unlike private schools, admission is solely based on entrance test scores, without interviews and consideration of extracurricular achievements. There are two test stages, only successful stage one sitters can proceed to stage two. Both stages consist of English and maths.
     After stage two, a combined mark is calculated at a weight of 60% English and 40% maths. For English, only stage two test score is used, but for maths, it is a weighted average of both stages. 
     Places are then allocated based on this combined mark.  
   </p>
@@ -112,13 +112,38 @@ using: js
     </div>
 
     <h4 class="text-primary">Inner catchment advantage</h4>
-    For simplicity, I assume all candidates have equally able so their marks are randomly distributed along a real number line without any tied-marks. From past data, I use 1300 and 200 for outer and inner catchment sitters in stage 1, and 370 and 100 for them in stage 2. 
-    Without catchment priority, we would have all 470 stage 2 sitters compete for 180 places equally. Thus, we expect $\frac{180}{470} \cdot 100 \approx 38$ girls from inner catchment getting admitted. With catchment priority, we can expect more than $60$ girls from the area getting admitted, $60\%$ above expectation, signalling a strong bias.
+    Inner catchment applicants have a clear advantage, but about how much. For simplicity, I assume all candidates are equally able so their marks are randomly distributed along a real number line to avoid tied-marks. From past data, I use 1300 and 200, and 370 and 100 for outer and inner catchment sitters in stage 1 and stage 2, respectively. 
+    <br><br>
+    If there were no catchment priority, we would have all 470 stage 2 sitters compete for 180 places equally. Thus, we expect $\frac{180}{470} \cdot 100 \approx 38$ girls from inner catchment getting admitted. With catchment priority, we can expect more than $60$ girls from the area getting admitted, almost $60\%$ above expectation, signalling a strong bias.
     <br><br>
     We expect $\frac{350}{470} \cdot 100 \approx 75 $ of inner catchment sitters to score above the 350<sup>th</sup> mark, so we can expect all 60 places to be allocated during the priority round. 
-    Along the equally-spaced $470$ line, we expect the lowest rank to gain a priority place to be $\frac{60}{100} \cdot 470 = 282$.
-    On the other hand, we expect the highest-ranked outer catchment sitter to not gain a place to be around $\frac{120}{370} \cdot 470 = 152$.
+    Along the equally-spaced 470 line, we expect the lowest rank to gain a priority place to be $\frac{60}{100} \cdot 470 = 282$.
+    On the other hand, we expect the highest-ranked outer catchment sitter to not gain a place to be around $\frac{120}{370} \cdot 470 = 152$. Again, a substantial bias towards inner catchment.
+    <br><br>
+    The 40 inner catchment sitters not gaining a priority place are not competitive in the remaining pool; 
+    they comprise 25 expected to score below the 350<sup>th</sup> mark and 15 who are ranked lowest in the group that make the 350<sup>th</sup> cutoff. 
+    Those 15 are expected to be below the $1 - \frac{60}{75} = 20$ percentile in the cohort, so scoring below the $0.8 \cdot 350 = 280$<sup>th</sup> mark.
+    With only 120 remaining places and 370 outer catchment candidates, admission is not expected for those below such mark, so competition can be seen only between outer catchment candidates.
+    As a result, admission is essentially segregated into a priority round where $33\%$ is allocated to a $20\%$ cohort and another round where $66\%$ is given to a $80\%$ group.
+    On this basis, we expect $\frac{60}{100} = 60\%$ and $\frac{120}{370} = 32\%$ admission rates for inner and outer catchment sitters.
+    <br><br>
+    Using the assumptions at stage 2 tests, we have:
+    
+    \begin{align}
+    P(\text{admission} \mid \text{inner catchment}) = {} & P(\text{above 350th mark}) \cdot P(\text{get a priority place}) \\
+    & {} + P(\text{above 350th mark}) \cdot P(\text{not get a priority place}) \cdot P(\text{get a place}) \\
+    & {} + P(\text{below 350th mark}) \cdot P(\text{get a place}) \\
+    = {} & \frac{350}{470} \cdot \frac{60}{75} + \frac{350}{470} \cdot \frac{15}{75} \cdot 0 + \frac{120}{470} \cdot 0 \\
+    \approx {} & 0.6
+    \end{align}
+    
+    \begin{align}
+    P(\text{admission} \mid \text{outer catchment}) = {} & \frac{\text{expected places}}{\text{expected candidates in the pool}} \\
+    = {} & \frac{120}{470-60\text{(priority spots)}-40\text{(uncompetitive inner sitters)}} \\
+    = {} & \frac{120}{370} \approx 0.3
+    \end{align}
 
+    These calculations suggest that the admission advantage for inner catchment is near <em>2x</em> whatever metrics considered. 
 
   
   </main>
