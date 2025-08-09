@@ -23,7 +23,7 @@ Highcharts.chart('timelineChart', {
       enabled: false
     },
     title: {
-      text: 'Assessment Dates and Decisions'
+      text: ''
     },
     tooltip: {
       style: {
