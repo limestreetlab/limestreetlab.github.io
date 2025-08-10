@@ -16,23 +16,27 @@ convert the data into javascript objects one by one and collect into an array
 call a helper function to read further csv files and feed into the array
 when all done, write the json out
 */
-fs.createReadStream("/Users/houghtonstreet/Dropbox/Lime Street/limestreetlab.github.io/blog/data/oxbridge/extracted/cambridge_2023.csv", { encoding: "utf-8" })
-  .pipe(parser({skipLines: 1, headers: ["ucas", "school", "postcode", "status", "cambridge_application_2023", "cambridge_offer_2023"]}))
+fs.createReadStream("/Users/houghtonstreet/Dropbox/Lime Street/limestreetlab.github.io/blog/data/oxbridge/extracted/cambridge_2024.csv", { encoding: "utf-8" })
+  .pipe(parser({skipLines: 1, headers: ["ucas", "school", "postcode", "status", "cambridge_application_2024", "cambridge_offer_2024"]}))
   .on("data", (line) => {
-    let offerRate = Math.round( (line.cambridge_offer_2023 / line.cambridge_application_2023)*100 );
-    line.cambridge_success_2023 = !isNaN(offerRate) ? offerRate + "%" : "";
+    let offerRate = Math.round( (line.cambridge_offer_2024 / line.cambridge_application_2024)*100 );
+    line.cambridge_success_2024 = !isNaN(offerRate) ? offerRate + "%" : "";
     line.status = (line.status.toLowerCase() == "independent") ? "Private" : "Public"; 
     data.push(line);
   })
   .on("end", () => {
 
-    let promise = addData("/Users/houghtonstreet/Dropbox/Lime Street/limestreetlab.github.io/blog/data/oxbridge/extracted/cambridge_2022.csv", "cambridge", 2022);
+    let promise = addData("/Users/houghtonstreet/Dropbox/Lime Street/limestreetlab.github.io/blog/data/oxbridge/extracted/cambridge_2023.csv", "cambridge", 2023);
     promise.then( function() {
+      return addData("/Users/houghtonstreet/Dropbox/Lime Street/limestreetlab.github.io/blog/data/oxbridge/extracted/cambridge_2022.csv", "cambridge", 2022);
+    }).then( function() {
       return addData("/Users/houghtonstreet/Dropbox/Lime Street/limestreetlab.github.io/blog/data/oxbridge/extracted/cambridge_2021.csv", "cambridge", 2021);
     }).then( function() {
       return addData("/Users/houghtonstreet/Dropbox/Lime Street/limestreetlab.github.io/blog/data/oxbridge/extracted/cambridge_2020.csv", "cambridge", 2020);
     }).then( function() {
       return addData("/Users/houghtonstreet/Dropbox/Lime Street/limestreetlab.github.io/blog/data/oxbridge/extracted/cambridge_2019.csv", "cambridge", 2019);
+    }).then( function() {
+      return addData("/Users/houghtonstreet/Dropbox/Lime Street/limestreetlab.github.io/blog/data/oxbridge/extracted/oxford_2024.csv", "oxford", 2024);
     }).then( function() {
       return addData("/Users/houghtonstreet/Dropbox/Lime Street/limestreetlab.github.io/blog/data/oxbridge/extracted/oxford_2023.csv", "oxford", 2023);
     }).then( function() {
@@ -44,7 +48,7 @@ fs.createReadStream("/Users/houghtonstreet/Dropbox/Lime Street/limestreetlab.git
     }).then( function() {
       return addData("/Users/houghtonstreet/Dropbox/Lime Street/limestreetlab.github.io/blog/data/oxbridge/extracted/oxford_2019.csv", "oxford", 2019);
     }).then( function() {
-      addOxbridge(2019, 2023);
+      addOxbridge(2019, 2024);
       fs.writeFileSync(outputPath, JSON.stringify(data), "utf8");
     })
    
@@ -112,7 +116,7 @@ function addOxbridge(startYear, endYear) {
       } else if ( !Number.isInteger(Number(data[i]["oxford_application_" + year])) & Number.isInteger(Number(data[i]["cambridge_application_" + year])) ) { //cambridge is numeric but not oxford
         data[i]["oxbridge_application_" + year] = Number(data[i]["cambridge_application_" + year]); //add only cambridge
       } else { //both are non-numeric
-        data[i]["oxbridge_application_" + year] = "<3"; //set to <3 string
+        data[i]["oxbridge_application_" + year] = "<5"; //set to <5 string, prior to 2024, both cam and ox non-numeric would sum to <5, after 2024 cam non-numeric data might mean up to 5, so both non-numeric can sum up to 7
       }
 
       //chunk to add offers
@@ -123,7 +127,7 @@ function addOxbridge(startYear, endYear) {
       } else if ( !Number.isInteger(Number(data[i]["oxford_offer_" + year])) & Number.isInteger(Number(data[i]["cambridge_offer_" + year])) ) { //cambridge is numeric but not oxford
         data[i]["oxbridge_offer_" + year] = Number(data[i]["cambridge_offer_" + year]); //add only cambridge
       } else { //both are non-numeric
-        data[i]["oxbridge_offer_" + year] = "<3"; //set to <3 string
+        data[i]["oxbridge_offer_" + year] = "<5"; //set to <5 string
       }
 
       //chunk to calc offer success %

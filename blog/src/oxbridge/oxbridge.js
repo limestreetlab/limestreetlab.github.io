@@ -74,10 +74,10 @@ function rank(by, university, year, status) {
             let row = `<tr><td>${rank+1}</td><td>${col1}</td><td>${col2}</td><td align="center">${col3}</td><td align="center">${col4}</td><td align="center">${col5}</td><td align="center">${col6}</td><td align="center">${col7}</td><td align="center">${col8}</td></tr>`;
             html = html.concat(row);
 
-            if (data[i+1][key] === "<3") { //when the next in line is under 3
-                break; //stop ranking as next is under 3
+            if (data[i+1][key] === "<3" || data[i+1][key] === "<5" || data[i+1][key] === "<=5") { //when the next in line is <3, <5, or <=5
+                break; //stop ranking as next is nonnumeric
             } else {
-                if ( parseInt(data[i][key]) > parseInt(data[i+1][key]) ) { //when next in line is >= 3 and lower than current iteration value
+                if ( parseInt(data[i][key]) > parseInt(data[i+1][key]) ) { //when next in line is numeric and lower than current iteration value
                     rank++; //increment the ranking by 1
                 }    
             }
@@ -94,13 +94,12 @@ function rank(by, university, year, status) {
 
     //function as input for sorting offers in descending order
     function compareOffer( {[key]: a}, {[key]: b} ) {
-        if (a === "<3") {
+        if (a === "<3" || a === "<5" || a === "<=5") {
             a = 0;
         }
-        if (b === "<3") {
+        if (b === "<3" || b === "<5" || b === "<=5") {
             b = 0;
         }
-    
         return Number(b) - Number(a);
     }
 

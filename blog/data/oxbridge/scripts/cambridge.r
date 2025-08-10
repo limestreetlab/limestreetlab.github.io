@@ -2,8 +2,9 @@ library(stringr);
 library(pdftools);
 
 #INPUT the input filepath and output filepath here, R's readline() is problematic and error-prone, so safer to input them here instead of asking user
-filepath <- "/Users/houghtonstreet/Dropbox/Lime Street/limestreetlab.github.io/blog/data/oxbridge/raw/cambridge_2022.pdf";
-out <- "/Users/houghtonstreet/Dropbox/Lime Street/limestreetlab.github.io/blog/data/oxbridge/extracted/cambridge_2022.csv"; 
+filepath <- "/Users/houghtonstreet/Dropbox/Lime Street/limestreetlab.github.io/blog/data/oxbridge/raw/cambridge_2024.pdf";
+out <- "/Users/houghtonstreet/Dropbox/Lime Street/limestreetlab.github.io/blog/data/oxbridge/extracted/cambridge_2024.csv"; 
+isFrom2024 <- TRUE; #boolean flag to signal before/after 2024; cambridge reported application and offer less than 3 as "<3" until 2024, starting 2024 the numbers changed to less than and equal to 5 as "5"; thus the codes should change 5 to "<=5" if after 2024
 
 str <- pdf_text(filepath); #pdf function to read the whole pdf file contents into a string
 
@@ -39,13 +40,22 @@ for (i in 1:length(lines)) {
         status <- other[,2];
         application <- other[,3];
         offer <- other[,4];
+        if (isFrom2024) { #if cambridge data after 2024, check if application and offer equal to "5", which actually mean "<=5"
+            #check if application = 5, if so both applications and offers <=5
+            if( !is.na(application) & strtoi(application) == 5) {
+              application <- "<=5"; #change to less than or equal to 5
+              offer <- "<=5";
+            } else if (!is.na(offer) & strtoi(offer) == 5) { #application not 5, but offer can still be = 5
+              offer <- "<=5";
+            }
+        }
         statuses <- append(statuses, status);
         applications <- append(applications, application);
         offers <- append(offers, offer);
     }
 
 }
-ucas <- unlist(ucasNumbers);
+ucas <- unlist(ucasNumbers); #unlist into vector
 name <- unlist(names);
 postcode <- unlist(postcodes);
 status <- unlist(statuses);
