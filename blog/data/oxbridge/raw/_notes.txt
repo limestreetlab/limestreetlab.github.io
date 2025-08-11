@@ -1,7 +1,9 @@
-cambridge files are clean, so use cambridge as benchmark for curating school list
+cambridge files are clean while oxford files are problematic, so use cambridge as benchmark for curating the school list
 prior to 2024 cambridge numbers less than 3 are shown as <3, but from 2024 numbers equal to and less than 5 are all shown as 5
 
 oxford admission statistics published in a tabulated online format at https://public.tableau.com/views/UniversityofOxford-UCASApplyCentre2023/UCASApplyCentre?:embed=y&:display_count=yes&:showTabs=y&:showVizHome=no
 pdf downloads from that website are not properly formatted and messed up. grey cells represent less than 3 (ie 0-2). The column names are ucas number, school name, application number, offer number, offer%, offer acceptance number, offer acceptance %(of applicants)
 
 a manually compiled 6form college list by ucas number, to re-classify them as 6form rather than public schools as shown by cambridge
+
+admission data are usually available in the summer for prior year

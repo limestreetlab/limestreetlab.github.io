@@ -215,7 +215,7 @@ $(document).ready( () => {
     $("#kewcollege_score").text(kewcollege_overall_score); //show score
 
     //kings house
-    const kingshouse_score = [8, 8, 7, 7, 6, 7, 8, 5]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const kingshouse_score = [8, 7, 7, 7, 6, 7, 8, 5]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const kingshouse_overall_score = dot(kingshouse_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
