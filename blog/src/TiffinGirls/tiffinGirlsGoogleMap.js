@@ -83,36 +83,6 @@ function initMap() {
             map: catchmentMap,
             title: "Tiffin Girls School"
       });
-      new google.maps.Marker({
-            position: {lat: 51.421447, lng: -0.226275},
-            map: catchmentMap,
-            title: "Kings College"
-      });
-      new google.maps.Marker({
-            position: {lat: 51.495665, lng: -0.219035},
-            map: catchmentMap,
-            title: "St Pauls"
-      });
-      new google.maps.Marker({
-            position: {lat: 51.495245, lng: -0.229258},
-            map: catchmentMap,
-            title: "Godolphin"
-      });
-      new google.maps.Marker({
-            position: {lat: 51.493163, lng: -0.237057},
-            map: catchmentMap,
-            title: "Latymer"
-      });
-      new google.maps.Marker({
-            position: {lat: 51.428605, lng: -0.366557},
-            map: catchmentMap,
-            title: "LEH"
-      });
-      new google.maps.Marker({
-            position: {lat: 51.355515, lng: -0.222993},
-            map: catchmentMap,
-            title: "Nonsuch High"
-      });
 
 
       innerCatchment.setMap(catchmentMap);
