@@ -57,32 +57,37 @@ Highcharts.chart('timelineChart', {
         x: '2026-01',
         name: 'School start',
         label: "School start",
-        description: "Starting petite section at L'Ecole des Petits from January 2026."
+        description: "Starting at L'Ecole des Petits."
       }, {
         x: '2026-02',
         name: 'Assessment',
         label: 'Assessment',
-        description: 'Wimbledon Common Prep assessment takes place 18 months prior to entry.'
+        description: 'Wimbledon Prep assessment takes place 18 months prior.'
       }, {
         x: '2026-09',
         name: 'Assessment',
         label: "Assessment",
         description: "Newton Prep, as a practice."
       }, {
-        x: '2026-10',
+        x: '2026-12',
         name: 'Assessment',
         label: 'Assessment',
-        description: 'Westminster Under assessment takes place on a rolling basis starting 12 months prior to entry.'
+        description: 'Westminster Under assessment takes place on a rolling basis from October.'
       }, {
         x: '2027-01',
         name: 'Assessment',
         label: 'Assessment',
-        description: 'Glendower and Kensington Prep assessments take place in the beginning of the entry year.'
+        description: 'Glendower assessment takse place around January.'
+      }, {
+        x: '2027-02',
+        name: 'Assessment',
+        label: 'Assessment',
+        description: 'Ken Prep assessment takse place around January/February.'
       }, {
         x: '2027-09',
         name: 'School start',
         label: "School start",
-        description: "New school year at either new English school or L'Ecole des Petits."
+        description: "New school year at either an English school or L'Ecole des Petits."
       }]
     }]
   });
