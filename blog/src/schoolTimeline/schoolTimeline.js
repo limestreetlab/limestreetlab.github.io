@@ -59,10 +59,10 @@ Highcharts.chart('timelineChart', {
         label: "School start",
         description: "Starting at L'Ecole des Petits."
       }, {
-        x: '2026-02',
+        x: '2026-01',
         name: 'Assessment',
         label: 'Assessment',
-        description: 'Wimbledon Prep assessment takes place 18 months prior.'
+        description: 'Wimbledon Prep assessment on 6 Jan.'
       }, {
         x: '2026-09',
         name: 'Assessment',

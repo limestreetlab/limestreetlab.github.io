@@ -249,7 +249,7 @@ $(document).ready( () => {
     $("#stpaulscathedral_score").text(stpaulscathedral_overall_score); //show score
 
     //merlin school
-    const merlin_score = [7, 6, 6, 5, 5, 6, 7, 7]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const merlin_score = [5, 6, 5, 5, 3, 6, 7, 7]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const merlin_overall_score = dot(merlin_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
@@ -304,7 +304,7 @@ $(document).ready( () => {
     $("#westminster_score").text(westminster_overall_score); //show score
 
     //wimbledon common
-    const wimbledoncommon_score = [9, 9, 6, 5, 5, 6, 7, 6]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const wimbledoncommon_score = [9, 9, 5, 5, 5, 6, 7, 6]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const wimbledoncommon_overall_score = dot(wimbledoncommon_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
