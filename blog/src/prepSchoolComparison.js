@@ -36,7 +36,7 @@ $(document).ready( () => {
     
     
     //holycross
-    const holycross_score = [7, 7, 7, 7, 5, 10, 6, 7]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const holycross_score = [7, 6, 7, 7, 5, 10, 6, 7]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const holycross_overall_score = dot(holycross_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
@@ -159,7 +159,7 @@ $(document).ready( () => {
     $("#kensingtonwade_score").text(kensingtonwade_overall_score); //show score
 
     //knightsbridge school
-    const knightsbridge_score = [7, 5, 6, 5, 6, 7, 8, 0]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const knightsbridge_score = [6, 5, 6, 5, 6, 6, 8, 0]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const knightsbridge_overall_score = dot(knightsbridge_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
@@ -171,7 +171,7 @@ $(document).ready( () => {
 
 
     //hill house
-    const hillhouse_score = [7, 6, 8, 6, 5, 5, 8, 6]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const hillhouse_score = [7, 6, 8, 6, 5, 5, 7, 6]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const hillhouse_overall_score = dot(hillhouse_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
@@ -282,7 +282,7 @@ $(document).ready( () => {
     $("#mulberry_score").text(mulberry_overall_score); //show score
 
     //roche
-    const roche_score = [6, 6, 5, 5, 8, 4, 4, 7]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const roche_score = [6, 6, 5, 5, 7, 4, 4, 7]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const roche_overall_score = dot(roche_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
