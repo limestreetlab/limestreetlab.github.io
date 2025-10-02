@@ -115,7 +115,7 @@ $(document).ready( () => {
     $("#jeanninemanuel_score").text(jeanninemanuel_overall_score); //show score
 
     //glendower
-    const glendower_score = [9, 9, 7, 7, 7, 7, 9, 1]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const glendower_score = [10, 9, 7, 7, 7, 7, 9, 1]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const glendower_overall_score = dot(glendower_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
