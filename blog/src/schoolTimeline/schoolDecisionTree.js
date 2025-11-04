@@ -40,7 +40,7 @@ Highcharts.chart('decisionTreeChart', {
                 ['Glendower Prep', 'Glendower', 'GP &#10003;', 6],
                 ['Offer from Wimbledon', 'WP &#10003;', 'GP &#10007;'],
                 ['No offer from Wimbledon', 'WP &#10007;', 'GP &#10007;'],
-                ['Wimbledon or Ecole des Petits', '?', 'WP &#10003;'],
+                ['TBD: Wimbledon or Ecole des Petits', '?', 'WP &#10003;'],
                 ['Stay at Ecole des Petits', "Ecole des Petits", 'WP &#10007;']
                 
             ]

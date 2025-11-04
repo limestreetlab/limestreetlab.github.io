@@ -47,12 +47,12 @@ Highcharts.chart('timelineChart', {
         x: '2025-09',
         name: 'School start',
         label: 'School start',
-        description: "Starting at Putney Little Fingers."
+        description: "Starting at Little Fingers."
       }, {
         x: '2025-10',
-        name: 'Ballot',
-        label: 'Ballot',
-        description: 'Bute House ballot drawn.'
+        name: 'School change',
+        label: 'School start',
+        description: 'Switch to Melrose House.'
       }, {
         x: '2026-01',
         name: 'School start',
@@ -63,6 +63,11 @@ Highcharts.chart('timelineChart', {
         name: 'Assessment',
         label: 'Assessment',
         description: 'Wimbledon Prep assessment on 6 Jan.'
+      }, {
+        x: '2026-05',
+        name: 'Waiting list',
+        label: 'Waiting list',
+        description: 'Bute\'s waitlist should start moving (ranked 1-6 on the list of 12).'
       }, {
         x: '2026-09',
         name: 'Assessment',
