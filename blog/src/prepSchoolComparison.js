@@ -115,7 +115,7 @@ $(document).ready( () => {
     $("#jeanninemanuel_score").text(jeanninemanuel_overall_score); //show score
 
     //glendower
-    const glendower_score = [10, 9, 7, 7, 7, 7, 9, 1]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const glendower_score = [10, 9, 7, 8, 7, 7, 7, 1]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const glendower_overall_score = dot(glendower_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
@@ -137,7 +137,7 @@ $(document).ready( () => {
     $("#pembridgehall_score").text(pembridgehall_overall_score); //show score
 
     //kensington prep
-    const kensingtonprep_score = [9, 9, 8, 6, 5, 7, 8, 3]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const kensingtonprep_score = [9, 9, 8, 6, 6, 9, 8, 3]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const kensingtonprep_overall_score = dot(kensingtonprep_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
@@ -304,7 +304,7 @@ $(document).ready( () => {
     $("#westminster_score").text(westminster_overall_score); //show score
 
     //wimbledon common
-    const wimbledoncommon_score = [9, 9, 5, 5, 5, 6, 7, 6]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const wimbledoncommon_score = [9, 9, 5, 5, 5, 6, 8, 7]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const wimbledoncommon_overall_score = dot(wimbledoncommon_score, weights); //overall score
     chartParams.series = [{
         name: 'score',

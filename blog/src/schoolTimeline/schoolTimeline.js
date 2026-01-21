@@ -44,17 +44,12 @@ Highcharts.chart('timelineChart', {
         symbol: 'circle'
       },
       data: [{
-        x: '2025-09',
+        x: '2025-10',
         name: 'School start',
         label: 'School start',
-        description: "Starting at Little Fingers."
+        description: 'Start at Melrose House.'
       }, {
-        x: '2025-10',
-        name: 'School change',
-        label: 'School start',
-        description: 'Switch to Melrose House.'
-      }, {
-        x: '2026-01',
+        x: '2026-02',
         name: 'School start',
         label: "School start",
         description: "Starting at L'Ecole des Petits."
@@ -64,7 +59,7 @@ Highcharts.chart('timelineChart', {
         label: 'Assessment',
         description: 'Wimbledon Prep assessment on 6 Jan.'
       }, {
-        x: '2026-05',
+        x: '2026-06',
         name: 'Waiting list',
         label: 'Waiting list',
         description: 'Bute\'s waitlist should start moving (ranked 1-6 on the list of 12).'
@@ -74,10 +69,15 @@ Highcharts.chart('timelineChart', {
         label: "Assessment",
         description: "Newton Prep, as a practice."
       }, {
-        x: '2026-12',
+        x: '2026-10',
         name: 'Assessment',
         label: 'Assessment',
-        description: 'Westminster Under assessment takes place on a rolling basis from October.'
+        description: 'Westminster Under assessment takes place from October.'
+      }, {
+        x: '2026-11',
+        name: 'Communication',
+        label: 'Communication',
+        description: 'Falkner should inform if assessment slot available in Jan.'
       }, {
         x: '2027-01',
         name: 'Assessment',
