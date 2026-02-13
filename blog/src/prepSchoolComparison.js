@@ -138,7 +138,7 @@ $(document).ready( () => {
 
 
     //pembridge hall
-    const pembridgehall_score = [8, 8, 7, 6, 6, 6, 9, 1]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const pembridgehall_score = [8, 8, 7, 6, 6, 7, 9, 1]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const pembridgehall_overall_score = dot(pembridgehall_score, weights); //overall score
     chartParams.series = [{
         name: 'score',

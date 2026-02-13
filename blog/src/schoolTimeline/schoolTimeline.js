@@ -59,9 +59,9 @@ Highcharts.chart('timelineChart', {
         label: 'Assessment',
         description: 'Wimbledon Prep assessment on 6 Jan.'
       }, {
-        x: '2026-06',
-        name: 'Waiting list',
-        label: 'Waiting list',
+        x: '2026-05',
+        name: 'Waitlist',
+        label: 'Waitlist',
         description: 'Bute\'s waitlist should start moving (ranked 1-6 on the list of 12).'
       }, {
         x: '2026-09',
