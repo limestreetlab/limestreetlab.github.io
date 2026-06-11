@@ -149,7 +149,7 @@ $(document).ready( () => {
     $("#pembridgehall_score").text(pembridgehall_overall_score); //show score
 
     //kensington prep
-    const kensingtonprep_score = [9, 8, 8, 6, 5, 9, 8, 3]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const kensingtonprep_score = [9, 9, 8, 6, 5, 9, 8, 3]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const kensingtonprep_overall_score = dot(kensingtonprep_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
