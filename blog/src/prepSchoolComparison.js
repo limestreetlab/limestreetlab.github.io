@@ -126,7 +126,7 @@ $(document).ready( () => {
     $("#glendower_score").text(glendower_overall_score); //show score
 
      //falker
-    const falkner_score = [9, 10, 7, 5, 5, 3, 7, 1]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const falkner_score = [10, 10, 7, 5, 5, 3, 7, 1]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const falkner_overall_score = dot(falkner_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
@@ -216,7 +216,7 @@ $(document).ready( () => {
     $("#eatonhouse_score").text(eatonhouse_overall_score); //show score
 
     //kew college
-    const kewcollege_score = [8, 8, 7, 6, 5, 6, 8, 7]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
+    const kewcollege_score = [7, 7, 7, 6, 5, 6, 8, 7]; //assigned score to [academics, placements, music, sports, lang, facility, location, cost]
     const kewcollege_overall_score = dot(kewcollege_score, weights); //overall score
     chartParams.series = [{
         name: 'score',
