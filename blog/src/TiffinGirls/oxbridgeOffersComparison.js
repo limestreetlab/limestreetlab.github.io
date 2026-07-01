@@ -53,12 +53,8 @@ Highcharts.chart('grammarSchoolsComparisonChart', {
         data: [
             16, 13, 10, 11, 11, 15, 13
         ]
-    }, {
-        name: 'Wallington',
-        data: [
-            7, 9, 17, 18, 11, 16, 8
-        ]
-    }]
+    }
+    ]
 });
 
 });
