@@ -12,7 +12,7 @@ Highcharts.chart('grammarSchoolsComparisonChart', {
     },
     xAxis: {
         categories: [
-            '2019', '2020', '2021', '2022', '2023', '2024'
+            '2019', '2020', '2021', '2022', '2023', '2024', '2025'
         ]
     },
     yAxis: {
@@ -31,32 +31,32 @@ Highcharts.chart('grammarSchoolsComparisonChart', {
     series: [{
         name: 'Tiffin Girls',
         data: [
-            34, 30, 19, 25, 21, 19
+            34, 30, 19, 25, 21, 19, 19
         ]
     }, {
         name: 'Pates',
         data: [
-            27, 34, 26, 18, 28, 42
+            27, 34, 26, 18, 28, 42, 32
         ]
     }, {
         name: 'Colyton',
         data: [
-            9, 13, 10, 16, 20, 19
+            9, 13, 10, 16, 20, 19, 34
         ]
     }, {
         name: 'Henrietta Barnett',
         data: [
-            33, 36, 30, 29, 34, 31
+            33, 36, 30, 29, 34, 31, 34
         ]
     }, {
         name: 'Nonsuch',
         data: [
-            16, 13, 10, 11, 11, 15
+            16, 13, 10, 11, 11, 15, 13
         ]
     }, {
         name: 'Wallington',
         data: [
-            7, 9, 17, 18, 11, 16
+            7, 9, 17, 18, 11, 16, 8
         ]
     }]
 });
